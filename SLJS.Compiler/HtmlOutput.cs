@@ -9,10 +9,25 @@ namespace SLJS.Compiler
     public class HtmlOutput
     {
         private readonly string filename;
+        private readonly Dictionary<string, ReflectedControl> controls = new Dictionary<string, ReflectedControl>();
 
         public HtmlOutput(string filename)
         {
             this.filename = filename;
+            InitializeControls();
+        }
+
+        private void InitializeControls()
+        {
+            var types = this.GetType()
+                .Assembly
+                .GetTypes()
+                .Where(x => !string.IsNullOrEmpty(x.Namespace) && x.Namespace.EndsWith("Controls"));
+
+            foreach(var type in types)
+            {
+                this.controls.Add(type.Name, new ReflectedControl(type));
+            }
         }
 
         public void ParseXamlFromXml(XmlReader reader)
@@ -59,60 +74,29 @@ namespace SLJS.Compiler
 
         private void ParseHtmlElement(XmlReader reader, XmlWriter writer)
         {
-            switch(reader.LocalName)
+           ReflectedControl control = null;
+            if(this.controls.TryGetValue(reader.LocalName, out control))
             {
-                case "UserControl":
-                    ParseUserControl(reader, writer);
-                    break;
-                case "Grid":
-                    ParseGrid(reader, writer);
-                    break;
-                case "Button":
-                    ParseButton(reader, writer);
-                    break;
-                default:
-                    Console.WriteLine(reader.NodeType);
-                    Console.WriteLine(reader.LocalName);
-                    return;
+                control.Write(reader, writer);
             }
+            else
+            {
+                Console.WriteLine(reader.NodeType);
+                Console.WriteLine(reader.LocalName);
+                return;
+            }
+
+            ParseHtmlElementChildren(reader, writer);
+        }
+
+        private void ParseHtmlElementChildren(XmlReader reader, XmlWriter writer)
+        {
             if (!reader.IsEmptyElement)
             {
                 var child = reader.ReadSubtree();
                 Next(child);
                 ParseContent(child, writer);
             }
-        }
-
-        private void ParseButton(XmlReader reader, XmlWriter writer)
-        {
-            var content = reader["Content"];
-            var height = reader["Height"];
-            var name = reader["Name"];
-            var width = reader["Width"];
-
-            writer.WriteStartElement("input");
-            writer.WriteAttributeString("type", "button");
-            writer.WriteAttributeString("name", name);
-            writer.WriteAttributeString("style", string.Format("height: {0}; width: {1}", height, width));
-            writer.WriteAttributeString("value", content);
-            writer.WriteEndElement();
-        }
-
-        private void ParseGrid(XmlReader reader, XmlWriter writer)
-        {
-            writer.WriteStartElement("div");
-
-            writer.WriteEndElement();
-        }
-
-        private void ParseUserControl(XmlReader reader, XmlWriter writer)
-        {
-            var height = reader["DesignHeight"];
-            var width = reader["DesignWidth"];
-
-            writer.WriteStartElement("div");
-            writer.WriteAttributeString("style", string.Format("height: {0}; width: {1}", height, width));
-            writer.WriteEndElement();
         }
 
         private void Next(XmlReader reader)

@@ -1,0 +1,12 @@
+C:\Stuff\Research\SilverlightToJs\demo_one\TestAppOne\TestAppOne\Bin\Debug\TestAppOne.dll
+C:\Stuff\Research\SilverlightToJs\demo_one\TestAppOne\TestAppOne\Bin\Debug\TestAppOne.pdb
+C:\Stuff\Research\SilverlightToJs\demo_one\TestAppOne\TestAppOne\Bin\Debug\AppManifest.xaml
+C:\Stuff\Research\SilverlightToJs\demo_one\TestAppOne\TestAppOne\Bin\Debug\TestAppOne.xap
+C:\Stuff\Research\SilverlightToJs\demo_one\TestAppOne\TestAppOne\Bin\Debug\TestAppOneTestPage.html
+C:\Stuff\Research\SilverlightToJs\demo_one\TestAppOne\TestAppOne\obj\Debug\ResolveAssemblyReference.cache
+C:\Stuff\Research\SilverlightToJs\demo_one\TestAppOne\TestAppOne\obj\Debug\App.g.i.cs
+C:\Stuff\Research\SilverlightToJs\demo_one\TestAppOne\TestAppOne\obj\Debug\MainPage.g.i.cs
+C:\Stuff\Research\SilverlightToJs\demo_one\TestAppOne\TestAppOne\obj\Debug\TestAppOne.g.resources
+C:\Stuff\Research\SilverlightToJs\demo_one\TestAppOne\TestAppOne\obj\Debug\TestAppOne.dll
+C:\Stuff\Research\SilverlightToJs\demo_one\TestAppOne\TestAppOne\obj\Debug\TestAppOne.pdb
+C:\Stuff\Research\SilverlightToJs\demo_one\TestAppOne\TestAppOne\obj\Debug\XapCacheFile.xml

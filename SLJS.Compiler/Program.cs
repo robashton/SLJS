@@ -119,6 +119,16 @@ namespace SLJS.Compiler
             foreach (var filename in filenames)
             {
                 translator.Translate(filename);
+                var resourceFolderName = Path.GetFileNameWithoutExtension(filename);
+                var resourceFolder = Path.Combine(translator.OutputDirectory, resourceFolderName);
+
+                foreach(var file in Directory.GetFiles(resourceFolder, "*.resources"))
+                {
+                    var htmlFilename = Path.ChangeExtension(file, ".html");
+                    var htmlFilepath = Path.Combine(translator.OutputDirectory, htmlFilename);
+                    var xamlTranslator = new XamlTranslator(file);
+                    xamlTranslator.WriteTo(htmlFilepath);
+                }
             }
         }
     }

@@ -21,6 +21,12 @@ namespace SL2JS
         {
             ProcessAssembly(translator);
             ProcessResources();
+            GenerateContainer();
+        }
+
+        private void GenerateContainer()
+        {
+            throw new NotImplementedException();
         }
 
         private void ProcessResources()

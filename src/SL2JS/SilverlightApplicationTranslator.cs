@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using JSIL;
 using Mono.Cecil;
+using SL2JS.Proxies;
 
 namespace SL2JS
 {
@@ -20,7 +21,6 @@ namespace SL2JS
         {
             ProcessAssembly(translator);
             ProcessResources();
-
         }
 
         private void ProcessResources()
@@ -36,6 +36,9 @@ namespace SL2JS
 
         private void ProcessAssembly(SilverlightAssemblyTranslator translator)
         {
+            translator.OutputDirectory = configuration.OutputDirectory;
+            translator.IncludeDependencies = configuration.IncludeDependencies;
+            translator.AddProxyAssembly(typeof (Application).Assembly, false);
             translator.Translate(configuration.Filename);
         }
     }

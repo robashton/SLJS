@@ -21,7 +21,9 @@ namespace SLJS.Compiler
             var configuration = new SilverlightApplicationTranslatorConfiguration();
             configuration.ParseArguments(arguments);
 
-            var applicationTranslator = new SilverlightApplicationTranslator(configuration);
+            var xamlTranslator = new XamlTranslator();
+            var resourceTranslator = new ResourceFileTranslator(xamlTranslator);
+            var applicationTranslator = new SilverlightApplicationTranslator(configuration, resourceTranslator);
             applicationTranslator.ProcessWith(assemblyTranslator);
         }
 

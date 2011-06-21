@@ -35,37 +35,36 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ICSharpCode.Decompiler">
-      <HintPath>..\_Libs\JSIL\ICSharpCode.Decompiler.dll</HintPath>
+      <HintPath>..\_LIBS\JSIL\ICSharpCode.Decompiler.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.NRefactory">
-      <HintPath>..\_Libs\JSIL\ICSharpCode.NRefactory.dll</HintPath>
+      <HintPath>..\_LIBS\JSIL\ICSharpCode.NRefactory.dll</HintPath>
     </Reference>
     <Reference Include="JSIL">
-      <HintPath>..\_Libs\JSIL\JSIL.dll</HintPath>
+      <HintPath>..\_LIBS\JSIL\JSIL.dll</HintPath>
     </Reference>
     <Reference Include="JSIL.Meta">
-      <HintPath>..\_Libs\JSIL\JSIL.Meta.dll</HintPath>
+      <HintPath>..\_LIBS\JSIL\JSIL.Meta.dll</HintPath>
     </Reference>
     <Reference Include="JSIL.Proxies">
-      <HintPath>..\_Libs\JSIL\JSIL.Proxies.dll</HintPath>
+      <HintPath>..\_LIBS\JSIL\JSIL.Proxies.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Cecil">
-      <HintPath>..\_Libs\JSIL\Mono.Cecil.dll</HintPath>
+      <HintPath>..\_LIBS\JSIL\Mono.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Cecil.Pdb">
-      <HintPath>..\_Libs\JSIL\Mono.Cecil.Pdb.dll</HintPath>
+      <HintPath>..\_LIBS\JSIL\Mono.Cecil.Pdb.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Program.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SL2JS.Proxies\SL2JS.Proxies.csproj">

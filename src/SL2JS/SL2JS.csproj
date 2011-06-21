@@ -72,7 +72,12 @@
     <Compile Include="XamlToJsonConverter.cs" />
     <Compile Include="XamlTranslator.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\SL2JS.Proxies\SL2JS.Proxies.csproj">
+      <Project>{D1663AC2-D577-4498-B942-238A0C5914FD}</Project>
+      <Name>SL2JS.Proxies</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

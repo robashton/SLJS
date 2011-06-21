@@ -9,25 +9,59 @@ namespace SLJS.Compiler
 {
     public class ReflectedControl
     {
-        MethodInfo renderMethod = null;
-        PropertyInfo[] properties = null;
-        Type type = null;
+        readonly MethodInfo renderMethod = null;
+        private readonly Dictionary<string, PropertyInfo> properties = new Dictionary<string, PropertyInfo>();
+        readonly Type type = null;
 
         public ReflectedControl(Type type)
         {
             this.type = type;
             renderMethod = type.GetMethod("Write");
-            this.properties = type.GetProperties();
+            foreach(var property in type.GetProperties())
+            {
+                properties.Add(property.Name, property);
+            }
         }
         
         public void Write(XmlReader reader, XmlWriter writer)
         {
             var control = Activator.CreateInstance(this.type);
-            foreach(var property in properties)
+            if(reader.HasAttributes)
             {
-                property.SetValue(control, reader[property.Name], null);
+                CopyAttributesIntoControl(reader, control);
             }
+             
             renderMethod.Invoke(control, new[] {writer});
+        }
+
+        private void CopyAttributesIntoControl(XmlReader reader, object control)
+        {
+            reader.MoveToFirstAttribute();
+
+            do
+            {
+                string attributeName = ExtractAttributeName(reader);
+                string attributeValue = reader.Value;
+
+                PropertyInfo property = null;
+                if (properties.TryGetValue(attributeName, out property))
+                {
+                    property.SetValue(control, attributeValue, null);
+                }
+            } while (reader.MoveToNextAttribute());
+            reader.MoveToElement();
+        }
+
+        private string ExtractAttributeName(XmlReader reader)
+        {
+            if(reader.Name.Contains(":"))
+            {
+                return reader.Name.Substring(reader.Name.IndexOf(':') + 1);
+            }
+            else
+            {
+                return reader.Name;
+            }
         }
     }
 }

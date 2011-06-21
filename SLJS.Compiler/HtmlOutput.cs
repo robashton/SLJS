@@ -40,22 +40,48 @@ namespace SLJS.Compiler
 
         private void ParseHtmlBody(XmlReader reader, XmlWriter writer)
         {
-            Next(reader);
-            switch (reader.NodeType)
-            {
-                case XmlNodeType.Element:
-                    writer.WriteStartElement("html");
-                    writer.WriteStartElement("body");
-                    ParseContent(reader, writer);
-                    writer.WriteEndElement();
-                    writer.WriteEndElement();
-                    break;
-                default:
-                    Console.WriteLine(reader.NodeType);
-                    break;
-            }
+            WriteStartDocument(writer);
+            ParseContent(reader, writer);
+            WriteEndDocument(writer);
         }
 
+        private void WriteStartDocument(XmlWriter writer)
+        {
+            writer.WriteStartElement("html");
+            WriteHeader(writer);
+            writer.WriteStartElement("body");
+        }
+
+        private void WriteEndDocument(XmlWriter writer)
+        {
+            writer.WriteEndElement();
+            writer.WriteEndElement();
+        }
+
+        private void WriteHeader(XmlWriter writer)
+        {
+            writer.WriteStartElement("head");
+
+            writer.WriteStartElement("script");
+            writer.WriteAttributeString("type", "text/javascript");
+            writer.WriteAttributeString("src", "jquery-1.6.1.js");
+            writer.WriteString("");
+            writer.WriteEndElement();
+
+            writer.WriteStartElement("script");
+            writer.WriteAttributeString("type", "text/javascript");
+            writer.WriteAttributeString("src", "lazyload.js");
+            writer.WriteString("");
+            writer.WriteEndElement();
+
+            writer.WriteStartElement("script");
+            writer.WriteAttributeString("type", "text/javascript");
+            writer.WriteAttributeString("src", "sljs.js");
+            writer.WriteString("");
+            writer.WriteEndElement();
+
+            writer.WriteEndElement();
+        }
 
         private void ParseContent(XmlReader reader, XmlWriter writer)
         {
@@ -69,7 +95,6 @@ namespace SLJS.Compiler
                    Console.WriteLine(reader.NodeType);
                    break;
            }
-
         }
 
         private void ParseHtmlElement(XmlReader reader, XmlWriter writer)

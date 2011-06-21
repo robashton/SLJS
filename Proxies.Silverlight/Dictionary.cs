@@ -5,7 +5,8 @@ using System.Text;
 
 namespace Proxies.Silverlight
 {
-    public class Class1
+    public class Dictionary
     {
+
     }
 }

@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="JSIL.Meta">
+      <HintPath>..\..\SLTOJS\JSIL\bin\JSIL.Meta.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,7 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Application.cs" />
+    <Compile Include="Control.cs" />
+    <Compile Include="DependencyObject.cs" />
+    <Compile Include="DependencyProperty.cs" />
+    <Compile Include="Dictionary.cs" />
+    <Compile Include="FrameworkElement.cs" />
+    <Compile Include="UnsafeNativeTypes.cs" />
+    <Compile Include="UserControl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

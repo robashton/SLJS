@@ -8,18 +8,58 @@
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="1554417B-9AEC-42BE-A4BD-0F4D73A73896/f:Class1.cs" caret="124" fromTop="6" />
-      <File id="102C0CAB-2975-49A4-8536-18E1B0B8B514/f:Patches.js/l:..?demo_one_output?Patches.js" caret="1390" fromTop="31" />
-      <File id="102C0CAB-2975-49A4-8536-18E1B0B8B514/f:Program.cs" caret="0" fromTop="0" />
+      <File id="102C0CAB-2975-49A4-8536-18E1B0B8B514/d:Controls/f:UserControl.cs" caret="455" fromTop="17" />
+      <File id="102C0CAB-2975-49A4-8536-18E1B0B8B514/d:Controls/f:Button.cs" caret="435" fromTop="10" />
+      <File id="102C0CAB-2975-49A4-8536-18E1B0B8B514/d:Controls/f:Control.cs" caret="786" fromTop="28" />
+      <File id="102C0CAB-2975-49A4-8536-18E1B0B8B514/d:Includes/f:jquery-1.6.1.js" caret="0" fromTop="0" />
+      <File id="102C0CAB-2975-49A4-8536-18E1B0B8B514/d:Controls/f:Grid.cs" caret="395" fromTop="14" />
+      <File id="102C0CAB-2975-49A4-8536-18E1B0B8B514/f:HtmlOutput.cs" caret="0" fromTop="0" />
+      <File id="102C0CAB-2975-49A4-8536-18E1B0B8B514/f:ReflectedControl.cs" caret="0" fromTop="0" />
+      <File id="102C0CAB-2975-49A4-8536-18E1B0B8B514/f:XamlTranslator.cs" caret="0" fromTop="0" />
+      <File id="102C0CAB-2975-49A4-8536-18E1B0B8B514/d:Includes/f:lazyload.js" caret="0" fromTop="0" />
+      <File id="1554417B-9AEC-42BE-A4BD-0F4D73A73896/f:Application.cs" caret="0" fromTop="0" />
+      <File id="1554417B-9AEC-42BE-A4BD-0F4D73A73896/f:Dictionary.cs" caret="0" fromTop="0" />
+      <File id="102C0CAB-2975-49A4-8536-18E1B0B8B514/d:Includes/f:sljs.js" caret="0" fromTop="0" />
+      <File id="102C0CAB-2975-49A4-8536-18E1B0B8B514/f:Program.cs" caret="685" fromTop="0" />
+      <File id="1554417B-9AEC-42BE-A4BD-0F4D73A73896/f:UnsafeNativeTypes.cs" caret="266" fromTop="13" />
+      <File id="1554417B-9AEC-42BE-A4BD-0F4D73A73896/f:UserControl.cs" caret="389" fromTop="17" />
+      <File id="1554417B-9AEC-42BE-A4BD-0F4D73A73896/f:Control.cs" caret="168" fromTop="9" />
+      <File id="1554417B-9AEC-42BE-A4BD-0F4D73A73896/f:DependencyProperty.cs" caret="268" fromTop="12" />
+      <File id="1554417B-9AEC-42BE-A4BD-0F4D73A73896/f:DependencyObject.cs" caret="416" fromTop="16" />
+      <File id="1554417B-9AEC-42BE-A4BD-0F4D73A73896/f:FrameworkElement.cs" caret="158" fromTop="7" />
+      <File id="102C0CAB-2975-49A4-8536-18E1B0B8B514/d:Includes/f:Patches.js" caret="1044" fromTop="18" />
     </RecentFiles>
     <RecentEdits>
-      <File id="1554417B-9AEC-42BE-A4BD-0F4D73A73896/f:Class1.cs" caret="168" fromTop="11" />
-      <File id="102C0CAB-2975-49A4-8536-18E1B0B8B514/f:Program.cs" caret="5753" fromTop="33" />
-      <File id="102C0CAB-2975-49A4-8536-18E1B0B8B514/f:Patches.js/l:..?demo_one_output?Patches.js" caret="197" fromTop="5" />
-      <File id="102C0CAB-2975-49A4-8536-18E1B0B8B514/f:Patches.js/l:..?demo_one_output?Patches.js" caret="1103" fromTop="15" />
-      <File id="102C0CAB-2975-49A4-8536-18E1B0B8B514/f:Patches.js/l:..?demo_one_output?Patches.js" caret="1009" fromTop="33" />
-      <File id="102C0CAB-2975-49A4-8536-18E1B0B8B514/f:Patches.js/l:..?demo_one_output?Patches.js" caret="475" fromTop="15" />
-      <File id="102C0CAB-2975-49A4-8536-18E1B0B8B514/f:Patches.js/l:..?demo_one_output?Patches.js" caret="475" fromTop="15" />
+      <File id="102C0CAB-2975-49A4-8536-18E1B0B8B514/d:Includes/f:Patches.js" caret="0" fromTop="0" />
+      <File id="102C0CAB-2975-49A4-8536-18E1B0B8B514/d:Includes/f:Patches.js" caret="203" fromTop="10" />
+      <File id="1554417B-9AEC-42BE-A4BD-0F4D73A73896/f:DependencyProperty.cs" caret="451" fromTop="13" />
+      <File id="1554417B-9AEC-42BE-A4BD-0F4D73A73896/f:DependencyProperty.cs" caret="451" fromTop="13" />
+      <File id="1554417B-9AEC-42BE-A4BD-0F4D73A73896/f:DependencyProperty.cs" caret="376" fromTop="14" />
+      <File id="102C0CAB-2975-49A4-8536-18E1B0B8B514/d:Includes/f:Patches.js" caret="203" fromTop="1" />
+      <File id="102C0CAB-2975-49A4-8536-18E1B0B8B514/d:Includes/f:Patches.js" caret="203" fromTop="3" />
+      <File id="1554417B-9AEC-42BE-A4BD-0F4D73A73896/f:FrameworkElement.cs" caret="255" fromTop="12" />
+      <File id="1554417B-9AEC-42BE-A4BD-0F4D73A73896/f:Control.cs" caret="265" fromTop="15" />
+      <File id="1554417B-9AEC-42BE-A4BD-0F4D73A73896/f:Control.cs" caret="168" fromTop="9" />
+      <File id="1554417B-9AEC-42BE-A4BD-0F4D73A73896/f:UserControl.cs" caret="381" fromTop="14" />
+      <File id="1554417B-9AEC-42BE-A4BD-0F4D73A73896/f:UserControl.cs" caret="303" fromTop="13" />
+      <File id="102C0CAB-2975-49A4-8536-18E1B0B8B514/d:Includes/f:Patches.js" caret="2284" fromTop="27" />
+      <File id="102C0CAB-2975-49A4-8536-18E1B0B8B514/d:Includes/f:Patches.js" caret="1958" fromTop="20" />
+      <File id="1554417B-9AEC-42BE-A4BD-0F4D73A73896/f:UnsafeNativeTypes.cs" caret="484" fromTop="30" />
+      <File id="1554417B-9AEC-42BE-A4BD-0F4D73A73896/f:UnsafeNativeTypes.cs" caret="255" fromTop="12" />
+      <File id="102C0CAB-2975-49A4-8536-18E1B0B8B514/d:Includes/f:Patches.js" caret="1418" fromTop="10" />
+      <File id="1554417B-9AEC-42BE-A4BD-0F4D73A73896/f:DependencyProperty.cs" caret="235" fromTop="10" />
+      <File id="1554417B-9AEC-42BE-A4BD-0F4D73A73896/f:DependencyProperty.cs" caret="333" fromTop="14" />
+      <File id="1554417B-9AEC-42BE-A4BD-0F4D73A73896/f:DependencyProperty.cs" caret="451" fromTop="18" />
+      <File id="1554417B-9AEC-42BE-A4BD-0F4D73A73896/f:DependencyObject.cs" caret="661" fromTop="18" />
+      <File id="102C0CAB-2975-49A4-8536-18E1B0B8B514/d:Includes/f:Patches.js" caret="1352" fromTop="21" />
+      <File id="102C0CAB-2975-49A4-8536-18E1B0B8B514/d:Includes/f:Patches.js" caret="203" fromTop="7" />
+      <File id="102C0CAB-2975-49A4-8536-18E1B0B8B514/d:Includes/f:Patches.js" caret="584" fromTop="15" />
+      <File id="102C0CAB-2975-49A4-8536-18E1B0B8B514/d:Includes/f:Patches.js" caret="980" fromTop="25" />
+      <File id="102C0CAB-2975-49A4-8536-18E1B0B8B514/d:Includes/f:Patches.js" caret="1414" fromTop="26" />
+      <File id="102C0CAB-2975-49A4-8536-18E1B0B8B514/d:Includes/f:Patches.js" caret="980" fromTop="15" />
+      <File id="102C0CAB-2975-49A4-8536-18E1B0B8B514/d:Includes/f:Patches.js" caret="1255" fromTop="20" />
+      <File id="1554417B-9AEC-42BE-A4BD-0F4D73A73896/f:DependencyObject.cs" caret="443" fromTop="17" />
+      <File id="1554417B-9AEC-42BE-A4BD-0F4D73A73896/f:DependencyObject.cs" caret="346" fromTop="14" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>

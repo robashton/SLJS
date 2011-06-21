@@ -19,3 +19,6 @@ C:\Stuff\Research\SilverlightToJs\SLJS.Compiler\bin\Debug\Mono.Cecil.pdb
 C:\Stuff\Research\SilverlightToJs\SLJS.Compiler\bin\Debug\Mono.Cecil.Pdb.pdb
 C:\Stuff\Research\SilverlightToJs\SLJS.Compiler\obj\x86\Debug\SLJS.Compiler.exe
 C:\Stuff\Research\SilverlightToJs\SLJS.Compiler\obj\x86\Debug\SLJS.Compiler.pdb
+C:\Stuff\Research\SilverlightToJs\SLJS.Compiler\obj\x86\Debug\SLJS.Compiler.Includes.Scripts.resources
+C:\Stuff\Research\SilverlightToJs\SLJS.Compiler\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Stuff\Research\SilverlightToJs\SLJS.Compiler\obj\x86\Debug\GenerateResource.write.1.tlog

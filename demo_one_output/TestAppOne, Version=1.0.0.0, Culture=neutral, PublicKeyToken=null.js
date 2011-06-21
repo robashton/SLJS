@@ -10,14 +10,10 @@ JSIL.MakeClass("System.Object", "TestAppOne.App/$l$gc__DisplayClass2", false);
 TestAppOne.MainPage.prototype.InitializeComponent = function () {
 	if (!this._contentLoaded) {
 		this._contentLoaded = true;
-		System.Windows.Application.LoadComponent(this, JSIL.New(System.Uri, "_ctor$1", ["/TestAppOne;component/MainPage.xaml", System.UriKind.Relative]));
-		this.LayoutRoot = JSIL.Cast(System.Windows.FrameworkElement.prototype.FindName.call(this, "LayoutRoot"), System.Windows.Controls.Grid);
-		this.button1 = JSIL.Cast(System.Windows.FrameworkElement.prototype.FindName.call(this, "button1"), System.Windows.Controls.Button);
+		console.log('Initializing Component');
+		this.LayoutRoot = JSIL.Cast(this.findElement("LayoutRoot"), System.Windows.Controls.Grid);
+		this.button1 = JSIL.Cast(this.findElement("button1"), System.Windows.Controls.Button);
 	}
-};
-TestAppOne.MainPage.prototype._ctor = function () {
-	System.Windows.Controls.UserControl.prototype._ctor$0.call(this);
-	this.InitializeComponent();
 };
 TestAppOne.MainPage.prototype.LayoutRoot = null;
 TestAppOne.MainPage.prototype.button1 = null;
@@ -26,7 +22,7 @@ TestAppOne.MainPage.prototype._contentLoaded = false;
 TestAppOne.App.prototype.InitializeComponent = function () {
 	if (!this._contentLoaded) {
 		this._contentLoaded = true;
-		System.Windows.Application.LoadComponent(this, JSIL.New(System.Uri, "_ctor$1", ["/TestAppOne;component/App.xaml", System.UriKind.Relative]));
+		console.log('Initializing Component');
 	}
 };
 TestAppOne.App.prototype._ctor = function () {
@@ -68,3 +64,8 @@ $asm01.TestAppOne.App.$l$gc__DisplayClass2.prototype._ctor = function () {
 $asm01.TestAppOne.App.$l$gc__DisplayClass2.prototype.$this = null;
 $asm01.TestAppOne.App.$l$gc__DisplayClass2.prototype.e = null;
 
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(TestAppOne.MainPage.prototype, 
+			"_ctor"
+		);
+	});

@@ -126,8 +126,8 @@ namespace SLJS.Compiler
                 {
                     var htmlFilename = Path.ChangeExtension(file, ".html");
                     var htmlFilepath = Path.Combine(translator.OutputDirectory, htmlFilename);
-                    var xamlTranslator = new XamlTranslator(file);
-                    xamlTranslator.WriteTo(htmlFilepath);
+                    var xamlTranslator = new XamlTranslator(file, translator.OutputDirectory);
+                    xamlTranslator.Write();
                 }
             }
         }

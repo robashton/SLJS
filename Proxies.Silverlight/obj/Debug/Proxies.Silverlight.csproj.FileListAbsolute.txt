@@ -3,3 +3,5 @@ C:\Stuff\Research\SilverlightToJs\Proxies.Silverlight\bin\Debug\Proxies.Silverli
 C:\Stuff\Research\SilverlightToJs\Proxies.Silverlight\obj\Debug\ResolveAssemblyReference.cache
 C:\Stuff\Research\SilverlightToJs\Proxies.Silverlight\obj\Debug\Proxies.Silverlight.dll
 C:\Stuff\Research\SilverlightToJs\Proxies.Silverlight\obj\Debug\Proxies.Silverlight.pdb
+C:\Stuff\Research\SilverlightToJs\Proxies.Silverlight\bin\Debug\JSIL.Meta.dll
+C:\Stuff\Research\SilverlightToJs\Proxies.Silverlight\bin\Debug\JSIL.Meta.pdb

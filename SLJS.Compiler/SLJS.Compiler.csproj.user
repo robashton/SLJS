@@ -3,4 +3,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <StartArguments>--proxy:Proxies.Silverlight.dll "C:\Stuff\Research\SilverlightToJs\demo_one\TestAppOne\TestAppOne\Bin\Debug\TestAppOne.dll" --out:C:\Stuff\Research\SilverlightToJs\demo_one_output --nodeps</StartArguments>
   </PropertyGroup>
+  <PropertyGroup>
+    <ProjectView>ProjectFiles</ProjectView>
+  </PropertyGroup>
 </Project>

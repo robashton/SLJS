@@ -1,5 +1,6 @@
 <Modules>
   <Module PersistentId="102C0CAB-2975-49A4-8536-18E1B0B8B514" ModuleId="SLJS.Compiler" />
   <Module PersistentId="1554417B-9AEC-42BE-A4BD-0F4D73A73896" ModuleId="Proxies.Silverlight" />
-  <Module PersistentId="JSIL, Version=0.2.0.24088, Culture=neutral" ModuleId="JSIL" />
+  <Module PersistentId="d:Miscellaneous Files" ModuleId="JSIL" />
+  <Module PersistentId="JSIL, Version=0.2.0.36854, Culture=neutral" ModuleId="JSIL_1" />
 </Modules>

@@ -15,6 +15,9 @@ TestAppOne.MainPage.prototype.InitializeComponent = function () {
 		this.button1 = JSIL.Cast(this.findElement("button1"), System.Windows.Controls.Button);
 	}
 };
+TestAppOne.MainPage.prototype.button1_Click = function (sender, e) {
+	System.Windows.MessageBox.Show("Executing in ur browzer");
+};
 TestAppOne.MainPage.prototype.LayoutRoot = null;
 TestAppOne.MainPage.prototype.button1 = null;
 TestAppOne.MainPage.prototype._contentLoaded = false;

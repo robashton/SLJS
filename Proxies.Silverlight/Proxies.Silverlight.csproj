@@ -49,6 +49,7 @@
     <Compile Include="DependencyProperty.cs" />
     <Compile Include="Dictionary.cs" />
     <Compile Include="FrameworkElement.cs" />
+    <Compile Include="MessageBox.cs" />
     <Compile Include="UnsafeNativeTypes.cs" />
     <Compile Include="UserControl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

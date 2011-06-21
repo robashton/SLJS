@@ -18,5 +18,10 @@ namespace TestAppOne
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Executing in ur browzer");
+        }
     }
 }

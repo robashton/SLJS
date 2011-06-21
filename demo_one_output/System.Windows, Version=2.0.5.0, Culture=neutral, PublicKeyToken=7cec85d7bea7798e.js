@@ -6680,19 +6680,19 @@ $asm02.MS.Internal.CoreTypes.GetCoreWrapper = function (typeId) {
 		case 32: 
 			return new System.Windows.Media.GeometryGroup();
 		case 34: 
-			return JSIL.New(System.Windows.Media.SolidColorBrush, "_ctor$0", []);
+			return new System.Windows.Media.SolidColorBrush();
 		case 35: 
 			return new System.Windows.Media.GradientStop();
 		case 37: 
-			return JSIL.New(System.Windows.Media.LinearGradientBrush, "_ctor$0", []);
+			return new System.Windows.Media.LinearGradientBrush();
 		case 38: 
-			return JSIL.New(System.Windows.Media.RadialGradientBrush, "_ctor$0", []);
+			return new System.Windows.Media.RadialGradientBrush();
 		case 42: 
-			return JSIL.New(System.Windows.Controls.Canvas, "_ctor$0", []);
+			return new System.Windows.Controls.Canvas();
 		case 43: 
 			return new System.Windows.Media.Animation.TimelineCollection();
 		case 44: 
-			return JSIL.New(System.Windows.Shapes.Path, "_ctor$0", []);
+			return new System.Windows.Shapes.Path();
 		case 45: 
 			return new System.Windows.Media.Animation.BeginStoryboard();
 		case 46: 
@@ -6788,7 +6788,7 @@ $asm02.MS.Internal.CoreTypes.GetCoreWrapper = function (typeId) {
 		case 124: 
 			return new System.Windows.Documents.InlineCollection();
 		case 125: 
-			return JSIL.New(System.Windows.Documents.Span, "_ctor$0", []);
+			return new System.Windows.Documents.Span();
 		case 126: 
 			return new System.Windows.Documents.Underline();
 		case 127: 
@@ -6802,7 +6802,7 @@ $asm02.MS.Internal.CoreTypes.GetCoreWrapper = function (typeId) {
 		case 135: 
 			return new System.Windows.Controls.InkPresenter();
 		case 136: 
-			return JSIL.New(System.Windows.Ink.Stroke, "_ctor$0", []);
+			return new System.Windows.Ink.Stroke();
 		case 137: 
 			return new System.Windows.Ink.StrokeCollection();
 		case 139: 
@@ -6832,9 +6832,9 @@ $asm02.MS.Internal.CoreTypes.GetCoreWrapper = function (typeId) {
 		case 163: 
 			return new System.Windows.AssemblyPartCollection();
 		case 171: 
-			return JSIL.New(System.Windows.Controls.StackPanel, "_ctor$0", []);
+			return new System.Windows.Controls.StackPanel();
 		case 177: 
-			return JSIL.New(System.Windows.Controls.TextBox, "_ctor$0", []);
+			return new System.Windows.Controls.TextBox();
 		case 179: 
 			return new $asm02.MS.Internal.TextBoxView();
 		case 180: 
@@ -6846,7 +6846,7 @@ $asm02.MS.Internal.CoreTypes.GetCoreWrapper = function (typeId) {
 		case 183: 
 			return new System.Windows.Controls.ColumnDefinitionCollection();
 		case 184: 
-			return JSIL.New(System.Windows.Controls.Grid, "_ctor$0", []);
+			return new System.Windows.Controls.Grid();
 		case 188: 
 			return new System.Windows.Controls.ControlTemplate();
 		case 189: 
@@ -6854,13 +6854,13 @@ $asm02.MS.Internal.CoreTypes.GetCoreWrapper = function (typeId) {
 		case 190: 
 			return new System.Windows.Controls.MultiScaleImage();
 		case 192: 
-			return JSIL.New(System.Windows.DataTemplate, "_ctor$0", []);
+			return new System.Windows.DataTemplate();
 		case 194: 
-			return JSIL.New(System.Windows.Media.Imaging.BitmapImage, "_ctor$0", []);
+			return new System.Windows.Media.Imaging.BitmapImage();
 		case 200: 
 			return new System.Windows.Controls.ItemCollection();
 		case 201: 
-			return JSIL.New(System.Windows.Controls.ItemsControl, "_ctor$0", []);
+			return new System.Windows.Controls.ItemsControl();
 		case 205: 
 			return new System.Windows.Controls.Primitives.Popup();
 		case 207: 
@@ -6868,7 +6868,7 @@ $asm02.MS.Internal.CoreTypes.GetCoreWrapper = function (typeId) {
 		case 208: 
 			return new System.Windows.Controls.ItemsPresenter();
 		case 209: 
-			return JSIL.New(System.Windows.Controls.ContentPresenter, "_ctor$0", []);
+			return new System.Windows.Controls.ContentPresenter();
 		case 210: 
 			return new $asm02.MS.Internal.DisplayMemberTemplate();
 		case 211: 
@@ -6876,11 +6876,11 @@ $asm02.MS.Internal.CoreTypes.GetCoreWrapper = function (typeId) {
 		case 213: 
 			return new System.Windows.Controls.Border();
 		case 216: 
-			return JSIL.New($asm02.MS.Internal.ManagedObjectReference, "_ctor$0", []);
+			return new $asm02.MS.Internal.ManagedObjectReference();
 		case 218: 
-			return JSIL.New(System.Windows.Setter, "_ctor$0", []);
+			return new System.Windows.Setter();
 		case 219: 
-			return JSIL.New(System.Windows.SetterBaseCollection, "_ctor$0", []);
+			return new System.Windows.SetterBaseCollection();
 		case 220: 
 			return new System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames();
 		case 222: 
@@ -6888,7 +6888,7 @@ $asm02.MS.Internal.CoreTypes.GetCoreWrapper = function (typeId) {
 		case 223: 
 			return new System.Windows.Media.Animation.ObjectKeyFrameCollection();
 		case 225: 
-			return JSIL.New(System.Windows.Style, "_ctor$0", []);
+			return new System.Windows.Style();
 		case 227: 
 			return new System.Windows.Controls.MultiScaleSubImage();
 		case 228: 
@@ -6896,9 +6896,9 @@ $asm02.MS.Internal.CoreTypes.GetCoreWrapper = function (typeId) {
 		case 229: 
 			return new $asm02.MS.Internal.DependencyPropertyProxy();
 		case 252: 
-			return JSIL.New(System.Windows.Controls.ContentControl, "_ctor$0", []);
+			return new System.Windows.Controls.ContentControl();
 		case 257: 
-			return JSIL.New(System.Windows.Media.DeepZoomImageTileSource, "_ctor$0", []);
+			return new System.Windows.Media.DeepZoomImageTileSource();
 		case 258: 
 			return new System.Windows.VisualState();
 		case 262: 
@@ -6916,29 +6916,29 @@ $asm02.MS.Internal.CoreTypes.GetCoreWrapper = function (typeId) {
 		case 279: 
 			return new System.Windows.ExternalPartCollection();
 		case 280: 
-			return JSIL.New(System.Windows.ExternalPart, "_ctor$0", []);
+			return new System.Windows.ExternalPart();
 		case 285: 
-			return JSIL.New(System.Windows.Media.Animation.CircleEase, "_ctor$0", []);
+			return new System.Windows.Media.Animation.CircleEase();
 		case 286: 
-			return JSIL.New(System.Windows.Media.Animation.BackEase, "_ctor$0", []);
+			return new System.Windows.Media.Animation.BackEase();
 		case 287: 
-			return JSIL.New(System.Windows.Media.Animation.ExponentialEase, "_ctor$0", []);
+			return new System.Windows.Media.Animation.ExponentialEase();
 		case 288: 
-			return JSIL.New(System.Windows.Media.Animation.PowerEase, "_ctor$0", []);
+			return new System.Windows.Media.Animation.PowerEase();
 		case 289: 
-			return JSIL.New(System.Windows.Media.Animation.QuadraticEase, "_ctor$0", []);
+			return new System.Windows.Media.Animation.QuadraticEase();
 		case 290: 
-			return JSIL.New(System.Windows.Media.Animation.CubicEase, "_ctor$0", []);
+			return new System.Windows.Media.Animation.CubicEase();
 		case 291: 
-			return JSIL.New(System.Windows.Media.Animation.QuarticEase, "_ctor$0", []);
+			return new System.Windows.Media.Animation.QuarticEase();
 		case 292: 
-			return JSIL.New(System.Windows.Media.Animation.QuinticEase, "_ctor$0", []);
+			return new System.Windows.Media.Animation.QuinticEase();
 		case 293: 
-			return JSIL.New(System.Windows.Media.Animation.ElasticEase, "_ctor$0", []);
+			return new System.Windows.Media.Animation.ElasticEase();
 		case 294: 
-			return JSIL.New(System.Windows.Media.Animation.BounceEase, "_ctor$0", []);
+			return new System.Windows.Media.Animation.BounceEase();
 		case 295: 
-			return JSIL.New(System.Windows.Media.Animation.SineEase, "_ctor$0", []);
+			return new System.Windows.Media.Animation.SineEase();
 		case 297: 
 			return new System.Windows.Media.Animation.EasingDoubleKeyFrame();
 		case 298: 
@@ -6968,7 +6968,7 @@ $asm02.MS.Internal.CoreTypes.GetCoreWrapper = function (typeId) {
 		case 322: 
 			return new System.Windows.VisualStateGroup();
 		case 323: 
-			return JSIL.New(System.Windows.VisualTransition, "_ctor$0", []);
+			return new System.Windows.VisualTransition();
 		case 324: 
 			return new $asm02.MS.Internal.VisualStateGroupCollection();
 		case 325: 
@@ -6988,7 +6988,7 @@ $asm02.MS.Internal.CoreTypes.GetCoreWrapper = function (typeId) {
 		case 335: 
 			return new System.Windows.Controls.Viewbox();
 		case 340: 
-			return JSIL.New(System.Windows.Controls.RichTextBox, "_ctor$0", []);
+			return new System.Windows.Controls.RichTextBox();
 		case 344: 
 			return new System.Windows.Documents.Paragraph();
 		case 345: 
@@ -7008,7 +7008,7 @@ $asm02.MS.Internal.CoreTypes.GetCoreWrapper = function (typeId) {
 		case 357: 
 			return new System.Windows.Media.AudioCaptureDeviceCollection();
 		case 358: 
-			return JSIL.New(System.Windows.Media.CaptureDevice, "_ctor$0", []);
+			return new System.Windows.Media.CaptureDevice();
 		case 359: 
 			return new System.Windows.Media.VideoCaptureDevice();
 		case 360: 
@@ -7016,7 +7016,7 @@ $asm02.MS.Internal.CoreTypes.GetCoreWrapper = function (typeId) {
 		case 361: 
 			return new System.Windows.Media.CaptureSource();
 		case 365: 
-			return JSIL.New(System.Windows.Printing.PrintDocument, "_ctor$0", []);
+			return new System.Windows.Printing.PrintDocument();
 		case 371: 
 			return new $asm02.System.Windows.DOCollection();
 		case 372: 
@@ -7030,7 +7030,7 @@ $asm02.MS.Internal.CoreTypes.GetCoreWrapper = function (typeId) {
 		case 381: 
 			return new $asm02.MS.Internal.TemplateContent();
 		case 385: 
-			return JSIL.New(System.Windows.VisualStateManager, "_ctor$0", []);
+			return new System.Windows.VisualStateManager();
 		default: 
 			if (typeId === 403) {
 				return new System.Windows.Documents.Section();
@@ -7953,40 +7953,6 @@ System.Windows.DependencyObject.prototype.get_ManagedReferenceStore = function (
 	}
 	return dictionary;
 };
-System.Windows.DependencyObject.prototype._ctor$0 = function () {
-	this._ctor$1(1);
-};
-System.Windows.DependencyObject.prototype._ctor$1 = function (nativeTypeIndex) {
-	this._ctor$2(nativeTypeIndex, System.IntPtr.Zero);
-};
-System.Windows.DependencyObject.prototype._ctor$2 = function (nativeTypeIndex, constructDO) {
-	System.Object.prototype._ctor.call(this);
-	$asm02.MS.Internal.XcpImports.CheckThread();
-	JSIL.IgnoredMember("m_nativePtr", this) = JSIL.IgnoredMember(".ctor()");
-	var intPtr = System.IntPtr.Zero;
-	if (System.IntPtr.op_Inequality(System.Windows.DependencyObject.StaticNativePointer, System.IntPtr.Zero)) {
-		intPtr = System.Windows.DependencyObject.StaticNativePointer;
-		System.Windows.DependencyObject.StaticNativePointer = System.IntPtr.Zero;
-		$asm02.MS.Internal.XcpImports.AddRefNativeObject$1(intPtr);
-	} else if (System.IntPtr.op_Inequality(constructDO, System.IntPtr.Zero)) {
-		intPtr = $asm02.MS.Internal.XcpImports.CreateObjectByTypeIndexWithDO(nativeTypeIndex, constructDO);
-	} else {
-		intPtr = $asm02.MS.Internal.XcpImports.CreateObjectByTypeIndex(nativeTypeIndex);
-	}
-	var flag = false;
-	if ($asm02.MS.Internal.XcpImports.DependencyObject_ShouldCreatePeerWithStrongRefNative(intPtr)) {
-		flag = true;
-	}
-	JSIL.IgnoredMember("set_NativeObject(value)", intPtr);
-	$asm02.MS.Internal.ManagedPeerTable.Add$1(intPtr, this, flag);
-	this._coreTypeEventHelper = new $asm02.MS.Internal.CoreTypeEventHelper();
-	var type = (JSIL.GetType(this));
-	var isCustomType = 0;
-	if (!$asm02.MS.Internal.TypeProxy.IsCoreType(type)) {
-		isCustomType = 1;
-	}
-	$asm02.MS.Internal.XcpImports.NotifyHasManagedPeer$1(intPtr, 11, isCustomType, flag ? 1 : 0);
-};
 System.Windows.DependencyObject.prototype.CheckAccess = function () {
 	return this.Dispatcher.CheckAccess();
 };
@@ -8715,11 +8681,6 @@ System.Windows.DependencyObject.RemovePeerReferenceToItem = function (nativeOwne
 	}
 	return 0;
 };
-JSIL.OverloadedMethod(System.Windows.DependencyObject.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]], 
-		["_ctor$2", [System.UInt32, System.IntPtr]]
-	]);
 JSIL.OverloadedMethod(System.Windows.DependencyObject.prototype, "SetValueInternal", [
 		["SetValueInternal$0", [System.Windows.DependencyProperty, System.Object]], 
 		["SetValueInternal$1", [System.Windows.DependencyProperty, System.Object, System.Boolean]]
@@ -8754,13 +8715,7 @@ System.Windows.DependencyObject._cctor = function () {
 	System.Windows.DependencyObject.PropertyReferencesHolder = new System.Windows.DependencyObject.ManagedReferencesToken();
 };
 
-$asm02.System.Windows.DependencyObject.ManagedReferencesToken.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$0.call(this);
-};
 
-System.Windows.UIElement.prototype._ctor = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.UIElement.prototype.add_MouseMove = function (value) {
 	System.Windows.DependencyObject.prototype.AddEventListener.call(this, System.Windows.DependencyProperty.RegisterCoreProperty(23010, null), value);
 };
@@ -9339,9 +9294,6 @@ System.Windows.UIElement._cctor = function () {
 	System.Windows.UIElement.TextInputUpdateEvent = new System.Windows.RoutedEvent("UIElement.TextInputUpdate");
 };
 
-System.Windows.FrameworkElement.prototype._ctor$0 = function (nKnownTypeIndex) {
-	System.Windows.UIElement.prototype._ctor.call(this, nKnownTypeIndex);
-};
 System.Windows.FrameworkElement.prototype.add_Loaded = function (value) {
 	System.Windows.DependencyObject.prototype.AddEventListener.call(this, System.Windows.DependencyProperty.RegisterCoreProperty(23050, null), value);
 };
@@ -9437,9 +9389,6 @@ System.Windows.FrameworkElement.prototype.get_FlowDirection = function () {
 };
 System.Windows.FrameworkElement.prototype.set_FlowDirection = function (value) {
 	System.Windows.DependencyObject.prototype.SetValue.call(this, System.Windows.FrameworkElement.FlowDirectionProperty, value);
-};
-System.Windows.FrameworkElement.prototype._ctor$1 = function () {
-	this._ctor$0(67);
 };
 System.Windows.FrameworkElement.prototype.get_Name = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.FrameworkElement.NameProperty), System.String);
@@ -9812,10 +9761,6 @@ System.Windows.FrameworkElement.prototype.add__sizeChanged = function (value) {
 System.Windows.FrameworkElement.prototype.remove__sizeChanged = function (value) {
 	this._sizeChanged = System.Delegate.Remove(this._sizeChanged, value);
 };
-JSIL.OverloadedMethod(System.Windows.FrameworkElement.prototype, "_ctor", [
-		["_ctor$0", [System.UInt32]], 
-		["_ctor$1", []]
-	]);
 JSIL.MakeProperty(System.Windows.FrameworkElement.prototype, "Triggers", 
 	System.Windows.FrameworkElement.prototype.get_Triggers, null);
 JSIL.MakeProperty(System.Windows.FrameworkElement.prototype, "Resources", 
@@ -9934,13 +9879,6 @@ $asm02.System.Windows.FrameworkElement.WeakRefSTRUCT.prototype._ctor = function 
 $asm02.System.Windows.FrameworkElement.WeakRefSTRUCT.prototype._weakRefObject = null;
 $asm02.System.Windows.FrameworkElement.WeakRefSTRUCT.prototype._actualObject = null;
 
-System.Windows.PresentationFrameworkCollection$b1.prototype._ctor$0 = function () {
-	this._ctor$1(2);
-};
-System.Windows.PresentationFrameworkCollection$b1.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
-	this._version = 0;
-};
 System.Windows.PresentationFrameworkCollection$b1.prototype.AddImpl = function (value) {
 	if (!((value === null) || JSIL.TryCast(value, this.T))) {
 		throw JSIL.New(System.ArgumentException, "_ctor$4", [$asm02.System.Windows.Resx.GetString$2("InvalidArgument"), "value"]);
@@ -10279,10 +10217,6 @@ System.Windows.PresentationFrameworkCollection$b1.prototype.NotifyCountChanged =
 		this.OnPropertyChanged(System.Windows.PresentationFrameworkCollection$b1.Of(this.T).CountProperty);
 	}
 };
-JSIL.OverloadedMethod(System.Windows.PresentationFrameworkCollection$b1.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.OverloadedMethod(System.Windows.PresentationFrameworkCollection$b1.prototype, "CopyTo", [
 		["CopyTo$0", [System.Array.Of(JSIL.AnyType), System.Int32]], 
 		["CopyTo$1", [System.Array, System.Int32]]
@@ -10362,9 +10296,6 @@ $asm02.System.Windows.PresentationFrameworkCollection$b1.CollectionEnum$b1.proto
 $asm02.System.Windows.PresentationFrameworkCollection$b1.CollectionEnum$b1.prototype.position = 0;
 $asm02.System.Windows.PresentationFrameworkCollection$b1.CollectionEnum$b1.prototype._version = 0;
 
-System.Windows.TriggerCollection.prototype._ctor = function () {
-	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.TriggerBase).prototype._ctor$1.call(this, 56);
-};
 System.Windows.TriggerCollection.prototype.AddInternal = function (value) {
 	this.AddDependencyObject(value);
 };
@@ -10387,20 +10318,7 @@ System.Windows.TriggerCollection.prototype.SetItemImplSkipMethodPack = function 
 	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.TriggerBase).prototype.SetItemDependencyObject.call(this, index, value);
 };
 
-System.Windows.TriggerBase.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 270);
-};
-System.Windows.TriggerBase.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
-JSIL.OverloadedMethod(System.Windows.TriggerBase.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 
-System.Windows.EventTrigger.prototype._ctor = function () {
-	System.Windows.TriggerBase.prototype._ctor$1.call(this, 55);
-};
 System.Windows.EventTrigger.prototype.get_Actions = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.EventTrigger.ActionsProperty), System.Windows.TriggerActionCollection);
 };
@@ -10421,9 +10339,6 @@ System.Windows.EventTrigger._cctor = function () {
 	System.Windows.EventTrigger.RoutedEventProperty = System.Windows.DependencyProperty.RegisterCoreProperty(14400, System.Windows.RoutedEvent);
 };
 
-System.Windows.TriggerActionCollection.prototype._ctor = function () {
-	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.TriggerAction).prototype._ctor$1.call(this, 64);
-};
 System.Windows.TriggerActionCollection.prototype.AddInternal = function (value) {
 	this.AddDependencyObject(value);
 };
@@ -10446,16 +10361,6 @@ System.Windows.TriggerActionCollection.prototype.SetItemImplSkipMethodPack = fun
 	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.TriggerAction).prototype.SetItemDependencyObject.call(this, index, value);
 };
 
-System.Windows.TriggerAction.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 271);
-};
-System.Windows.TriggerAction.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
-JSIL.OverloadedMethod(System.Windows.TriggerAction.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 
 System.Windows.RoutedEventArgs.prototype._ctor = function () {
 	System.EventArgs.prototype._ctor.call(this);
@@ -10600,9 +10505,6 @@ System.Windows.MediaFailedRoutedEventArgs._cctor = function () {
 	System.Windows.MediaFailedRoutedEventArgs.ErrorTraceProperty = System.Windows.DependencyProperty.RegisterCoreProperty(16919, System.String);
 };
 
-System.Windows.AssemblyPart.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 162);
-};
 System.Windows.AssemblyPart.prototype.get_Source = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.AssemblyPart.SourceProperty), System.String);
 };
@@ -10635,9 +10537,6 @@ System.Windows.AssemblyPart._cctor = function () {
 	System.Windows.AssemblyPart.SourceProperty = System.Windows.DependencyProperty.RegisterCoreProperty(19100, System.String);
 };
 
-System.Windows.AssemblyPartCollection.prototype._ctor = function () {
-	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.AssemblyPart).prototype._ctor$1.call(this, 163);
-};
 System.Windows.AssemblyPartCollection.prototype.AddInternal = function (value) {
 	this.AddDependencyObject(value);
 };
@@ -10684,22 +10583,12 @@ JSIL.MakeProperty(System.Windows.StartupEventArgs.prototype, "IManagedPeerBase_N
 JSIL.MakeProperty(System.Windows.StartupEventArgs.prototype, "InitParams", 
 	System.Windows.StartupEventArgs.prototype.get_InitParams, null);
 
-System.Windows.FrameworkTemplate.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 187);
-};
-System.Windows.FrameworkTemplate.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.FrameworkTemplate.prototype.get_Template = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.FrameworkTemplate.TemplateProperty), $asm02.MS.Internal.TemplateContent);
 };
 System.Windows.FrameworkTemplate.prototype.set_Template = function (value) {
 	System.Windows.DependencyObject.prototype.SetValue.call(this, System.Windows.FrameworkTemplate.TemplateProperty, value);
 };
-JSIL.OverloadedMethod(System.Windows.FrameworkTemplate.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.MakeProperty(System.Windows.FrameworkTemplate.prototype, "Template", 
 	System.Windows.FrameworkTemplate.prototype.get_Template, System.Windows.FrameworkTemplate.prototype.set_Template);
 System.Windows.FrameworkTemplate.TemplateProperty = null;
@@ -10708,19 +10597,9 @@ System.Windows.FrameworkTemplate._cctor = function () {
 	System.Windows.FrameworkTemplate.TemplateProperty = System.Windows.DependencyProperty.RegisterCoreProperty(27060, MS.Internal.TemplateContent);
 };
 
-System.Windows.DataTemplate.prototype._ctor$0 = function () {
-	System.Windows.FrameworkTemplate.prototype._ctor$1.call(this, 192);
-};
-System.Windows.DataTemplate.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.FrameworkTemplate.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.DataTemplate.prototype.LoadContent = function () {
 	return $asm02.MS.Internal.XcpImports.DataTemplate_LoadContent(this);
 };
-JSIL.OverloadedMethod(System.Windows.DataTemplate.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 
 System.Windows.SizeChangedEventArgs.prototype._ctor = function () {
 	System.Windows.RoutedEventArgs.prototype._ctor.call(this);
@@ -10749,9 +10628,6 @@ System.Windows.SizeChangedEventArgs._cctor = function () {
 	System.Windows.SizeChangedEventArgs.NewSizeProperty = System.Windows.DependencyProperty.RegisterCoreProperty(19703, System.Windows.Size);
 };
 
-System.Windows.Style.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 225);
-};
 System.Windows.Style.prototype.get_IsSealed = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Style.IsSealedProperty), System.Boolean);
 };
@@ -10767,10 +10643,6 @@ System.Windows.Style.prototype.set_BasedOn = function (value) {
 System.Windows.Style.prototype.Seal = function () {
 	$asm02.MS.Internal.XcpImports.Style_Seal(this);
 };
-System.Windows.Style.prototype._ctor$1 = function (targetType) {
-	this._ctor$0();
-	this.TargetType = targetType;
-};
 System.Windows.Style.prototype.get_TargetType = function () {
 	var typeProxy = JSIL.TryCast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Style.TargetTypeProperty), $asm02.MS.Internal.TypeProxy);
 	if (typeProxy === null) {
@@ -10781,10 +10653,6 @@ System.Windows.Style.prototype.get_TargetType = function () {
 System.Windows.Style.prototype.set_TargetType = function (value) {
 	System.Windows.DependencyObject.prototype.SetValue.call(this, System.Windows.Style.TargetTypeProperty, $asm02.MS.Internal.TypeProxy.CreateProxyForType(value));
 };
-JSIL.OverloadedMethod(System.Windows.Style.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.Type]]
-	]);
 JSIL.MakeProperty(System.Windows.Style.prototype, "IsSealed", 
 	System.Windows.Style.prototype.get_IsSealed, null);
 JSIL.MakeProperty(System.Windows.Style.prototype, "Setters", 
@@ -10804,9 +10672,6 @@ System.Windows.Style._cctor = function () {
 	System.Windows.Style.TargetTypeProperty = System.Windows.DependencyProperty.RegisterCoreProperty(19612, System.Type);
 };
 
-System.Windows.SetterBase.prototype._ctor = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.SetterBase.prototype.get_IsSealed = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.SetterBase.IsSealedProperty), System.Boolean);
 };
@@ -10817,14 +10682,6 @@ System.Windows.SetterBase._cctor = function () {
 	System.Windows.SetterBase.IsSealedProperty = System.Windows.DependencyProperty.RegisterCoreProperty(19620, System.Boolean);
 };
 
-System.Windows.Setter.prototype._ctor$0 = function () {
-	System.Windows.SetterBase.prototype._ctor.call(this, 218);
-};
-System.Windows.Setter.prototype._ctor$1 = function (property, value) {
-	this._ctor$0();
-	this.Property = property;
-	this.Value = value;
-};
 System.Windows.Setter.prototype.get_Value = function () {
 	return System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Setter.ValueProperty);
 };
@@ -10841,10 +10698,6 @@ System.Windows.Setter.prototype.get_Property = function () {
 System.Windows.Setter.prototype.set_Property = function (value) {
 	System.Windows.DependencyObject.prototype.SetValue.call(this, System.Windows.Setter.PropertyProperty, $asm02.MS.Internal.DependencyPropertyProxy.CreateProxyForDependencyProperty(value));
 };
-JSIL.OverloadedMethod(System.Windows.Setter.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.Windows.DependencyProperty, System.Object]]
-	]);
 JSIL.MakeProperty(System.Windows.Setter.prototype, "Value", 
 	System.Windows.Setter.prototype.get_Value, System.Windows.Setter.prototype.set_Value);
 JSIL.MakeProperty(System.Windows.Setter.prototype, "Property", 
@@ -10856,12 +10709,6 @@ System.Windows.Setter._cctor = function () {
 	System.Windows.Setter.ValueProperty = System.Windows.DependencyProperty.RegisterCoreProperty(19631, System.Object);
 };
 
-System.Windows.SetterBaseCollection.prototype._ctor$0 = function () {
-	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.SetterBase).prototype._ctor$1.call(this, 219);
-};
-System.Windows.SetterBaseCollection.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.SetterBase).prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.SetterBaseCollection.prototype.AddInternal = function (value) {
 	this.AddDependencyObject(value);
 };
@@ -10886,10 +10733,6 @@ System.Windows.SetterBaseCollection.prototype.SetItemImplSkipMethodPack = functi
 System.Windows.SetterBaseCollection.prototype.get_IsSealed = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.SetterBaseCollection.IsSealedProperty), System.Boolean);
 };
-JSIL.OverloadedMethod(System.Windows.SetterBaseCollection.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.MakeProperty(System.Windows.SetterBaseCollection.prototype, "IsSealed", 
 	System.Windows.SetterBaseCollection.prototype.get_IsSealed, null);
 System.Windows.SetterBaseCollection.IsSealedProperty = null;
@@ -10897,9 +10740,6 @@ System.Windows.SetterBaseCollection._cctor = function () {
 	System.Windows.SetterBaseCollection.IsSealedProperty = System.Windows.DependencyProperty.RegisterCoreProperty(19640, System.Boolean);
 };
 
-System.Windows.VisualState.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 258);
-};
 System.Windows.VisualState.prototype.get_Storyboard = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.VisualState.StoryboardProperty), System.Windows.Media.Animation.Storyboard);
 };
@@ -10928,9 +10768,6 @@ System.Windows.VisualState._cctor = function () {
 	System.Windows.VisualState.__DeferredStoryboardProperty = System.Windows.DependencyProperty.RegisterCoreProperty(21016, $asm02.MS.Internal.TemplateContent);
 };
 
-System.Windows.OutOfBrowserSettings.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 316);
-};
 System.Windows.OutOfBrowserSettings.prototype.get_ShortName = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.OutOfBrowserSettings.ShortNameProperty), System.String);
 };
@@ -10983,9 +10820,6 @@ System.Windows.OutOfBrowserSettings._cctor = function () {
 	System.Windows.OutOfBrowserSettings.SecuritySettingsProperty = System.Windows.DependencyProperty.RegisterCoreProperty(22107, System.Windows.SecuritySettings);
 };
 
-System.Windows.IconCollection.prototype._ctor = function () {
-	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Icon).prototype._ctor$1.call(this, 317);
-};
 System.Windows.IconCollection.prototype.AddInternal = function (value) {
 	this.AddDependencyObject(value);
 };
@@ -11008,9 +10842,6 @@ System.Windows.IconCollection.prototype.SetItemImplSkipMethodPack = function (in
 	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Icon).prototype.SetItemDependencyObject.call(this, index, value);
 };
 
-System.Windows.Icon.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 318);
-};
 System.Windows.Icon.prototype.get_Size = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Icon.SizeProperty), System.Windows.Size);
 };
@@ -11028,9 +10859,6 @@ System.Windows.Icon._cctor = function () {
 	System.Windows.Icon.SourceProperty = System.Windows.DependencyProperty.RegisterCoreProperty(22021, System.Uri);
 };
 
-System.Windows.WindowSettings.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 321);
-};
 System.Windows.WindowSettings.prototype.get_Height = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.WindowSettings.HeightProperty), System.Double);
 };
@@ -11083,9 +10911,6 @@ System.Windows.WindowSettings._cctor = function () {
 	System.Windows.WindowSettings.WindowStartupLocationProperty = System.Windows.DependencyProperty.RegisterCoreProperty(22352, System.Windows.WindowStartupLocation);
 };
 
-System.Windows.SecuritySettings.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 351);
-};
 System.Windows.SecuritySettings.prototype.get_ElevatedPermissions = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.SecuritySettings.ElevatedPermissionsProperty), System.Windows.ElevatedPermissions);
 };
@@ -11096,9 +10921,6 @@ System.Windows.SecuritySettings._cctor = function () {
 	System.Windows.SecuritySettings.ElevatedPermissionsProperty = System.Windows.DependencyProperty.RegisterCoreProperty(22108, System.Windows.ElevatedPermissions);
 };
 
-System.Windows.VisualStateGroup.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 322);
-};
 System.Windows.VisualStateGroup.prototype.get_Name = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.FrameworkElement.NameProperty), System.String);
 };
@@ -11186,12 +11008,6 @@ System.Windows.VisualStateGroup._cctor = function () {
 	System.Windows.VisualStateGroup.StatesProperty = System.Windows.DependencyProperty.RegisterCoreProperty(21005, $asm02.MS.Internal.VisualStateCollection);
 };
 
-System.Windows.VisualTransition.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 323);
-};
-System.Windows.VisualTransition.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.VisualTransition.prototype.get_GeneratedDuration = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.VisualTransition.GeneratedDurationProperty), System.Windows.Duration);
 };
@@ -11222,10 +11038,6 @@ System.Windows.VisualTransition.prototype.get_GeneratedEasingFunction = function
 System.Windows.VisualTransition.prototype.set_GeneratedEasingFunction = function (value) {
 	System.Windows.DependencyObject.prototype.SetValue.call(this, System.Windows.VisualTransition.GeneratedEasingFunctionProperty, value);
 };
-JSIL.OverloadedMethod(System.Windows.VisualTransition.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.MakeProperty(System.Windows.VisualTransition.prototype, "GeneratedDuration", 
 	System.Windows.VisualTransition.prototype.get_GeneratedDuration, System.Windows.VisualTransition.prototype.set_GeneratedDuration);
 JSIL.MakeProperty(System.Windows.VisualTransition.prototype, "To", 
@@ -11370,9 +11182,6 @@ System.Windows.CheckAndDownloadUpdateCompletedEventArgs._cctor = function () {
 	System.Windows.CheckAndDownloadUpdateCompletedEventArgs.UpdateHRProperty = System.Windows.DependencyProperty.RegisterCoreProperty(24515, System.Int32);
 };
 
-System.Windows.NotificationWindow.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 378);
-};
 System.Windows.NotificationWindow.prototype.Show = function (durationInMilliseconds) {
 	if (!((durationInMilliseconds >= 0) && (durationInMilliseconds <= 30000))) {
 		throw JSIL.New(System.ArgumentOutOfRangeException, "_ctor$1", [$asm02.System.Windows.Resx.GetString$0("NotificationWindow_ValueOutOfRange", [0, 30000])]);
@@ -11507,9 +11316,6 @@ System.Windows.NotificationWindow._cctor = function () {
 	System.Windows.NotificationWindow.HeightProperty = System.Windows.DependencyProperty.RegisterCoreProperty(22262, System.Double);
 };
 
-System.Windows.Window.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 353);
-};
 System.Windows.Window.prototype.Activate = function () {
 	if (System.Windows.Application.Current.IsRunningOutOfBrowser) {
 		$asm02.MS.Internal.XcpImports.CheckThread();
@@ -11772,12 +11578,6 @@ System.Windows.Window._cctor = function () {
 	System.Windows.Window.ChromeWidthProperty = System.Windows.DependencyProperty.RegisterCoreProperty(22310, System.Double);
 };
 
-System.Windows.VisualStateManager.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 385);
-};
-System.Windows.VisualStateManager.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.VisualStateManager.GoToState = function (control, stateName, useTransitions) {
 	var flag = new JSIL.Variable(false), group = new JSIL.Variable(null), visualState = new JSIL.Variable(null), group2 = new JSIL.Variable(null), state = new JSIL.Variable(null);
 	if (control === null) {
@@ -11939,10 +11739,6 @@ System.Windows.VisualStateManager.prototype.RaiseCurrentStateChanged = function 
 	}
 	stateGroup.RaiseCurrentStateChanged(implementationRoot, oldState, newState, control);
 };
-JSIL.OverloadedMethod(System.Windows.VisualStateManager.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 System.Windows.VisualStateManager.CustomVisualStateManagerProperty = null;
 System.Windows.VisualStateManager.VisualStateGroupsProperty = null;
 System.Windows.VisualStateManager._cctor = function () {
@@ -11952,9 +11748,6 @@ System.Windows.VisualStateManager._cctor = function () {
 	System.Windows.VisualStateManager.DurationZero = new System.Windows.Duration(System.TimeSpan.Zero);
 };
 
-System.Windows.Ink.StrokeCollection.prototype._ctor = function () {
-	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Ink.Stroke).prototype._ctor$1.call(this, 137);
-};
 System.Windows.Ink.StrokeCollection.prototype.AddInternal = function (value) {
 	this.AddImpl(value);
 };
@@ -11983,9 +11776,6 @@ System.Windows.Ink.StrokeCollection.prototype.HitTest = function (stylusPointCol
 	return $asm02.MS.Internal.XcpImports.StrokeCollection_HitTest(this, stylusPointCollection);
 };
 
-System.Windows.Ink.DrawingAttributes.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 141);
-};
 System.Windows.Ink.DrawingAttributes.prototype.get_Color = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Ink.DrawingAttributes.ColorProperty), System.Windows.Media.Color);
 };
@@ -12029,9 +11819,6 @@ System.Windows.Ink.DrawingAttributes._cctor = function () {
 	System.Windows.Ink.DrawingAttributes.HeightProperty = System.Windows.DependencyProperty.RegisterCoreProperty(17132, System.Double);
 };
 
-System.Windows.Media.DoubleCollection.prototype._ctor = function () {
-	System.Windows.PresentationFrameworkCollection$b1.Of(System.Double).prototype._ctor$1.call(this, 57);
-};
 System.Windows.Media.DoubleCollection.prototype.AddInternal = function (value) {
 	System.Windows.PresentationFrameworkCollection$b1.Of(System.Double).prototype.AddDouble.call(this, value);
 };
@@ -12054,9 +11841,6 @@ System.Windows.Media.DoubleCollection.prototype.SetItemImplSkipMethodPack = func
 	System.Windows.PresentationFrameworkCollection$b1.Of(System.Double).prototype.SetItemDouble.call(this, index, value);
 };
 
-System.Windows.Media.PointCollection.prototype._ctor = function () {
-	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Point).prototype._ctor$1.call(this, 58);
-};
 System.Windows.Media.PointCollection.prototype.AddInternal = function (value) {
 	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Point).prototype.AddPoint.call(this, value);
 };
@@ -12079,12 +11863,6 @@ System.Windows.Media.PointCollection.prototype.SetItemImplSkipMethodPack = funct
 	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Point).prototype.SetItemPoint.call(this, index, value);
 };
 
-System.Windows.Media.GeneralTransform.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 176);
-};
-System.Windows.Media.GeneralTransform.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Media.GeneralTransform.prototype.Transform = function (point) {
 	var result = new JSIL.Variable(new System.Windows.Point());
 	if (!this.TryTransform(point, /* ref */ result)) {
@@ -12092,16 +11870,9 @@ System.Windows.Media.GeneralTransform.prototype.Transform = function (point) {
 	}
 	return result.value;
 };
-JSIL.OverloadedMethod(System.Windows.Media.GeneralTransform.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.MakeProperty(System.Windows.Media.GeneralTransform.prototype, "Inverse", 
 	System.Windows.Media.GeneralTransform.prototype.get_Inverse, null);
 
-System.Windows.Media.Transform.prototype._ctor = function (nKnownTypeIndex) {
-	System.Windows.Media.GeneralTransform.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Media.Transform.prototype.TryTransform = function (inPoint, /* ref */ outPoint) {
 	try {
 		outPoint.value = this.TransformNative(inPoint).MemberwiseClone();
@@ -12134,16 +11905,7 @@ System.Windows.Media.Transform.prototype.get_Inverse = function () {
 JSIL.MakeProperty(System.Windows.Media.Transform.prototype, "Inverse", 
 	System.Windows.Media.Transform.prototype.get_Inverse, null);
 
-System.Windows.Media.PathSegment.prototype._ctor = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 
-System.Windows.Media.Brush.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 33);
-};
-System.Windows.Media.Brush.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Media.Brush.prototype.get_Opacity = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Brush.OpacityProperty), System.Double);
 };
@@ -12162,10 +11924,6 @@ System.Windows.Media.Brush.prototype.get_RelativeTransform = function () {
 System.Windows.Media.Brush.prototype.set_RelativeTransform = function (value) {
 	System.Windows.DependencyObject.prototype.SetValue.call(this, System.Windows.Media.Brush.RelativeTransformProperty, value);
 };
-JSIL.OverloadedMethod(System.Windows.Media.Brush.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.MakeProperty(System.Windows.Media.Brush.prototype, "Opacity", 
 	System.Windows.Media.Brush.prototype.get_Opacity, System.Windows.Media.Brush.prototype.set_Opacity);
 JSIL.MakeProperty(System.Windows.Media.Brush.prototype, "Transform", 
@@ -12181,12 +11939,6 @@ System.Windows.Media.Brush._cctor = function () {
 	System.Windows.Media.Brush.RelativeTransformProperty = System.Windows.DependencyProperty.RegisterCoreProperty(12202, System.Windows.Media.Transform);
 };
 
-System.Windows.Media.TileBrush.prototype._ctor$0 = function () {
-	System.Windows.Media.Brush.prototype._ctor$1.call(this, 102);
-};
-System.Windows.Media.TileBrush.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.Media.Brush.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Media.TileBrush.prototype.get_AlignmentX = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.TileBrush.AlignmentXProperty), System.Windows.Media.AlignmentX);
 };
@@ -12205,10 +11957,6 @@ System.Windows.Media.TileBrush.prototype.get_Stretch = function () {
 System.Windows.Media.TileBrush.prototype.set_Stretch = function (value) {
 	System.Windows.DependencyObject.prototype.SetValue.call(this, System.Windows.Media.TileBrush.StretchProperty, value);
 };
-JSIL.OverloadedMethod(System.Windows.Media.TileBrush.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.MakeProperty(System.Windows.Media.TileBrush.prototype, "AlignmentX", 
 	System.Windows.Media.TileBrush.prototype.get_AlignmentX, System.Windows.Media.TileBrush.prototype.set_AlignmentX);
 JSIL.MakeProperty(System.Windows.Media.TileBrush.prototype, "AlignmentY", 
@@ -12224,9 +11972,6 @@ System.Windows.Media.TileBrush._cctor = function () {
 	System.Windows.Media.TileBrush.StretchProperty = System.Windows.DependencyProperty.RegisterCoreProperty(12802, System.Windows.Media.Stretch);
 };
 
-System.Windows.Media.Geometry.prototype._ctor = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Media.Geometry.prototype.get_Transform = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Geometry.TransformProperty), System.Windows.Media.Transform);
 };
@@ -12257,13 +12002,7 @@ System.Windows.Media.Geometry._cctor = function () {
 	System.Windows.Media.Geometry.BoundsProperty = System.Windows.DependencyProperty.RegisterCoreProperty(11602, System.Windows.Rect);
 };
 
-System.Windows.Media.ImageSource.prototype._ctor = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 
-System.Windows.Media.RotateTransform.prototype._ctor = function () {
-	System.Windows.Media.Transform.prototype._ctor.call(this, 17);
-};
 System.Windows.Media.RotateTransform.prototype.get_CenterX = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.RotateTransform.CenterXProperty), System.Double);
 };
@@ -12297,9 +12036,6 @@ System.Windows.Media.RotateTransform._cctor = function () {
 	System.Windows.Media.RotateTransform.AngleProperty = System.Windows.DependencyProperty.RegisterCoreProperty(10102, System.Double);
 };
 
-System.Windows.Media.ScaleTransform.prototype._ctor = function () {
-	System.Windows.Media.Transform.prototype._ctor.call(this, 18);
-};
 System.Windows.Media.ScaleTransform.prototype.get_CenterX = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.ScaleTransform.CenterXProperty), System.Double);
 };
@@ -12343,9 +12079,6 @@ System.Windows.Media.ScaleTransform._cctor = function () {
 	System.Windows.Media.ScaleTransform.ScaleYProperty = System.Windows.DependencyProperty.RegisterCoreProperty(10203, System.Double);
 };
 
-System.Windows.Media.SkewTransform.prototype._ctor = function () {
-	System.Windows.Media.Transform.prototype._ctor.call(this, 19);
-};
 System.Windows.Media.SkewTransform.prototype.get_CenterX = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.SkewTransform.CenterXProperty), System.Double);
 };
@@ -12389,9 +12122,6 @@ System.Windows.Media.SkewTransform._cctor = function () {
 	System.Windows.Media.SkewTransform.AngleYProperty = System.Windows.DependencyProperty.RegisterCoreProperty(10303, System.Double);
 };
 
-System.Windows.Media.TranslateTransform.prototype._ctor = function () {
-	System.Windows.Media.Transform.prototype._ctor.call(this, 20);
-};
 System.Windows.Media.TranslateTransform.prototype.get_X = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.TranslateTransform.XProperty), System.Double);
 };
@@ -12415,9 +12145,6 @@ System.Windows.Media.TranslateTransform._cctor = function () {
 	System.Windows.Media.TranslateTransform.YProperty = System.Windows.DependencyProperty.RegisterCoreProperty(10401, System.Double);
 };
 
-System.Windows.Media.TransformCollection.prototype._ctor = function () {
-	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Media.Transform).prototype._ctor$1.call(this, 59);
-};
 System.Windows.Media.TransformCollection.prototype.AddInternal = function (value) {
 	this.AddDependencyObject(value);
 };
@@ -12440,9 +12167,6 @@ System.Windows.Media.TransformCollection.prototype.SetItemImplSkipMethodPack = f
 	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Media.Transform).prototype.SetItemDependencyObject.call(this, index, value);
 };
 
-System.Windows.Media.TransformGroup.prototype._ctor = function () {
-	System.Windows.Media.Transform.prototype._ctor.call(this, 16);
-};
 System.Windows.Media.TransformGroup.prototype.get_Children = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.TransformGroup.ChildrenProperty), System.Windows.Media.TransformCollection);
 };
@@ -12463,9 +12187,6 @@ System.Windows.Media.TransformGroup._cctor = function () {
 	System.Windows.Media.TransformGroup.ValueProperty = System.Windows.DependencyProperty.RegisterCoreProperty(10501, System.Windows.Media.Matrix);
 };
 
-System.Windows.Media.MatrixTransform.prototype._ctor = function () {
-	System.Windows.Media.Transform.prototype._ctor.call(this, 101);
-};
 System.Windows.Media.MatrixTransform.prototype.get_Matrix = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.MatrixTransform.MatrixProperty), System.Windows.Media.Matrix);
 };
@@ -12479,9 +12200,6 @@ System.Windows.Media.MatrixTransform._cctor = function () {
 	System.Windows.Media.MatrixTransform.MatrixProperty = System.Windows.DependencyProperty.RegisterCoreProperty(10600, System.Windows.Media.Matrix);
 };
 
-System.Windows.Media.CompositeTransform.prototype._ctor = function () {
-	System.Windows.Media.Transform.prototype._ctor.call(this, 375);
-};
 System.Windows.Media.CompositeTransform.prototype.get_CenterX = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.CompositeTransform.CenterXProperty), System.Double);
 };
@@ -12575,9 +12293,6 @@ System.Windows.Media.CompositeTransform._cctor = function () {
 	System.Windows.Media.CompositeTransform.TranslateYProperty = System.Windows.DependencyProperty.RegisterCoreProperty(10418, System.Double);
 };
 
-System.Windows.Media.LineSegment.prototype._ctor = function () {
-	System.Windows.Media.PathSegment.prototype._ctor.call(this, 22);
-};
 System.Windows.Media.LineSegment.prototype.get_Point = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.LineSegment.PointProperty), System.Windows.Point);
 };
@@ -12591,9 +12306,6 @@ System.Windows.Media.LineSegment._cctor = function () {
 	System.Windows.Media.LineSegment.PointProperty = System.Windows.DependencyProperty.RegisterCoreProperty(10800, System.Windows.Point);
 };
 
-System.Windows.Media.BezierSegment.prototype._ctor = function () {
-	System.Windows.Media.PathSegment.prototype._ctor.call(this, 23);
-};
 System.Windows.Media.BezierSegment.prototype.get_Point1 = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.BezierSegment.Point1Property), System.Windows.Point);
 };
@@ -12627,9 +12339,6 @@ System.Windows.Media.BezierSegment._cctor = function () {
 	System.Windows.Media.BezierSegment.Point3Property = System.Windows.DependencyProperty.RegisterCoreProperty(10902, System.Windows.Point);
 };
 
-System.Windows.Media.QuadraticBezierSegment.prototype._ctor = function () {
-	System.Windows.Media.PathSegment.prototype._ctor.call(this, 24);
-};
 System.Windows.Media.QuadraticBezierSegment.prototype.get_Point1 = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.QuadraticBezierSegment.Point1Property), System.Windows.Point);
 };
@@ -12653,9 +12362,6 @@ System.Windows.Media.QuadraticBezierSegment._cctor = function () {
 	System.Windows.Media.QuadraticBezierSegment.Point2Property = System.Windows.DependencyProperty.RegisterCoreProperty(11001, System.Windows.Point);
 };
 
-System.Windows.Media.ArcSegment.prototype._ctor = function () {
-	System.Windows.Media.PathSegment.prototype._ctor.call(this, 25);
-};
 System.Windows.Media.ArcSegment.prototype.get_Point = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.ArcSegment.PointProperty), System.Windows.Point);
 };
@@ -12709,9 +12415,6 @@ System.Windows.Media.ArcSegment._cctor = function () {
 	System.Windows.Media.ArcSegment.SweepDirectionProperty = System.Windows.DependencyProperty.RegisterCoreProperty(11104, System.Windows.Media.SweepDirection);
 };
 
-System.Windows.Media.PolyLineSegment.prototype._ctor = function () {
-	System.Windows.Media.PathSegment.prototype._ctor.call(this, 26);
-};
 System.Windows.Media.PolyLineSegment.prototype.get_Points = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.PolyLineSegment.PointsProperty), System.Windows.Media.PointCollection);
 };
@@ -12725,9 +12428,6 @@ System.Windows.Media.PolyLineSegment._cctor = function () {
 	System.Windows.Media.PolyLineSegment.PointsProperty = System.Windows.DependencyProperty.RegisterCoreProperty(11200, System.Windows.Media.PointCollection);
 };
 
-System.Windows.Media.PolyBezierSegment.prototype._ctor = function () {
-	System.Windows.Media.PathSegment.prototype._ctor.call(this, 27);
-};
 System.Windows.Media.PolyBezierSegment.prototype.get_Points = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.PolyBezierSegment.PointsProperty), System.Windows.Media.PointCollection);
 };
@@ -12741,9 +12441,6 @@ System.Windows.Media.PolyBezierSegment._cctor = function () {
 	System.Windows.Media.PolyBezierSegment.PointsProperty = System.Windows.DependencyProperty.RegisterCoreProperty(11300, System.Windows.Media.PointCollection);
 };
 
-System.Windows.Media.PolyQuadraticBezierSegment.prototype._ctor = function () {
-	System.Windows.Media.PathSegment.prototype._ctor.call(this, 28);
-};
 System.Windows.Media.PolyQuadraticBezierSegment.prototype.get_Points = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.PolyQuadraticBezierSegment.PointsProperty), System.Windows.Media.PointCollection);
 };
@@ -12757,9 +12454,6 @@ System.Windows.Media.PolyQuadraticBezierSegment._cctor = function () {
 	System.Windows.Media.PolyQuadraticBezierSegment.PointsProperty = System.Windows.DependencyProperty.RegisterCoreProperty(11400, System.Windows.Media.PointCollection);
 };
 
-System.Windows.Media.PathSegmentCollection.prototype._ctor = function () {
-	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Media.PathSegment).prototype._ctor$1.call(this, 60);
-};
 System.Windows.Media.PathSegmentCollection.prototype.AddInternal = function (value) {
 	this.AddDependencyObject(value);
 };
@@ -12782,9 +12476,6 @@ System.Windows.Media.PathSegmentCollection.prototype.SetItemImplSkipMethodPack =
 	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Media.PathSegment).prototype.SetItemDependencyObject.call(this, index, value);
 };
 
-System.Windows.Media.PathFigure.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 29);
-};
 System.Windows.Media.PathFigure.prototype.get_Segments = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.PathFigure.SegmentsProperty), System.Windows.Media.PathSegmentCollection);
 };
@@ -12828,9 +12519,6 @@ System.Windows.Media.PathFigure._cctor = function () {
 	System.Windows.Media.PathFigure.IsFilledProperty = System.Windows.DependencyProperty.RegisterCoreProperty(11503, System.Boolean);
 };
 
-System.Windows.Media.PathFigureCollection.prototype._ctor = function () {
-	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Media.PathFigure).prototype._ctor$1.call(this, 61);
-};
 System.Windows.Media.PathFigureCollection.prototype.AddInternal = function (value) {
 	this.AddDependencyObject(value);
 };
@@ -12853,9 +12541,6 @@ System.Windows.Media.PathFigureCollection.prototype.SetItemImplSkipMethodPack = 
 	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Media.PathFigure).prototype.SetItemDependencyObject.call(this, index, value);
 };
 
-System.Windows.Media.PathGeometry.prototype._ctor = function () {
-	System.Windows.Media.Geometry.prototype._ctor.call(this, 31);
-};
 System.Windows.Media.PathGeometry.prototype.get_FillRule = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.PathGeometry.FillRuleProperty), System.Windows.Media.FillRule);
 };
@@ -12885,9 +12570,6 @@ System.Windows.Media.PathGeometry._cctor = function () {
 	System.Windows.Media.PathGeometry.FiguresProperty = System.Windows.DependencyProperty.RegisterCoreProperty(11700, System.Windows.Media.PathFigureCollection);
 };
 
-System.Windows.Media.EllipseGeometry.prototype._ctor = function () {
-	System.Windows.Media.Geometry.prototype._ctor.call(this, 96);
-};
 System.Windows.Media.EllipseGeometry.prototype.get_Center = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.EllipseGeometry.CenterProperty), System.Windows.Point);
 };
@@ -12921,9 +12603,6 @@ System.Windows.Media.EllipseGeometry._cctor = function () {
 	System.Windows.Media.EllipseGeometry.RadiusYProperty = System.Windows.DependencyProperty.RegisterCoreProperty(11802, System.Double);
 };
 
-System.Windows.Media.RectangleGeometry.prototype._ctor = function () {
-	System.Windows.Media.Geometry.prototype._ctor.call(this, 97);
-};
 System.Windows.Media.RectangleGeometry.prototype.get_Rect = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.RectangleGeometry.RectProperty), System.Windows.Rect);
 };
@@ -12957,9 +12636,6 @@ System.Windows.Media.RectangleGeometry._cctor = function () {
 	System.Windows.Media.RectangleGeometry.RadiusYProperty = System.Windows.DependencyProperty.RegisterCoreProperty(11902, System.Double);
 };
 
-System.Windows.Media.LineGeometry.prototype._ctor = function () {
-	System.Windows.Media.Geometry.prototype._ctor.call(this, 98);
-};
 System.Windows.Media.LineGeometry.prototype.get_StartPoint = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.LineGeometry.StartPointProperty), System.Windows.Point);
 };
@@ -12983,9 +12659,6 @@ System.Windows.Media.LineGeometry._cctor = function () {
 	System.Windows.Media.LineGeometry.EndPointProperty = System.Windows.DependencyProperty.RegisterCoreProperty(12001, System.Windows.Point);
 };
 
-System.Windows.Media.GeometryCollection.prototype._ctor = function () {
-	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Media.Geometry).prototype._ctor$1.call(this, 62);
-};
 System.Windows.Media.GeometryCollection.prototype.AddInternal = function (value) {
 	this.AddDependencyObject(value);
 };
@@ -13008,9 +12681,6 @@ System.Windows.Media.GeometryCollection.prototype.SetItemImplSkipMethodPack = fu
 	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Media.Geometry).prototype.SetItemDependencyObject.call(this, index, value);
 };
 
-System.Windows.Media.GeometryGroup.prototype._ctor = function () {
-	System.Windows.Media.Geometry.prototype._ctor.call(this, 32);
-};
 System.Windows.Media.GeometryGroup.prototype.get_FillRule = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.GeometryGroup.FillRuleProperty), System.Windows.Media.FillRule);
 };
@@ -13034,23 +12704,12 @@ System.Windows.Media.GeometryGroup._cctor = function () {
 	System.Windows.Media.GeometryGroup.ChildrenProperty = System.Windows.DependencyProperty.RegisterCoreProperty(12100, System.Windows.Media.GeometryCollection);
 };
 
-System.Windows.Media.SolidColorBrush.prototype._ctor$0 = function () {
-	System.Windows.Media.Brush.prototype._ctor$1.call(this, 34);
-};
 System.Windows.Media.SolidColorBrush.prototype.get_Color = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.SolidColorBrush.ColorProperty), System.Windows.Media.Color);
 };
 System.Windows.Media.SolidColorBrush.prototype.set_Color = function (value) {
 	System.Windows.DependencyObject.prototype.SetValue.call(this, System.Windows.Media.SolidColorBrush.ColorProperty, value);
 };
-System.Windows.Media.SolidColorBrush.prototype._ctor$1 = function (color) {
-	this._ctor$0();
-	(this.Color = color);
-};
-JSIL.OverloadedMethod(System.Windows.Media.SolidColorBrush.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.Windows.Media.Color]]
-	]);
 JSIL.MakeProperty(System.Windows.Media.SolidColorBrush.prototype, "Color", 
 	System.Windows.Media.SolidColorBrush.prototype.get_Color, System.Windows.Media.SolidColorBrush.prototype.set_Color);
 System.Windows.Media.SolidColorBrush.ColorProperty = null;
@@ -13058,9 +12717,6 @@ System.Windows.Media.SolidColorBrush._cctor = function () {
 	System.Windows.Media.SolidColorBrush.ColorProperty = System.Windows.DependencyProperty.RegisterCoreProperty(12300, System.Windows.Media.Color);
 };
 
-System.Windows.Media.GradientStop.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 35);
-};
 System.Windows.Media.GradientStop.prototype.get_Color = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.GradientStop.ColorProperty), System.Windows.Media.Color);
 };
@@ -13084,9 +12740,6 @@ System.Windows.Media.GradientStop._cctor = function () {
 	System.Windows.Media.GradientStop.OffsetProperty = System.Windows.DependencyProperty.RegisterCoreProperty(12401, System.Double);
 };
 
-System.Windows.Media.GradientStopCollection.prototype._ctor = function () {
-	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Media.GradientStop).prototype._ctor$1.call(this, 63);
-};
 System.Windows.Media.GradientStopCollection.prototype.AddInternal = function (value) {
 	this.AddDependencyObject(value);
 };
@@ -13109,12 +12762,6 @@ System.Windows.Media.GradientStopCollection.prototype.SetItemImplSkipMethodPack 
 	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Media.GradientStop).prototype.SetItemDependencyObject.call(this, index, value);
 };
 
-System.Windows.Media.GradientBrush.prototype._ctor$0 = function () {
-	System.Windows.Media.Brush.prototype._ctor$1.call(this, 36);
-};
-System.Windows.Media.GradientBrush.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.Media.Brush.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Media.GradientBrush.prototype.get_SpreadMethod = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.GradientBrush.SpreadMethodProperty), System.Windows.Media.GradientSpreadMethod);
 };
@@ -13139,10 +12786,6 @@ System.Windows.Media.GradientBrush.prototype.get_GradientStops = function () {
 System.Windows.Media.GradientBrush.prototype.set_GradientStops = function (value) {
 	System.Windows.DependencyObject.prototype.SetValue.call(this, System.Windows.Media.GradientBrush.GradientStopsProperty, value);
 };
-JSIL.OverloadedMethod(System.Windows.Media.GradientBrush.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.MakeProperty(System.Windows.Media.GradientBrush.prototype, "SpreadMethod", 
 	System.Windows.Media.GradientBrush.prototype.get_SpreadMethod, System.Windows.Media.GradientBrush.prototype.set_SpreadMethod);
 JSIL.MakeProperty(System.Windows.Media.GradientBrush.prototype, "MappingMode", 
@@ -13162,10 +12805,6 @@ System.Windows.Media.GradientBrush._cctor = function () {
 	System.Windows.Media.GradientBrush.GradientStopsProperty = System.Windows.DependencyProperty.RegisterCoreProperty(12503, System.Windows.Media.GradientStopCollection);
 };
 
-System.Windows.Media.LinearGradientBrush.prototype._ctor$0 = function () {
-	this._endPointFromAngleMultiplier = 0.017453292519943295;
-	System.Windows.Media.GradientBrush.prototype._ctor$1.call(this, 37);
-};
 System.Windows.Media.LinearGradientBrush.prototype.get_StartPoint = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.LinearGradientBrush.StartPointProperty), System.Windows.Point);
 };
@@ -13178,19 +12817,10 @@ System.Windows.Media.LinearGradientBrush.prototype.get_EndPoint = function () {
 System.Windows.Media.LinearGradientBrush.prototype.set_EndPoint = function (value) {
 	System.Windows.DependencyObject.prototype.SetValue.call(this, System.Windows.Media.LinearGradientBrush.EndPointProperty, value);
 };
-System.Windows.Media.LinearGradientBrush.prototype._ctor$1 = function (gradientStopCollection, angle) {
-	this._ctor$0();
-	System.Windows.Media.GradientBrush.prototype.set_GradientStops.call(this, gradientStopCollection);
-	(this.EndPoint = this.EndPointFromAngle(angle).MemberwiseClone());
-};
 System.Windows.Media.LinearGradientBrush.prototype.EndPointFromAngle = function (angle) {
 	angle *= this._endPointFromAngleMultiplier;
 	return new System.Windows.Point(Math.cos(angle), Math.sin(angle));
 };
-JSIL.OverloadedMethod(System.Windows.Media.LinearGradientBrush.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.Windows.Media.GradientStopCollection, System.Double]]
-	]);
 JSIL.MakeProperty(System.Windows.Media.LinearGradientBrush.prototype, "StartPoint", 
 	System.Windows.Media.LinearGradientBrush.prototype.get_StartPoint, System.Windows.Media.LinearGradientBrush.prototype.set_StartPoint);
 JSIL.MakeProperty(System.Windows.Media.LinearGradientBrush.prototype, "EndPoint", 
@@ -13203,9 +12833,6 @@ System.Windows.Media.LinearGradientBrush._cctor = function () {
 	System.Windows.Media.LinearGradientBrush.EndPointProperty = System.Windows.DependencyProperty.RegisterCoreProperty(12601, System.Windows.Point);
 };
 
-System.Windows.Media.RadialGradientBrush.prototype._ctor$0 = function () {
-	System.Windows.Media.GradientBrush.prototype._ctor$1.call(this, 38);
-};
 System.Windows.Media.RadialGradientBrush.prototype.get_Center = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.RadialGradientBrush.CenterProperty), System.Windows.Point);
 };
@@ -13230,26 +12857,6 @@ System.Windows.Media.RadialGradientBrush.prototype.get_RadiusY = function () {
 System.Windows.Media.RadialGradientBrush.prototype.set_RadiusY = function (value) {
 	System.Windows.DependencyObject.prototype.SetValue.call(this, System.Windows.Media.RadialGradientBrush.RadiusYProperty, value);
 };
-System.Windows.Media.RadialGradientBrush.prototype._ctor$1 = function (gradientStopCollection) {
-	this._ctor$0();
-	System.Windows.Media.GradientBrush.prototype.set_GradientStops.call(this, gradientStopCollection);
-};
-System.Windows.Media.RadialGradientBrush.prototype._ctor$2 = function (startColor, endColor) {
-	this._ctor$0();
-	var gradientStop = new System.Windows.Media.GradientStop();
-	(gradientStop.Color = startColor);
-	gradientStop.Offset = 0;
-	var gradientStop2 = new System.Windows.Media.GradientStop();
-	(gradientStop2.Color = endColor);
-	gradientStop2.Offset = 1;
-	System.Windows.Media.GradientBrush.prototype.get_GradientStops.call(this).Add(gradientStop);
-	System.Windows.Media.GradientBrush.prototype.get_GradientStops.call(this).Add(gradientStop2);
-};
-JSIL.OverloadedMethod(System.Windows.Media.RadialGradientBrush.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.Windows.Media.GradientStopCollection]], 
-		["_ctor$2", [System.Windows.Media.Color, System.Windows.Media.Color]]
-	]);
 JSIL.MakeProperty(System.Windows.Media.RadialGradientBrush.prototype, "Center", 
 	System.Windows.Media.RadialGradientBrush.prototype.get_Center, System.Windows.Media.RadialGradientBrush.prototype.set_Center);
 JSIL.MakeProperty(System.Windows.Media.RadialGradientBrush.prototype, "GradientOrigin", 
@@ -13269,16 +12876,13 @@ System.Windows.Media.RadialGradientBrush._cctor = function () {
 	System.Windows.Media.RadialGradientBrush.RadiusYProperty = System.Windows.DependencyProperty.RegisterCoreProperty(12703, System.Double);
 };
 
-System.Windows.Media.ImageBrush.prototype._ctor = function () {
-	System.Windows.Media.TileBrush.prototype._ctor$1.call(this, 103);
-};
 System.Windows.Media.ImageBrush.prototype.get_ImageSource = function () {
 	if (!$asm02.MS.Internal.QuirksMode.ShouldReturnImageBrushImageSourceAsBitmapImage()) {
 		return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.ImageBrush.ImageSourceProperty), System.Windows.Media.ImageSource);
 	}
 	var bitmapImage = JSIL.TryCast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.ImageBrush.ImageSourceProperty), System.Windows.Media.Imaging.BitmapImage);
 	if (bitmapImage === null) {
-		return JSIL.New(System.Windows.Media.Imaging.BitmapImage, "_ctor$0", []);
+		return new System.Windows.Media.Imaging.BitmapImage();
 	}
 	return bitmapImage;
 };
@@ -13304,9 +12908,6 @@ System.Windows.Media.ImageBrush._cctor = function () {
 	System.Windows.Media.ImageBrush.ImageSourceProperty = System.Windows.DependencyProperty.RegisterCoreProperty(12900, System.Windows.Media.ImageSource);
 };
 
-System.Windows.Media.VideoBrush.prototype._ctor = function () {
-	System.Windows.Media.TileBrush.prototype._ctor$1.call(this, 134);
-};
 System.Windows.Media.VideoBrush.prototype.get_SourceName = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.VideoBrush.SourceNameProperty), System.String);
 };
@@ -13330,9 +12931,6 @@ System.Windows.Media.VideoBrush._cctor = function () {
 	System.Windows.Media.VideoBrush.SourceNameProperty = System.Windows.DependencyProperty.RegisterCoreProperty(18500, System.String);
 };
 
-System.Windows.Media.ImplicitInputBrush.prototype._ctor = function () {
-	System.Windows.Media.Brush.prototype._ctor$1.call(this, 309);
-};
 
 System.Windows.Media.TimelineMarkerRoutedEventArgs.prototype._ctor = function () {
 	System.Windows.RoutedEventArgs.prototype._ctor.call(this);
@@ -13357,9 +12955,6 @@ System.Windows.Media.TimelineMarkerRoutedEventArgs._cctor = function () {
 	System.Windows.Media.TimelineMarkerRoutedEventArgs.MarkerProperty = System.Windows.DependencyProperty.RegisterCoreProperty(18605, System.Windows.Media.TimelineMarker);
 };
 
-System.Windows.Media.TimelineMarker.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 147);
-};
 System.Windows.Media.TimelineMarker.prototype.get_Time = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.TimelineMarker.TimeProperty), System.TimeSpan);
 };
@@ -13393,9 +12988,6 @@ System.Windows.Media.TimelineMarker._cctor = function () {
 	System.Windows.Media.TimelineMarker.TextProperty = System.Windows.DependencyProperty.RegisterCoreProperty(18604, System.String);
 };
 
-System.Windows.Media.TimelineMarkerCollection.prototype._ctor = function () {
-	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Media.TimelineMarker).prototype._ctor$1.call(this, 148);
-};
 System.Windows.Media.TimelineMarkerCollection.prototype.AddInternal = function (value) {
 	this.AddDependencyObject(value);
 };
@@ -13474,20 +13066,7 @@ System.Windows.Media.RenderingEventArgs._cctor = function () {
 	System.Windows.Media.RenderingEventArgs.RenderingTimeProperty = System.Windows.DependencyProperty.RegisterCoreProperty(20105, System.TimeSpan);
 };
 
-System.Windows.Media.Projection.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 303);
-};
-System.Windows.Media.Projection.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
-JSIL.OverloadedMethod(System.Windows.Media.Projection.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 
-System.Windows.Media.PlaneProjection.prototype._ctor = function () {
-	System.Windows.Media.Projection.prototype._ctor$1.call(this, 304);
-};
 System.Windows.Media.PlaneProjection.prototype.get_LocalOffsetX = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.PlaneProjection.LocalOffsetXProperty), System.Double);
 };
@@ -13618,9 +13197,6 @@ System.Windows.Media.PlaneProjection._cctor = function () {
 	System.Windows.Media.PlaneProjection.ProjectionMatrixProperty = System.Windows.DependencyProperty.RegisterCoreProperty(20413, System.Windows.Media.Media3D.Matrix3D);
 };
 
-System.Windows.Media.Matrix3DProjection.prototype._ctor = function () {
-	System.Windows.Media.Projection.prototype._ctor$1.call(this, 329);
-};
 System.Windows.Media.Matrix3DProjection.prototype.get_ProjectionMatrix = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Matrix3DProjection.ProjectionMatrixProperty), System.Windows.Media.Media3D.Matrix3D);
 };
@@ -13634,20 +13210,7 @@ System.Windows.Media.Matrix3DProjection._cctor = function () {
 	System.Windows.Media.Matrix3DProjection.ProjectionMatrixProperty = System.Windows.DependencyProperty.RegisterCoreProperty(20601, System.Windows.Media.Media3D.Matrix3D);
 };
 
-System.Windows.Media.CacheMode.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 273);
-};
-System.Windows.Media.CacheMode.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
-JSIL.OverloadedMethod(System.Windows.Media.CacheMode.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 
-System.Windows.Media.BitmapCache.prototype._ctor = function () {
-	System.Windows.Media.CacheMode.prototype._ctor$1.call(this, 274);
-};
 System.Windows.Media.BitmapCache.prototype.get_RenderAtScale = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.BitmapCache.RenderAtScaleProperty), System.Double);
 };
@@ -13661,9 +13224,6 @@ System.Windows.Media.BitmapCache._cctor = function () {
 	System.Windows.Media.BitmapCache.RenderAtScaleProperty = System.Windows.DependencyProperty.RegisterCoreProperty(26080, System.Double);
 };
 
-System.Windows.Media.VideoCaptureDeviceCollection.prototype._ctor = function () {
-	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Media.VideoCaptureDevice).prototype._ctor$1.call(this, 356);
-};
 System.Windows.Media.VideoCaptureDeviceCollection.prototype.AddInternal = function (value) {
 	this.AddDependencyObject(value);
 };
@@ -13686,9 +13246,6 @@ System.Windows.Media.VideoCaptureDeviceCollection.prototype.SetItemImplSkipMetho
 	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Media.VideoCaptureDevice).prototype.SetItemDependencyObject.call(this, index, value);
 };
 
-System.Windows.Media.AudioCaptureDeviceCollection.prototype._ctor = function () {
-	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Media.AudioCaptureDevice).prototype._ctor$1.call(this, 357);
-};
 System.Windows.Media.AudioCaptureDeviceCollection.prototype.AddInternal = function (value) {
 	this.AddDependencyObject(value);
 };
@@ -13711,22 +13268,12 @@ System.Windows.Media.AudioCaptureDeviceCollection.prototype.SetItemImplSkipMetho
 	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Media.AudioCaptureDevice).prototype.SetItemDependencyObject.call(this, index, value);
 };
 
-System.Windows.Media.CaptureDevice.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 358);
-};
-System.Windows.Media.CaptureDevice.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Media.CaptureDevice.prototype.get_FriendlyName = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.CaptureDevice.FriendlyNameProperty), System.String);
 };
 System.Windows.Media.CaptureDevice.prototype.get_IsDefaultDevice = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.CaptureDevice.IsDefaultDeviceProperty), System.Boolean);
 };
-JSIL.OverloadedMethod(System.Windows.Media.CaptureDevice.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.MakeProperty(System.Windows.Media.CaptureDevice.prototype, "FriendlyName", 
 	System.Windows.Media.CaptureDevice.prototype.get_FriendlyName, null);
 JSIL.MakeProperty(System.Windows.Media.CaptureDevice.prototype, "IsDefaultDevice", 
@@ -13738,9 +13285,6 @@ System.Windows.Media.CaptureDevice._cctor = function () {
 	System.Windows.Media.CaptureDevice.IsDefaultDeviceProperty = System.Windows.DependencyProperty.RegisterCoreProperty(22231, System.Boolean);
 };
 
-System.Windows.Media.VideoCaptureDevice.prototype._ctor = function () {
-	System.Windows.Media.CaptureDevice.prototype._ctor$1.call(this, 359);
-};
 System.Windows.Media.VideoCaptureDevice.prototype.get_SupportedFormats = function () {
 	if (this.m_SupportedFormats === null) {
 		this.m_SupportedFormats = new (System.Collections.ObjectModel.ReadOnlyCollection$b1.Of(System.Windows.Media.VideoFormat)) ($asm02.MS.Internal.XcpImports.VideoCaptureDevice_GetSupportedFormats(this));
@@ -13759,9 +13303,6 @@ JSIL.MakeProperty(System.Windows.Media.VideoCaptureDevice.prototype, "DesiredFor
 	System.Windows.Media.VideoCaptureDevice.prototype.get_DesiredFormat, System.Windows.Media.VideoCaptureDevice.prototype.set_DesiredFormat);
 System.Windows.Media.VideoCaptureDevice.prototype.m_SupportedFormats = null;
 
-System.Windows.Media.AudioCaptureDevice.prototype._ctor = function () {
-	System.Windows.Media.CaptureDevice.prototype._ctor$1.call(this, 360);
-};
 System.Windows.Media.AudioCaptureDevice.prototype.get_AudioFrameSize = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.AudioCaptureDevice.AudioFrameSizeProperty), System.Int32);
 };
@@ -13812,12 +13353,6 @@ System.Windows.Media.CaptureSource.prototype.remove_CaptureFailed = function (va
 };
 System.Windows.Media.CaptureSource.prototype.get_State = function () {
 	return $asm02.MS.Internal.XcpImports.CaptureGraph_GetState(this);
-};
-System.Windows.Media.CaptureSource.prototype._ctor = function () {
-	this.m_CaptureLock = new System.Object();
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 361);
-	this.VideoCaptureDevice = System.Windows.Media.CaptureDeviceConfiguration.GetDefaultVideoCaptureDevice();
-	this.AudioCaptureDevice = System.Windows.Media.CaptureDeviceConfiguration.GetDefaultAudioCaptureDevice();
 };
 System.Windows.Media.CaptureSource.prototype.Start = function () {
 	$asm02.MS.Internal.XcpImports.CaptureGraph_Start(this);
@@ -13882,12 +13417,6 @@ System.Windows.Media.CaptureSource._cctor = function () {
 	System.Windows.Media.CaptureSource.AudioCaptureDeviceProperty = System.Windows.DependencyProperty.RegisterCoreProperty(22251, System.Windows.Media.AudioCaptureDevice);
 };
 
-System.Windows.Media.Animation.Timeline.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 47);
-};
-System.Windows.Media.Animation.Timeline.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Media.Animation.Timeline.prototype.get_AutoReverse = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Animation.Timeline.AutoReverseProperty), System.Boolean);
 };
@@ -14023,10 +13552,6 @@ __step0__:
 		}
 	}
 };
-JSIL.OverloadedMethod(System.Windows.Media.Animation.Timeline.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.MakeProperty(System.Windows.Media.Animation.Timeline.prototype, "AutoReverse", 
 	System.Windows.Media.Animation.Timeline.prototype.get_AutoReverse, System.Windows.Media.Animation.Timeline.prototype.set_AutoReverse);
 JSIL.MakeProperty(System.Windows.Media.Animation.Timeline.prototype, "BeginTime", 
@@ -14054,12 +13579,6 @@ System.Windows.Media.Animation.Timeline._cctor = function () {
 	System.Windows.Media.Animation.Timeline.RepeatBehaviorProperty = System.Windows.DependencyProperty.RegisterCoreProperty(14607, System.Windows.Media.Animation.RepeatBehavior);
 };
 
-System.Windows.Media.Animation.EasingFunctionBase.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 284);
-};
-System.Windows.Media.Animation.EasingFunctionBase.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Media.Animation.EasingFunctionBase.prototype.get_EasingMode = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Animation.EasingFunctionBase.EasingModeProperty), System.Windows.Media.Animation.EasingMode);
 };
@@ -14092,10 +13611,6 @@ System.Windows.Media.Animation.EasingFunctionBase.EaseManaged = function (native
 	}
 	return 0;
 };
-JSIL.OverloadedMethod(System.Windows.Media.Animation.EasingFunctionBase.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.MakeProperty(System.Windows.Media.Animation.EasingFunctionBase.prototype, "EasingMode", 
 	System.Windows.Media.Animation.EasingFunctionBase.prototype.get_EasingMode, System.Windows.Media.Animation.EasingFunctionBase.prototype.set_EasingMode);
 System.Windows.Media.Animation.EasingFunctionBase.EasingModeProperty = null;
@@ -14103,26 +13618,10 @@ System.Windows.Media.Animation.EasingFunctionBase._cctor = function () {
 	System.Windows.Media.Animation.EasingFunctionBase.EasingModeProperty = System.Windows.DependencyProperty.RegisterCoreProperty(20350, System.Windows.Media.Animation.EasingMode);
 };
 
-System.Windows.Media.Animation.CircleEase.prototype._ctor$0 = function () {
-	System.Windows.Media.Animation.EasingFunctionBase.prototype._ctor$1.call(this, 285);
-};
-System.Windows.Media.Animation.CircleEase.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.Media.Animation.EasingFunctionBase.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Media.Animation.CircleEase.prototype.EaseInCore = function (normalizedTime) {
 	return $asm02.MS.Internal.XcpImports.EasingFunction_EaseInCore(this, normalizedTime);
 };
-JSIL.OverloadedMethod(System.Windows.Media.Animation.CircleEase.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 
-System.Windows.Media.Animation.BackEase.prototype._ctor$0 = function () {
-	System.Windows.Media.Animation.EasingFunctionBase.prototype._ctor$1.call(this, 286);
-};
-System.Windows.Media.Animation.BackEase.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.Media.Animation.EasingFunctionBase.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Media.Animation.BackEase.prototype.get_Amplitude = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Animation.BackEase.AmplitudeProperty), System.Double);
 };
@@ -14132,10 +13631,6 @@ System.Windows.Media.Animation.BackEase.prototype.set_Amplitude = function (valu
 System.Windows.Media.Animation.BackEase.prototype.EaseInCore = function (normalizedTime) {
 	return $asm02.MS.Internal.XcpImports.EasingFunction_EaseInCore(this, normalizedTime);
 };
-JSIL.OverloadedMethod(System.Windows.Media.Animation.BackEase.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.MakeProperty(System.Windows.Media.Animation.BackEase.prototype, "Amplitude", 
 	System.Windows.Media.Animation.BackEase.prototype.get_Amplitude, System.Windows.Media.Animation.BackEase.prototype.set_Amplitude);
 System.Windows.Media.Animation.BackEase.AmplitudeProperty = null;
@@ -14143,12 +13638,6 @@ System.Windows.Media.Animation.BackEase._cctor = function () {
 	System.Windows.Media.Animation.BackEase.AmplitudeProperty = System.Windows.DependencyProperty.RegisterCoreProperty(20351, System.Double);
 };
 
-System.Windows.Media.Animation.ExponentialEase.prototype._ctor$0 = function () {
-	System.Windows.Media.Animation.EasingFunctionBase.prototype._ctor$1.call(this, 287);
-};
-System.Windows.Media.Animation.ExponentialEase.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.Media.Animation.EasingFunctionBase.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Media.Animation.ExponentialEase.prototype.get_Exponent = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Animation.ExponentialEase.ExponentProperty), System.Double);
 };
@@ -14158,10 +13647,6 @@ System.Windows.Media.Animation.ExponentialEase.prototype.set_Exponent = function
 System.Windows.Media.Animation.ExponentialEase.prototype.EaseInCore = function (normalizedTime) {
 	return $asm02.MS.Internal.XcpImports.EasingFunction_EaseInCore(this, normalizedTime);
 };
-JSIL.OverloadedMethod(System.Windows.Media.Animation.ExponentialEase.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.MakeProperty(System.Windows.Media.Animation.ExponentialEase.prototype, "Exponent", 
 	System.Windows.Media.Animation.ExponentialEase.prototype.get_Exponent, System.Windows.Media.Animation.ExponentialEase.prototype.set_Exponent);
 System.Windows.Media.Animation.ExponentialEase.ExponentProperty = null;
@@ -14169,12 +13654,6 @@ System.Windows.Media.Animation.ExponentialEase._cctor = function () {
 	System.Windows.Media.Animation.ExponentialEase.ExponentProperty = System.Windows.DependencyProperty.RegisterCoreProperty(20352, System.Double);
 };
 
-System.Windows.Media.Animation.PowerEase.prototype._ctor$0 = function () {
-	System.Windows.Media.Animation.EasingFunctionBase.prototype._ctor$1.call(this, 288);
-};
-System.Windows.Media.Animation.PowerEase.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.Media.Animation.EasingFunctionBase.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Media.Animation.PowerEase.prototype.get_Power = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Animation.PowerEase.PowerProperty), System.Double);
 };
@@ -14184,10 +13663,6 @@ System.Windows.Media.Animation.PowerEase.prototype.set_Power = function (value) 
 System.Windows.Media.Animation.PowerEase.prototype.EaseInCore = function (normalizedTime) {
 	return $asm02.MS.Internal.XcpImports.EasingFunction_EaseInCore(this, normalizedTime);
 };
-JSIL.OverloadedMethod(System.Windows.Media.Animation.PowerEase.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.MakeProperty(System.Windows.Media.Animation.PowerEase.prototype, "Power", 
 	System.Windows.Media.Animation.PowerEase.prototype.get_Power, System.Windows.Media.Animation.PowerEase.prototype.set_Power);
 System.Windows.Media.Animation.PowerEase.PowerProperty = null;
@@ -14195,68 +13670,22 @@ System.Windows.Media.Animation.PowerEase._cctor = function () {
 	System.Windows.Media.Animation.PowerEase.PowerProperty = System.Windows.DependencyProperty.RegisterCoreProperty(20353, System.Double);
 };
 
-System.Windows.Media.Animation.QuadraticEase.prototype._ctor$0 = function () {
-	System.Windows.Media.Animation.EasingFunctionBase.prototype._ctor$1.call(this, 289);
-};
-System.Windows.Media.Animation.QuadraticEase.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.Media.Animation.EasingFunctionBase.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Media.Animation.QuadraticEase.prototype.EaseInCore = function (normalizedTime) {
 	return $asm02.MS.Internal.XcpImports.EasingFunction_EaseInCore(this, normalizedTime);
 };
-JSIL.OverloadedMethod(System.Windows.Media.Animation.QuadraticEase.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 
-System.Windows.Media.Animation.CubicEase.prototype._ctor$0 = function () {
-	System.Windows.Media.Animation.EasingFunctionBase.prototype._ctor$1.call(this, 290);
-};
-System.Windows.Media.Animation.CubicEase.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.Media.Animation.EasingFunctionBase.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Media.Animation.CubicEase.prototype.EaseInCore = function (normalizedTime) {
 	return $asm02.MS.Internal.XcpImports.EasingFunction_EaseInCore(this, normalizedTime);
 };
-JSIL.OverloadedMethod(System.Windows.Media.Animation.CubicEase.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 
-System.Windows.Media.Animation.QuarticEase.prototype._ctor$0 = function () {
-	System.Windows.Media.Animation.EasingFunctionBase.prototype._ctor$1.call(this, 291);
-};
-System.Windows.Media.Animation.QuarticEase.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.Media.Animation.EasingFunctionBase.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Media.Animation.QuarticEase.prototype.EaseInCore = function (normalizedTime) {
 	return $asm02.MS.Internal.XcpImports.EasingFunction_EaseInCore(this, normalizedTime);
 };
-JSIL.OverloadedMethod(System.Windows.Media.Animation.QuarticEase.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 
-System.Windows.Media.Animation.QuinticEase.prototype._ctor$0 = function () {
-	System.Windows.Media.Animation.EasingFunctionBase.prototype._ctor$1.call(this, 292);
-};
-System.Windows.Media.Animation.QuinticEase.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.Media.Animation.EasingFunctionBase.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Media.Animation.QuinticEase.prototype.EaseInCore = function (normalizedTime) {
 	return $asm02.MS.Internal.XcpImports.EasingFunction_EaseInCore(this, normalizedTime);
 };
-JSIL.OverloadedMethod(System.Windows.Media.Animation.QuinticEase.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 
-System.Windows.Media.Animation.ElasticEase.prototype._ctor$0 = function () {
-	System.Windows.Media.Animation.EasingFunctionBase.prototype._ctor$1.call(this, 293);
-};
-System.Windows.Media.Animation.ElasticEase.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.Media.Animation.EasingFunctionBase.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Media.Animation.ElasticEase.prototype.get_Oscillations = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Animation.ElasticEase.OscillationsProperty), System.Int32);
 };
@@ -14272,10 +13701,6 @@ System.Windows.Media.Animation.ElasticEase.prototype.set_Springiness = function 
 System.Windows.Media.Animation.ElasticEase.prototype.EaseInCore = function (normalizedTime) {
 	return $asm02.MS.Internal.XcpImports.EasingFunction_EaseInCore(this, normalizedTime);
 };
-JSIL.OverloadedMethod(System.Windows.Media.Animation.ElasticEase.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.MakeProperty(System.Windows.Media.Animation.ElasticEase.prototype, "Oscillations", 
 	System.Windows.Media.Animation.ElasticEase.prototype.get_Oscillations, System.Windows.Media.Animation.ElasticEase.prototype.set_Oscillations);
 JSIL.MakeProperty(System.Windows.Media.Animation.ElasticEase.prototype, "Springiness", 
@@ -14287,12 +13712,6 @@ System.Windows.Media.Animation.ElasticEase._cctor = function () {
 	System.Windows.Media.Animation.ElasticEase.SpringinessProperty = System.Windows.DependencyProperty.RegisterCoreProperty(20355, System.Double);
 };
 
-System.Windows.Media.Animation.BounceEase.prototype._ctor$0 = function () {
-	System.Windows.Media.Animation.EasingFunctionBase.prototype._ctor$1.call(this, 294);
-};
-System.Windows.Media.Animation.BounceEase.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.Media.Animation.EasingFunctionBase.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Media.Animation.BounceEase.prototype.get_Bounces = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Animation.BounceEase.BouncesProperty), System.Int32);
 };
@@ -14308,10 +13727,6 @@ System.Windows.Media.Animation.BounceEase.prototype.set_Bounciness = function (v
 System.Windows.Media.Animation.BounceEase.prototype.EaseInCore = function (normalizedTime) {
 	return $asm02.MS.Internal.XcpImports.EasingFunction_EaseInCore(this, normalizedTime);
 };
-JSIL.OverloadedMethod(System.Windows.Media.Animation.BounceEase.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.MakeProperty(System.Windows.Media.Animation.BounceEase.prototype, "Bounces", 
 	System.Windows.Media.Animation.BounceEase.prototype.get_Bounces, System.Windows.Media.Animation.BounceEase.prototype.set_Bounces);
 JSIL.MakeProperty(System.Windows.Media.Animation.BounceEase.prototype, "Bounciness", 
@@ -14323,23 +13738,10 @@ System.Windows.Media.Animation.BounceEase._cctor = function () {
 	System.Windows.Media.Animation.BounceEase.BouncinessProperty = System.Windows.DependencyProperty.RegisterCoreProperty(20357, System.Double);
 };
 
-System.Windows.Media.Animation.SineEase.prototype._ctor$0 = function () {
-	System.Windows.Media.Animation.EasingFunctionBase.prototype._ctor$1.call(this, 295);
-};
-System.Windows.Media.Animation.SineEase.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.Media.Animation.EasingFunctionBase.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Media.Animation.SineEase.prototype.EaseInCore = function (normalizedTime) {
 	return $asm02.MS.Internal.XcpImports.EasingFunction_EaseInCore(this, normalizedTime);
 };
-JSIL.OverloadedMethod(System.Windows.Media.Animation.SineEase.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 
-System.Windows.Media.Animation.BeginStoryboard.prototype._ctor = function () {
-	System.Windows.TriggerAction.prototype._ctor$1.call(this, 45);
-};
 System.Windows.Media.Animation.BeginStoryboard.prototype.get_Storyboard = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Animation.BeginStoryboard.StoryboardProperty), System.Windows.Media.Animation.Storyboard);
 };
@@ -14353,9 +13755,6 @@ System.Windows.Media.Animation.BeginStoryboard._cctor = function () {
 	System.Windows.Media.Animation.BeginStoryboard.StoryboardProperty = System.Windows.DependencyProperty.RegisterCoreProperty(14500, System.Windows.Media.Animation.Storyboard);
 };
 
-System.Windows.Media.Animation.Storyboard.prototype._ctor = function () {
-	System.Windows.Media.Animation.Timeline.prototype._ctor$1.call(this, 46);
-};
 System.Windows.Media.Animation.Storyboard.GetTargetName = function (element) {
 	return JSIL.Cast(element.GetValue(System.Windows.Media.Animation.Storyboard.TargetNameProperty), System.String);
 };
@@ -14440,9 +13839,6 @@ System.Windows.Media.Animation.Storyboard._cctor = function () {
 	System.Windows.Media.Animation.Storyboard.TargetNameProperty = System.Windows.DependencyProperty.RegisterCoreProperty(14609, System.String);
 };
 
-System.Windows.Media.Animation.DoubleAnimation.prototype._ctor = function () {
-	System.Windows.Media.Animation.Timeline.prototype._ctor$1.call(this, 53);
-};
 System.Windows.Media.Animation.DoubleAnimation.prototype.get_From = function () {
 	var value = System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Animation.DoubleAnimation.FromProperty);
 	if (value === null) {
@@ -14498,9 +13894,6 @@ System.Windows.Media.Animation.DoubleAnimation._cctor = function () {
 	System.Windows.Media.Animation.DoubleAnimation.EasingFunctionProperty = System.Windows.DependencyProperty.RegisterCoreProperty(14903, System.Windows.Media.Animation.IEasingFunction);
 };
 
-System.Windows.Media.Animation.ColorAnimation.prototype._ctor = function () {
-	System.Windows.Media.Animation.Timeline.prototype._ctor$1.call(this, 65);
-};
 System.Windows.Media.Animation.ColorAnimation.prototype.get_From = function () {
 	var value = System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Animation.ColorAnimation.FromProperty);
 	if (value === null) {
@@ -14556,9 +13949,6 @@ System.Windows.Media.Animation.ColorAnimation._cctor = function () {
 	System.Windows.Media.Animation.ColorAnimation.EasingFunctionProperty = System.Windows.DependencyProperty.RegisterCoreProperty(15003, System.Windows.Media.Animation.IEasingFunction);
 };
 
-System.Windows.Media.Animation.PointAnimation.prototype._ctor = function () {
-	System.Windows.Media.Animation.Timeline.prototype._ctor$1.call(this, 87);
-};
 System.Windows.Media.Animation.PointAnimation.prototype.get_From = function () {
 	var value = System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Animation.PointAnimation.FromProperty);
 	if (value === null) {
@@ -14614,9 +14004,6 @@ System.Windows.Media.Animation.PointAnimation._cctor = function () {
 	System.Windows.Media.Animation.PointAnimation.EasingFunctionProperty = System.Windows.DependencyProperty.RegisterCoreProperty(15103, System.Windows.Media.Animation.IEasingFunction);
 };
 
-System.Windows.Media.Animation.KeySpline.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 70);
-};
 System.Windows.Media.Animation.KeySpline.prototype.get_ControlPoint1 = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Animation.KeySpline.ControlPoint1Property), System.Windows.Point);
 };
@@ -14640,9 +14027,6 @@ System.Windows.Media.Animation.KeySpline._cctor = function () {
 	System.Windows.Media.Animation.KeySpline.ControlPoint2Property = System.Windows.DependencyProperty.RegisterCoreProperty(16802, System.Windows.Point);
 };
 
-System.Windows.Media.Animation.ColorKeyFrameCollection.prototype._ctor = function () {
-	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Media.Animation.ColorKeyFrame).prototype._ctor$1.call(this, 156);
-};
 System.Windows.Media.Animation.ColorKeyFrameCollection.prototype.AddInternal = function (value) {
 	this.AddDependencyObject(value);
 };
@@ -14665,9 +14049,6 @@ System.Windows.Media.Animation.ColorKeyFrameCollection.prototype.SetItemImplSkip
 	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Media.Animation.ColorKeyFrame).prototype.SetItemDependencyObject.call(this, index, value);
 };
 
-System.Windows.Media.Animation.DoubleKeyFrameCollection.prototype._ctor = function () {
-	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Media.Animation.DoubleKeyFrame).prototype._ctor$1.call(this, 157);
-};
 System.Windows.Media.Animation.DoubleKeyFrameCollection.prototype.AddInternal = function (value) {
 	this.AddDependencyObject(value);
 };
@@ -14690,9 +14071,6 @@ System.Windows.Media.Animation.DoubleKeyFrameCollection.prototype.SetItemImplSki
 	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Media.Animation.DoubleKeyFrame).prototype.SetItemDependencyObject.call(this, index, value);
 };
 
-System.Windows.Media.Animation.PointKeyFrameCollection.prototype._ctor = function () {
-	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Media.Animation.PointKeyFrame).prototype._ctor$1.call(this, 71);
-};
 System.Windows.Media.Animation.PointKeyFrameCollection.prototype.AddInternal = function (value) {
 	this.AddDependencyObject(value);
 };
@@ -14715,9 +14093,6 @@ System.Windows.Media.Animation.PointKeyFrameCollection.prototype.SetItemImplSkip
 	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Media.Animation.PointKeyFrame).prototype.SetItemDependencyObject.call(this, index, value);
 };
 
-System.Windows.Media.Animation.ObjectKeyFrameCollection.prototype._ctor = function () {
-	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Media.Animation.ObjectKeyFrame).prototype._ctor$1.call(this, 223);
-};
 System.Windows.Media.Animation.ObjectKeyFrameCollection.prototype.AddInternal = function (value) {
 	this.AddDependencyObject(value);
 };
@@ -14740,9 +14115,6 @@ System.Windows.Media.Animation.ObjectKeyFrameCollection.prototype.SetItemImplSki
 	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Media.Animation.ObjectKeyFrame).prototype.SetItemDependencyObject.call(this, index, value);
 };
 
-System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.prototype._ctor = function () {
-	System.Windows.Media.Animation.Timeline.prototype._ctor$1.call(this, 72);
-};
 System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.prototype.get_KeyFrames = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFramesProperty), System.Windows.Media.Animation.DoubleKeyFrameCollection);
 };
@@ -14753,12 +14125,6 @@ System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames._cctor = function (
 	System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFramesProperty = System.Windows.DependencyProperty.RegisterCoreProperty(16000, System.Windows.Media.Animation.DoubleKeyFrameCollection);
 };
 
-System.Windows.Media.Animation.DoubleKeyFrame.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 73);
-};
-System.Windows.Media.Animation.DoubleKeyFrame.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Media.Animation.DoubleKeyFrame.prototype.get_Value = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Animation.DoubleKeyFrame.ValueProperty), System.Double);
 };
@@ -14771,10 +14137,6 @@ System.Windows.Media.Animation.DoubleKeyFrame.prototype.get_KeyTime = function (
 System.Windows.Media.Animation.DoubleKeyFrame.prototype.set_KeyTime = function (value) {
 	System.Windows.DependencyObject.prototype.SetValue.call(this, System.Windows.Media.Animation.DoubleKeyFrame.KeyTimeProperty, value.MemberwiseClone());
 };
-JSIL.OverloadedMethod(System.Windows.Media.Animation.DoubleKeyFrame.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.MakeProperty(System.Windows.Media.Animation.DoubleKeyFrame.prototype, "Value", 
 	System.Windows.Media.Animation.DoubleKeyFrame.prototype.get_Value, System.Windows.Media.Animation.DoubleKeyFrame.prototype.set_Value);
 JSIL.MakeProperty(System.Windows.Media.Animation.DoubleKeyFrame.prototype, "KeyTime", 
@@ -14786,17 +14148,8 @@ System.Windows.Media.Animation.DoubleKeyFrame._cctor = function () {
 	System.Windows.Media.Animation.DoubleKeyFrame.KeyTimeProperty = System.Windows.DependencyProperty.RegisterCoreProperty(15200, System.Windows.Media.Animation.KeyTime);
 };
 
-System.Windows.Media.Animation.DiscreteDoubleKeyFrame.prototype._ctor = function () {
-	System.Windows.Media.Animation.DoubleKeyFrame.prototype._ctor$1.call(this, 74);
-};
 
-System.Windows.Media.Animation.LinearDoubleKeyFrame.prototype._ctor = function () {
-	System.Windows.Media.Animation.DoubleKeyFrame.prototype._ctor$1.call(this, 75);
-};
 
-System.Windows.Media.Animation.SplineDoubleKeyFrame.prototype._ctor = function () {
-	System.Windows.Media.Animation.DoubleKeyFrame.prototype._ctor$1.call(this, 76);
-};
 System.Windows.Media.Animation.SplineDoubleKeyFrame.prototype.get_KeySpline = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySplineProperty), System.Windows.Media.Animation.KeySpline);
 };
@@ -14810,9 +14163,6 @@ System.Windows.Media.Animation.SplineDoubleKeyFrame._cctor = function () {
 	System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySplineProperty = System.Windows.DependencyProperty.RegisterCoreProperty(16002, System.Windows.Media.Animation.KeySpline);
 };
 
-System.Windows.Media.Animation.EasingDoubleKeyFrame.prototype._ctor = function () {
-	System.Windows.Media.Animation.DoubleKeyFrame.prototype._ctor$1.call(this, 297);
-};
 System.Windows.Media.Animation.EasingDoubleKeyFrame.prototype.get_EasingFunction = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Animation.EasingDoubleKeyFrame.EasingFunctionProperty), System.Windows.Media.Animation.IEasingFunction);
 };
@@ -14829,9 +14179,6 @@ System.Windows.Media.Animation.EasingDoubleKeyFrame._cctor = function () {
 	System.Windows.Media.Animation.EasingDoubleKeyFrame.EasingFunctionProperty = System.Windows.DependencyProperty.RegisterCoreProperty(16003, System.Windows.Media.Animation.IEasingFunction);
 };
 
-System.Windows.Media.Animation.ColorAnimationUsingKeyFrames.prototype._ctor = function () {
-	System.Windows.Media.Animation.Timeline.prototype._ctor$1.call(this, 77);
-};
 System.Windows.Media.Animation.ColorAnimationUsingKeyFrames.prototype.get_KeyFrames = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Animation.ColorAnimationUsingKeyFrames.KeyFramesProperty), System.Windows.Media.Animation.ColorKeyFrameCollection);
 };
@@ -14842,12 +14189,6 @@ System.Windows.Media.Animation.ColorAnimationUsingKeyFrames._cctor = function ()
 	System.Windows.Media.Animation.ColorAnimationUsingKeyFrames.KeyFramesProperty = System.Windows.DependencyProperty.RegisterCoreProperty(16010, System.Windows.Media.Animation.ColorKeyFrameCollection);
 };
 
-System.Windows.Media.Animation.ColorKeyFrame.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 78);
-};
-System.Windows.Media.Animation.ColorKeyFrame.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Media.Animation.ColorKeyFrame.prototype.get_Value = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Animation.ColorKeyFrame.ValueProperty), System.Windows.Media.Color);
 };
@@ -14860,10 +14201,6 @@ System.Windows.Media.Animation.ColorKeyFrame.prototype.get_KeyTime = function ()
 System.Windows.Media.Animation.ColorKeyFrame.prototype.set_KeyTime = function (value) {
 	System.Windows.DependencyObject.prototype.SetValue.call(this, System.Windows.Media.Animation.ColorKeyFrame.KeyTimeProperty, value.MemberwiseClone());
 };
-JSIL.OverloadedMethod(System.Windows.Media.Animation.ColorKeyFrame.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.MakeProperty(System.Windows.Media.Animation.ColorKeyFrame.prototype, "Value", 
 	System.Windows.Media.Animation.ColorKeyFrame.prototype.get_Value, System.Windows.Media.Animation.ColorKeyFrame.prototype.set_Value);
 JSIL.MakeProperty(System.Windows.Media.Animation.ColorKeyFrame.prototype, "KeyTime", 
@@ -14875,17 +14212,8 @@ System.Windows.Media.Animation.ColorKeyFrame._cctor = function () {
 	System.Windows.Media.Animation.ColorKeyFrame.KeyTimeProperty = System.Windows.DependencyProperty.RegisterCoreProperty(15201, System.Windows.Media.Animation.KeyTime);
 };
 
-System.Windows.Media.Animation.DiscreteColorKeyFrame.prototype._ctor = function () {
-	System.Windows.Media.Animation.ColorKeyFrame.prototype._ctor$1.call(this, 79);
-};
 
-System.Windows.Media.Animation.LinearColorKeyFrame.prototype._ctor = function () {
-	System.Windows.Media.Animation.ColorKeyFrame.prototype._ctor$1.call(this, 80);
-};
 
-System.Windows.Media.Animation.SplineColorKeyFrame.prototype._ctor = function () {
-	System.Windows.Media.Animation.ColorKeyFrame.prototype._ctor$1.call(this, 81);
-};
 System.Windows.Media.Animation.SplineColorKeyFrame.prototype.get_KeySpline = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Animation.SplineColorKeyFrame.KeySplineProperty), System.Windows.Media.Animation.KeySpline);
 };
@@ -14899,9 +14227,6 @@ System.Windows.Media.Animation.SplineColorKeyFrame._cctor = function () {
 	System.Windows.Media.Animation.SplineColorKeyFrame.KeySplineProperty = System.Windows.DependencyProperty.RegisterCoreProperty(16012, System.Windows.Media.Animation.KeySpline);
 };
 
-System.Windows.Media.Animation.EasingColorKeyFrame.prototype._ctor = function () {
-	System.Windows.Media.Animation.ColorKeyFrame.prototype._ctor$1.call(this, 298);
-};
 System.Windows.Media.Animation.EasingColorKeyFrame.prototype.get_EasingFunction = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Animation.EasingColorKeyFrame.EasingFunctionProperty), System.Windows.Media.Animation.IEasingFunction);
 };
@@ -14918,9 +14243,6 @@ System.Windows.Media.Animation.EasingColorKeyFrame._cctor = function () {
 	System.Windows.Media.Animation.EasingColorKeyFrame.EasingFunctionProperty = System.Windows.DependencyProperty.RegisterCoreProperty(16013, System.Windows.Media.Animation.IEasingFunction);
 };
 
-System.Windows.Media.Animation.PointAnimationUsingKeyFrames.prototype._ctor = function () {
-	System.Windows.Media.Animation.Timeline.prototype._ctor$1.call(this, 82);
-};
 System.Windows.Media.Animation.PointAnimationUsingKeyFrames.prototype.get_KeyFrames = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Animation.PointAnimationUsingKeyFrames.KeyFramesProperty), System.Windows.Media.Animation.PointKeyFrameCollection);
 };
@@ -14931,12 +14253,6 @@ System.Windows.Media.Animation.PointAnimationUsingKeyFrames._cctor = function ()
 	System.Windows.Media.Animation.PointAnimationUsingKeyFrames.KeyFramesProperty = System.Windows.DependencyProperty.RegisterCoreProperty(16020, System.Windows.Media.Animation.PointKeyFrameCollection);
 };
 
-System.Windows.Media.Animation.PointKeyFrame.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 83);
-};
-System.Windows.Media.Animation.PointKeyFrame.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Media.Animation.PointKeyFrame.prototype.get_Value = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Animation.PointKeyFrame.ValueProperty), System.Windows.Point);
 };
@@ -14949,10 +14265,6 @@ System.Windows.Media.Animation.PointKeyFrame.prototype.get_KeyTime = function ()
 System.Windows.Media.Animation.PointKeyFrame.prototype.set_KeyTime = function (value) {
 	System.Windows.DependencyObject.prototype.SetValue.call(this, System.Windows.Media.Animation.PointKeyFrame.KeyTimeProperty, value.MemberwiseClone());
 };
-JSIL.OverloadedMethod(System.Windows.Media.Animation.PointKeyFrame.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.MakeProperty(System.Windows.Media.Animation.PointKeyFrame.prototype, "Value", 
 	System.Windows.Media.Animation.PointKeyFrame.prototype.get_Value, System.Windows.Media.Animation.PointKeyFrame.prototype.set_Value);
 JSIL.MakeProperty(System.Windows.Media.Animation.PointKeyFrame.prototype, "KeyTime", 
@@ -14964,17 +14276,8 @@ System.Windows.Media.Animation.PointKeyFrame._cctor = function () {
 	System.Windows.Media.Animation.PointKeyFrame.KeyTimeProperty = System.Windows.DependencyProperty.RegisterCoreProperty(15202, System.Windows.Media.Animation.KeyTime);
 };
 
-System.Windows.Media.Animation.DiscretePointKeyFrame.prototype._ctor = function () {
-	System.Windows.Media.Animation.PointKeyFrame.prototype._ctor$1.call(this, 84);
-};
 
-System.Windows.Media.Animation.LinearPointKeyFrame.prototype._ctor = function () {
-	System.Windows.Media.Animation.PointKeyFrame.prototype._ctor$1.call(this, 85);
-};
 
-System.Windows.Media.Animation.SplinePointKeyFrame.prototype._ctor = function () {
-	System.Windows.Media.Animation.PointKeyFrame.prototype._ctor$1.call(this, 86);
-};
 System.Windows.Media.Animation.SplinePointKeyFrame.prototype.get_KeySpline = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Animation.SplinePointKeyFrame.KeySplineProperty), System.Windows.Media.Animation.KeySpline);
 };
@@ -14988,9 +14291,6 @@ System.Windows.Media.Animation.SplinePointKeyFrame._cctor = function () {
 	System.Windows.Media.Animation.SplinePointKeyFrame.KeySplineProperty = System.Windows.DependencyProperty.RegisterCoreProperty(16022, System.Windows.Media.Animation.KeySpline);
 };
 
-System.Windows.Media.Animation.EasingPointKeyFrame.prototype._ctor = function () {
-	System.Windows.Media.Animation.PointKeyFrame.prototype._ctor$1.call(this, 299);
-};
 System.Windows.Media.Animation.EasingPointKeyFrame.prototype.get_EasingFunction = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Animation.EasingPointKeyFrame.EasingFunctionProperty), System.Windows.Media.Animation.IEasingFunction);
 };
@@ -15007,9 +14307,6 @@ System.Windows.Media.Animation.EasingPointKeyFrame._cctor = function () {
 	System.Windows.Media.Animation.EasingPointKeyFrame.EasingFunctionProperty = System.Windows.DependencyProperty.RegisterCoreProperty(16023, System.Windows.Media.Animation.IEasingFunction);
 };
 
-System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames.prototype._ctor = function () {
-	System.Windows.Media.Animation.Timeline.prototype._ctor$1.call(this, 220);
-};
 System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames.prototype.get_KeyFrames = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames.KeyFramesProperty), System.Windows.Media.Animation.ObjectKeyFrameCollection);
 };
@@ -15020,12 +14317,6 @@ System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames._cctor = function (
 	System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames.KeyFramesProperty = System.Windows.DependencyProperty.RegisterCoreProperty(16850, System.Windows.Media.Animation.ObjectKeyFrameCollection);
 };
 
-System.Windows.Media.Animation.ObjectKeyFrame.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 221);
-};
-System.Windows.Media.Animation.ObjectKeyFrame.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Media.Animation.ObjectKeyFrame.prototype.get_KeyTime = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Animation.ObjectKeyFrame.KeyTimeProperty), System.Windows.Media.Animation.KeyTime);
 };
@@ -15038,10 +14329,6 @@ System.Windows.Media.Animation.ObjectKeyFrame.prototype.get_Value = function () 
 System.Windows.Media.Animation.ObjectKeyFrame.prototype.set_Value = function (value) {
 	System.Windows.DependencyObject.prototype.SetValue.call(this, System.Windows.Media.Animation.ObjectKeyFrame.ValueProperty, value);
 };
-JSIL.OverloadedMethod(System.Windows.Media.Animation.ObjectKeyFrame.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.MakeProperty(System.Windows.Media.Animation.ObjectKeyFrame.prototype, "KeyTime", 
 	System.Windows.Media.Animation.ObjectKeyFrame.prototype.get_KeyTime, System.Windows.Media.Animation.ObjectKeyFrame.prototype.set_KeyTime);
 JSIL.MakeProperty(System.Windows.Media.Animation.ObjectKeyFrame.prototype, "Value", 
@@ -15056,13 +14343,7 @@ System.Windows.Media.Animation.ObjectKeyFrame._cctor = function () {
 	System.Windows.Media.Animation.ObjectKeyFrame.ValueProperty = System.Windows.DependencyProperty.RegisterCoreProperty(16851, System.Object);
 };
 
-System.Windows.Media.Animation.DiscreteObjectKeyFrame.prototype._ctor = function () {
-	System.Windows.Media.Animation.ObjectKeyFrame.prototype._ctor$1.call(this, 222);
-};
 
-System.Windows.Media.Animation.TimelineCollection.prototype._ctor = function () {
-	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Media.Animation.Timeline).prototype._ctor$1.call(this, 43);
-};
 System.Windows.Media.Animation.TimelineCollection.prototype.AddInternal = function (value) {
 	this.AddDependencyObject(value);
 };
@@ -15085,9 +14366,6 @@ System.Windows.Media.Animation.TimelineCollection.prototype.SetItemImplSkipMetho
 	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Media.Animation.Timeline).prototype.SetItemDependencyObject.call(this, index, value);
 };
 
-System.Windows.Input.StylusPointCollection.prototype._ctor = function () {
-	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Input.StylusPoint).prototype._ctor$1.call(this, 139);
-};
 System.Windows.Input.StylusPointCollection.prototype.AddInternal = function (value) {
 	this.AddImpl(value.MemberwiseClone());
 };
@@ -15327,9 +14605,6 @@ System.Windows.Input.TextCompositionEventArgs._cctor = function () {
 	System.Windows.Input.TextCompositionEventArgs.CompositionTextProperty = System.Windows.DependencyProperty.RegisterCoreProperty(22219, System.String);
 };
 
-System.Windows.Input.TouchPointCollection.prototype._ctor = function () {
-	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Input.TouchPoint).prototype._ctor$1.call(this, 331);
-};
 System.Windows.Input.TouchPointCollection.prototype.AddInternal = function (value) {
 	this.AddDependencyObject(value);
 };
@@ -15352,9 +14627,6 @@ System.Windows.Input.TouchPointCollection.prototype.SetItemImplSkipMethodPack = 
 	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Input.TouchPoint).prototype.SetItemDependencyObject.call(this, index, value);
 };
 
-System.Windows.Input.TouchDevice.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 332);
-};
 System.Windows.Input.TouchDevice.prototype.get_Id = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Input.TouchDevice.IdProperty), System.Int32);
 };
@@ -15372,9 +14644,6 @@ System.Windows.Input.TouchDevice._cctor = function () {
 	System.Windows.Input.TouchDevice.DirectlyOverProperty = System.Windows.DependencyProperty.RegisterCoreProperty(22117, System.Windows.UIElement);
 };
 
-System.Windows.Input.TouchPoint.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 333);
-};
 System.Windows.Input.TouchPoint.prototype.get_TouchDevice = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Input.TouchPoint.TouchDeviceProperty), System.Windows.Input.TouchDevice);
 };
@@ -15406,12 +14675,6 @@ System.Windows.Input.TouchPoint._cctor = function () {
 	System.Windows.Input.TouchPoint.ActionProperty = System.Windows.DependencyProperty.RegisterCoreProperty(22115, System.Windows.Input.TouchAction);
 };
 
-System.Windows.Shapes.Shape.prototype._ctor$0 = function () {
-	System.Windows.FrameworkElement.prototype._ctor$0.call(this, 41);
-};
-System.Windows.Shapes.Shape.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.FrameworkElement.prototype._ctor$0.call(this, nKnownTypeIndex);
-};
 System.Windows.Shapes.Shape.prototype.get_Fill = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Shapes.Shape.FillProperty), System.Windows.Media.Brush);
 };
@@ -15484,10 +14747,6 @@ System.Windows.Shapes.Shape.prototype.get_GeometryTransform = function () {
 	(matrixTransform.Matrix = matrix.MemberwiseClone());
 	return matrixTransform;
 };
-JSIL.OverloadedMethod(System.Windows.Shapes.Shape.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.MakeProperty(System.Windows.Shapes.Shape.prototype, "Fill", 
 	System.Windows.Shapes.Shape.prototype.get_Fill, System.Windows.Shapes.Shape.prototype.set_Fill);
 JSIL.MakeProperty(System.Windows.Shapes.Shape.prototype, "Stroke", 
@@ -15539,22 +14798,12 @@ System.Windows.Shapes.Shape._cctor = function () {
 	System.Windows.Shapes.Shape.GeometryTransformProperty = System.Windows.DependencyProperty.RegisterCoreProperty(13311, System.Windows.Media.Matrix);
 };
 
-System.Windows.Shapes.Path.prototype._ctor$0 = function () {
-	System.Windows.Shapes.Shape.prototype._ctor$1.call(this, 44);
-};
-System.Windows.Shapes.Path.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.Shapes.Shape.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Shapes.Path.prototype.get_Data = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Shapes.Path.DataProperty), System.Windows.Media.Geometry);
 };
 System.Windows.Shapes.Path.prototype.set_Data = function (value) {
 	System.Windows.DependencyObject.prototype.SetValue.call(this, System.Windows.Shapes.Path.DataProperty, value);
 };
-JSIL.OverloadedMethod(System.Windows.Shapes.Path.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.MakeProperty(System.Windows.Shapes.Path.prototype, "Data", 
 	System.Windows.Shapes.Path.prototype.get_Data, System.Windows.Shapes.Path.prototype.set_Data);
 System.Windows.Shapes.Path.DataProperty = null;
@@ -15562,13 +14811,7 @@ System.Windows.Shapes.Path._cctor = function () {
 	System.Windows.Shapes.Path.DataProperty = System.Windows.DependencyProperty.RegisterCoreProperty(13900, System.Windows.Media.Geometry);
 };
 
-System.Windows.Shapes.Ellipse.prototype._ctor = function () {
-	System.Windows.Shapes.Shape.prototype._ctor$1.call(this, 91);
-};
 
-System.Windows.Shapes.Line.prototype._ctor = function () {
-	System.Windows.Shapes.Shape.prototype._ctor$1.call(this, 92);
-};
 System.Windows.Shapes.Line.prototype.get_X1 = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Shapes.Line.X1Property), System.Double);
 };
@@ -15612,9 +14855,6 @@ System.Windows.Shapes.Line._cctor = function () {
 	System.Windows.Shapes.Line.Y2Property = System.Windows.DependencyProperty.RegisterCoreProperty(13503, System.Double);
 };
 
-System.Windows.Shapes.Polygon.prototype._ctor = function () {
-	System.Windows.Shapes.Shape.prototype._ctor$1.call(this, 93);
-};
 System.Windows.Shapes.Polygon.prototype.get_FillRule = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Shapes.Polygon.FillRuleProperty), System.Windows.Media.FillRule);
 };
@@ -15638,9 +14878,6 @@ System.Windows.Shapes.Polygon._cctor = function () {
 	System.Windows.Shapes.Polygon.PointsProperty = System.Windows.DependencyProperty.RegisterCoreProperty(13601, System.Windows.Media.PointCollection);
 };
 
-System.Windows.Shapes.Polyline.prototype._ctor = function () {
-	System.Windows.Shapes.Shape.prototype._ctor$1.call(this, 94);
-};
 System.Windows.Shapes.Polyline.prototype.get_FillRule = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Shapes.Polyline.FillRuleProperty), System.Windows.Media.FillRule);
 };
@@ -15664,9 +14901,6 @@ System.Windows.Shapes.Polyline._cctor = function () {
 	System.Windows.Shapes.Polyline.PointsProperty = System.Windows.DependencyProperty.RegisterCoreProperty(13701, System.Windows.Media.PointCollection);
 };
 
-System.Windows.Shapes.Rectangle.prototype._ctor = function () {
-	System.Windows.Shapes.Shape.prototype._ctor$1.call(this, 95);
-};
 System.Windows.Shapes.Rectangle.prototype.get_RadiusX = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Shapes.Rectangle.RadiusXProperty), System.Double);
 };
@@ -15690,12 +14924,6 @@ System.Windows.Shapes.Rectangle._cctor = function () {
 	System.Windows.Shapes.Rectangle.RadiusYProperty = System.Windows.DependencyProperty.RegisterCoreProperty(13801, System.Double);
 };
 
-System.Windows.Documents.TextElement.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 341);
-};
-System.Windows.Documents.TextElement.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Documents.TextElement.prototype.get_FontSize = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Documents.TextElement.FontSizeProperty), System.Double);
 };
@@ -15768,10 +14996,6 @@ System.Windows.Documents.TextElement.prototype.GetOrCreateAutomationPeer = funct
 System.Windows.Documents.TextElement.prototype.IAutomationElement_GetOrCreateAutomationPeer = function () {
 	return this.GetOrCreateAutomationPeer();
 };
-JSIL.OverloadedMethod(System.Windows.Documents.TextElement.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.MakeProperty(System.Windows.Documents.TextElement.prototype, "FontSize", 
 	System.Windows.Documents.TextElement.prototype.get_FontSize, System.Windows.Documents.TextElement.prototype.set_FontSize);
 JSIL.MakeProperty(System.Windows.Documents.TextElement.prototype, "FontFamily", 
@@ -15814,12 +15038,6 @@ System.Windows.Documents.TextElement._cctor = function () {
 	System.Windows.Documents.TextElement.LanguageProperty = System.Windows.DependencyProperty.RegisterCoreProperty(4207424, System.Windows.Markup.XmlLanguage);
 };
 
-System.Windows.Documents.Inline.prototype._ctor$0 = function () {
-	System.Windows.Documents.TextElement.prototype._ctor$1.call(this, 123);
-};
-System.Windows.Documents.Inline.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.Documents.TextElement.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Documents.Inline.prototype.get_TextDecorations = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Documents.Inline.TextDecorationsProperty), System.Windows.TextDecorationCollection);
 };
@@ -15830,10 +15048,6 @@ System.Windows.Documents.Inline.prototype.set_TextDecorations = function (value)
 	}
 	System.Windows.DependencyObject.prototype.SetValue.call(this, System.Windows.Documents.Inline.TextDecorationsProperty, 0);
 };
-JSIL.OverloadedMethod(System.Windows.Documents.Inline.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.MakeProperty(System.Windows.Documents.Inline.prototype, "TextDecorations", 
 	System.Windows.Documents.Inline.prototype.get_TextDecorations, System.Windows.Documents.Inline.prototype.set_TextDecorations);
 System.Windows.Documents.Inline.TextDecorationsProperty = null;
@@ -15855,22 +15069,12 @@ System.Windows.Documents.Inline._cctor = function () {
 	System.Windows.Documents.Inline.LanguageProperty = System.Windows.Documents.TextElement.LanguageProperty;
 };
 
-System.Windows.Documents.Block.prototype._ctor$0 = function () {
-	System.Windows.Documents.TextElement.prototype._ctor$1.call(this, 343);
-};
-System.Windows.Documents.Block.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.Documents.TextElement.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Documents.Block.prototype.get_TextAlignment = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Documents.Block.TextAlignmentProperty), System.Windows.TextAlignment);
 };
 System.Windows.Documents.Block.prototype.set_TextAlignment = function (value) {
 	System.Windows.DependencyObject.prototype.SetValue.call(this, System.Windows.Documents.Block.TextAlignmentProperty, value);
 };
-JSIL.OverloadedMethod(System.Windows.Documents.Block.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.MakeProperty(System.Windows.Documents.Block.prototype, "TextAlignment", 
 	System.Windows.Documents.Block.prototype.get_TextAlignment, System.Windows.Documents.Block.prototype.set_TextAlignment);
 System.Windows.Documents.Block.TextAlignmentProperty = null;
@@ -15878,13 +15082,7 @@ System.Windows.Documents.Block._cctor = function () {
 	System.Windows.Documents.Block.TextAlignmentProperty = System.Windows.DependencyProperty.RegisterCoreProperty(14258, System.Windows.TextAlignment);
 };
 
-System.Windows.Documents.TextElementCollection$b1.prototype._ctor = function (nativeTypeIndex) {
-	System.Windows.PresentationFrameworkCollection$b1.Of(this.T).prototype._ctor$1.call(this, nativeTypeIndex);
-};
 
-System.Windows.Documents.InlineCollection.prototype._ctor = function () {
-	System.Windows.Documents.TextElementCollection$b1.Of(System.Windows.Documents.Inline).prototype._ctor.call(this, 124);
-};
 System.Windows.Documents.InlineCollection.prototype.AddInternal = function (value) {
 	this.AddDependencyObject(value);
 };
@@ -15991,9 +15189,6 @@ System.Windows.Documents.InlineCollection.prototype.TryThrowWithHostSpecificMess
 	}
 };
 
-System.Windows.Documents.BlockCollection.prototype._ctor = function () {
-	System.Windows.Documents.TextElementCollection$b1.Of(System.Windows.Documents.Block).prototype._ctor.call(this, 345);
-};
 System.Windows.Documents.BlockCollection.prototype.AddInternal = function (value) {
 	this.AddDependencyObject(value);
 };
@@ -16043,9 +15238,6 @@ System.Windows.Documents.BlockCollection.prototype.ThrowSectionIsNotAllowedExcep
 	throw JSIL.New(System.ArgumentException, "_ctor$1", [System.String.Format($asm02.System.Windows.Resx.GetString$2("TextElementCollection_TypeNotSupportedInHost"), JSIL.GetType(value), "BlockCollection", "RichTextBox")]);
 };
 
-System.Windows.Documents.Glyphs.prototype._ctor = function () {
-	System.Windows.FrameworkElement.prototype._ctor$0.call(this, 66);
-};
 System.Windows.Documents.Glyphs.prototype.get_UnicodeString = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Documents.Glyphs.UnicodeStringProperty), System.String);
 };
@@ -16150,9 +15342,6 @@ System.Windows.Documents.Glyphs._cctor = function () {
 	System.Windows.Documents.Glyphs.FillProperty = System.Windows.DependencyProperty.RegisterCoreProperty(14007, System.Windows.Media.Brush);
 };
 
-System.Windows.Documents.Run.prototype._ctor = function () {
-	System.Windows.Documents.Inline.prototype._ctor$1.call(this, 110);
-};
 System.Windows.Documents.Run.prototype.get_FlowDirection = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Documents.Run.FlowDirectionProperty), System.Windows.FlowDirection);
 };
@@ -16187,9 +15376,6 @@ System.Windows.Documents.Run._cctor = function () {
 	System.Windows.Documents.Run.TextProperty = System.Windows.DependencyProperty.RegisterCoreProperty(14150, System.String);
 };
 
-System.Windows.Documents.Paragraph.prototype._ctor = function () {
-	System.Windows.Documents.Block.prototype._ctor$1.call(this, 344);
-};
 System.Windows.Documents.Paragraph.prototype.get_Inlines = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Documents.Paragraph.InlinesProperty), System.Windows.Documents.InlineCollection);
 };
@@ -16200,9 +15386,6 @@ System.Windows.Documents.Paragraph._cctor = function () {
 	System.Windows.Documents.Paragraph.InlinesProperty = System.Windows.DependencyProperty.RegisterCoreProperty(14256, System.Windows.Documents.InlineCollection);
 };
 
-System.Windows.Documents.Section.prototype._ctor = function () {
-	System.Windows.Documents.Block.prototype._ctor$1.call(this, 403);
-};
 System.Windows.Documents.Section.prototype.get_Blocks = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Documents.Section.BlocksProperty), System.Windows.Documents.BlockCollection);
 };
@@ -16226,19 +15409,9 @@ System.Windows.Documents.Section._cctor = function () {
 	System.Windows.Documents.Section.HasTrailingParagraphBreakOnPasteProperty = System.Windows.DependencyProperty.RegisterCoreProperty(14271, System.Boolean);
 };
 
-System.Windows.Documents.Span.prototype._ctor$0 = function () {
-	System.Windows.Documents.Inline.prototype._ctor$1.call(this, 125);
-};
-System.Windows.Documents.Span.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.Documents.Inline.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Documents.Span.prototype.get_Inlines = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Documents.Span.InlinesProperty), System.Windows.Documents.InlineCollection);
 };
-JSIL.OverloadedMethod(System.Windows.Documents.Span.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.MakeProperty(System.Windows.Documents.Span.prototype, "Inlines", 
 	System.Windows.Documents.Span.prototype.get_Inlines, null);
 System.Windows.Documents.Span.InlinesProperty = null;
@@ -16246,21 +15419,9 @@ System.Windows.Documents.Span._cctor = function () {
 	System.Windows.Documents.Span.InlinesProperty = System.Windows.DependencyProperty.RegisterCoreProperty(14250, System.Windows.Documents.InlineCollection);
 };
 
-System.Windows.Documents.Underline.prototype._ctor = function () {
-	System.Windows.Documents.Span.prototype._ctor$1.call(this, 126);
-};
 
-System.Windows.Documents.Italic.prototype._ctor = function () {
-	System.Windows.Documents.Span.prototype._ctor$1.call(this, 127);
-};
 
-System.Windows.Documents.Bold.prototype._ctor = function () {
-	System.Windows.Documents.Span.prototype._ctor$1.call(this, 128);
-};
 
-System.Windows.Documents.Hyperlink.prototype._ctor = function () {
-	System.Windows.Documents.Span.prototype._ctor$1.call(this, 347);
-};
 System.Windows.Documents.Hyperlink.prototype.get_TargetName = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Documents.Hyperlink.TargetNameProperty), System.String);
 };
@@ -16359,13 +15520,7 @@ System.Windows.Documents.Hyperlink._cctor = function () {
 	System.Windows.Documents.Hyperlink.CommandParameterProperty = System.Windows.DependencyProperty.Register$0("CommandParameter", System.Object, System.Windows.Documents.Hyperlink, null);
 };
 
-System.Windows.Documents.LineBreak.prototype._ctor = function () {
-	System.Windows.Documents.Inline.prototype._ctor$1.call(this, 111);
-};
 
-System.Windows.Documents.InlineUIContainer.prototype._ctor = function () {
-	System.Windows.Documents.Inline.prototype._ctor$1.call(this, 349);
-};
 System.Windows.Documents.InlineUIContainer.prototype.get_Child = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Documents.InlineUIContainer.ChildProperty), System.Windows.UIElement);
 };
@@ -16379,12 +15534,6 @@ System.Windows.Documents.InlineUIContainer._cctor = function () {
 	System.Windows.Documents.InlineUIContainer.ChildProperty = System.Windows.DependencyProperty.RegisterCoreProperty(14151, System.Windows.UIElement);
 };
 
-System.Windows.Controls.Panel.prototype._ctor$0 = function () {
-	System.Windows.FrameworkElement.prototype._ctor$0.call(this, 114);
-};
-System.Windows.Controls.Panel.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.FrameworkElement.prototype._ctor$0.call(this, nKnownTypeIndex);
-};
 System.Windows.Controls.Panel.prototype.get_Children = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Controls.Panel.ChildrenProperty), System.Windows.Controls.UIElementCollection);
 };
@@ -16397,10 +15546,6 @@ System.Windows.Controls.Panel.prototype.set_Background = function (value) {
 System.Windows.Controls.Panel.prototype.get_IsItemsHost = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Controls.Panel.IsItemsHostProperty), System.Boolean);
 };
-JSIL.OverloadedMethod(System.Windows.Controls.Panel.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.MakeProperty(System.Windows.Controls.Panel.prototype, "Children", 
 	System.Windows.Controls.Panel.prototype.get_Children, null);
 JSIL.MakeProperty(System.Windows.Controls.Panel.prototype, "Background", 
@@ -16416,9 +15561,6 @@ System.Windows.Controls.Panel._cctor = function () {
 	System.Windows.Controls.Panel.IsItemsHostProperty = System.Windows.DependencyProperty.RegisterCoreProperty(13201, System.Boolean);
 };
 
-System.Windows.Controls.Image.prototype._ctor = function () {
-	System.Windows.FrameworkElement.prototype._ctor$0.call(this, 117);
-};
 System.Windows.Controls.Image.prototype.get_Stretch = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Controls.Image.StretchProperty), System.Windows.Media.Stretch);
 };
@@ -16431,7 +15573,7 @@ System.Windows.Controls.Image.prototype.get_Source = function () {
 	}
 	var bitmapImage = JSIL.TryCast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Controls.Image.SourceProperty), System.Windows.Media.Imaging.BitmapImage);
 	if (bitmapImage === null) {
-		return JSIL.New(System.Windows.Media.Imaging.BitmapImage, "_ctor$0", []);
+		return new System.Windows.Media.Imaging.BitmapImage();
 	}
 	return bitmapImage;
 };
@@ -16464,12 +15606,6 @@ System.Windows.Controls.Image._cctor = function () {
 	System.Windows.Controls.Image.StretchProperty = System.Windows.DependencyProperty.RegisterCoreProperty(13401, System.Windows.Media.Stretch);
 };
 
-System.Windows.Controls.Canvas.prototype._ctor$0 = function () {
-	System.Windows.Controls.Panel.prototype._ctor$1.call(this, 42);
-};
-System.Windows.Controls.Canvas.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.Controls.Panel.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Controls.Canvas.GetLeft = function (element) {
 	return JSIL.Cast(element.GetValue(System.Windows.Controls.Canvas.LeftProperty), System.Double);
 };
@@ -16494,10 +15630,6 @@ System.Windows.Controls.Canvas.prototype.MeasureOverride = function (constraint)
 System.Windows.Controls.Canvas.prototype.ArrangeOverride = function (arrangeSize) {
 	return System.Windows.FrameworkElement.prototype.ArrangeOverride.call(this, arrangeSize);
 };
-JSIL.OverloadedMethod(System.Windows.Controls.Canvas.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 System.Windows.Controls.Canvas.LeftProperty = null;
 System.Windows.Controls.Canvas.TopProperty = null;
 System.Windows.Controls.Canvas.ZIndexProperty = null;
@@ -16507,9 +15639,6 @@ System.Windows.Controls.Canvas._cctor = function () {
 	System.Windows.Controls.Canvas.ZIndexProperty = System.Windows.DependencyProperty.RegisterCoreProperty(13011, System.Int32);
 };
 
-System.Windows.Controls.TextBlock.prototype._ctor = function () {
-	System.Windows.FrameworkElement.prototype._ctor$0.call(this, 109);
-};
 System.Windows.Controls.TextBlock.prototype.get_FontSize = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Controls.TextBlock.FontSizeProperty), System.Double);
 };
@@ -16692,10 +15821,6 @@ System.Windows.Controls.TextBlock._cctor = function () {
 	System.Windows.Controls.TextBlock.LineStackingStrategyProperty = System.Windows.DependencyProperty.RegisterCoreProperty(14205, System.Windows.LineStackingStrategy);
 };
 
-System.Windows.Controls.MediaElement.prototype._ctor = function () {
-	this._internalAttributes = JSIL.New(System.Collections.Generic.Dictionary$b2.Of(System.String, System.String), "_ctor$2", [System.StringComparer.OrdinalIgnoreCase]);
-	System.Windows.FrameworkElement.prototype._ctor$0.call(this, 116);
-};
 System.Windows.Controls.MediaElement.prototype.add_MediaOpened = function (value) {
 	System.Windows.DependencyObject.prototype.AddEventListener.call(this, System.Windows.DependencyProperty.RegisterCoreProperty(23100, null), value);
 };
@@ -17390,9 +16515,6 @@ System.Windows.Controls.NotifyEventArgs._cctor = function () {
 	System.Windows.Controls.NotifyEventArgs.ValueProperty = System.Windows.DependencyProperty.RegisterCoreProperty(22160, System.String);
 };
 
-System.Windows.Controls.InkPresenter.prototype._ctor = function () {
-	System.Windows.Controls.Canvas.prototype._ctor$1.call(this, 135);
-};
 System.Windows.Controls.InkPresenter.prototype.get_Strokes = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Controls.InkPresenter.StrokesProperty), System.Windows.Ink.StrokeCollection);
 };
@@ -17406,9 +16528,6 @@ System.Windows.Controls.InkPresenter._cctor = function () {
 	System.Windows.Controls.InkPresenter.StrokesProperty = System.Windows.DependencyProperty.RegisterCoreProperty(17100, System.Windows.Ink.StrokeCollection);
 };
 
-System.Windows.Controls.UIElementCollection.prototype._ctor = function () {
-	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.UIElement).prototype._ctor$1.call(this, 122);
-};
 System.Windows.Controls.UIElementCollection.prototype.AddInternal = function (value) {
 	this.AddDependencyObject(value);
 };
@@ -17431,9 +16550,6 @@ System.Windows.Controls.UIElementCollection.prototype.SetItemImplSkipMethodPack 
 	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.UIElement).prototype.SetItemDependencyObject.call(this, index, value);
 };
 
-System.Windows.Controls.MultiScaleImage.prototype._ctor = function () {
-	System.Windows.FrameworkElement.prototype._ctor$0.call(this, 190);
-};
 System.Windows.Controls.MultiScaleImage.prototype.add_MotionFinished = function (value) {
 	System.Windows.DependencyObject.prototype.AddEventListener.call(this, System.Windows.DependencyProperty.RegisterCoreProperty(19601, null), value);
 };
@@ -17605,9 +16721,6 @@ System.Windows.Controls.MultiScaleImage._cctor = function () {
 	System.Windows.Controls.MultiScaleImage._InternalSubImagesProperty = System.Windows.DependencyProperty.RegisterCoreProperty(19606, System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Controls.MultiScaleSubImage));
 };
 
-System.Windows.Controls.MultiScaleSubImage.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 227);
-};
 System.Windows.Controls.MultiScaleSubImage.prototype.get_ViewportOrigin = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Controls.MultiScaleSubImage.ViewportOriginProperty), System.Windows.Point);
 };
@@ -17658,12 +16771,6 @@ System.Windows.Controls.MultiScaleSubImage._cctor = function () {
 	System.Windows.Controls.MultiScaleSubImage.OpacityProperty = System.Windows.DependencyProperty.RegisterCoreProperty(19674, System.Double);
 };
 
-System.Windows.Controls.StackPanel.prototype._ctor$0 = function () {
-	System.Windows.Controls.Panel.prototype._ctor$1.call(this, 171);
-};
-System.Windows.Controls.StackPanel.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.Controls.Panel.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Controls.StackPanel.prototype.get_Orientation = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Controls.StackPanel.OrientationProperty), System.Windows.Controls.Orientation);
 };
@@ -17676,10 +16783,6 @@ System.Windows.Controls.StackPanel.prototype.MeasureOverride = function (constra
 System.Windows.Controls.StackPanel.prototype.ArrangeOverride = function (arrangeSize) {
 	return System.Windows.FrameworkElement.prototype.ArrangeOverride.call(this, arrangeSize);
 };
-JSIL.OverloadedMethod(System.Windows.Controls.StackPanel.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.MakeProperty(System.Windows.Controls.StackPanel.prototype, "Orientation", 
 	System.Windows.Controls.StackPanel.prototype.get_Orientation, System.Windows.Controls.StackPanel.prototype.set_Orientation);
 System.Windows.Controls.StackPanel.OrientationProperty = null;
@@ -17687,12 +16790,6 @@ System.Windows.Controls.StackPanel._cctor = function () {
 	System.Windows.Controls.StackPanel.OrientationProperty = System.Windows.DependencyProperty.RegisterCoreProperty(24503, System.Windows.Controls.Orientation);
 };
 
-System.Windows.Controls.Control.prototype._ctor$0 = function () {
-	System.Windows.FrameworkElement.prototype._ctor$0.call(this, 155);
-};
-System.Windows.Controls.Control.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.FrameworkElement.prototype._ctor$0.call(this, nKnownTypeIndex);
-};
 System.Windows.Controls.Control.prototype.get_ImplementationRoot = function () {
 	return $asm02.MS.Internal.XcpImports.Control_GetImplementationRoot(this);
 };
@@ -18247,10 +17344,6 @@ System.Windows.Controls.Control.prototype.OnDoubleTap = function (e) {
 System.Windows.Controls.Control.prototype.OnHold = function (e) {
 	$asm02.MS.Internal.StubHelper.ThrowIfNotInDesignMode();
 };
-JSIL.OverloadedMethod(System.Windows.Controls.Control.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.MakeProperty(System.Windows.Controls.Control.prototype, "ImplementationRoot", 
 	System.Windows.Controls.Control.prototype.get_ImplementationRoot, System.Windows.Controls.Control.prototype.set_ImplementationRoot);
 JSIL.MakeProperty(System.Windows.Controls.Control.prototype, "DefaultStyleKey", 
@@ -18350,19 +17443,6 @@ System.Windows.Controls.Control._cctor = function () {
 	System.Windows.Controls.Control._controlDelgates = JSIL.Array.New(System.Windows.Controls.Control.ControlDelegate, [JSIL.Delegate.New("System.Windows.Controls.Control/ControlDelegate", null, System.Windows.Controls.Control.OnMouseMove), JSIL.Delegate.New("System.Windows.Controls.Control/ControlDelegate", null, System.Windows.Controls.Control.OnMouseEnter), JSIL.Delegate.New("System.Windows.Controls.Control/ControlDelegate", null, System.Windows.Controls.Control.OnMouseLeave), JSIL.Delegate.New("System.Windows.Controls.Control/ControlDelegate", null, System.Windows.Controls.Control.OnMouseLeftButtonDown), JSIL.Delegate.New("System.Windows.Controls.Control/ControlDelegate", null, System.Windows.Controls.Control.OnMouseLeftButtonUp), JSIL.Delegate.New("System.Windows.Controls.Control/ControlDelegate", null, System.Windows.Controls.Control.OnMouseRightButtonDown), JSIL.Delegate.New("System.Windows.Controls.Control/ControlDelegate", null, System.Windows.Controls.Control.OnMouseRightButtonUp), JSIL.Delegate.New("System.Windows.Controls.Control/ControlDelegate", null, System.Windows.Controls.Control.OnMouseWheel), JSIL.Delegate.New("System.Windows.Controls.Control/ControlDelegate", null, System.Windows.Controls.Control.OnKeyUp), JSIL.Delegate.New("System.Windows.Controls.Control/ControlDelegate", null, System.Windows.Controls.Control.OnKeyDown), JSIL.Delegate.New("System.Windows.Controls.Control/ControlDelegate", null, System.Windows.Controls.Control.OnGotFocus), JSIL.Delegate.New("System.Windows.Controls.Control/ControlDelegate", null, System.Windows.Controls.Control.OnLostFocus), JSIL.Delegate.New("System.Windows.Controls.Control/ControlDelegate", null, System.Windows.Controls.Control.OnIsEnabledChanged), JSIL.Delegate.New("System.Windows.Controls.Control/ControlDelegate", null, System.Windows.Controls.Control.OnLostMouseCapture), JSIL.Delegate.New("System.Windows.Controls.Control/ControlDelegate", null, System.Windows.Controls.Control.OnTextInput), JSIL.Delegate.New("System.Windows.Controls.Control/ControlDelegate", null, System.Windows.Controls.Control.OnTextInputStart), JSIL.Delegate.New("System.Windows.Controls.Control/ControlDelegate", null, System.Windows.Controls.Control.OnTextInputUpdate), JSIL.Delegate.New("System.Windows.Controls.Control/ControlDelegate", null, System.Windows.Controls.Control.OnDragEnter), JSIL.Delegate.New("System.Windows.Controls.Control/ControlDelegate", null, System.Windows.Controls.Control.OnDragLeave), JSIL.Delegate.New("System.Windows.Controls.Control/ControlDelegate", null, System.Windows.Controls.Control.OnDragOver), JSIL.Delegate.New("System.Windows.Controls.Control/ControlDelegate", null, System.Windows.Controls.Control.OnDrop)]);
 };
 
-System.Windows.Controls.TextBox.prototype._ctor$0 = function () {
-	this._previousHSBV = System.Windows.Controls.ScrollBarVisibility.Hidden;
-	this._horizontalScrollBarVisibility = System.Windows.Controls.ScrollBarVisibility.Hidden;
-	this._verticalScrollBarVisibility = System.Windows.Controls.ScrollBarVisibility.Hidden;
-	System.Windows.Controls.Control.prototype._ctor$1.call(this, 177);
-	System.Windows.Controls.Control.prototype.set_DefaultStyleKey.call(this, System.Windows.Controls.TextBox);
-};
-System.Windows.Controls.TextBox.prototype._ctor$1 = function (nKnownTypeIndex) {
-	this._previousHSBV = System.Windows.Controls.ScrollBarVisibility.Hidden;
-	this._horizontalScrollBarVisibility = System.Windows.Controls.ScrollBarVisibility.Hidden;
-	this._verticalScrollBarVisibility = System.Windows.Controls.ScrollBarVisibility.Hidden;
-	System.Windows.Controls.Control.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Controls.TextBox.prototype.add_TextChanged = function (value) {
 	System.Windows.DependencyObject.prototype.AddEventListener.call(this, System.Windows.DependencyProperty.RegisterCoreProperty(24504, null), value);
 };
@@ -18737,10 +17817,6 @@ System.Windows.Controls.TextBox.prototype.ChangeVisualState = function (useTrans
 	}
 	return 0;
 };
-JSIL.OverloadedMethod(System.Windows.Controls.TextBox.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.OverloadedMethod(System.Windows.Controls.TextBox.prototype, "GetRectFromCharacterIndex", [
 		["GetRectFromCharacterIndex$0", [System.Int32]], 
 		["GetRectFromCharacterIndex$1", [System.Int32, System.Boolean]]
@@ -18827,21 +17903,6 @@ System.Windows.Controls.TextBox._cctor = function () {
 			}]));
 };
 
-System.Windows.Controls.RichTextBox.prototype._ctor$0 = function () {
-	this._previousHSBV = System.Windows.Controls.ScrollBarVisibility.Hidden;
-	this._verticalScrollBarVisibility = System.Windows.Controls.ScrollBarVisibility.Auto;
-	this._selectionLock = new System.Object();
-	this._clipboardXAMLSerializer = new $asm02.MS.Internal.ClipboardXAMLSerializer();
-	System.Windows.Controls.Control.prototype._ctor$1.call(this, 340);
-	System.Windows.Controls.Control.prototype.set_DefaultStyleKey.call(this, System.Windows.Controls.RichTextBox);
-};
-System.Windows.Controls.RichTextBox.prototype._ctor$1 = function (nKnownTypeIndex) {
-	this._previousHSBV = System.Windows.Controls.ScrollBarVisibility.Hidden;
-	this._verticalScrollBarVisibility = System.Windows.Controls.ScrollBarVisibility.Auto;
-	this._selectionLock = new System.Object();
-	this._clipboardXAMLSerializer = new $asm02.MS.Internal.ClipboardXAMLSerializer();
-	System.Windows.Controls.Control.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Controls.RichTextBox.prototype.add_SelectionChanged = function (value) {
 	System.Windows.DependencyObject.prototype.AddEventListener.call(this, System.Windows.DependencyProperty.RegisterCoreProperty(26016, null), value);
 };
@@ -19219,10 +18280,6 @@ System.Windows.Controls.RichTextBox.prototype.TextWrappingChanged = function () 
 	}
 	return 0;
 };
-JSIL.OverloadedMethod(System.Windows.Controls.RichTextBox.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.MakeProperty(System.Windows.Controls.RichTextBox.prototype, "IsReadOnly", 
 	System.Windows.Controls.RichTextBox.prototype.get_IsReadOnly, System.Windows.Controls.RichTextBox.prototype.set_IsReadOnly);
 JSIL.MakeProperty(System.Windows.Controls.RichTextBox.prototype, "TextWrapping", 
@@ -19295,10 +18352,6 @@ System.Windows.Controls.ContentChangedEventArgs.prototype.CheckPtr = function ()
 	}
 };
 
-System.Windows.Controls.PasswordBox.prototype._ctor = function () {
-	System.Windows.Controls.Control.prototype._ctor$1.call(this, 262);
-	System.Windows.Controls.Control.prototype.set_DefaultStyleKey.call(this, System.Windows.Controls.PasswordBox);
-};
 System.Windows.Controls.PasswordBox.prototype.add_PasswordChanged = function (value) {
 	System.Windows.DependencyObject.prototype.AddEventListener.call(this, System.Windows.DependencyProperty.RegisterCoreProperty(26012, null), value);
 };
@@ -19489,9 +18542,6 @@ System.Windows.Controls.PasswordBox._cctor = function () {
 	System.Windows.Controls.PasswordBox.PasswordCharProperty = System.Windows.DependencyProperty.RegisterCoreProperty(20202, System.Char);
 };
 
-System.Windows.Controls.RowDefinition.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 180);
-};
 System.Windows.Controls.RowDefinition.prototype.get_Height = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Controls.RowDefinition.HeightProperty), System.Windows.GridLength);
 };
@@ -19532,9 +18582,6 @@ System.Windows.Controls.RowDefinition._cctor = function () {
 	System.Windows.Controls.RowDefinition.ActualHeightProperty = System.Windows.DependencyProperty.RegisterCoreProperty(19464, System.Double);
 };
 
-System.Windows.Controls.ColumnDefinition.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 181);
-};
 System.Windows.Controls.ColumnDefinition.prototype.get_Width = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Controls.ColumnDefinition.WidthProperty), System.Windows.GridLength);
 };
@@ -19575,12 +18622,6 @@ System.Windows.Controls.ColumnDefinition._cctor = function () {
 	System.Windows.Controls.ColumnDefinition.ActualWidthProperty = System.Windows.DependencyProperty.RegisterCoreProperty(19465, System.Double);
 };
 
-System.Windows.Controls.Grid.prototype._ctor$0 = function () {
-	System.Windows.Controls.Panel.prototype._ctor$1.call(this, 184);
-};
-System.Windows.Controls.Grid.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.Controls.Panel.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Controls.Grid.GetRow = function (element) {
 	return JSIL.Cast(element.GetValue(System.Windows.Controls.Grid.RowProperty), System.Int32);
 };
@@ -19623,10 +18664,6 @@ System.Windows.Controls.Grid.prototype.MeasureOverride = function (constraint) {
 System.Windows.Controls.Grid.prototype.ArrangeOverride = function (arrangeSize) {
 	return System.Windows.FrameworkElement.prototype.ArrangeOverride.call(this, arrangeSize);
 };
-JSIL.OverloadedMethod(System.Windows.Controls.Grid.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.MakeProperty(System.Windows.Controls.Grid.prototype, "RowDefinitions", 
 	System.Windows.Controls.Grid.prototype.get_RowDefinitions, null);
 JSIL.MakeProperty(System.Windows.Controls.Grid.prototype, "ColumnDefinitions", 
@@ -19650,9 +18687,6 @@ System.Windows.Controls.Grid._cctor = function () {
 	System.Windows.Controls.Grid.ColumnSpanProperty = System.Windows.DependencyProperty.RegisterCoreProperty(13124, System.Int32);
 };
 
-System.Windows.Controls.RowDefinitionCollection.prototype._ctor = function () {
-	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Controls.RowDefinition).prototype._ctor$1.call(this, 182);
-};
 System.Windows.Controls.RowDefinitionCollection.prototype.AddInternal = function (value) {
 	this.AddDependencyObject(value);
 };
@@ -19675,9 +18709,6 @@ System.Windows.Controls.RowDefinitionCollection.prototype.SetItemImplSkipMethodP
 	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Controls.RowDefinition).prototype.SetItemDependencyObject.call(this, index, value);
 };
 
-System.Windows.Controls.ColumnDefinitionCollection.prototype._ctor = function () {
-	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Controls.ColumnDefinition).prototype._ctor$1.call(this, 183);
-};
 System.Windows.Controls.ColumnDefinitionCollection.prototype.AddInternal = function (value) {
 	this.AddDependencyObject(value);
 };
@@ -19700,9 +18731,6 @@ System.Windows.Controls.ColumnDefinitionCollection.prototype.SetItemImplSkipMeth
 	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Controls.ColumnDefinition).prototype.SetItemDependencyObject.call(this, index, value);
 };
 
-System.Windows.Controls.ControlTemplate.prototype._ctor = function () {
-	System.Windows.FrameworkTemplate.prototype._ctor$1.call(this, 188);
-};
 System.Windows.Controls.ControlTemplate.prototype.get_TargetType = function () {
 	var typeProxy = JSIL.TryCast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Controls.ControlTemplate.TargetTypeProperty), $asm02.MS.Internal.TypeProxy);
 	if (typeProxy === null) {
@@ -19720,13 +18748,6 @@ System.Windows.Controls.ControlTemplate._cctor = function () {
 	System.Windows.Controls.ControlTemplate.TargetTypeProperty = System.Windows.DependencyProperty.RegisterCoreProperty(19500, System.Type);
 };
 
-System.Windows.Controls.ItemsControl.prototype._ctor$0 = function () {
-	System.Windows.Controls.Control.prototype._ctor$1.call(this, 201);
-	System.Windows.Controls.Control.prototype.set_DefaultStyleKey.call(this, System.Windows.Controls.ItemsControl);
-};
-System.Windows.Controls.ItemsControl.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.Controls.Control.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Controls.ItemsControl.prototype.get_Items = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Controls.ItemsControl.ItemsProperty), System.Windows.Controls.ItemCollection);
 };
@@ -19907,7 +18928,7 @@ System.Windows.Controls.ItemsControl.prototype.IsItemItsOwnContainerOverride = f
 	return JSIL.CheckType(item, System.Windows.UIElement);
 };
 System.Windows.Controls.ItemsControl.prototype.GetContainerForItemOverride = function () {
-	return JSIL.New(System.Windows.Controls.ContentPresenter, "_ctor$0", []);
+	return new System.Windows.Controls.ContentPresenter();
 };
 System.Windows.Controls.ItemsControl.prototype.ShouldApplyItemContainerStyle = function (container, item) {
 	return true;
@@ -20143,10 +19164,6 @@ System.Windows.Controls.ItemsControl.ItemsControlFromItemContainer = function (c
 	}
 	return null;
 };
-JSIL.OverloadedMethod(System.Windows.Controls.ItemsControl.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.MakeProperty(System.Windows.Controls.ItemsControl.prototype, "Items", 
 	System.Windows.Controls.ItemsControl.prototype.get_Items, null);
 JSIL.MakeProperty(System.Windows.Controls.ItemsControl.prototype, "ItemTemplate", 
@@ -20200,9 +19217,6 @@ JSIL.MakeProperty($asm02.System.Windows.Controls.ItemsControl.AccessibilityItem.
 	$asm02.System.Windows.Controls.ItemsControl.AccessibilityItem.prototype.get_Item, null);
 $asm02.System.Windows.Controls.ItemsControl.AccessibilityItem.prototype._item = null;
 
-System.Windows.Controls.Viewbox.prototype._ctor = function () {
-	System.Windows.FrameworkElement.prototype._ctor$0.call(this, 335);
-};
 System.Windows.Controls.Viewbox.prototype.get_Child = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Controls.Viewbox.ChildProperty), System.Windows.UIElement);
 };
@@ -20236,9 +19250,6 @@ System.Windows.Controls.Viewbox._cctor = function () {
 	System.Windows.Controls.Viewbox.StretchDirectionProperty = System.Windows.DependencyProperty.RegisterCoreProperty(22218, System.Windows.Controls.StretchDirection);
 };
 
-System.Windows.Controls.Border.prototype._ctor = function () {
-	System.Windows.FrameworkElement.prototype._ctor$0.call(this, 213);
-};
 System.Windows.Controls.Border.prototype.get_BorderBrush = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Controls.Border.BorderBrushProperty), System.Windows.Media.Brush);
 };
@@ -20302,13 +19313,6 @@ System.Windows.Controls.Border._cctor = function () {
 	System.Windows.Controls.Border.ChildProperty = System.Windows.DependencyProperty.RegisterCoreProperty(19750, System.Windows.UIElement);
 };
 
-System.Windows.Controls.ContentControl.prototype._ctor$0 = function () {
-	System.Windows.Controls.Control.prototype._ctor$1.call(this, 252);
-	System.Windows.Controls.Control.prototype.set_DefaultStyleKey.call(this, System.Windows.Controls.ContentControl);
-};
-System.Windows.Controls.ContentControl.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.Controls.Control.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Controls.ContentControl.prototype.get_Content = function () {
 	return System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Controls.ContentControl.ContentProperty);
 };
@@ -20366,10 +19370,6 @@ System.Windows.Controls.ContentControl.prototype.SetContentIsNotLogical = functi
 System.Windows.Controls.ContentControl.prototype.GetPlainText = function () {
 	return System.Windows.FrameworkElement.GetStringFromObject(this.Content);
 };
-JSIL.OverloadedMethod(System.Windows.Controls.ContentControl.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.MakeProperty(System.Windows.Controls.ContentControl.prototype, "Content", 
 	System.Windows.Controls.ContentControl.prototype.get_Content, System.Windows.Controls.ContentControl.prototype.set_Content);
 JSIL.MakeProperty(System.Windows.Controls.ContentControl.prototype, "ContentTemplate", 
@@ -20385,12 +19385,6 @@ System.Windows.Controls.ContentControl._cctor = function () {
 	System.Windows.Controls.ContentControl.ContentProperty = System.Windows.DependencyProperty.RegisterCoreProperty(19707, System.Object);
 };
 
-System.Windows.Controls.ContentPresenter.prototype._ctor$0 = function () {
-	System.Windows.FrameworkElement.prototype._ctor$0.call(this, 209);
-};
-System.Windows.Controls.ContentPresenter.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.FrameworkElement.prototype._ctor$0.call(this, nKnownTypeIndex);
-};
 System.Windows.Controls.ContentPresenter.prototype.get_Content = function () {
 	return System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Controls.ContentPresenter.ContentProperty);
 };
@@ -20407,10 +19401,6 @@ System.Windows.Controls.ContentPresenter.prototype.IsDataContextChangeRelevant =
 	return (System.Windows.FrameworkElement.prototype.IsDataContextChangeRelevant.call(this, e) || (!JSIL.Cast(e.ChangeReason, System.Boolean) && 
 			JSIL.CheckType(System.Windows.DependencyObject.prototype.ReadLocalValue.call(this, System.Windows.Controls.ContentPresenter.ContentProperty), System.Windows.Data.BindingExpression)));
 };
-JSIL.OverloadedMethod(System.Windows.Controls.ContentPresenter.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.MakeProperty(System.Windows.Controls.ContentPresenter.prototype, "Content", 
 	System.Windows.Controls.ContentPresenter.prototype.get_Content, System.Windows.Controls.ContentPresenter.prototype.set_Content);
 JSIL.MakeProperty(System.Windows.Controls.ContentPresenter.prototype, "ContentTemplate", 
@@ -20425,13 +19415,7 @@ System.Windows.Controls.ContentPresenter._cctor = function () {
 	System.Windows.Controls.ContentPresenter.ContentProperty = System.Windows.DependencyProperty.RegisterCoreProperty(19704, System.Object);
 };
 
-System.Windows.Controls.ItemsPanelTemplate.prototype._ctor = function () {
-	System.Windows.FrameworkTemplate.prototype._ctor$1.call(this, 207);
-};
 
-System.Windows.Controls.ItemsPresenter.prototype._ctor = function () {
-	System.Windows.FrameworkElement.prototype._ctor$0.call(this, 208);
-};
 System.Windows.Controls.ItemsPresenter.prototype.get_ItemsPanel = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Controls.ItemsPresenter.ItemsPanelProperty), System.Windows.Controls.ItemsPanelTemplate);
 };
@@ -20445,9 +19429,6 @@ System.Windows.Controls.ItemsPresenter._cctor = function () {
 	System.Windows.Controls.ItemsPresenter.ItemsPanelProperty = System.Windows.DependencyProperty.RegisterCoreProperty(19437, System.Windows.Controls.ItemsPanelTemplate);
 };
 
-System.Windows.Controls.WebBrowser.prototype._ctor = function () {
-	System.Windows.FrameworkElement.prototype._ctor$0.call(this, 372);
-};
 System.Windows.Controls.WebBrowser.prototype.get_Source = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Controls.WebBrowser.SourceProperty), System.Uri);
 };
@@ -20540,9 +19521,6 @@ System.Windows.Controls.WebBrowser._cctor = function () {
 	System.Windows.Controls.WebBrowser.SourceProperty = System.Windows.DependencyProperty.RegisterCoreProperty(22150, System.Uri);
 };
 
-System.Windows.Controls.WebBrowserBrush.prototype._ctor = function () {
-	System.Windows.Media.TileBrush.prototype._ctor$1.call(this, 373);
-};
 System.Windows.Controls.WebBrowserBrush.prototype.get_SourceName = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Controls.WebBrowserBrush.SourceNameProperty), System.String);
 };
@@ -20562,9 +19540,6 @@ System.Windows.Controls.WebBrowserBrush._cctor = function () {
 	System.Windows.Controls.WebBrowserBrush.SourceNameProperty = System.Windows.DependencyProperty.RegisterCoreProperty(22151, System.String);
 };
 
-$asm02.MS.Internal.InternalTransform.prototype._ctor = function () {
-	System.Windows.Media.GeneralTransform.prototype._ctor$1.call(this, 312);
-};
 $asm02.MS.Internal.InternalTransform.prototype.TryTransform = function (inPoint, /* ref */ outPoint) {
 	try {
 		outPoint.value = this.TransformNative(inPoint).MemberwiseClone();
@@ -20597,9 +19572,6 @@ $asm02.MS.Internal.InternalTransform.prototype.get_Inverse = function () {
 JSIL.MakeProperty($asm02.MS.Internal.InternalTransform.prototype, "Inverse", 
 	$asm02.MS.Internal.InternalTransform.prototype.get_Inverse, null);
 
-$asm02.MS.Internal.TextPointerWrapper.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 407);
-};
 
 $asm02.MS.Internal.ErrorEventArgs.prototype._ctor = function () {
 	System.EventArgs.prototype._ctor.call(this);
@@ -20620,9 +19592,6 @@ $asm02.MS.Internal.ErrorEventArgs.prototype.CheckPtr = function () {
 JSIL.MakeProperty($asm02.MS.Internal.ErrorEventArgs.prototype, "IManagedPeerBase_NativeObject", 
 	$asm02.MS.Internal.ErrorEventArgs.prototype.IManagedPeerBase_get_NativeObject, null);
 
-$asm02.MS.Internal.Downloader.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 131);
-};
 $asm02.MS.Internal.Downloader.prototype.add_DownloadProgressChanged = function (value) {
 	System.Windows.DependencyObject.prototype.AddEventListener.call(this, System.Windows.DependencyProperty.RegisterCoreProperty(23300, null), value);
 };
@@ -20729,9 +19698,6 @@ $asm02.MS.Internal.Downloader._cctor = function () {
 	$asm02.MS.Internal.Downloader.FinalUriProperty = System.Windows.DependencyProperty.RegisterCoreProperty(18405, System.String);
 };
 
-$asm02.MS.Internal.StylusInfo.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 140);
-};
 $asm02.MS.Internal.StylusInfo.prototype.get_DeviceType = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, $asm02.MS.Internal.StylusInfo.DeviceTypeProperty), System.Windows.Input.TabletDeviceType);
 };
@@ -20755,9 +19721,6 @@ MS.Internal.StylusInfo._cctor = function () {
 	MS.Internal.StylusInfo.IsInvertedProperty = System.Windows.DependencyProperty.RegisterCoreProperty(17140, System.Boolean);
 };
 
-$asm02.MS.Internal.MultiScaleSubImageCollection.prototype._ctor = function () {
-	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Controls.MultiScaleSubImage).prototype._ctor$1.call(this, 228);
-};
 $asm02.MS.Internal.MultiScaleSubImageCollection.prototype.AddInternal = function (value) {
 	this.AddDependencyObject(value);
 };
@@ -20780,9 +19743,6 @@ $asm02.MS.Internal.MultiScaleSubImageCollection.prototype.SetItemImplSkipMethodP
 	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Controls.MultiScaleSubImage).prototype.SetItemDependencyObject.call(this, index, value);
 };
 
-$asm02.MS.Internal.MediaAttribute.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 152);
-};
 $asm02.MS.Internal.MediaAttribute.prototype.get_Value = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, $asm02.MS.Internal.MediaAttribute.ValueProperty), System.String);
 };
@@ -20796,9 +19756,6 @@ $asm02.MS.Internal.MediaAttribute._cctor = function () {
 	$asm02.MS.Internal.MediaAttribute.ValueProperty = System.Windows.DependencyProperty.RegisterCoreProperty(18700, System.String);
 };
 
-$asm02.MS.Internal.MediaAttributeCollection.prototype._ctor = function () {
-	System.Windows.PresentationFrameworkCollection$b1.Of($asm02.MS.Internal.MediaAttribute).prototype._ctor$1.call(this, 153);
-};
 $asm02.MS.Internal.MediaAttributeCollection.prototype.AddInternal = function (value) {
 	this.AddDependencyObject(value);
 };
@@ -20824,13 +19781,7 @@ $asm02.MS.Internal.MediaAttributeCollection.prototype.GetItemByName = function (
 	return $asm02.MS.Internal.XcpImports.MediaAttributeCollection_GetItemByName(this, attributeName);
 };
 
-$asm02.MS.Internal.RichTextBoxView.prototype._ctor = function () {
-	System.Windows.FrameworkElement.prototype._ctor$0.call(this, 346);
-};
 
-$asm02.MS.Internal.TextBoxView.prototype._ctor = function () {
-	System.Windows.FrameworkElement.prototype._ctor$0.call(this, 179);
-};
 
 $asm02.MS.Internal.RequestBringIntoViewEventArgs.prototype._ctor = function () {
 	System.Windows.RoutedEventArgs.prototype._ctor.call(this);
@@ -20944,9 +19895,6 @@ MS.Internal.IsEnabledChangedEventArgs._cctor = function () {
 	MS.Internal.IsEnabledChangedEventArgs.NewValueProperty = System.Windows.DependencyProperty.RegisterCoreProperty(19802, System.Boolean);
 };
 
-$asm02.MS.Internal.DisplayMemberTemplate.prototype._ctor = function () {
-	System.Windows.DataTemplate.prototype._ctor$1.call(this, 210);
-};
 $asm02.MS.Internal.DisplayMemberTemplate.prototype.get_DisplayMemberPath = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, $asm02.MS.Internal.DisplayMemberTemplate.DisplayMemberPathProperty), System.String);
 };
@@ -20971,9 +19919,6 @@ $asm02.MS.Internal.DisplayMemberTemplate._cctor = function () {
 	$asm02.MS.Internal.DisplayMemberTemplate.DisplayMemberPathProperty = System.Windows.DependencyProperty.RegisterCoreProperty(19706, System.String);
 };
 
-$asm02.MS.Internal.TypeProxy.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 211);
-};
 $asm02.MS.Internal.TypeProxy.prototype.get_ManagedTypeId = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, $asm02.MS.Internal.TypeProxy.ManagedTypeIdProperty), System.Int32);
 };
@@ -21181,16 +20126,16 @@ $asm02.MS.Internal.TypeProxy._cctor = function () {
 	$asm02.MS.Internal.TypeProxy.__types = JSIL.Array.New(System.Type, [null, System.Windows.Controls.TextBox, System.Windows.Controls.PasswordBox, System.Windows.Controls.ItemsControl, System.Windows.Controls.ContentControl, System.Windows.Controls.UserControl, System.Windows.Controls.Button, System.Windows.Controls.Primitives.ToggleButton, System.Windows.Controls.CheckBox, System.Windows.Controls.ComboBox, System.Windows.Controls.ListBoxItem, System.Windows.Controls.ComboBoxItem, System.Windows.Controls.HyperlinkButton, System.Windows.Controls.ListBox, System.Windows.Controls.Primitives.RepeatButton, System.Windows.Controls.Primitives.ScrollBar, System.Windows.Controls.Primitives.Thumb, System.Windows.Controls.RadioButton, System.Windows.Controls.ScrollViewer, System.Windows.Controls.Slider, System.Windows.Controls.ToolTip, System.Windows.Controls.ProgressBar]);
 	var array = JSIL.Array.New($asm02.MS.Internal.TypeProxy.CreateObjectDelegate, 22);
 	array[1] = function () {
-		return JSIL.New(System.Windows.Controls.TextBox, "_ctor$0", []);
+		return new System.Windows.Controls.TextBox();
 	};
 	array[2] = function () {
 		return new System.Windows.Controls.PasswordBox();
 	};
 	array[3] = function () {
-		return JSIL.New(System.Windows.Controls.ItemsControl, "_ctor$0", []);
+		return new System.Windows.Controls.ItemsControl();
 	};
 	array[4] = function () {
-		return JSIL.New(System.Windows.Controls.ContentControl, "_ctor$0", []);
+		return new System.Windows.Controls.ContentControl();
 	};
 	array[5] = function () {
 		return new System.Windows.Controls.UserControl();
@@ -21260,9 +20205,6 @@ $asm02.MS.Internal.TypeProxy.$l$gc__DisplayClass30.prototype._ctor = function ()
 $asm02.MS.Internal.TypeProxy.$l$gc__DisplayClass30.prototype.$locals2e = null;
 $asm02.MS.Internal.TypeProxy.$l$gc__DisplayClass30.prototype.ctor = null;
 
-$asm02.MS.Internal.ManagedObjectReference.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 216);
-};
 $asm02.MS.Internal.ManagedObjectReference.prototype.get_IsMarkupExtension = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, $asm02.MS.Internal.ManagedObjectReference.IsMarkupExtensionProperty), System.Boolean);
 };
@@ -21275,24 +20217,13 @@ $asm02.MS.Internal.ManagedObjectReference.prototype.get_Target = function () {
 $asm02.MS.Internal.ManagedObjectReference.prototype.set_NativeValue = function (value) {
 	System.Windows.DependencyObject.prototype.SetValue.call(this, $asm02.MS.Internal.ManagedObjectReference.NativeValueProperty, value);
 };
-$asm02.MS.Internal.ManagedObjectReference.prototype._ctor$1 = function (target) {
-	this._ctor$0();
-	this._target = target;
-	if (JSIL.TryCast(this._target, $asm02.MS.Internal.IMarkupExtension) !== null) {
-		this.IsMarkupExtension = true;
-	}
-};
 $asm02.MS.Internal.ManagedObjectReference.ConditionalWrap = function (value) {
 	var managedPeer = JSIL.TryCast(value, $asm02.MS.Internal.IManagedPeer);
 	if (!(managedPeer || (value === null))) {
-		managedPeer = JSIL.New($asm02.MS.Internal.ManagedObjectReference, "_ctor$1", [value]);
+		managedPeer = new $asm02.MS.Internal.ManagedObjectReference(value);
 	}
 	return managedPeer;
 };
-JSIL.OverloadedMethod($asm02.MS.Internal.ManagedObjectReference.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.Object]]
-	]);
 JSIL.MakeProperty($asm02.MS.Internal.ManagedObjectReference.prototype, "IsMarkupExtension", 
 	$asm02.MS.Internal.ManagedObjectReference.prototype.get_IsMarkupExtension, $asm02.MS.Internal.ManagedObjectReference.prototype.set_IsMarkupExtension);
 JSIL.MakeProperty($asm02.MS.Internal.ManagedObjectReference.prototype, "Target", 
@@ -21307,9 +20238,6 @@ $asm02.MS.Internal.ManagedObjectReference._cctor = function () {
 	$asm02.MS.Internal.ManagedObjectReference.NativeValueProperty = System.Windows.DependencyProperty.RegisterCoreProperty(19201, System.Object);
 };
 
-$asm02.MS.Internal.DependencyPropertyProxy.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 229);
-};
 $asm02.MS.Internal.DependencyPropertyProxy.prototype.get_ManagedPropertyId = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, $asm02.MS.Internal.DependencyPropertyProxy.ManagedPropertyIdProperty), System.Int32);
 };
@@ -21372,9 +20300,6 @@ $asm02.MS.Internal.DependencyPropertyProxy._cctor = function () {
 	$asm02.MS.Internal.DependencyPropertyProxy.CorePropertyIdProperty = System.Windows.DependencyProperty.RegisterCoreProperty(20102, System.Int32);
 };
 
-$asm02.MS.Internal.GlyphTypeface.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 275);
-};
 $asm02.MS.Internal.GlyphTypeface.prototype.get_FontUri = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, $asm02.MS.Internal.GlyphTypeface.FontUriProperty), System.String);
 };
@@ -21399,9 +20324,6 @@ $asm02.MS.Internal.GlyphTypeface._cctor = function () {
 	$asm02.MS.Internal.GlyphTypeface.MinorVersionProperty = System.Windows.DependencyProperty.RegisterCoreProperty(14011, System.Int32);
 };
 
-$asm02.MS.Internal.GlyphTypefaceCollection.prototype._ctor = function () {
-	System.Windows.PresentationFrameworkCollection$b1.Of($asm02.MS.Internal.GlyphTypeface).prototype._ctor$1.call(this, 276);
-};
 $asm02.MS.Internal.GlyphTypefaceCollection.prototype.AddInternal = function (value) {
 	this.AddDependencyObject(value);
 };
@@ -21424,9 +20346,6 @@ $asm02.MS.Internal.GlyphTypefaceCollection.prototype.SetItemImplSkipMethodPack =
 	System.Windows.PresentationFrameworkCollection$b1.Of($asm02.MS.Internal.GlyphTypeface).prototype.SetItemDependencyObject.call(this, index, value);
 };
 
-$asm02.MS.Internal.ResourceDictionaryCollection.prototype._ctor = function () {
-	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.ResourceDictionary).prototype._ctor$1.call(this, 277);
-};
 $asm02.MS.Internal.ResourceDictionaryCollection.prototype.AddInternal = function (value) {
 	this.AddImpl(value);
 };
@@ -21449,9 +20368,6 @@ $asm02.MS.Internal.ResourceDictionaryCollection.prototype.SetItemImplSkipMethodP
 	this.SetItemImpl(index, value);
 };
 
-$asm02.MS.Internal.VisualStateGroupCollection.prototype._ctor = function () {
-	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.VisualStateGroup).prototype._ctor$1.call(this, 324);
-};
 $asm02.MS.Internal.VisualStateGroupCollection.prototype.AddInternal = function (value) {
 	this.AddDependencyObject(value);
 };
@@ -21474,9 +20390,6 @@ $asm02.MS.Internal.VisualStateGroupCollection.prototype.SetItemImplSkipMethodPac
 	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.VisualStateGroup).prototype.SetItemDependencyObject.call(this, index, value);
 };
 
-$asm02.MS.Internal.VisualTransitionCollection.prototype._ctor = function () {
-	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.VisualTransition).prototype._ctor$1.call(this, 325);
-};
 $asm02.MS.Internal.VisualTransitionCollection.prototype.AddInternal = function (value) {
 	this.AddDependencyObject(value);
 };
@@ -21499,9 +20412,6 @@ $asm02.MS.Internal.VisualTransitionCollection.prototype.SetItemImplSkipMethodPac
 	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.VisualTransition).prototype.SetItemDependencyObject.call(this, index, value);
 };
 
-$asm02.MS.Internal.VisualStateCollection.prototype._ctor = function () {
-	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.VisualState).prototype._ctor$1.call(this, 326);
-};
 $asm02.MS.Internal.VisualStateCollection.prototype.AddInternal = function (value) {
 	this.AddDependencyObject(value);
 };
@@ -21524,16 +20434,7 @@ $asm02.MS.Internal.VisualStateCollection.prototype.SetItemImplSkipMethodPack = f
 	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.VisualState).prototype.SetItemDependencyObject.call(this, index, value);
 };
 
-$asm02.MS.Internal.TemplateContent.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 381);
-};
 
-System.Windows.Media.Imaging.BitmapSource.prototype._ctor$0 = function () {
-	System.Windows.Media.ImageSource.prototype._ctor.call(this, 313);
-};
-System.Windows.Media.Imaging.BitmapSource.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.Media.ImageSource.prototype._ctor.call(this, nKnownTypeIndex);
-};
 System.Windows.Media.Imaging.BitmapSource.prototype.get_PixelHeight = function () {
 	return this.PixelHeightInternal;
 };
@@ -21561,10 +20462,6 @@ System.Windows.Media.Imaging.BitmapSource.prototype.EnsureArray = function (arr,
 	}
 	return arr;
 };
-JSIL.OverloadedMethod(System.Windows.Media.Imaging.BitmapSource.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.MakeProperty(System.Windows.Media.Imaging.BitmapSource.prototype, "PixelHeight", 
 	System.Windows.Media.Imaging.BitmapSource.prototype.get_PixelHeight, null);
 JSIL.MakeProperty(System.Windows.Media.Imaging.BitmapSource.prototype, "PixelWidth", 
@@ -21580,9 +20477,6 @@ System.Windows.Media.Imaging.BitmapSource._cctor = function () {
 	System.Windows.Media.Imaging.BitmapSource.PixelHeightProperty = System.Windows.DependencyProperty.RegisterCoreProperty(13411, System.Int32);
 };
 
-System.Windows.Media.Imaging.BitmapImage.prototype._ctor$0 = function () {
-	System.Windows.Media.Imaging.BitmapSource.prototype._ctor$1.call(this, 194);
-};
 System.Windows.Media.Imaging.BitmapImage.prototype.get_CreateOptions = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Imaging.BitmapImage.CreateOptionsProperty), System.Windows.Media.Imaging.BitmapCreateOptions);
 };
@@ -21594,10 +20488,6 @@ System.Windows.Media.Imaging.BitmapImage.prototype.get_UriSource = function () {
 };
 System.Windows.Media.Imaging.BitmapImage.prototype.set_UriSource = function (value) {
 	System.Windows.DependencyObject.prototype.SetValue.call(this, System.Windows.Media.Imaging.BitmapImage.UriSourceProperty, value);
-};
-System.Windows.Media.Imaging.BitmapImage.prototype._ctor$1 = function (uriSource) {
-	this._ctor$0();
-	this.UriSource = uriSource;
 };
 System.Windows.Media.Imaging.BitmapImage.prototype.add_DownloadProgress = function (value) {
 	System.Windows.DependencyObject.prototype.AddEventListener.call(this, System.Windows.DependencyProperty.RegisterCoreProperty(13406, null), value);
@@ -21621,10 +20511,6 @@ System.Windows.Media.Imaging.BitmapImage.prototype.SetSourceInternal = function 
 	this.UriSource = null;
 	System.Windows.Media.Imaging.BitmapSource.prototype.SetSourceInternal.call(this, streamSource);
 };
-JSIL.OverloadedMethod(System.Windows.Media.Imaging.BitmapImage.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.Uri]]
-	]);
 JSIL.MakeProperty(System.Windows.Media.Imaging.BitmapImage.prototype, "CreateOptions", 
 	System.Windows.Media.Imaging.BitmapImage.prototype.get_CreateOptions, System.Windows.Media.Imaging.BitmapImage.prototype.set_CreateOptions);
 JSIL.MakeProperty(System.Windows.Media.Imaging.BitmapImage.prototype, "UriSource", 
@@ -21665,9 +20551,6 @@ System.Windows.Media.Imaging.DownloadProgressEventArgs._cctor = function () {
 	System.Windows.Media.Imaging.DownloadProgressEventArgs.ProgressProperty = System.Windows.DependencyProperty.RegisterCoreProperty(25000, System.Double);
 };
 
-System.Windows.Controls.Primitives.Popup.prototype._ctor = function () {
-	System.Windows.FrameworkElement.prototype._ctor$0.call(this, 205);
-};
 System.Windows.Controls.Primitives.Popup.prototype.add_Opened = function (value) {
 	System.Windows.DependencyObject.prototype.AddEventListener.call(this, System.Windows.DependencyProperty.RegisterCoreProperty(26000, null), value);
 };
@@ -21788,9 +20671,6 @@ System.Windows.Controls.Primitives.Popup._cctor = function () {
 	System.Windows.Controls.Primitives.Popup.VerticalOffsetProperty = System.Windows.DependencyProperty.RegisterCoreProperty(19713, System.Double);
 };
 
-System.Windows.Media.Effects.PixelShader.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 305);
-};
 System.Windows.Media.Effects.PixelShader.prototype.get_UriSource = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Effects.PixelShader.UriSourceProperty), System.Uri);
 };
@@ -21804,12 +20684,6 @@ System.Windows.Media.Effects.PixelShader._cctor = function () {
 	System.Windows.Media.Effects.PixelShader.UriSourceProperty = System.Windows.DependencyProperty.RegisterCoreProperty(26100, System.Uri);
 };
 
-System.Windows.Media.Effects.Effect.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 307);
-};
-System.Windows.Media.Effects.Effect.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Media.Effects.Effect.prototype.get_EffectMapping = function () {
 	return new System.Windows.Media.MatrixTransform();
 };
@@ -21892,10 +20766,6 @@ System.Windows.Media.Effects.Effect.MapPoint$1 = function (nativeTarget, /* ref 
 System.Windows.Media.Effects.Effect.MapPointInverse = function (nativeTarget, /* ref */ inPoint, /* ref */ outPoint) {
 	return System.Windows.Media.Effects.Effect.MapPoint$0(nativeTarget, /* ref */ inPoint, /* ref */ outPoint, true);
 };
-JSIL.OverloadedMethod(System.Windows.Media.Effects.Effect.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.OverloadedMethod(System.Windows.Media.Effects.Effect, "MapRect", [
 		["MapRect$0", [System.IntPtr, JSIL.Reference.Of(MS.Internal.RectF), JSIL.Reference.Of(MS.Internal.RectF), System.Boolean]], 
 		["MapRect$1", [System.IntPtr, JSIL.Reference.Of(MS.Internal.RectF), JSIL.Reference.Of(MS.Internal.RectF)]]
@@ -21909,12 +20779,6 @@ JSIL.MakeProperty(System.Windows.Media.Effects.Effect.prototype, "EffectMapping"
 JSIL.MakeProperty(System.Windows.Media.Effects.Effect, "ImplicitInput", 
 	System.Windows.Media.Effects.Effect.get_ImplicitInput, null);
 
-System.Windows.Media.Effects.ShaderEffect.prototype._ctor$0 = function () {
-	System.Windows.Media.Effects.Effect.prototype._ctor$1.call(this, 308);
-};
-System.Windows.Media.Effects.ShaderEffect.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.Media.Effects.Effect.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Media.Effects.ShaderEffect.prototype.get_DdxUvDdyUvRegisterIndex = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Effects.ShaderEffect.DdxUvDdyUvRegisterIndexProperty), System.Int32);
 };
@@ -22144,10 +21008,6 @@ System.Windows.Media.Effects.ShaderEffect.RegisterPixelShaderSamplerProperty$0 =
 System.Windows.Media.Effects.ShaderEffect.RegisterPixelShaderSamplerProperty$1 = function (dpName, ownerType, samplerRegisterIndex, samplingMode) {
 	return System.Windows.DependencyProperty.Register$0(dpName, System.Windows.Media.Brush, ownerType, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [System.Windows.Media.Effects.ShaderEffect.PixelShaderSamplerCallback$1(samplerRegisterIndex, samplingMode)]));
 };
-JSIL.OverloadedMethod(System.Windows.Media.Effects.ShaderEffect.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.OverloadedMethod(System.Windows.Media.Effects.ShaderEffect, "PixelShaderSamplerCallback", [
 		["PixelShaderSamplerCallback$0", [System.Int32]], 
 		["PixelShaderSamplerCallback$1", [System.Int32, System.Windows.Media.Effects.SamplingMode]]
@@ -22258,9 +21118,6 @@ $asm02.System.Windows.Media.Effects.ShaderEffect.$l$gc__DisplayClass4.prototype.
 $asm02.System.Windows.Media.Effects.ShaderEffect.$l$gc__DisplayClass4.prototype.register = 0;
 $asm02.System.Windows.Media.Effects.ShaderEffect.$l$gc__DisplayClass4.prototype.samplingMode = 0;
 
-System.Windows.Media.Effects.BlurEffect.prototype._ctor = function () {
-	System.Windows.Media.Effects.Effect.prototype._ctor$1.call(this, 310);
-};
 System.Windows.Media.Effects.BlurEffect.prototype.get_Radius = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Effects.BlurEffect.RadiusProperty), System.Double);
 };
@@ -22274,9 +21131,6 @@ System.Windows.Media.Effects.BlurEffect._cctor = function () {
 	System.Windows.Media.Effects.BlurEffect.RadiusProperty = System.Windows.DependencyProperty.RegisterCoreProperty(26126, System.Double);
 };
 
-System.Windows.Media.Effects.DropShadowEffect.prototype._ctor = function () {
-	System.Windows.Media.Effects.Effect.prototype._ctor$1.call(this, 311);
-};
 System.Windows.Media.Effects.DropShadowEffect.prototype.get_Color = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Effects.DropShadowEffect.ColorProperty), System.Windows.Media.Color);
 };
@@ -22330,12 +21184,6 @@ System.Windows.Media.Effects.DropShadowEffect._cctor = function () {
 	System.Windows.Media.Effects.DropShadowEffect.ShadowDepthProperty = System.Windows.DependencyProperty.RegisterCoreProperty(26131, System.Double);
 };
 
-System.Windows.Printing.PrintDocument.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 365);
-};
-System.Windows.Printing.PrintDocument.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Printing.PrintDocument.prototype.get_PrintedPageCount = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Printing.PrintDocument.PrintedPageCountProperty), System.Int32);
 };
@@ -22389,10 +21237,6 @@ System.Windows.Printing.PrintDocument.prototype.AddEventListners = function () {
 	System.Windows.DependencyObject.prototype.AddEventListener.call(this, System.Windows.DependencyProperty.RegisterCoreProperty(26139, null), JSIL.Delegate.New("System.EventHandler`1[System.Windows.Printing.PrintPageEventArgs]", this, System.Windows.Printing.PrintDocument.prototype.OnPrintPage));
 	System.Windows.DependencyObject.prototype.AddEventListener.call(this, System.Windows.DependencyProperty.RegisterCoreProperty(26140, null), JSIL.Delegate.New("System.EventHandler`1[System.Windows.Printing.EndPrintEventArgs]", this, System.Windows.Printing.PrintDocument.prototype.OnEndPrint));
 };
-JSIL.OverloadedMethod(System.Windows.Printing.PrintDocument.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.MakeProperty(System.Windows.Printing.PrintDocument.prototype, "PrintedPageCount", 
 	System.Windows.Printing.PrintDocument.prototype.get_PrintedPageCount, null);
 System.Windows.Printing.PrintDocument.PrintedPageCountProperty = null;
@@ -24802,7 +23646,7 @@ $asm02.System.Net.Browser.BrowserHttpWebRequest.prototype.BeginGetResponseImplem
 	try {
 		try {
 			if (this._wr === null) {
-				this._wr = JSIL.New($asm02.MS.Internal.InternalWebRequest, "_ctor$0", []);
+				this._wr = new $asm02.MS.Internal.InternalWebRequest();
 			}
 			this._wr.Open(this._method, this._reqUri);
 			this._wr.add_Completed(JSIL.Delegate.New("System.EventHandler", this, $asm02.System.Net.Browser.BrowserHttpWebRequest.prototype.Completed));
@@ -25464,7 +24308,7 @@ $asm02.System.Net.Browser.ClientHttpWebRequest.prototype._ctor$0 = function (uri
 	this._getResponseResult = null;
 	this._getResponseFired = false;
 	this._reqUri = uri;
-	this._wr = JSIL.New($asm02.MS.Internal.InternalWebRequest, "_ctor$0", []);
+	this._wr = new $asm02.MS.Internal.InternalWebRequest();
 	this._wr.OperatingSystemStack = true;
 	this._finished = false;
 	this._state = $asm02.System.Net.Browser.ClientHttpWebRequest.ClientHttpWebRequestState.Ready;
@@ -25998,7 +24842,7 @@ __step0__:
 													this._redirecting = false;
 													this._madeProgress = false;
 													this._responseHeaders = null;
-													this._wr = JSIL.New($asm02.MS.Internal.InternalWebRequest, "_ctor$0", []);
+													this._wr = new $asm02.MS.Internal.InternalWebRequest();
 													this._wr.OperatingSystemStack = true;
 													try {
 														var text3 = this._method;
@@ -28478,12 +27322,6 @@ $asm02.MS.Internal.InternalUtils.AreValuesEqual = function (o1, o2) {
 	return System.Object.ReferenceEquals(o1, o2);
 };
 
-$asm02.MS.Internal.InternalWebRequest.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 197);
-};
-$asm02.MS.Internal.InternalWebRequest.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 $asm02.MS.Internal.InternalWebRequest.prototype.add_DownloadProgressChanged = function (value) {
 	System.Windows.DependencyObject.prototype.AddEventListener.call(this, System.Windows.DependencyProperty.RegisterCoreProperty(24600, null), value);
 };
@@ -28712,10 +27550,6 @@ $asm02.MS.Internal.InternalWebRequest.prototype.GrowArray = function (arr) {
 	arr.CopyTo(array, 0);
 	return array;
 };
-JSIL.OverloadedMethod($asm02.MS.Internal.InternalWebRequest.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.MakeProperty($asm02.MS.Internal.InternalWebRequest.prototype, "Uri", 
 	null, $asm02.MS.Internal.InternalWebRequest.prototype.set_Uri);
 JSIL.MakeProperty($asm02.MS.Internal.InternalWebRequest.prototype, "FinalUri", 
@@ -29553,7 +28387,7 @@ $asm02.MS.Internal.ManagedPeerTable.GetOrCreateAutomationPeer = function ($unman
 	} else {
 		$asm02.MS.Internal.FrameworkCallbacks.Initialize();
 		System.Windows.DependencyObject.StaticNativePointer = unmanagedPointer.value;
-		result = JSIL.New(System.Windows.Automation.Peers.FrameworkElementAutomationPeer, "_ctor$2", [myUIE]);
+		result = new System.Windows.Automation.Peers.FrameworkElementAutomationPeer(myUIE);
 		System.Windows.DependencyObject.StaticNativePointer = System.IntPtr.Zero;
 	}
 	return result;
@@ -32294,7 +31128,7 @@ $asm02.MS.Internal.FrameworkCallbacks.CreateBindingExtension = function (constru
 	nativeOutValue.value = System.IntPtr.Zero;
 	try {
 		var target = JSIL.New(System.Windows.Data.Binding, "_ctor$0", [constructorArgument, true]);
-		var managedObjectReference = JSIL.New($asm02.MS.Internal.ManagedObjectReference, "_ctor$1", [target]);
+		var managedObjectReference = new $asm02.MS.Internal.ManagedObjectReference(target);
 		managedObjectReference.PegManagedPeerNoRef();
 		nativeOutValue.value = managedObjectReference.NativeObject;
 		$asm02.MS.Internal.XcpImports.AddRefNativeObject$0(managedObjectReference);
@@ -37587,13 +36421,6 @@ System.Windows.Deployment.get_Current = function () {
 	}
 	return null;
 };
-System.Windows.Deployment.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 161);
-	if (System.Windows.Deployment._current !== null) {
-		throw JSIL.New(System.InvalidOperationException, "_ctor$1", [$asm02.System.Windows.Resx.GetString$2("Deployment_UseCurrentToAccessDeployment")]);
-	}
-	System.Windows.Deployment._current = this;
-};
 System.Windows.Deployment.prototype.get_Parts = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Deployment.PartsProperty), System.Windows.AssemblyPartCollection);
 };
@@ -38816,7 +37643,7 @@ $asm02.MS.Internal.XcpImports.SetValue$14 = function (doh, property, obj) {
 			$asm02.MS.Internal.XcpImports.SetValue$13(doh, property, null);
 			return;
 		}
-		var managedObjectReference = JSIL.New($asm02.MS.Internal.ManagedObjectReference, "_ctor$1", [obj]);
+		var managedObjectReference = new $asm02.MS.Internal.ManagedObjectReference(obj);
 		managedObjectReference.PegManagedPeerNoRef();
 		$asm02.MS.Internal.XcpImports.SetValue$13(doh, property, managedObjectReference);
 		return;
@@ -42804,7 +41631,7 @@ System.Windows.Input.InputScopeConverter.prototype.ConvertFrom = function (conte
 		}
 	}
 	return new System.Windows.Input.InputScope().__Initialize__({
-			Names: new JSIL.CollectionInitializer(JSIL.New(System.Windows.Input.InputScopeName, "_ctor$1", [nameValue]))}
+			Names: new JSIL.CollectionInitializer(new System.Windows.Input.InputScopeName(nameValue))}
 	);
 };
 System.Windows.Input.InputScopeConverter.prototype.ConvertTo = function (context, culture, value, destinationType) {
@@ -42840,7 +41667,7 @@ System.Windows.Input.InputScopeNameConverter.prototype.ConvertFrom = function (c
 			nameValue = JSIL.Cast(System.Enum.Parse(System.Windows.Input.InputScopeNameValue, text, false), System.Windows.Input.InputScopeNameValue);
 		}
 	}
-	return JSIL.New(System.Windows.Input.InputScopeName, "_ctor$0", []).__Initialize__({
+	return new System.Windows.Input.InputScopeName().__Initialize__({
 			NameValue: nameValue}
 	);
 };
@@ -42856,11 +41683,6 @@ System.Windows.Input.InputScopeNameConverter.prototype._ctor = function () {
 	System.ComponentModel.TypeConverter.prototype._ctor.call(this);
 };
 
-System.Windows.Input.InputScope.prototype._ctor = function () {
-	this._scopeNames = new (System.Collections.Generic.List$b1.Of(System.Windows.Input.InputScopeName)) ();
-	System.Windows.DependencyObject.prototype._ctor$0.call(this);
-	$asm02.MS.Internal.StubHelper.ThrowIfNotInDesignMode();
-};
 System.Windows.Input.InputScope.prototype.get_Names = function () {
 	return this._scopeNames;
 };
@@ -42868,25 +41690,12 @@ JSIL.MakeProperty(System.Windows.Input.InputScope.prototype, "Names",
 	System.Windows.Input.InputScope.prototype.get_Names, null);
 System.Windows.Input.InputScope.prototype._scopeNames = null;
 
-System.Windows.Input.InputScopeName.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$0.call(this);
-	$asm02.MS.Internal.StubHelper.ThrowIfNotInDesignMode();
-};
-System.Windows.Input.InputScopeName.prototype._ctor$1 = function (nameValue) {
-	System.Windows.DependencyObject.prototype._ctor$0.call(this);
-	$asm02.MS.Internal.StubHelper.ThrowIfNotInDesignMode();
-	this.NameValue = nameValue;
-};
 System.Windows.Input.InputScopeName.prototype.get_NameValue = function () {
 	return this.NameValue$value;
 };
 System.Windows.Input.InputScopeName.prototype.set_NameValue = function (value) {
 	this.NameValue$value = value;
 };
-JSIL.OverloadedMethod(System.Windows.Input.InputScopeName.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.Windows.Input.InputScopeNameValue]]
-	]);
 JSIL.MakeProperty(System.Windows.Input.InputScopeName.prototype, "NameValue", 
 	System.Windows.Input.InputScopeName.prototype.get_NameValue, System.Windows.Input.InputScopeName.prototype.set_NameValue);
 System.Windows.Input.InputScopeName.prototype.NameValue$value = 0;
@@ -43053,12 +41862,6 @@ System.Windows.Input.ManipulationCompletedEventArgs.prototype.ManipulationContai
 System.Windows.Input.ManipulationCompletedEventArgs.prototype.TotalManipulation$value = null;
 System.Windows.Input.ManipulationCompletedEventArgs.prototype.FinalVelocities$value = null;
 
-System.Windows.Input.ManipulationDelta.prototype._ctor = function (translation, scale) {
-	System.Windows.DependencyObject.prototype._ctor$0.call(this);
-	$asm02.MS.Internal.StubHelper.ThrowIfNotInDesignMode();
-	(this.Translation = translation);
-	(this.Scale = scale);
-};
 System.Windows.Input.ManipulationDelta.prototype.get_Translation = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Input.ManipulationDelta.TranslationProperty), System.Windows.Point);
 };
@@ -43088,12 +41891,6 @@ System.Windows.Input.ManipulationDelta._cctor = function () {
 			}]));
 };
 
-System.Windows.Input.ManipulationVelocities.prototype._ctor = function (linear, expansion) {
-	System.Windows.DependencyObject.prototype._ctor$0.call(this);
-	$asm02.MS.Internal.StubHelper.ThrowIfNotInDesignMode();
-	(this.LinearVelocity = linear);
-	(this.ExpansionVelocity = expansion);
-};
 System.Windows.Input.ManipulationVelocities.prototype.get_ExpansionVelocity = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Input.ManipulationVelocities.ExpansionVelocityProperty), System.Windows.Point);
 };
@@ -43309,11 +42106,6 @@ System.Windows.Controls.ScrollViewer.SetVerticalScrollBarVisibility = function (
 		throw JSIL.New(System.ArgumentNullException, "_ctor$1", ["element"]);
 	}
 	element.SetValue(System.Windows.Controls.ScrollViewer.VerticalScrollBarVisibilityProperty, verticalScrollBarVisibility);
-};
-System.Windows.Controls.ScrollViewer.prototype._ctor = function () {
-	System.Windows.Controls.ContentControl.prototype._ctor$0.call(this);
-	System.Windows.Controls.Control.prototype.set_DefaultStyleKey.call(this, System.Windows.Controls.ScrollViewer);
-	System.Windows.UIElement.prototype.add_RequestBringIntoView.call(this, JSIL.Delegate.New("MS.Internal.RequestBringIntoViewEventHandler", this, System.Windows.Controls.ScrollViewer.prototype.OnRequestBringIntoView));
 };
 System.Windows.Controls.ScrollViewer.prototype.OnApplyTemplate = function () {
 	System.Windows.FrameworkElement.prototype.OnApplyTemplate.call(this);
@@ -46707,9 +45499,6 @@ JSIL.MakeProperty($asm02.MS.Internal.ComAutomation.ComAutomationParam.prototype,
 $asm02.MS.Internal.ComAutomation.ComAutomationParam.prototype.Value$value = null;
 $asm02.MS.Internal.ComAutomation.ComAutomationParam.prototype.ByRef$value = false;
 
-System.Windows.Controls.ItemCollection.prototype._ctor = function () {
-	System.Windows.PresentationFrameworkCollection$b1.Of(System.Object).prototype._ctor$1.call(this, 200);
-};
 System.Windows.Controls.ItemCollection.prototype.get_ManagedPeerCollection = function () {
 	if (this._treeItems === null) {
 		this._treeItems = JSIL.New(System.Collections.Generic.Dictionary$b2.Of(System.Windows.UIElement, System.Object), "_ctor$0", []);
@@ -46789,7 +45578,7 @@ System.Windows.Controls.ItemCollection.prototype.IndexOfWrapped = function (valu
 	var count = System.Windows.PresentationFrameworkCollection$b1.Of(System.Object).prototype.get_Count.call(this);
 __loop0__: 
 	for (var i = 0; i < count; ++i) {
-		if (this.ManagedObjectReferenceIsEquals(JSIL.New($asm02.MS.Internal.ManagedObjectReference, "_ctor$1", [System.Windows.PresentationFrameworkCollection$b1.Of(System.Object).prototype.get_Item.call(this, i)]), JSIL.New($asm02.MS.Internal.ManagedObjectReference, "_ctor$1", [value]))) {
+		if (this.ManagedObjectReferenceIsEquals(new $asm02.MS.Internal.ManagedObjectReference(System.Windows.PresentationFrameworkCollection$b1.Of(System.Object).prototype.get_Item.call(this, i)), new $asm02.MS.Internal.ManagedObjectReference(value))) {
 			return i;
 		}
 	}
@@ -50475,14 +49264,6 @@ System.Windows.Controls.Primitives.ButtonBase.prototype.add_Click = function (va
 System.Windows.Controls.Primitives.ButtonBase.prototype.remove_Click = function (value) {
 	this.Click = System.Delegate.Remove(this.Click, value);
 };
-System.Windows.Controls.Primitives.ButtonBase.prototype._ctor = function () {
-	System.Windows.Controls.ContentControl.prototype._ctor$0.call(this);
-	$asm02.System.Windows.Input.KeyboardNavigation.SetAcceptsReturn(this, true);
-	System.Windows.FrameworkElement.prototype.add_Loaded.call(this, function (obj, routedEventArgs) {
-			this._isLoaded = true;
-			this.UpdateVisualState$1(false);
-		});
-};
 System.Windows.Controls.Primitives.ButtonBase.prototype.AutomationButtonBaseClick = function () {
 	this.OnClick();
 };
@@ -50798,10 +49579,6 @@ System.Windows.Controls.Primitives.ButtonBase._cctor = function () {
 	System.Windows.Controls.Primitives.ButtonBase.CommandParameterProperty = System.Windows.DependencyProperty.Register$0("CommandParameter", System.Object, System.Windows.Controls.Primitives.ButtonBase, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [null, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.ButtonBase.OnCommandParameterPropertyChanged)]));
 };
 
-System.Windows.Controls.Button.prototype._ctor = function () {
-	System.Windows.Controls.Primitives.ButtonBase.prototype._ctor.call(this);
-	System.Windows.Controls.Control.prototype.set_DefaultStyleKey.call(this, System.Windows.Controls.Button);
-};
 System.Windows.Controls.Button.prototype.OnCreateAutomationPeer = function () {
 	return new System.Windows.Automation.Peers.ButtonAutomationPeer(this);
 };
@@ -50885,10 +49662,6 @@ System.Windows.Controls.Primitives.ToggleButton.prototype.add_Unchecked = functi
 };
 System.Windows.Controls.Primitives.ToggleButton.prototype.remove_Unchecked = function (value) {
 	this.Unchecked = System.Delegate.Remove(this.Unchecked, value);
-};
-System.Windows.Controls.Primitives.ToggleButton.prototype._ctor = function () {
-	System.Windows.Controls.Primitives.ButtonBase.prototype._ctor.call(this);
-	System.Windows.Controls.Control.prototype.set_DefaultStyleKey.call(this, System.Windows.Controls.Primitives.ToggleButton);
 };
 System.Windows.Controls.Primitives.ToggleButton.prototype.OnApplyTemplate = function () {
 	System.Windows.FrameworkElement.prototype.OnApplyTemplate.call(this);
@@ -51003,11 +49776,6 @@ System.Windows.Controls.Primitives.ToggleButton._cctor = function () {
 	System.Windows.Controls.Primitives.ToggleButton.IsThreeStateProperty = System.Windows.DependencyProperty.Register$0("IsThreeState", System.Boolean, System.Windows.Controls.Primitives.ToggleButton, null);
 };
 
-System.Windows.Controls.CheckBox.prototype._ctor = function () {
-	System.Windows.Controls.Primitives.ToggleButton.prototype._ctor.call(this);
-	$asm02.System.Windows.Input.KeyboardNavigation.SetAcceptsReturn(this, false);
-	System.Windows.Controls.Control.prototype.set_DefaultStyleKey.call(this, System.Windows.Controls.CheckBox);
-};
 System.Windows.Controls.CheckBox.prototype.OnKeyDownInternal = function (key) {
 	var result = System.Windows.Controls.Primitives.ButtonBase.prototype.OnKeyDownInternal.call(this, key);
 	if (!(System.Windows.Controls.Primitives.ToggleButton.prototype.get_IsThreeState.call(this) || !System.Windows.Controls.Control.prototype.get_IsEnabled.call(this))) {
@@ -51054,15 +49822,6 @@ System.Windows.Controls.CleanUpVirtualizedItemEventArgs.prototype._value = null;
 System.Windows.Controls.CleanUpVirtualizedItemEventArgs.prototype._element = null;
 System.Windows.Controls.CleanUpVirtualizedItemEventArgs.prototype._cancel = false;
 
-System.Windows.Controls.Primitives.Selector.prototype._ctor = function () {
-	this._synchronizeCurrentItem = true;
-	System.Windows.Controls.ItemsControl.prototype._ctor$0.call(this);
-	this._selectedItemsImpl = JSIL.New(System.Collections.ObjectModel.ObservableCollection$b1.Of(System.Object), "_ctor$0", []);
-	this._selectedItemsImpl.add_CollectionChanged(JSIL.Delegate.New("System.Collections.Specialized.NotifyCollectionChangedEventHandler", this, System.Windows.Controls.Primitives.Selector.prototype.OnSelectedItemsCollectionChanged));
-	this._selectedItems = JSIL.New($asm02.System.Windows.Controls.Primitives.Selector.InternalSelectedItemsStorage, "_ctor$0", [1]);
-	this._selectionChanger = new $asm02.System.Windows.Controls.Primitives.Selector.SelectionChanger(this);
-	this._selectedItemsStale = false;
-};
 System.Windows.Controls.Primitives.Selector.prototype.OnApplyTemplate = function () {
 	System.Windows.FrameworkElement.prototype.OnApplyTemplate.call(this);
 	this.ElementScrollViewer = System.Windows.Controls.Control.prototype.get_Template.call(this) ? JSIL.TryCast(System.Windows.Controls.Control.prototype.GetTemplateChild.call(this, "ScrollViewer"), System.Windows.Controls.ScrollViewer) : null;
@@ -52586,10 +51345,6 @@ System.Windows.Controls.ComboBox.prototype.OnDropDownOpened = function (e) {
 		this.DropDownOpened(this, e);
 	}
 };
-System.Windows.Controls.ComboBox.prototype._ctor = function () {
-	System.Windows.Controls.Primitives.Selector.prototype._ctor.call(this);
-	System.Windows.Controls.Control.prototype.set_DefaultStyleKey.call(this, System.Windows.Controls.ComboBox);
-};
 System.Windows.Controls.ComboBox.prototype.OnApplyTemplate = function () {
 	System.Windows.Controls.Primitives.Selector.prototype.OnApplyTemplate.call(this);
 	if (!((this.ElementContentPresenter === null) || (this._swappedOutComboBoxItem === null))) {
@@ -52616,13 +51371,13 @@ System.Windows.Controls.ComboBox.prototype.OnApplyTemplate = function () {
 	}
 	if (this.ElementPopup !== null) {
 		this.ElementPopupChild = JSIL.TryCast(this.ElementPopup.Child, System.Windows.FrameworkElement);
-		this.ElementOutsidePopup = JSIL.New(System.Windows.Controls.Canvas, "_ctor$0", []);
+		this.ElementOutsidePopup = new System.Windows.Controls.Canvas();
 	} else {
 		this.ElementPopupChild = null;
 		this.ElementOutsidePopup = null;
 	}
 	if (this.ElementOutsidePopup !== null) {
-		this.ElementOutsidePopup.Background = JSIL.New(System.Windows.Media.SolidColorBrush, "_ctor$1", [System.Windows.Media.Colors.Transparent]);
+		this.ElementOutsidePopup.Background = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Colors.Transparent);
 		this.ElementOutsidePopup.add_MouseLeftButtonDown(JSIL.Delegate.New("System.Windows.Input.MouseButtonEventHandler", this, System.Windows.Controls.ComboBox.prototype.ElementOutsidePopup_MouseLeftButtonDown));
 	}
 	var value = function (sender, e) {
@@ -52637,7 +51392,7 @@ System.Windows.Controls.ComboBox.prototype.OnApplyTemplate = function () {
 		this.ElementPopupChild.add_MouseEnter(JSIL.Delegate.New("System.Windows.Input.MouseEventHandler", this, System.Windows.Controls.ComboBox.prototype.ElementPopupChild_MouseEnter));
 		this.ElementPopupChild.add_MouseLeave(JSIL.Delegate.New("System.Windows.Input.MouseEventHandler", this, System.Windows.Controls.ComboBox.prototype.ElementPopupChild_MouseLeave));
 		this.ElementPopupChild.add_SizeChanged(JSIL.Delegate.New("System.Windows.SizeChangedEventHandler", this, System.Windows.Controls.ComboBox.prototype.ElementPopupChild_SizeChanged));
-		this.ElementPopupChildCanvas = JSIL.New(System.Windows.Controls.Canvas, "_ctor$0", []);
+		this.ElementPopupChildCanvas = new System.Windows.Controls.Canvas();
 	} else {
 		this.ElementPopupChildCanvas = null;
 	}
@@ -53190,13 +51945,6 @@ System.Windows.Controls.ListBoxItem.prototype.get_Item = function () {
 System.Windows.Controls.ListBoxItem.prototype.set_Item = function (value) {
 	this.Item$value = value;
 };
-System.Windows.Controls.ListBoxItem.prototype._ctor = function () {
-	System.Windows.Controls.ContentControl.prototype._ctor$0.call(this);
-	System.Windows.FrameworkElement.prototype.add_Loaded.call(this, function (obj, routedEventArgs) {
-			this.ChangeVisualState$1(false);
-		});
-	System.Windows.Controls.Control.prototype.set_DefaultStyleKey.call(this, System.Windows.Controls.ListBoxItem);
-};
 System.Windows.Controls.ListBoxItem.prototype.OnApplyTemplate = function () {
 	System.Windows.FrameworkElement.prototype.OnApplyTemplate.call(this);
 	this.ChangeVisualState$1(false);
@@ -53254,7 +52002,7 @@ System.Windows.Controls.ListBoxItem.prototype.OnCreateAutomationPeer = function 
 	if (this._parentSelector !== null) {
 		selectorAutomationPeer = JSIL.TryCast(System.Windows.Automation.Peers.FrameworkElementAutomationPeer.CreatePeerForElement(this._parentSelector), System.Windows.Automation.Peers.SelectorAutomationPeer);
 	}
-	return JSIL.New(System.Windows.Automation.Peers.ListBoxItemAutomationPeer, "_ctor$1", [this, selectorAutomationPeer]);
+	return new System.Windows.Automation.Peers.ListBoxItemAutomationPeer(this, selectorAutomationPeer);
 };
 System.Windows.Controls.ListBoxItem.prototype.IsParentSelectionActive = function () {
 	return ((this._parentSelector !== null) && System.Windows.Controls.Primitives.Selector.GetIsSelectionActive(this._parentSelector));
@@ -53338,9 +52086,6 @@ System.Windows.Controls.ComboBoxItem.prototype.OnMouseLeftButtonUp = function (e
 		comboBox.IsDropDownOpen = false;
 	}
 };
-System.Windows.Controls.ComboBoxItem.prototype._ctor = function () {
-	System.Windows.Controls.ListBoxItem.prototype._ctor.call(this);
-};
 
 $asm02.System.Windows.Controls.DisplayMemberValueConverter.prototype.Convert = function (value, targetType, parameter, culture) {
 	if (value === null) {
@@ -53366,10 +52111,6 @@ System.Windows.Controls.HyperlinkButton.prototype.get_TargetName = function () {
 };
 System.Windows.Controls.HyperlinkButton.prototype.set_TargetName = function (value) {
 	System.Windows.DependencyObject.prototype.SetValue.call(this, System.Windows.Controls.HyperlinkButton.TargetNameProperty, value);
-};
-System.Windows.Controls.HyperlinkButton.prototype._ctor = function () {
-	System.Windows.Controls.Primitives.ButtonBase.prototype._ctor.call(this);
-	System.Windows.Controls.Control.prototype.set_DefaultStyleKey.call(this, System.Windows.Controls.HyperlinkButton);
 };
 System.Windows.Controls.HyperlinkButton.prototype.OnApplyTemplate = function () {
 	System.Windows.FrameworkElement.prototype.OnApplyTemplate.call(this);
@@ -55232,10 +53973,6 @@ System.Windows.Controls.ListBox.prototype.get_SelectedItems = function () {
 System.Windows.Controls.ListBox.prototype.get_CanSelectMultiple = function () {
 	return (this.SelectionMode !== System.Windows.Controls.SelectionMode.Single);
 };
-System.Windows.Controls.ListBox.prototype._ctor = function () {
-	System.Windows.Controls.Primitives.Selector.prototype._ctor.call(this);
-	System.Windows.Controls.Control.prototype.set_DefaultStyleKey.call(this, System.Windows.Controls.ListBox);
-};
 System.Windows.Controls.ListBox.prototype.OnApplyTemplate = function () {
 	System.Windows.Controls.Primitives.Selector.prototype.OnApplyTemplate.call(this);
 	if (!(System.Windows.Controls.ItemsControl.prototype.get_ItemsPanel.call(this) || !$asm02.MS.Internal.QuirksMode.ShouldListboxUseVirtualization())) {
@@ -56223,9 +54960,6 @@ System.Windows.Controls.Primitives.RangeBase.prototype.add_ValueChanged = functi
 System.Windows.Controls.Primitives.RangeBase.prototype.remove_ValueChanged = function (value) {
 	this.ValueChanged = System.Delegate.Remove(this.ValueChanged, value);
 };
-System.Windows.Controls.Primitives.RangeBase.prototype._ctor = function () {
-	System.Windows.Controls.Control.prototype._ctor$0.call(this);
-};
 System.Windows.Controls.Primitives.RangeBase.prototype.OnMaximumChanged = function (oldMaximum, newMaximum) {
 };
 System.Windows.Controls.Primitives.RangeBase.prototype.OnMinimumChanged = function (oldMinimum, newMinimum) {
@@ -56391,11 +55125,6 @@ System.Windows.Controls.Primitives.RepeatButton.prototype.OnLostFocus = function
 		this.UpdateRepeatState();
 	}
 };
-System.Windows.Controls.Primitives.RepeatButton.prototype._ctor = function () {
-	System.Windows.Controls.Primitives.ButtonBase.prototype._ctor.call(this);
-	System.Windows.Controls.Control.prototype.set_DefaultStyleKey.call(this, System.Windows.Controls.Primitives.RepeatButton);
-	System.Windows.Controls.Primitives.ButtonBase.prototype.set_ClickMode.call(this, System.Windows.Controls.ClickMode.Press);
-};
 System.Windows.Controls.Primitives.RepeatButton.prototype.OnApplyTemplate = function () {
 	System.Windows.Controls.Primitives.ButtonBase.prototype.UpdateVisualState$1.call(this, false);
 };
@@ -56524,13 +55253,6 @@ System.Windows.Controls.Primitives.RepeatButton._cctor = function () {
 	System.Windows.Controls.Primitives.RepeatButton.IntervalProperty = System.Windows.DependencyProperty.Register$0("Interval", System.Int32, System.Windows.Controls.Primitives.RepeatButton, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [33, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.RepeatButton.OnIntervalPropertyChanged)]));
 };
 
-System.Windows.Controls.Primitives.ScrollBar.prototype._ctor = function () {
-	System.Windows.Controls.Primitives.RangeBase.prototype._ctor.call(this);
-	System.Windows.FrameworkElement.prototype.add_SizeChanged.call(this, function (obj, sizeChangedEventArgs) {
-			this.UpdateTrackLayout(this.GetTrackLength());
-		});
-	System.Windows.Controls.Control.prototype.set_DefaultStyleKey.call(this, System.Windows.Controls.Primitives.ScrollBar);
-};
 System.Windows.Controls.Primitives.ScrollBar.prototype.OnApplyTemplate = function () {
 	System.Windows.FrameworkElement.prototype.OnApplyTemplate.call(this);
 	this.ElementHorizontalTemplate = JSIL.TryCast(System.Windows.Controls.Control.prototype.GetTemplateChild.call(this, "HorizontalRoot"), System.Windows.FrameworkElement);
@@ -57126,10 +55848,6 @@ System.Windows.Controls.Primitives.Thumb.prototype.add_DragCompleted = function 
 System.Windows.Controls.Primitives.Thumb.prototype.remove_DragCompleted = function (value) {
 	this.DragCompleted = System.Delegate.Remove(this.DragCompleted, value);
 };
-System.Windows.Controls.Primitives.Thumb.prototype._ctor = function () {
-	System.Windows.Controls.Control.prototype._ctor$0.call(this);
-	System.Windows.Controls.Control.prototype.set_DefaultStyleKey.call(this, System.Windows.Controls.Primitives.Thumb);
-};
 System.Windows.Controls.Primitives.Thumb.prototype.OnApplyTemplate = function () {
 	System.Windows.FrameworkElement.prototype.OnApplyTemplate.call(this);
 	this.UpdateVisualState$1(false);
@@ -57290,12 +56008,6 @@ System.Windows.Controls.RadioButton.OnGroupNamePropertyChanged = function (d, e)
 	var groupName2 = JSIL.Cast(e.NewValue, System.String);
 	System.Windows.Controls.RadioButton.Register(groupName2, radioButton);
 };
-System.Windows.Controls.RadioButton.prototype._ctor = function () {
-	System.Windows.Controls.Primitives.ToggleButton.prototype._ctor.call(this);
-	$asm02.System.Windows.Input.KeyboardNavigation.SetAcceptsReturn(this, false);
-	System.Windows.Controls.Control.prototype.set_DefaultStyleKey.call(this, System.Windows.Controls.RadioButton);
-	System.Windows.Controls.RadioButton.Register("", this);
-};
 System.Windows.Controls.RadioButton.prototype.OnToggle = function () {
 	System.Windows.Controls.Primitives.ToggleButton.prototype.set_IsChecked.call(this, new (System.Nullable$b1.Of(System.Boolean)) (true));
 };
@@ -57423,11 +56135,6 @@ System.Windows.Controls.RadioButton._cctor = function () {
 	System.Windows.Controls.RadioButton.GroupNameProperty = System.Windows.DependencyProperty.Register$0("GroupName", System.String, System.Windows.Controls.RadioButton, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.RadioButton.OnGroupNamePropertyChanged)]));
 };
 
-System.Windows.Controls.ScrollContentPresenter.prototype._ctor = function () {
-	System.Windows.Controls.ContentPresenter.prototype._ctor$0.call(this);
-	this._isClipPropertySet = false;
-	this._scrollData = new $asm02.MS.Internal.Controls.ScrollData();
-};
 System.Windows.Controls.ScrollContentPresenter.prototype.LineUp = function () {
 	if (this.IsScrollClient) {
 		this.SetVerticalOffset((this.VerticalOffset - 16));
@@ -57842,13 +56549,6 @@ JSIL.MakeProperty(System.Windows.Controls.SelectionChangedEventArgs.prototype, "
 System.Windows.Controls.SelectionChangedEventArgs.prototype._addedItems = null;
 System.Windows.Controls.SelectionChangedEventArgs.prototype._removedItems = null;
 
-System.Windows.Controls.Slider.prototype._ctor = function () {
-	System.Windows.Controls.Primitives.RangeBase.prototype._ctor.call(this);
-	System.Windows.FrameworkElement.prototype.add_SizeChanged.call(this, function (obj, sizeChangedEventArgs) {
-			this.UpdateTrackLayout();
-		});
-	System.Windows.Controls.Control.prototype.set_DefaultStyleKey.call(this, System.Windows.Controls.Slider);
-};
 System.Windows.Controls.Slider.prototype.OnApplyTemplate = function () {
 	System.Windows.FrameworkElement.prototype.OnApplyTemplate.call(this);
 	this.ElementHorizontalTemplate = JSIL.TryCast(System.Windows.Controls.Control.prototype.GetTemplateChild.call(this, "HorizontalTemplate"), System.Windows.FrameworkElement);
@@ -58339,11 +57039,6 @@ System.Windows.Controls.ToolTip.prototype.get_ParentPopup = function () {
 };
 System.Windows.Controls.ToolTip.prototype.set_ParentPopup = function (value) {
 	this._parentPopup = value;
-};
-System.Windows.Controls.ToolTip.prototype._ctor = function () {
-	System.Windows.Controls.ContentControl.prototype._ctor$0.call(this);
-	System.Windows.FrameworkElement.prototype.add_SizeChanged.call(this, JSIL.Delegate.New("System.Windows.SizeChangedEventHandler", this, System.Windows.Controls.ToolTip.prototype.OnToolTipSizeChanged));
-	System.Windows.Controls.Control.prototype.set_DefaultStyleKey.call(this, System.Windows.Controls.ToolTip);
 };
 System.Windows.Controls.ToolTip.prototype.OnApplyTemplate = function () {
 	System.Windows.FrameworkElement.prototype.OnApplyTemplate.call(this);
@@ -59469,17 +58164,10 @@ System.Windows.Controls.VirtualizingPanel.prototype.BringIndexIntoView = functio
 System.Windows.Controls.VirtualizingPanel.prototype.OnClearChildrenInternal = function () {
 	this.OnClearChildren();
 };
-System.Windows.Controls.VirtualizingPanel.prototype._ctor = function () {
-	System.Windows.Controls.Panel.prototype._ctor$0.call(this);
-};
 JSIL.MakeProperty(System.Windows.Controls.VirtualizingPanel.prototype, "ItemContainerGenerator", 
 	System.Windows.Controls.VirtualizingPanel.prototype.get_ItemContainerGenerator, null);
 System.Windows.Controls.VirtualizingPanel.prototype.isGeneratorHooked = false;
 
-System.Windows.Controls.VirtualizingStackPanel.prototype._ctor = function () {
-	System.Windows.Controls.VirtualizingPanel.prototype._ctor.call(this);
-	this._scrollData = new $asm02.MS.Internal.Controls.ScrollData();
-};
 System.Windows.Controls.VirtualizingStackPanel.prototype.LineUp = function () {
 	this.SetVerticalOffset((this.VerticalOffset - !JSIL.Cast(this.Orientation, System.Boolean) ? 1 : 16));
 };
@@ -60556,11 +59244,6 @@ System.Windows.Controls.VirtualizingStackPanel._cctor = function () {
 	System.Windows.Controls.VirtualizingStackPanel.VirtualizationModeProperty = System.Windows.DependencyProperty.RegisterAttached("VirtualizationMode", System.Windows.Controls.VirtualizationMode, System.Windows.Controls.VirtualizingStackPanel, JSIL.New(System.Windows.PropertyMetadata, "_ctor$1", [System.Windows.Controls.VirtualizationMode.Recycling]));
 };
 
-System.Windows.Controls.ProgressBar.prototype._ctor = function () {
-	System.Windows.Controls.Primitives.RangeBase.prototype._ctor.call(this);
-	$asm02.System.Windows.Input.KeyboardNavigation.SetAcceptsReturn(this, false);
-	System.Windows.Controls.Control.prototype.set_DefaultStyleKey.call(this, System.Windows.Controls.ProgressBar);
-};
 System.Windows.Controls.ProgressBar.prototype.get_IsIndeterminate = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Controls.ProgressBar.IsIndeterminateProperty), System.Boolean);
 };
@@ -61078,13 +59761,6 @@ $asm02.MS.Internal.Data.TargetDefaultValueConverter.prototype.ConvertBack = func
 	return $asm02.MS.Internal.Data.DefaultValueConverter.prototype.ConvertTo.call(this, o, this._sourceType, culture);
 };
 
-System.Windows.Data.CollectionViewSource.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 322);
-	this._sort = new System.ComponentModel.SortDescriptionCollection();
-	this._sort.INotifyCollectionChanged_add_CollectionChanged(JSIL.Delegate.New("System.Collections.Specialized.NotifyCollectionChangedEventHandler", this, System.Windows.Data.CollectionViewSource.prototype.OnForwardedCollectionChanged));
-	this._groupBy = JSIL.New(System.Collections.ObjectModel.ObservableCollection$b1.Of(System.ComponentModel.GroupDescription), "_ctor$0", []);
-	this._groupBy.INotifyCollectionChanged_add_CollectionChanged(JSIL.Delegate.New("System.Collections.Specialized.NotifyCollectionChangedEventHandler", this, System.Windows.Data.CollectionViewSource.prototype.OnForwardedCollectionChanged));
-};
 System.Windows.Data.CollectionViewSource.prototype.get_View = function () {
 	return System.Windows.Data.CollectionViewSource.GetOriginalView(this.CollectionView);
 };
@@ -62581,11 +61257,6 @@ System.Windows.Data.BindingOperations.SetBinding = function (target, dp, binding
 System.Windows.DependencyObjectCollection$b1.prototype.INativeCollectionWrapper_GetCollection = function () {
 	return this._collection;
 };
-System.Windows.DependencyObjectCollection$b1.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 409);
-	this._collection = new $asm02.System.Windows.DOCollection();
-	System.Windows.DependencyObject.prototype.SetValue.call(this, System.Windows.DependencyObjectCollection$b1.Of(this.T).CollectionProperty, this._collection);
-};
 System.Windows.DependencyObjectCollection$b1.prototype.CheckReentrancy = function () {
 	if (this._busy) {
 		throw JSIL.New(System.InvalidOperationException, "_ctor$1", [System.String.Format($asm02.System.Windows.Resx.GetString$2("DependencyObjectCollection_CannotChangeCollection"), "DependencyObjectCollection", "CollectionChanged")]);
@@ -62966,9 +61637,6 @@ $asm02.System.Windows.DependencyObjectCollection$b1.$lGetEnumerator$gd__0.protot
 $asm02.System.Windows.DependencyObjectCollection$b1.$lGetEnumerator$gd__0.prototype.item = null;
 $asm02.System.Windows.DependencyObjectCollection$b1.$lGetEnumerator$gd__0.prototype.$wrap2 = null;
 
-$asm02.System.Windows.DOCollection.prototype._ctor = function () {
-	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.DependencyObject).prototype._ctor$1.call(this, 371);
-};
 $asm02.System.Windows.DOCollection.prototype.get_ManagedPeerCollection = function () {
 	if (this._treeItems === null) {
 		this._treeItems = JSIL.New(System.Collections.Generic.Dictionary$b2.Of(System.Windows.DependencyObject, System.Object), "_ctor$0", []);
@@ -64186,12 +62854,6 @@ JSIL.MakeProperty(System.Windows.TemplateVisualStateAttribute.prototype, "GroupN
 System.Windows.TemplateVisualStateAttribute.prototype.Name$value = null;
 System.Windows.TemplateVisualStateAttribute.prototype.GroupName$value = null;
 
-System.Windows.MessageBox.Show$0 = function (messageBoxText, caption, button) {
-	return System.Windows.MessageBox.ShowCore(messageBoxText, caption, button);
-};
-System.Windows.MessageBox.Show$1 = function (messageBoxText) {
-	return System.Windows.MessageBox.ShowCore(messageBoxText, System.String.Empty, System.Windows.MessageBoxButton.OK);
-};
 System.Windows.MessageBox.ShowCore = function (messageBoxText, caption, button) {
 	if (messageBoxText === null) {
 		throw JSIL.New(System.ArgumentNullException, "_ctor$1", ["messageBoxText"]);
@@ -64229,32 +62891,15 @@ System.Windows.MessageBox.Win32ToMessageBoxResult = function (win32Result) {
 	result = System.Windows.MessageBoxResult.None;
 	return result;
 };
-JSIL.OverloadedMethod(System.Windows.MessageBox, "Show", [
-		["Show$0", [System.String, System.String, System.Windows.MessageBoxButton]], 
-		["Show$1", [System.String]]
-	]);
 
-System.Windows.ExternalPart.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 280);
-};
-System.Windows.ExternalPart.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.ExternalPart.prototype.get_Source = function () {
 	return null;
 };
 System.Windows.ExternalPart.prototype.set_Source = function (value) {
 };
-JSIL.OverloadedMethod(System.Windows.ExternalPart.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.MakeProperty(System.Windows.ExternalPart.prototype, "Source", 
 	System.Windows.ExternalPart.prototype.get_Source, System.Windows.ExternalPart.prototype.set_Source);
 
-System.Windows.ExtensionPart.prototype._ctor = function () {
-	System.Windows.ExternalPart.prototype._ctor$1.call(this, 278);
-};
 System.Windows.ExtensionPart.prototype.get_Source = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.ExtensionPart.SourceProperty), System.Uri);
 };
@@ -64268,9 +62913,6 @@ System.Windows.ExtensionPart._cctor = function () {
 	System.Windows.ExtensionPart.SourceProperty = System.Windows.DependencyProperty.RegisterCoreProperty(19315, System.Uri);
 };
 
-System.Windows.ExternalPartCollection.prototype._ctor = function () {
-	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.ExternalPart).prototype._ctor$1.call(this, 279);
-};
 System.Windows.ExternalPartCollection.prototype.AddInternal = function (value) {
 	this.AddImpl(value);
 };
@@ -64726,19 +63368,6 @@ $asm02.System.Windows.Hosting.NativeMethods.DOMEventInfo.prototype.charCode = 0;
 $asm02.System.Windows.Hosting.NativeMethods.DOMEventInfo.prototype.pszEventType = 0;
 $asm02.System.Windows.Hosting.NativeMethods.DOMEventInfo.prototype.pEventObject = 0;
 
-System.Windows.Ink.Stroke.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 136);
-};
-System.Windows.Ink.Stroke.prototype._ctor$1 = function (stylusPoints) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 136);
-	if (stylusPoints === null) {
-		throw JSIL.New(System.ArgumentNullException, "_ctor$1", ["stylusPoints"]);
-	}
-	if (stylusPoints.Count === 0) {
-		throw JSIL.New(System.ArgumentException, "_ctor$1", ["stylusPoints"]);
-	}
-	this.SetPointCollection(stylusPoints);
-};
 System.Windows.Ink.Stroke.prototype.get_StylusPoints = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Ink.Stroke.StylusPointsProperty), System.Windows.Input.StylusPointCollection);
 };
@@ -64760,10 +63389,6 @@ System.Windows.Ink.Stroke.prototype.HitTest = function (stylusPointCollection) {
 System.Windows.Ink.Stroke.prototype.SetPointCollection = function (pointCollection) {
 	$asm02.MS.Internal.XcpImports.SetValue$13(this, System.Windows.Ink.Stroke.StylusPointsProperty, pointCollection);
 };
-JSIL.OverloadedMethod(System.Windows.Ink.Stroke.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.Windows.Input.StylusPointCollection]]
-	]);
 JSIL.MakeProperty(System.Windows.Ink.Stroke.prototype, "StylusPoints", 
 	System.Windows.Ink.Stroke.prototype.get_StylusPoints, System.Windows.Ink.Stroke.prototype.set_StylusPoints);
 JSIL.MakeProperty(System.Windows.Ink.Stroke.prototype, "DrawingAttributes", 
@@ -64906,9 +63531,6 @@ System.Windows.Input.FocusManager.GetFocusedElement = function () {
 	return $asm02.MS.Internal.XcpImports.FocusManager_GetFocusedElement();
 };
 
-System.Windows.Input.InputMethod.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$0.call(this);
-};
 System.Windows.Input.InputMethod.GetIsInputMethodEnabled = function (target) {
 	if (target === null) {
 		throw JSIL.New(System.ArgumentNullException, "_ctor$1", ["target"]);
@@ -65485,76 +64107,18 @@ System.Windows.Media.ImageSourceConverter.prototype.CanConvertFrom = function (c
 };
 System.Windows.Media.ImageSourceConverter.prototype.ConvertFrom = function (context, culture, value) {
 	if (JSIL.TryCast(value, System.Uri) !== null) {
-		return JSIL.New(System.Windows.Media.Imaging.BitmapImage, "_ctor$0", []).__Initialize__({
+		return new System.Windows.Media.Imaging.BitmapImage().__Initialize__({
 				UriSource: JSIL.Cast(value, System.Uri)}
 		);
 	}
 	if (JSIL.TryCast(value, System.String) !== null) {
-		return JSIL.New(System.Windows.Media.Imaging.BitmapImage, "_ctor$0", []).__Initialize__({
+		return new System.Windows.Media.Imaging.BitmapImage().__Initialize__({
 				UriSource: JSIL.New(System.Uri, "_ctor$1", [JSIL.Cast(value, System.String), System.UriKind.RelativeOrAbsolute])}
 		);
 	}
 	return System.ComponentModel.TypeConverter.prototype.ConvertFrom$1.call(this, context, culture, value);
 };
 
-System.Windows.Media.Imaging.WriteableBitmap.prototype._ctor$0 = function (source) {
-	var flag = new JSIL.Variable(false);
-	System.Windows.Media.Imaging.BitmapSource.prototype._ctor$1.call(this, 314);
-	this._pixelWidth = source.PixelWidth;
-	this._pixelHeight = source.PixelHeight;
-	this._pixelArrayLength = (this._pixelWidth * this._pixelHeight);
-	this.AllocPixelBuffer();
-	$asm02.MS.Internal.XcpImports.WriteableBitmap_CreateFromSource(this, this._ptrPinnedPixels, source, /* ref */ flag);
-	if (flag.value) {
-		this._bHasProtectedContent = true;
-		this.ReleasePixelBuffer();
-	}
-};
-System.Windows.Media.Imaging.WriteableBitmap.prototype._ctor$1 = function (pixelWidth, pixelHeight) {
-	System.Windows.Media.Imaging.BitmapSource.prototype._ctor$1.call(this, 314);
-	if (pixelWidth < 0) {
-		throw JSIL.New(System.ArgumentOutOfRangeException, "_ctor$1", ["pixelWidth"]);
-	}
-	if (pixelHeight < 0) {
-		throw JSIL.New(System.ArgumentOutOfRangeException, "_ctor$1", ["pixelHeight"]);
-	}
-	this._pixelWidth = pixelWidth;
-	this._pixelHeight = pixelHeight;
-	this._pixelArrayLength = (this._pixelWidth * this._pixelHeight);
-	this.AllocPixelBuffer();
-	$asm02.MS.Internal.XcpImports.WriteableBitmap_Create(this, this._ptrPinnedPixels, this._pixelWidth, this._pixelHeight);
-};
-System.Windows.Media.Imaging.WriteableBitmap.prototype._ctor$2 = function (element, transform) {
-	var flag = new JSIL.Variable(false);
-	System.Windows.Media.Imaging.BitmapSource.prototype._ctor$1.call(this, 314);
-	if (element === null) {
-		throw JSIL.New(System.ArgumentNullException, "_ctor$1", ["element"]);
-	}
-	if (transform === null) {
-		transform = new System.Windows.Media.TranslateTransform();
-	}
-	$asm02.MS.Internal.XcpImports.WriteableBitmap_CalculateSize(this, element, transform);
-	var pixelWidthInternal = System.Windows.Media.Imaging.BitmapSource.prototype.get_PixelWidthInternal.call(this);
-	var pixelHeightInternal = System.Windows.Media.Imaging.BitmapSource.prototype.get_PixelHeightInternal.call(this);
-	if (!((pixelWidthInternal >= 0) && (pixelHeightInternal >= 0))) {
-		throw JSIL.New(System.ArgumentException, "_ctor$1", [$asm02.System.Windows.Resx.GetString$2("WriteableBitmap_InvalidSize")]);
-	}
-	this._pixelWidth = pixelWidthInternal;
-	this._pixelHeight = pixelHeightInternal;
-	this._pixelArrayLength = (this._pixelWidth * this._pixelHeight);
-	this.AllocPixelBuffer();
-	$asm02.MS.Internal.XcpImports.WriteableBitmap_CreateFromUIElement(
-		this, 
-		element, 
-		transform, 
-		this._ptrPinnedPixels, 
-		/* ref */ flag
-	);
-	if (!(!flag.value || this._bHasProtectedContent)) {
-		this._bHasProtectedContent = true;
-		this.ReleasePixelBuffer();
-	}
-};
 System.Windows.Media.Imaging.WriteableBitmap.prototype.Finalize = function () {
 	try {
 		this.ReleasePixelBuffer();
@@ -65614,11 +64178,6 @@ System.Windows.Media.Imaging.WriteableBitmap.prototype.AllocPixelBuffer = functi
 	this._pinned = System.Runtime.InteropServices.GCHandle.Alloc$1(this._pixels, System.Runtime.InteropServices.GCHandleType.Pinned).MemberwiseClone();
 	this._ptrPinnedPixels = this._pinned.AddrOfPinnedObject();
 };
-JSIL.OverloadedMethod(System.Windows.Media.Imaging.WriteableBitmap.prototype, "_ctor", [
-		["_ctor$0", [System.Windows.Media.Imaging.BitmapSource]], 
-		["_ctor$1", [System.Int32, System.Int32]], 
-		["_ctor$2", [System.Windows.UIElement, System.Windows.Media.Transform]]
-	]);
 JSIL.MakeProperty(System.Windows.Media.Imaging.WriteableBitmap.prototype, "Pixels", 
 	System.Windows.Media.Imaging.WriteableBitmap.prototype.get_Pixels, null);
 JSIL.MakeProperty(System.Windows.Media.Imaging.WriteableBitmap.prototype, "PixelHeightInternal", 
@@ -67388,7 +65947,7 @@ $asm02.System.Windows.Media.SingleImageSink.prototype.OnSample = function (sampl
 		this.m_RaisedEvent = true;
 		System.Windows.Media.VideoSink.prototype.set_CaptureSource.call(this, null);
 		this.m_CaptureSource.Dispatcher.BeginInvoke$0(function () {
-				var writeableBitmap = JSIL.New(System.Windows.Media.Imaging.WriteableBitmap, "_ctor$1", [$l$gc__DisplayClass.$this.m_Width, $l$gc__DisplayClass.$this.m_Height]);
+				var writeableBitmap = new System.Windows.Media.Imaging.WriteableBitmap($l$gc__DisplayClass.$this.m_Width, $l$gc__DisplayClass.$this.m_Height);
 				var pixelFormat = $l$gc__DisplayClass.$this.m_PixelFormat;
 				if (pixelFormat === System.Windows.Media.PixelFormatType.Format32bppArgb) {
 					if ($l$gc__DisplayClass.$this.m_Stride >= 0) {
@@ -69404,14 +67963,6 @@ System.Windows.Media.MultiScaleTileSource.prototype.InvalidateTileLayer = functi
 		tileLayer
 	);
 };
-System.Windows.Media.MultiScaleTileSource.prototype._ctor$0 = function (nKnownTypeIndex) {
-	this._lastTileLevel = -1;
-	this._lastTilePositionX = -1;
-	this._lastTilePositionY = -1;
-	this._lastTileImageUris = new (System.Collections.Generic.List$b1.Of(System.Object)) ();
-	this._maxTileBlendTimeMilliseconds = 500;
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
-};
 System.Windows.Media.MultiScaleTileSource.prototype.get_TileBlendTime = function () {
 	return System.TimeSpan.FromMilliseconds(this._maxTileBlendTimeMilliseconds);
 };
@@ -69425,55 +67976,6 @@ System.Windows.Media.MultiScaleTileSource.prototype.SetTileSourceParameters = fu
 	this._tileHeight = tileHeight;
 	this._tileOverlap = tileOverlap;
 };
-System.Windows.Media.MultiScaleTileSource.prototype._ctor$1 = function (imageWidth, imageHeight, tileWidth, tileHeight, tileOverlap) {
-	this._lastTileLevel = -1;
-	this._lastTilePositionX = -1;
-	this._lastTilePositionY = -1;
-	this._lastTileImageUris = new (System.Collections.Generic.List$b1.Of(System.Object)) ();
-	this._maxTileBlendTimeMilliseconds = 500;
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 256);
-	if (!((imageWidth >= 0) && 
-			(imageHeight >= 0) && 
-			(tileWidth >= 0) && 
-			(tileHeight >= 0) && (tileOverlap >= 0))) {
-		throw JSIL.New(System.ArgumentException, "_ctor$1", [$asm02.System.Windows.Resx.GetString$2("InvalidArgument")]);
-	}
-	this.SetTileSourceParameters(
-		imageWidth, 
-		imageHeight, 
-		tileWidth, 
-		tileHeight, 
-		tileOverlap
-	);
-};
-System.Windows.Media.MultiScaleTileSource.prototype._ctor$2 = function (imageWidth, imageHeight, tileWidth, tileHeight, tileOverlap) {
-	this._lastTileLevel = -1;
-	this._lastTilePositionX = -1;
-	this._lastTilePositionY = -1;
-	this._lastTileImageUris = new (System.Collections.Generic.List$b1.Of(System.Object)) ();
-	this._maxTileBlendTimeMilliseconds = 500;
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 256);
-	if (!((imageWidth >= 0) && 
-			(imageHeight >= 0) && 
-			(imageWidth <= System.Windows.Media.MultiScaleTileSource.MaxImageDimension) && 
-			(imageHeight <= System.Windows.Media.MultiScaleTileSource.MaxImageDimension) && 
-			(tileWidth >= 0) && 
-			(tileHeight >= 0) && (tileOverlap >= 0))) {
-		throw JSIL.New(System.ArgumentException, "_ctor$1", [$asm02.System.Windows.Resx.GetString$2("InvalidArgument")]);
-	}
-	this.SetTileSourceParameters(
-		imageWidth, 
-		imageHeight, 
-		tileWidth, 
-		tileHeight, 
-		tileOverlap
-	);
-};
-JSIL.OverloadedMethod(System.Windows.Media.MultiScaleTileSource.prototype, "_ctor", [
-		["_ctor$0", [System.UInt32]], 
-		["_ctor$1", [System.Int32, System.Int32, System.Int32, System.Int32, System.Int32]], 
-		["_ctor$2", [System.Int64, System.Int64, System.Int32, System.Int32, System.Int32]]
-	]);
 JSIL.MakeProperty(System.Windows.Media.MultiScaleTileSource.prototype, "TileBlendTime", 
 	System.Windows.Media.MultiScaleTileSource.prototype.get_TileBlendTime, System.Windows.Media.MultiScaleTileSource.prototype.set_TileBlendTime);
 Object.defineProperty(System.Windows.Media.MultiScaleTileSource, "DEFAULT_TILE_BLEND_TIME_MILLISECONDS", {
@@ -69494,13 +67996,6 @@ System.Windows.Media.MultiScaleTileSource._cctor = function () {
 	System.Windows.Media.MultiScaleTileSource.MaxImageDimension = -2147483648;
 };
 
-System.Windows.Media.DeepZoomImageTileSource.prototype._ctor$0 = function () {
-	System.Windows.Media.MultiScaleTileSource.prototype._ctor$0.call(this, 257);
-};
-System.Windows.Media.DeepZoomImageTileSource.prototype._ctor$1 = function (sourceUri) {
-	System.Windows.Media.MultiScaleTileSource.prototype._ctor$0.call(this, 257);
-	System.Windows.DependencyObject.prototype.SetValue.call(this, System.Windows.Media.DeepZoomImageTileSource.UriSourceProperty, sourceUri);
-};
 System.Windows.Media.DeepZoomImageTileSource.prototype.GetTileLayers = function (tileLevel, tilePositionX, tilePositionY, tileImageLayerSources) {
 	throw JSIL.New(System.NotImplementedException, "_ctor$0", []);
 };
@@ -69510,10 +68005,6 @@ System.Windows.Media.DeepZoomImageTileSource.prototype.get_UriSource = function 
 System.Windows.Media.DeepZoomImageTileSource.prototype.set_UriSource = function (value) {
 	System.Windows.DependencyObject.prototype.SetValue.call(this, System.Windows.Media.DeepZoomImageTileSource.UriSourceProperty, value);
 };
-JSIL.OverloadedMethod(System.Windows.Media.DeepZoomImageTileSource.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.Uri]]
-	]);
 JSIL.MakeProperty(System.Windows.Media.DeepZoomImageTileSource.prototype, "UriSource", 
 	System.Windows.Media.DeepZoomImageTileSource.prototype.get_UriSource, System.Windows.Media.DeepZoomImageTileSource.prototype.set_UriSource);
 System.Windows.Media.DeepZoomImageTileSource.UriSourceProperty = null;
@@ -69572,9 +68063,6 @@ JSIL.MakeProperty(System.Windows.PropertyMetadata.prototype, "DefaultValue",
 System.Windows.PropertyMetadata.prototype._propertyChangedCallback = null;
 System.Windows.PropertyMetadata.prototype._defaultValue = null;
 
-System.Windows.ResourceDictionary.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 151);
-};
 System.Windows.ResourceDictionary.prototype.get_Source = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.ResourceDictionary.SourceProperty), System.Uri);
 };
@@ -69872,7 +68360,7 @@ __step0__:
 									result = 0;
 									return result;
 								}
-								var managedObjectReference = JSIL.New($asm02.MS.Internal.ManagedObjectReference, "_ctor$1", [managedPeer.value]);
+								var managedObjectReference = new $asm02.MS.Internal.ManagedObjectReference(managedPeer.value);
 								managedObjectReference.NativeValue = managedPeer.value;
 								$asm02.MS.Internal.ManagedPeerTable.PegManagedPeerNoRef$0(managedObjectReference);
 								nativeOutValue.value = managedObjectReference.IManagedPeerBase_NativeObject;
@@ -70652,12 +69140,6 @@ JSIL.OverloadedMethod(System.Windows.Media.VisualTreeHelper, "FindElementsInHost
 		["FindElementsInHostCoordinates$1", [System.Windows.Rect, System.Windows.UIElement]]
 	]);
 
-System.Windows.Automation.Peers.AutomationPeer.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 231);
-};
-System.Windows.Automation.Peers.AutomationPeer.prototype._ctor$1 = function (index, nativeDO) {
-	System.Windows.DependencyObject.prototype._ctor$2.call(this, index, nativeDO);
-};
 System.Windows.Automation.Peers.AutomationPeer.prototype.GetAcceleratorKey = function () {
 	return this.GetAcceleratorKeyCore();
 };
@@ -70909,7 +69391,7 @@ System.Windows.Automation.Peers.AutomationPeer.GetPattern = function (nativeTarg
 		var automationPeer = JSIL.Cast($asm02.MS.Internal.ManagedPeerTable.GetManagedPeer(nativeTarget), System.Windows.Automation.Peers.AutomationPeer);
 		var pattern = automationPeer.GetPattern(eInterface);
 		if (pattern !== null) {
-			var managedObjectReference = JSIL.New($asm02.MS.Internal.ManagedObjectReference, "_ctor$1", [pattern]);
+			var managedObjectReference = new $asm02.MS.Internal.ManagedObjectReference(pattern);
 			nativeInterface.value = managedObjectReference.NativeObject;
 			managedObjectReference.PegManagedPeerNoRef();
 		} else {
@@ -70950,10 +69432,6 @@ System.Windows.Automation.Peers.AutomationPeer.GetXresultForAutomationException 
 	}
 	return xresultForException;
 };
-JSIL.OverloadedMethod(System.Windows.Automation.Peers.AutomationPeer.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32, System.IntPtr]]
-	]);
 JSIL.MakeProperty(System.Windows.Automation.Peers.AutomationPeer.prototype, "EventsSource", 
 	System.Windows.Automation.Peers.AutomationPeer.prototype.get_EventsSource, System.Windows.Automation.Peers.AutomationPeer.prototype.set_EventsSource);
 JSIL.MakeProperty(System.Windows.Automation.Peers.AutomationPeer.prototype, "Children", 
@@ -70988,27 +69466,6 @@ System.Windows.Automation.Peers.FrameworkElementAutomationPeer.GetPeerIdWithInde
 		return index;
 	}
 	return 231;
-};
-System.Windows.Automation.Peers.FrameworkElementAutomationPeer.prototype._ctor$0 = function (owner) {
-	System.Windows.Automation.Peers.AutomationPeer.prototype._ctor$1.call(this, System.Windows.Automation.Peers.FrameworkElementAutomationPeer.GetPeerId(owner), System.Windows.Automation.Peers.FrameworkElementAutomationPeer.GetNativeObject(owner, true));
-	if (owner === null) {
-		throw JSIL.New(System.ArgumentNullException, "_ctor$1", ["owner"]);
-	}
-	this._owner = owner;
-};
-System.Windows.Automation.Peers.FrameworkElementAutomationPeer.prototype._ctor$1 = function (index, uie) {
-	System.Windows.Automation.Peers.AutomationPeer.prototype._ctor$1.call(this, System.Windows.Automation.Peers.FrameworkElementAutomationPeer.GetPeerIdWithIndex(index, uie), System.Windows.Automation.Peers.FrameworkElementAutomationPeer.GetNativeObject(uie, true));
-	if (uie === null) {
-		throw JSIL.New(System.ArgumentNullException, "_ctor$1", ["uie"]);
-	}
-	this._owner = uie;
-};
-System.Windows.Automation.Peers.FrameworkElementAutomationPeer.prototype._ctor$2 = function (item) {
-	System.Windows.Automation.Peers.AutomationPeer.prototype._ctor$1.call(
-		this, System.Windows.Automation.Peers.FrameworkElementAutomationPeer.GetPeerId(JSIL.TryCast(item, System.Windows.UIElement)), 
-		System.Windows.Automation.Peers.FrameworkElementAutomationPeer.GetNativeObject(JSIL.TryCast(item, System.Windows.DependencyObject), false)
-	);
-	this._owner = JSIL.TryCast(item, System.Windows.UIElement);
 };
 System.Windows.Automation.Peers.FrameworkElementAutomationPeer.prototype.get_Owner = function () {
 	return this._owner;
@@ -71131,11 +69588,6 @@ System.Windows.Automation.Peers.FrameworkElementAutomationPeer.prototype.GetChil
 System.Windows.Automation.Peers.FrameworkElementAutomationPeer.prototype.ChildIsAcceptable = function (child) {
 	return (child !== null);
 };
-JSIL.OverloadedMethod(System.Windows.Automation.Peers.FrameworkElementAutomationPeer.prototype, "_ctor", [
-		["_ctor$0", [System.Windows.FrameworkElement]], 
-		["_ctor$1", [System.UInt32, System.Windows.UIElement]], 
-		["_ctor$2", [System.Object]]
-	]);
 JSIL.MakeProperty(System.Windows.Automation.Peers.FrameworkElementAutomationPeer.prototype, "Owner", 
 	System.Windows.Automation.Peers.FrameworkElementAutomationPeer.prototype.get_Owner, null);
 Object.defineProperty(System.Windows.Automation.Peers.FrameworkElementAutomationPeer, "NativeFrameworkElementAutomatinPeer", {
@@ -71670,13 +70122,6 @@ System.Windows.Automation.AutomationTextAttribute.prototype._ctor = function (th
 };
 System.Windows.Automation.AutomationTextAttribute.prototype.m_enum = 0;
 
-$asm02.MS.Internal.Automation.TextProvider.prototype._ctor = function (textPeer) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 404);
-	this._textPeer = textPeer;
-	this._richTextBox = JSIL.Cast(this._textPeer.Owner, System.Windows.Controls.RichTextBox);
-	this._richTextBox.add_ContentChanged(JSIL.Delegate.New("System.Windows.Controls.ContentChangedEventHandler", this, $asm02.MS.Internal.Automation.TextProvider.prototype.OnTextContentChanged));
-	this._richTextBox.add_SelectionChanged(JSIL.Delegate.New("System.Windows.RoutedEventHandler", this, $asm02.MS.Internal.Automation.TextProvider.prototype.OnTextSelectionChanged));
-};
 $asm02.MS.Internal.Automation.TextProvider.prototype.Dispose = function () {
 	this._richTextBox.remove_ContentChanged(JSIL.Delegate.New("System.Windows.Controls.ContentChangedEventHandler", this, $asm02.MS.Internal.Automation.TextProvider.prototype.OnTextContentChanged));
 	this._richTextBox.remove_SelectionChanged(JSIL.Delegate.New("System.Windows.RoutedEventHandler", this, $asm02.MS.Internal.Automation.TextProvider.prototype.OnTextSelectionChanged));
@@ -71770,12 +70215,6 @@ Object.defineProperty($asm02.MS.Internal.Automation.TextProvider, "NativeTextPro
 $asm02.MS.Internal.Automation.TextProvider.prototype._textPeer = null;
 $asm02.MS.Internal.Automation.TextProvider.prototype._richTextBox = null;
 
-$asm02.MS.Internal.Automation.TextRangeProvider.prototype._ctor = function (textProvider, textRange, textPeer) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 405);
-	this._textProvider = textProvider;
-	this._textRange = textRange;
-	this._textPeer = textPeer;
-};
 $asm02.MS.Internal.Automation.TextRangeProvider.prototype.ITextRangeProvider_Clone = function () {
 	var textRange = this._textRange.Clone();
 	return new $asm02.MS.Internal.Automation.TextRangeProvider(this._textProvider, textRange, this._textPeer);
@@ -71928,9 +70367,6 @@ JSIL.OverloadedMethod(System.Windows.Automation.Provider.IRawElementProviderSimp
 	]);
 System.Windows.Automation.Provider.IRawElementProviderSimple.prototype.m_AP = null;
 
-System.Windows.Automation.Peers.ButtonBaseAutomationPeer.prototype._ctor = function (owner) {
-	System.Windows.Automation.Peers.FrameworkElementAutomationPeer.prototype._ctor$0.call(this, owner);
-};
 System.Windows.Automation.Peers.ButtonBaseAutomationPeer.prototype.GetNameCore = function () {
 	var text = System.Windows.Automation.Peers.FrameworkElementAutomationPeer.prototype.GetNameCore.call(this);
 	if (System.String.IsNullOrEmpty(text)) {
@@ -71939,9 +70375,6 @@ System.Windows.Automation.Peers.ButtonBaseAutomationPeer.prototype.GetNameCore =
 	return text;
 };
 
-System.Windows.Automation.Peers.ButtonAutomationPeer.prototype._ctor = function (owner) {
-	System.Windows.Automation.Peers.ButtonBaseAutomationPeer.prototype._ctor.call(this, owner);
-};
 System.Windows.Automation.Peers.ButtonAutomationPeer.prototype.GetAutomationControlTypeCore = function () {
 	return System.Windows.Automation.Peers.AutomationControlType.Button;
 };
@@ -71967,13 +70400,7 @@ System.Windows.Automation.Peers.ButtonAutomationPeer.prototype.IInvokeProvider_I
 		});
 };
 
-System.Windows.Automation.Peers.ImageAutomationPeer.prototype._ctor = function (owner) {
-	System.Windows.Automation.Peers.FrameworkElementAutomationPeer.prototype._ctor$1.call(this, 272, owner);
-};
 
-System.Windows.Automation.Peers.ItemsControlAutomationPeer.prototype._ctor = function (owner) {
-	System.Windows.Automation.Peers.FrameworkElementAutomationPeer.prototype._ctor$0.call(this, owner);
-};
 System.Windows.Automation.Peers.ItemsControlAutomationPeer.prototype.GetPattern = function (patternInterface) {
 	if (patternInterface === System.Windows.Automation.Peers.PatternInterface.Scroll) {
 		var itemsControl = JSIL.Cast(System.Windows.Automation.Peers.FrameworkElementAutomationPeer.prototype.get_Owner.call(this), System.Windows.Controls.ItemsControl);
@@ -72115,18 +70542,6 @@ System.Windows.Automation.Peers.ItemsControlAutomationPeer.prototype.CreateItemA
 };
 System.Windows.Automation.Peers.ItemsControlAutomationPeer.prototype._itemPeerStorage = null;
 
-System.Windows.Automation.Peers.ItemAutomationPeer.prototype._ctor$0 = function (item) {
-	System.Windows.Automation.Peers.FrameworkElementAutomationPeer.prototype._ctor$2.call(this, item);
-	this.SetupItem(item);
-};
-System.Windows.Automation.Peers.ItemAutomationPeer.prototype._ctor$1 = function (item, itemsControlAutomationPeer) {
-	System.Windows.Automation.Peers.FrameworkElementAutomationPeer.prototype._ctor$2.call(this, item);
-	this._itemsControlAutomationPeer = itemsControlAutomationPeer;
-	if (itemsControlAutomationPeer !== null) {
-		System.Windows.Automation.Peers.AutomationPeer.prototype.SetAutomationPeerParent.call(this, itemsControlAutomationPeer);
-	}
-	this.SetupItem(item);
-};
 System.Windows.Automation.Peers.ItemAutomationPeer.prototype.SetupItem = function (item) {
 	var accessibilityItem = null;
 	if (JSIL.TryCast(item, System.Windows.UIElement) !== null) {
@@ -72156,7 +70571,7 @@ System.Windows.Automation.Peers.ItemAutomationPeer.prototype.GetContainerPeer = 
 	if (container !== null) {
 		automationPeer = container.GetOrCreateAutomationPeer();
 		if (automationPeer === null) {
-			automationPeer = JSIL.New(System.Windows.Automation.Peers.FrameworkElementAutomationPeer, "_ctor$2", [container]);
+			automationPeer = new System.Windows.Automation.Peers.FrameworkElementAutomationPeer(container);
 		}
 	}
 	return automationPeer;
@@ -72407,10 +70822,6 @@ System.Windows.Automation.Peers.ItemAutomationPeer.prototype.get_ItemsControlAut
 System.Windows.Automation.Peers.ItemAutomationPeer.prototype.get_Item = function () {
 	return this._item;
 };
-JSIL.OverloadedMethod(System.Windows.Automation.Peers.ItemAutomationPeer.prototype, "_ctor", [
-		["_ctor$0", [System.Windows.UIElement]], 
-		["_ctor$1", [System.Object, System.Windows.Automation.Peers.ItemsControlAutomationPeer]]
-	]);
 JSIL.MakeProperty(System.Windows.Automation.Peers.ItemAutomationPeer.prototype, "ItemsControlAutomationPeer", 
 	System.Windows.Automation.Peers.ItemAutomationPeer.prototype.get_ItemsControlAutomationPeer, null);
 JSIL.MakeProperty(System.Windows.Automation.Peers.ItemAutomationPeer.prototype, "Item", 
@@ -72418,9 +70829,6 @@ JSIL.MakeProperty(System.Windows.Automation.Peers.ItemAutomationPeer.prototype, 
 System.Windows.Automation.Peers.ItemAutomationPeer.prototype._item = null;
 System.Windows.Automation.Peers.ItemAutomationPeer.prototype._itemsControlAutomationPeer = null;
 
-System.Windows.Automation.Peers.SelectorAutomationPeer.prototype._ctor = function (owner) {
-	System.Windows.Automation.Peers.ItemsControlAutomationPeer.prototype._ctor.call(this, owner);
-};
 System.Windows.Automation.Peers.SelectorAutomationPeer.prototype.GetAutomationControlTypeCore = function () {
 	return System.Windows.Automation.Peers.AutomationControlType.List;
 };
@@ -72514,9 +70922,6 @@ Object.defineProperty(System.Windows.Automation.Peers.SelectorAutomationPeer, "B
 		"value": 20}
 );
 
-System.Windows.Automation.Peers.ListBoxAutomationPeer.prototype._ctor = function (owner) {
-	System.Windows.Automation.Peers.SelectorAutomationPeer.prototype._ctor.call(this, owner);
-};
 System.Windows.Automation.Peers.ListBoxAutomationPeer.prototype.GetAutomationControlTypeCore = function () {
 	return System.Windows.Automation.Peers.AutomationControlType.List;
 };
@@ -72524,15 +70929,9 @@ System.Windows.Automation.Peers.ListBoxAutomationPeer.prototype.GetClassNameCore
 	return "ListBox";
 };
 System.Windows.Automation.Peers.ListBoxAutomationPeer.prototype.CreateItemAutomationPeer = function (item) {
-	return JSIL.New(System.Windows.Automation.Peers.ListBoxItemAutomationPeer, "_ctor$1", [item, this]);
+	return new System.Windows.Automation.Peers.ListBoxItemAutomationPeer(item, this);
 };
 
-System.Windows.Automation.Peers.SelectorItemAutomationPeer.prototype._ctor$0 = function (owner) {
-	System.Windows.Automation.Peers.ItemAutomationPeer.prototype._ctor$0.call(this, owner);
-};
-System.Windows.Automation.Peers.SelectorItemAutomationPeer.prototype._ctor$1 = function (owner, selectorAutomationPeer) {
-	System.Windows.Automation.Peers.ItemAutomationPeer.prototype._ctor$1.call(this, owner, selectorAutomationPeer);
-};
 System.Windows.Automation.Peers.SelectorItemAutomationPeer.prototype.GetPattern = function (patternInterface) {
 	if (patternInterface === System.Windows.Automation.Peers.PatternInterface.SelectionItem) {
 		return this;
@@ -72594,21 +70993,11 @@ System.Windows.Automation.Peers.SelectorItemAutomationPeer.prototype.ISelectionI
 System.Windows.Automation.Peers.SelectorItemAutomationPeer.prototype.RaiseAutomationIsSelectedChanged = function (isSelected) {
 	System.Windows.Automation.Peers.AutomationPeer.prototype.RaisePropertyChangedEvent.call(this, System.Windows.Automation.SelectionItemPatternIdentifiers.IsSelectedProperty, !isSelected, isSelected);
 };
-JSIL.OverloadedMethod(System.Windows.Automation.Peers.SelectorItemAutomationPeer.prototype, "_ctor", [
-		["_ctor$0", [System.Windows.UIElement]], 
-		["_ctor$1", [System.Object, System.Windows.Automation.Peers.SelectorAutomationPeer]]
-	]);
 JSIL.MakeProperty(System.Windows.Automation.Peers.SelectorItemAutomationPeer.prototype, "ISelectionItemProvider_IsSelected", 
 	System.Windows.Automation.Peers.SelectorItemAutomationPeer.prototype.ISelectionItemProvider_get_IsSelected, null);
 JSIL.MakeProperty(System.Windows.Automation.Peers.SelectorItemAutomationPeer.prototype, "ISelectionItemProvider_SelectionContainer", 
 	System.Windows.Automation.Peers.SelectorItemAutomationPeer.prototype.ISelectionItemProvider_get_SelectionContainer, null);
 
-System.Windows.Automation.Peers.ListBoxItemAutomationPeer.prototype._ctor$0 = function (owner) {
-	System.Windows.Automation.Peers.SelectorItemAutomationPeer.prototype._ctor$0.call(this, owner);
-};
-System.Windows.Automation.Peers.ListBoxItemAutomationPeer.prototype._ctor$1 = function (owner, selectorAutomationPeer) {
-	System.Windows.Automation.Peers.SelectorItemAutomationPeer.prototype._ctor$1.call(this, owner, selectorAutomationPeer);
-};
 System.Windows.Automation.Peers.ListBoxItemAutomationPeer.prototype.GetClassNameCore = function () {
 	return "ListBoxItem";
 };
@@ -72629,14 +71018,7 @@ System.Windows.Automation.Peers.ListBoxItemAutomationPeer.prototype.IScrollItemP
 		}
 	}
 };
-JSIL.OverloadedMethod(System.Windows.Automation.Peers.ListBoxItemAutomationPeer.prototype, "_ctor", [
-		["_ctor$0", [System.Windows.Controls.ListBoxItem]], 
-		["_ctor$1", [System.Object, System.Windows.Automation.Peers.SelectorAutomationPeer]]
-	]);
 
-System.Windows.Automation.Peers.MediaElementAutomationPeer.prototype._ctor = function (owner) {
-	System.Windows.Automation.Peers.FrameworkElementAutomationPeer.prototype._ctor$0.call(this, owner);
-};
 System.Windows.Automation.Peers.MediaElementAutomationPeer.prototype.GetClassNameCore = function () {
 	return "MediaElement";
 };
@@ -72644,9 +71026,6 @@ System.Windows.Automation.Peers.MediaElementAutomationPeer.prototype.GetAutomati
 	return System.Windows.Automation.Peers.AutomationControlType.Custom;
 };
 
-System.Windows.Automation.Peers.MultiScaleImageAutomationPeer.prototype._ctor = function (owner) {
-	System.Windows.Automation.Peers.FrameworkElementAutomationPeer.prototype._ctor$0.call(this, owner);
-};
 System.Windows.Automation.Peers.MultiScaleImageAutomationPeer.prototype.GetClassNameCore = function () {
 	return "MultiScaleImage";
 };
@@ -72654,9 +71033,6 @@ System.Windows.Automation.Peers.MultiScaleImageAutomationPeer.prototype.GetAutom
 	return System.Windows.Automation.Peers.AutomationControlType.Custom;
 };
 
-System.Windows.Automation.Peers.ToggleButtonAutomationPeer.prototype._ctor = function (owner) {
-	System.Windows.Automation.Peers.ButtonBaseAutomationPeer.prototype._ctor.call(this, owner);
-};
 System.Windows.Automation.Peers.ToggleButtonAutomationPeer.prototype.GetClassNameCore = function () {
 	return "Button";
 };
@@ -72706,9 +71082,6 @@ System.Windows.Automation.Peers.ToggleButtonAutomationPeer.ConvertToToggleState 
 JSIL.MakeProperty(System.Windows.Automation.Peers.ToggleButtonAutomationPeer.prototype, "IToggleProvider_ToggleState", 
 	System.Windows.Automation.Peers.ToggleButtonAutomationPeer.prototype.IToggleProvider_get_ToggleState, null);
 
-System.Windows.Automation.Peers.CheckBoxAutomationPeer.prototype._ctor = function (owner) {
-	System.Windows.Automation.Peers.ToggleButtonAutomationPeer.prototype._ctor.call(this, owner);
-};
 System.Windows.Automation.Peers.CheckBoxAutomationPeer.prototype.GetClassNameCore = function () {
 	return "CheckBox";
 };
@@ -72716,9 +71089,6 @@ System.Windows.Automation.Peers.CheckBoxAutomationPeer.prototype.GetAutomationCo
 	return System.Windows.Automation.Peers.AutomationControlType.CheckBox;
 };
 
-System.Windows.Automation.Peers.RangeBaseAutomationPeer.prototype._ctor = function (owner) {
-	System.Windows.Automation.Peers.FrameworkElementAutomationPeer.prototype._ctor$0.call(this, owner);
-};
 System.Windows.Automation.Peers.RangeBaseAutomationPeer.prototype.GetPattern = function (patternInterface) {
 	if (patternInterface === System.Windows.Automation.Peers.PatternInterface.RangeValue) {
 		return this;
@@ -72775,9 +71145,6 @@ JSIL.MakeProperty(System.Windows.Automation.Peers.RangeBaseAutomationPeer.protot
 JSIL.MakeProperty(System.Windows.Automation.Peers.RangeBaseAutomationPeer.prototype, "IRangeValueProvider_SmallChange", 
 	System.Windows.Automation.Peers.RangeBaseAutomationPeer.prototype.IRangeValueProvider_get_SmallChange, null);
 
-System.Windows.Automation.Peers.RepeatButtonAutomationPeer.prototype._ctor = function (owner) {
-	System.Windows.Automation.Peers.ButtonBaseAutomationPeer.prototype._ctor.call(this, owner);
-};
 System.Windows.Automation.Peers.RepeatButtonAutomationPeer.prototype.GetClassNameCore = function () {
 	return "RepeatButton";
 };
@@ -72798,9 +71165,6 @@ System.Windows.Automation.Peers.RepeatButtonAutomationPeer.prototype.IInvokeProv
 	repeatButton.AutomationButtonBaseClick();
 };
 
-System.Windows.Automation.Peers.ScrollBarAutomationPeer.prototype._ctor = function (owner) {
-	System.Windows.Automation.Peers.RangeBaseAutomationPeer.prototype._ctor.call(this, owner);
-};
 System.Windows.Automation.Peers.ScrollBarAutomationPeer.prototype.GetClassNameCore = function () {
 	return "ScrollBar";
 };
@@ -72825,9 +71189,6 @@ System.Windows.Automation.Peers.ScrollBarAutomationPeer.prototype.ChildIsAccepta
 			(child !== scrollBar.ElementVerticalTemplate)) || (child.Visibility === System.Windows.Visibility.Visible));
 };
 
-System.Windows.Automation.Peers.ThumbAutomationPeer.prototype._ctor = function (owner) {
-	System.Windows.Automation.Peers.FrameworkElementAutomationPeer.prototype._ctor$0.call(this, owner);
-};
 System.Windows.Automation.Peers.ThumbAutomationPeer.prototype.GetClassNameCore = function () {
 	return "Thumb";
 };
@@ -72835,9 +71196,6 @@ System.Windows.Automation.Peers.ThumbAutomationPeer.prototype.GetAutomationContr
 	return System.Windows.Automation.Peers.AutomationControlType.Thumb;
 };
 
-System.Windows.Automation.Peers.RadioButtonAutomationPeer.prototype._ctor = function (owner) {
-	System.Windows.Automation.Peers.ToggleButtonAutomationPeer.prototype._ctor.call(this, owner);
-};
 System.Windows.Automation.Peers.RadioButtonAutomationPeer.prototype.GetClassNameCore = function () {
 	return "RadioButton";
 };
@@ -72887,9 +71245,6 @@ JSIL.MakeProperty(System.Windows.Automation.Peers.RadioButtonAutomationPeer.prot
 JSIL.MakeProperty(System.Windows.Automation.Peers.RadioButtonAutomationPeer.prototype, "ISelectionItemProvider_SelectionContainer", 
 	System.Windows.Automation.Peers.RadioButtonAutomationPeer.prototype.ISelectionItemProvider_get_SelectionContainer, null);
 
-System.Windows.Automation.Peers.ScrollViewerAutomationPeer.prototype._ctor = function (owner) {
-	System.Windows.Automation.Peers.FrameworkElementAutomationPeer.prototype._ctor$0.call(this, owner);
-};
 System.Windows.Automation.Peers.ScrollViewerAutomationPeer.prototype.GetClassNameCore = function () {
 	return "ScrollViewer";
 };
@@ -73083,9 +71438,6 @@ JSIL.MakeProperty(System.Windows.Automation.Peers.ScrollViewerAutomationPeer.pro
 JSIL.MakeProperty(System.Windows.Automation.Peers.ScrollViewerAutomationPeer.prototype, "VerticallyScrollable", 
 	System.Windows.Automation.Peers.ScrollViewerAutomationPeer.prototype.get_VerticallyScrollable, null);
 
-System.Windows.Automation.Peers.SliderAutomationPeer.prototype._ctor = function (owner) {
-	System.Windows.Automation.Peers.RangeBaseAutomationPeer.prototype._ctor.call(this, owner);
-};
 System.Windows.Automation.Peers.SliderAutomationPeer.prototype.GetClassNameCore = function () {
 	return "Slider";
 };
@@ -73104,9 +71456,6 @@ System.Windows.Automation.Peers.SliderAutomationPeer.prototype.ChildIsAcceptable
 			(child !== slider.ElementVerticalTemplate)) || (child.Visibility === System.Windows.Visibility.Visible));
 };
 
-$asm02.System.Windows.Automation.Peers.ToolTipAutomationPeer.prototype._ctor = function (owner) {
-	System.Windows.Automation.Peers.FrameworkElementAutomationPeer.prototype._ctor$0.call(this, owner);
-};
 $asm02.System.Windows.Automation.Peers.ToolTipAutomationPeer.prototype.GetClassNameCore = function () {
 	return "ToolTip";
 };
@@ -73114,9 +71463,6 @@ $asm02.System.Windows.Automation.Peers.ToolTipAutomationPeer.prototype.GetAutoma
 	return System.Windows.Automation.Peers.AutomationControlType.ToolTip;
 };
 
-$asm02.System.Windows.Automation.Peers.PopupRootAutomationPeer.prototype._ctor = function (owner) {
-	System.Windows.Automation.Peers.FrameworkElementAutomationPeer.prototype._ctor$0.call(this, owner);
-};
 $asm02.System.Windows.Automation.Peers.PopupRootAutomationPeer.prototype.GetClassNameCore = function () {
 	return "Popup";
 };
@@ -73124,9 +71470,6 @@ $asm02.System.Windows.Automation.Peers.PopupRootAutomationPeer.prototype.GetAuto
 	return System.Windows.Automation.Peers.AutomationControlType.Window;
 };
 
-System.Windows.Automation.Peers.ProgressBarAutomationPeer.prototype._ctor = function (owner) {
-	System.Windows.Automation.Peers.RangeBaseAutomationPeer.prototype._ctor.call(this, owner);
-};
 System.Windows.Automation.Peers.ProgressBarAutomationPeer.prototype.GetClassNameCore = function () {
 	return "ProgressBar";
 };
@@ -73158,9 +71501,6 @@ JSIL.MakeProperty(System.Windows.Automation.Peers.ProgressBarAutomationPeer.prot
 JSIL.MakeProperty(System.Windows.Automation.Peers.ProgressBarAutomationPeer.prototype, "IRangeValueProvider_SmallChange", 
 	System.Windows.Automation.Peers.ProgressBarAutomationPeer.prototype.IRangeValueProvider_get_SmallChange, null);
 
-System.Windows.Automation.Peers.TextBoxAutomationPeer.prototype._ctor = function (owner) {
-	System.Windows.Automation.Peers.FrameworkElementAutomationPeer.prototype._ctor$1.call(this, 263, owner);
-};
 System.Windows.Automation.Peers.TextBoxAutomationPeer.prototype.IValueProvider_get_IsReadOnly = function () {
 	var textBox = JSIL.Cast(System.Windows.Automation.Peers.FrameworkElementAutomationPeer.prototype.get_Owner.call(this), System.Windows.Controls.TextBox);
 	return textBox.IsReadOnly;
@@ -73203,9 +71543,6 @@ JSIL.MakeProperty(System.Windows.Automation.Peers.TextBoxAutomationPeer.prototyp
 JSIL.MakeProperty(System.Windows.Automation.Peers.TextBoxAutomationPeer.prototype, "IValueProvider_Value", 
 	System.Windows.Automation.Peers.TextBoxAutomationPeer.prototype.IValueProvider_get_Value, null);
 
-System.Windows.Automation.Peers.RichTextBoxAutomationPeer.prototype._ctor = function (owner) {
-	System.Windows.Automation.Peers.FrameworkElementAutomationPeer.prototype._ctor$0.call(this, owner);
-};
 System.Windows.Automation.Peers.RichTextBoxAutomationPeer.prototype.GetAutomationControlTypeCore = function () {
 	return System.Windows.Automation.Peers.AutomationControlType.Document;
 };
@@ -73251,9 +71588,6 @@ __loop0__:
 };
 System.Windows.Automation.Peers.RichTextBoxAutomationPeer.prototype._textProvider = null;
 
-System.Windows.Automation.Peers.TextBlockAutomationPeer.prototype._ctor = function (owner) {
-	System.Windows.Automation.Peers.FrameworkElementAutomationPeer.prototype._ctor$1.call(this, 248, owner);
-};
 System.Windows.Automation.Peers.TextBlockAutomationPeer.prototype.GetNameCore = function () {
 	var nameCore = System.Windows.Automation.Peers.FrameworkElementAutomationPeer.prototype.GetNameCore.call(this);
 	if (System.String.IsNullOrEmpty(nameCore)) {
@@ -73274,9 +71608,6 @@ System.Windows.Automation.Peers.TextBlockAutomationPeer.prototype.IsControlEleme
 	return (JSIL.Cast(System.Windows.Automation.Peers.FrameworkElementAutomationPeer.prototype.get_Owner.call(this), System.Windows.Controls.TextBlock).TemplatedParent === null);
 };
 
-System.Windows.Automation.Peers.PasswordBoxAutomationPeer.prototype._ctor = function (owner) {
-	System.Windows.Automation.Peers.FrameworkElementAutomationPeer.prototype._ctor$1.call(this, 264, owner);
-};
 System.Windows.Automation.Peers.PasswordBoxAutomationPeer.prototype.IValueProvider_get_IsReadOnly = function () {
 	return false;
 };
@@ -73304,9 +71635,6 @@ JSIL.MakeProperty(System.Windows.Automation.Peers.PasswordBoxAutomationPeer.prot
 JSIL.MakeProperty(System.Windows.Automation.Peers.PasswordBoxAutomationPeer.prototype, "IValueProvider_Value", 
 	System.Windows.Automation.Peers.PasswordBoxAutomationPeer.prototype.IValueProvider_get_Value, null);
 
-System.Windows.Automation.Peers.HyperlinkButtonAutomationPeer.prototype._ctor = function (owner) {
-	System.Windows.Automation.Peers.ButtonBaseAutomationPeer.prototype._ctor.call(this, owner);
-};
 System.Windows.Automation.Peers.HyperlinkButtonAutomationPeer.prototype.GetPattern = function (patternInterface) {
 	if (!JSIL.Cast(patternInterface, System.Boolean)) {
 		return this;
@@ -73339,9 +71667,6 @@ JSIL.MakeProperty(System.Windows.Automation.Peers.HyperlinkButtonAutomationPeer.
 	System.Windows.Automation.Peers.HyperlinkButtonAutomationPeer.prototype.get_InUIAutomationInvoke, System.Windows.Automation.Peers.HyperlinkButtonAutomationPeer.prototype.set_InUIAutomationInvoke);
 System.Windows.Automation.Peers.HyperlinkButtonAutomationPeer.prototype.inUIAutomationInvoke = false;
 
-System.Windows.Automation.Peers.ComboBoxAutomationPeer.prototype._ctor = function (owner) {
-	System.Windows.Automation.Peers.SelectorAutomationPeer.prototype._ctor.call(this, owner);
-};
 System.Windows.Automation.Peers.ComboBoxAutomationPeer.prototype.GetAutomationControlTypeCore = function () {
 	return System.Windows.Automation.Peers.AutomationControlType.ComboBox;
 };
@@ -73349,7 +71674,7 @@ System.Windows.Automation.Peers.ComboBoxAutomationPeer.prototype.GetClassNameCor
 	return "ComboBox";
 };
 System.Windows.Automation.Peers.ComboBoxAutomationPeer.prototype.CreateItemAutomationPeer = function (item) {
-	return JSIL.New(System.Windows.Automation.Peers.ListBoxItemAutomationPeer, "_ctor$1", [item, this]);
+	return new System.Windows.Automation.Peers.ListBoxItemAutomationPeer(item, this);
 };
 System.Windows.Automation.Peers.ComboBoxAutomationPeer.prototype.GetPattern = function (pattern) {
 	var result = null;
@@ -73410,10 +71735,6 @@ JSIL.MakeProperty(System.Windows.Automation.Peers.ComboBoxAutomationPeer.prototy
 JSIL.MakeProperty(System.Windows.Automation.Peers.ComboBoxAutomationPeer.prototype, "IValueProvider_Value", 
 	System.Windows.Automation.Peers.ComboBoxAutomationPeer.prototype.IValueProvider_get_Value, null);
 
-$asm02.System.Windows.Automation.Peers.HyperlinkAutomationPeer.prototype._ctor = function (hyperlink) {
-	System.Windows.Automation.Peers.AutomationPeer.prototype._ctor$0.call(this);
-	this._owner = hyperlink;
-};
 $asm02.System.Windows.Automation.Peers.HyperlinkAutomationPeer.prototype.get_Owner = function () {
 	return this._owner;
 };
@@ -73577,7 +71898,12 @@ JSIL.QueueInitializer(function () {
 	});
 JSIL.QueueInitializer(function () {
 		JSIL.ExternalMembers(System.Windows.DependencyObject.prototype, 
-			"SetValue", "AddEventListener"
+			"_ctor", "SetValue", "AddEventListener"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers($asm02.System.Windows.DependencyObject.ManagedReferencesToken.prototype, 
+			"_ctor"
 		);
 	});
 JSIL.QueueInitializer(function () {
@@ -73586,9 +71912,24 @@ JSIL.QueueInitializer(function () {
 			]);
 	});
 JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.UIElement.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.FrameworkElement.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Windows.PresentationFrameworkCollection$b1, [
 				"System.Collections.Generic.IList$b1", "System.Collections.Generic.ICollection$b1", "System.Collections.Generic.IEnumerable$b1", "System.Collections.IList", "System.Collections.ICollection", "System.Collections.IEnumerable"
 			]);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.PresentationFrameworkCollection$b1.prototype, 
+			"_ctor"
+		);
 	});
 JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces($asm02.System.Windows.PresentationFrameworkCollection$b1.CollectionEnum$b1, [
@@ -73596,14 +71937,119 @@ JSIL.QueueInitializer(function () {
 			]);
 	});
 JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.TriggerCollection.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.TriggerBase.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.EventTrigger.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.TriggerActionCollection.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.TriggerAction.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Windows.RoutedEventArgs, [
 				"MS.Internal.IManagedPeerBase", "MS.Internal.INativeCoreTypeWrapper"
 			]);
 	});
 JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.AssemblyPart.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.AssemblyPartCollection.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Windows.StartupEventArgs, [
 				"MS.Internal.IManagedPeerBase", "MS.Internal.INativeCoreTypeWrapper"
 			]);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.FrameworkTemplate.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.DataTemplate.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Style.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.SetterBase.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Setter.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.SetterBaseCollection.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.VisualState.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.OutOfBrowserSettings.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.IconCollection.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Icon.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.WindowSettings.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.SecuritySettings.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.VisualStateGroup.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.VisualTransition.prototype, 
+			"_ctor"
+		);
 	});
 JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Windows.VisualStateChangedEventArgs, [
@@ -73616,9 +72062,314 @@ JSIL.QueueInitializer(function () {
 			]);
 	});
 JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.NotificationWindow.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Window.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.VisualStateManager.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Ink.StrokeCollection.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Ink.DrawingAttributes.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.DoubleCollection.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.PointCollection.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.GeneralTransform.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Transform.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.PathSegment.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Brush.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.TileBrush.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Geometry.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.ImageSource.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.RotateTransform.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.ScaleTransform.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.SkewTransform.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.TranslateTransform.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.TransformCollection.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.TransformGroup.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.MatrixTransform.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.CompositeTransform.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.LineSegment.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.BezierSegment.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.QuadraticBezierSegment.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.ArcSegment.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.PolyLineSegment.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.PolyBezierSegment.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.PolyQuadraticBezierSegment.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.PathSegmentCollection.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.PathFigure.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.PathFigureCollection.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.PathGeometry.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.EllipseGeometry.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.RectangleGeometry.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.LineGeometry.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.GeometryCollection.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.GeometryGroup.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.SolidColorBrush.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.GradientStop.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.GradientStopCollection.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.GradientBrush.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.LinearGradientBrush.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.RadialGradientBrush.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.ImageBrush.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.VideoBrush.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.ImplicitInputBrush.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.TimelineMarker.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.TimelineMarkerCollection.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Windows.Media.RenderingEventArgs, [
 				"MS.Internal.IManagedPeerBase", "MS.Internal.INativeCoreTypeWrapper"
 			]);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Projection.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.PlaneProjection.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Matrix3DProjection.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.CacheMode.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.BitmapCache.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.VideoCaptureDeviceCollection.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.AudioCaptureDeviceCollection.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.CaptureDevice.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.VideoCaptureDevice.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.AudioCaptureDevice.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.CaptureSource.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.Timeline.prototype, 
+			"_ctor"
+		);
 	});
 JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Windows.Media.Animation.EasingFunctionBase, [
@@ -73626,9 +72377,284 @@ JSIL.QueueInitializer(function () {
 			]);
 	});
 JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.EasingFunctionBase.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.CircleEase.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.BackEase.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.ExponentialEase.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.PowerEase.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.QuadraticEase.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.CubicEase.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.QuarticEase.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.QuinticEase.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.ElasticEase.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.BounceEase.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.SineEase.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.BeginStoryboard.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.Storyboard.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.DoubleAnimation.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.ColorAnimation.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.PointAnimation.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.KeySpline.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.ColorKeyFrameCollection.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.DoubleKeyFrameCollection.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.PointKeyFrameCollection.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.ObjectKeyFrameCollection.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.DoubleKeyFrame.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.DiscreteDoubleKeyFrame.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.LinearDoubleKeyFrame.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.SplineDoubleKeyFrame.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.EasingDoubleKeyFrame.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.ColorAnimationUsingKeyFrames.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.ColorKeyFrame.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.DiscreteColorKeyFrame.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.LinearColorKeyFrame.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.SplineColorKeyFrame.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.EasingColorKeyFrame.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.PointAnimationUsingKeyFrames.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.PointKeyFrame.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.DiscretePointKeyFrame.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.LinearPointKeyFrame.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.SplinePointKeyFrame.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.EasingPointKeyFrame.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.ObjectKeyFrame.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.DiscreteObjectKeyFrame.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Animation.TimelineCollection.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Input.StylusPointCollection.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Windows.Input.TouchFrameEventArgs, [
 				"MS.Internal.IManagedPeerBase", "MS.Internal.INativeCoreTypeWrapper"
 			]);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Input.TouchPointCollection.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Input.TouchDevice.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Input.TouchPoint.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Shapes.Shape.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Shapes.Path.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Shapes.Ellipse.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Shapes.Line.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Shapes.Polygon.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Shapes.Polyline.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Shapes.Rectangle.prototype, 
+			"_ctor"
+		);
 	});
 JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Windows.Documents.TextElement, [
@@ -73636,9 +72662,144 @@ JSIL.QueueInitializer(function () {
 			]);
 	});
 JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Documents.TextElement.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Documents.Inline.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Documents.Block.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Documents.TextElementCollection$b1.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Documents.InlineCollection.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Documents.BlockCollection.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Documents.Glyphs.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Documents.Run.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Documents.Paragraph.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Documents.Section.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Documents.Span.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Documents.Underline.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Documents.Italic.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Documents.Bold.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Documents.Hyperlink.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Documents.LineBreak.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Documents.InlineUIContainer.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.Panel.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.Image.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.Canvas.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.TextBlock.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.MediaElement.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Windows.Controls.NotifyEventArgs, [
 				"MS.Internal.IManagedPeerBase", "MS.Internal.INativeCoreTypeWrapper"
 			]);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.InkPresenter.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.UIElementCollection.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.MultiScaleImage.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.MultiScaleSubImage.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.StackPanel.prototype, 
+			"_ctor"
+		);
 	});
 JSIL.QueueInitializer(function () {
 		System.Windows.Controls.Control.prototype.__StructFields__ = [
@@ -73646,14 +72807,154 @@ JSIL.QueueInitializer(function () {
 		];
 	});
 JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.Control.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.TextBox.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.RichTextBox.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.PasswordBox.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.RowDefinition.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.ColumnDefinition.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.Grid.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.RowDefinitionCollection.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.ColumnDefinitionCollection.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.ControlTemplate.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Windows.Controls.ItemsControl, [
 				"MS.Internal.Controls.IGeneratorHost"
 			]);
 	});
 JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.ItemsControl.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.Viewbox.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.Border.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.ContentControl.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.ContentPresenter.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.ItemsPanelTemplate.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.ItemsPresenter.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.WebBrowser.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.WebBrowserBrush.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers($asm02.MS.Internal.InternalTransform.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers($asm02.MS.Internal.TextPointerWrapper.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces($asm02.MS.Internal.ErrorEventArgs, [
 				"MS.Internal.IManagedPeerBase", "MS.Internal.INativeCoreTypeWrapper"
 			]);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers($asm02.MS.Internal.Downloader.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers($asm02.MS.Internal.StylusInfo.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers($asm02.MS.Internal.MultiScaleSubImageCollection.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers($asm02.MS.Internal.MediaAttribute.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers($asm02.MS.Internal.MediaAttributeCollection.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers($asm02.MS.Internal.RichTextBoxView.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers($asm02.MS.Internal.TextBoxView.prototype, 
+			"_ctor"
+		);
 	});
 JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces($asm02.MS.Internal.RuntimeHostEventArgs, [
@@ -73671,9 +72972,109 @@ JSIL.QueueInitializer(function () {
 			]);
 	});
 JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers($asm02.MS.Internal.DisplayMemberTemplate.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers($asm02.MS.Internal.TypeProxy.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers($asm02.MS.Internal.ManagedObjectReference.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers($asm02.MS.Internal.DependencyPropertyProxy.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers($asm02.MS.Internal.GlyphTypeface.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers($asm02.MS.Internal.GlyphTypefaceCollection.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers($asm02.MS.Internal.ResourceDictionaryCollection.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers($asm02.MS.Internal.VisualStateGroupCollection.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers($asm02.MS.Internal.VisualTransitionCollection.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers($asm02.MS.Internal.VisualStateCollection.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers($asm02.MS.Internal.TemplateContent.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Imaging.BitmapSource.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Imaging.BitmapImage.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Windows.Media.Imaging.DownloadProgressEventArgs, [
 				"MS.Internal.IManagedPeerBase", "MS.Internal.INativeCoreTypeWrapper"
 			]);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.Primitives.Popup.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Effects.PixelShader.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Effects.Effect.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Effects.ShaderEffect.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Effects.BlurEffect.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Effects.DropShadowEffect.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Printing.PrintDocument.prototype, 
+			"_ctor"
+		);
 	});
 JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Windows.Printing.PrintPageEventArgs, [
@@ -73774,6 +73175,11 @@ JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Collections.ObjectModel.ReadOnlyObservableCollection$b1, [
 				"System.Collections.Specialized.INotifyCollectionChanged", "System.ComponentModel.INotifyPropertyChanged"
 			]);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers($asm02.MS.Internal.InternalWebRequest.prototype, 
+			"_ctor"
+		);
 	});
 JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces($asm02.MS.Internal.ManagedPeerTable.IntPtrComparer, [
@@ -73897,6 +73303,11 @@ JSIL.QueueInitializer(function () {
 		);
 	});
 JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Deployment.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Windows.Threading.DispatcherTimer, [
 				"MS.Internal.IManagedPeer", "MS.Internal.IManagedPeerBase", "MS.Internal.INativeCoreTypeWrapper"
 			]);
@@ -73923,6 +73334,16 @@ JSIL.QueueInitializer(function () {
 		];
 	});
 JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Input.InputScope.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Input.InputScopeName.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
 		System.Windows.Input.ManipulationStartedEventArgs.prototype.__StructFields__ = [
 			["<ManipulationOrigin>k__BackingField", System.Windows.Point]
 		];
@@ -73936,6 +73357,21 @@ JSIL.QueueInitializer(function () {
 		System.Windows.Input.ManipulationCompletedEventArgs.prototype.__StructFields__ = [
 			["<ManipulationOrigin>k__BackingField", System.Windows.Point]
 		];
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Input.ManipulationDelta.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Input.ManipulationVelocities.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.ScrollViewer.prototype, 
+			"_ctor"
+		);
 	});
 JSIL.QueueInitializer(function () {
 		$asm02.MS.Internal.Controls.ScrollData.prototype.__StructFields__ = [
@@ -74000,6 +73436,11 @@ JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Windows.Controls.ItemCollection, [
 				"System.Collections.Specialized.INotifyCollectionChanged", "System.Windows.Controls.ICollectionChangedListener"
 			]);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.ItemCollection.prototype, 
+			"_ctor"
+		);
 	});
 JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces($asm02.System.Windows.Controls.ItemCollection.EnumerableCollectionView, [
@@ -74087,9 +73528,34 @@ JSIL.QueueInitializer(function () {
 		];
 	});
 JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.Primitives.ButtonBase.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.Button.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.Primitives.ToggleButton.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.CheckBox.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Windows.Controls.Primitives.Selector, [
 				"System.ComponentModel.ISupportInitialize"
 			]);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.Primitives.Selector.prototype, 
+			"_ctor"
+		);
 	});
 JSIL.QueueInitializer(function () {
 		$asm02.System.Windows.Controls.Primitives.Selector.SelectionChanger.prototype.__StructFields__ = [
@@ -74102,9 +73568,29 @@ JSIL.QueueInitializer(function () {
 			]);
 	});
 JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.ComboBox.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.ListBoxItem.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.ComboBoxItem.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces($asm02.System.Windows.Controls.DisplayMemberValueConverter, [
 				"System.Windows.Data.IValueConverter"
 			]);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.HyperlinkButton.prototype, 
+			"_ctor"
+		);
 	});
 JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Windows.Controls.ItemContainerGenerator, [
@@ -74132,6 +73618,11 @@ JSIL.QueueInitializer(function () {
 		];
 	});
 JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.ListBox.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
 		System.Windows.Controls.SaveFileDialog.prototype.__StructFields__ = [
 			["m_dlgInfo", $asm02.System.Windows.Hosting.NativeMethods.OpenFileNameInfo]
 		];
@@ -74143,15 +73634,50 @@ JSIL.QueueInitializer(function () {
 		];
 	});
 JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.Primitives.RangeBase.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.Primitives.RepeatButton.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.Primitives.ScrollBar.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
 		System.Windows.Controls.Primitives.Thumb.prototype.__StructFields__ = [
 			["_origin", System.Windows.Point], 
 			["_previousPosition", System.Windows.Point]
 		];
 	});
 JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.Primitives.Thumb.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.RadioButton.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Windows.Controls.ScrollContentPresenter, [
 				"System.Windows.Controls.Primitives.IScrollInfo"
 			]);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.ScrollContentPresenter.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.Slider.prototype, 
+			"_ctor"
+		);
 	});
 JSIL.QueueInitializer(function () {
 		System.Windows.Controls.ToolTip.prototype.__StructFields__ = [
@@ -74160,9 +73686,29 @@ JSIL.QueueInitializer(function () {
 		];
 	});
 JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.ToolTip.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.VirtualizingPanel.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Windows.Controls.VirtualizingStackPanel, [
 				"System.Windows.Controls.Primitives.IScrollInfo"
 			]);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.VirtualizingStackPanel.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Controls.ProgressBar.prototype, 
+			"_ctor"
+		);
 	});
 JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces($asm02.MS.Internal.Data.DynamicValueConverter, [
@@ -74205,6 +73751,11 @@ JSIL.QueueInitializer(function () {
 			]);
 	});
 JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Data.CollectionViewSource.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces($asm02.System.Windows.Data.CollectionViewSource.DeferHelper, [
 				"System.IDisposable"
 			]);
@@ -74220,14 +73771,44 @@ JSIL.QueueInitializer(function () {
 			]);
 	});
 JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.DependencyObjectCollection$b1.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces($asm02.System.Windows.DependencyObjectCollection$b1.$lGetEnumerator$gd__0, [
 				"System.Collections.Generic.IEnumerator$b1", "System.Collections.IEnumerator", "System.IDisposable"
 			]);
 	});
 JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers($asm02.System.Windows.DOCollection.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Windows.DataObject, [
 				"System.Windows.IDataObject"
 			]);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.MessageBox, 
+			"Show"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.ExternalPart.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.ExtensionPart.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.ExternalPartCollection.prototype, 
+			"_ctor"
+		);
 	});
 JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces($asm02.System.Windows.Hosting.DelegateWrapper, [
@@ -74238,6 +73819,16 @@ JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces($asm02.System.Windows.Hosting.HostHandle, [
 				"System.IDisposable"
 			]);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Ink.Stroke.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Input.InputMethod.prototype, 
+			"_ctor"
+		);
 	});
 JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces($asm02.System.Windows.Media.Fonts.TypefaceCollection, [
@@ -74258,6 +73849,11 @@ JSIL.QueueInitializer(function () {
 		System.Windows.Media.Imaging.WriteableBitmap.prototype.__StructFields__ = [
 			["_pinned", System.Runtime.InteropServices.GCHandle]
 		];
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.Imaging.WriteableBitmap.prototype, 
+			"_ctor"
+		);
 	});
 JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Windows.Interop.HostingRenderTargetBitmap, [
@@ -74311,9 +73907,24 @@ JSIL.QueueInitializer(function () {
 			]);
 	});
 JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.MultiScaleTileSource.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Media.DeepZoomImageTileSource.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Windows.ResourceDictionary, [
 				"System.Collections.Generic.IDictionary$b2", "System.Collections.Generic.ICollection$b1", "System.Collections.Generic.IEnumerable$b1", "System.Collections.IDictionary", "System.Collections.ICollection", "System.Collections.IEnumerable"
 			]);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.ResourceDictionary.prototype, 
+			"_ctor"
+		);
 	});
 JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces($asm02.System.Windows.ResourceDictionary.GetEnumerator$gd__0, [
@@ -74331,9 +73942,24 @@ JSIL.QueueInitializer(function () {
 			]);
 	});
 JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Automation.Peers.AutomationPeer.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Automation.Peers.FrameworkElementAutomationPeer.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces($asm02.MS.Internal.Automation.TextProvider, [
 				"System.Windows.Automation.Provider.ITextProvider", "System.IDisposable"
 			]);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers($asm02.MS.Internal.Automation.TextProvider.prototype, 
+			"_ctor"
+		);
 	});
 JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces($asm02.MS.Internal.Automation.TextRangeProvider, [
@@ -74341,9 +73967,39 @@ JSIL.QueueInitializer(function () {
 			]);
 	});
 JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers($asm02.MS.Internal.Automation.TextRangeProvider.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Automation.Peers.ButtonBaseAutomationPeer.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Windows.Automation.Peers.ButtonAutomationPeer, [
 				"System.Windows.Automation.Provider.IInvokeProvider"
 			]);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Automation.Peers.ButtonAutomationPeer.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Automation.Peers.ImageAutomationPeer.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Automation.Peers.ItemsControlAutomationPeer.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Automation.Peers.ItemAutomationPeer.prototype, 
+			"_ctor"
+		);
 	});
 JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Windows.Automation.Peers.SelectorAutomationPeer, [
@@ -74351,9 +74007,24 @@ JSIL.QueueInitializer(function () {
 			]);
 	});
 JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Automation.Peers.SelectorAutomationPeer.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Automation.Peers.ListBoxAutomationPeer.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Windows.Automation.Peers.SelectorItemAutomationPeer, [
 				"System.Windows.Automation.Provider.ISelectionItemProvider"
 			]);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Automation.Peers.SelectorItemAutomationPeer.prototype, 
+			"_ctor"
+		);
 	});
 JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Windows.Automation.Peers.ListBoxItemAutomationPeer, [
@@ -74361,9 +74032,34 @@ JSIL.QueueInitializer(function () {
 			]);
 	});
 JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Automation.Peers.ListBoxItemAutomationPeer.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Automation.Peers.MediaElementAutomationPeer.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Automation.Peers.MultiScaleImageAutomationPeer.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Windows.Automation.Peers.ToggleButtonAutomationPeer, [
 				"System.Windows.Automation.Provider.IToggleProvider"
 			]);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Automation.Peers.ToggleButtonAutomationPeer.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Automation.Peers.CheckBoxAutomationPeer.prototype, 
+			"_ctor"
+		);
 	});
 JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Windows.Automation.Peers.RangeBaseAutomationPeer, [
@@ -74371,9 +74067,29 @@ JSIL.QueueInitializer(function () {
 			]);
 	});
 JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Automation.Peers.RangeBaseAutomationPeer.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Windows.Automation.Peers.RepeatButtonAutomationPeer, [
 				"System.Windows.Automation.Provider.IInvokeProvider"
 			]);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Automation.Peers.RepeatButtonAutomationPeer.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Automation.Peers.ScrollBarAutomationPeer.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Automation.Peers.ThumbAutomationPeer.prototype, 
+			"_ctor"
+		);
 	});
 JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Windows.Automation.Peers.RadioButtonAutomationPeer, [
@@ -74381,9 +74097,34 @@ JSIL.QueueInitializer(function () {
 			]);
 	});
 JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Automation.Peers.RadioButtonAutomationPeer.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Windows.Automation.Peers.ScrollViewerAutomationPeer, [
 				"System.Windows.Automation.Provider.IScrollProvider"
 			]);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Automation.Peers.ScrollViewerAutomationPeer.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Automation.Peers.SliderAutomationPeer.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers($asm02.System.Windows.Automation.Peers.ToolTipAutomationPeer.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers($asm02.System.Windows.Automation.Peers.PopupRootAutomationPeer.prototype, 
+			"_ctor"
+		);
 	});
 JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Windows.Automation.Peers.ProgressBarAutomationPeer, [
@@ -74391,9 +74132,29 @@ JSIL.QueueInitializer(function () {
 			]);
 	});
 JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Automation.Peers.ProgressBarAutomationPeer.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Windows.Automation.Peers.TextBoxAutomationPeer, [
 				"System.Windows.Automation.Provider.IValueProvider"
 			]);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Automation.Peers.TextBoxAutomationPeer.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Automation.Peers.RichTextBoxAutomationPeer.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Automation.Peers.TextBlockAutomationPeer.prototype, 
+			"_ctor"
+		);
 	});
 JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Windows.Automation.Peers.PasswordBoxAutomationPeer, [
@@ -74401,9 +74162,19 @@ JSIL.QueueInitializer(function () {
 			]);
 	});
 JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Automation.Peers.PasswordBoxAutomationPeer.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Windows.Automation.Peers.HyperlinkButtonAutomationPeer, [
 				"System.Windows.Automation.Provider.IInvokeProvider"
 			]);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Automation.Peers.HyperlinkButtonAutomationPeer.prototype, 
+			"_ctor"
+		);
 	});
 JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Windows.Automation.Peers.ComboBoxAutomationPeer, [
@@ -74411,9 +74182,19 @@ JSIL.QueueInitializer(function () {
 			]);
 	});
 JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Automation.Peers.ComboBoxAutomationPeer.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces($asm02.System.Windows.Automation.Peers.HyperlinkAutomationPeer, [
 				"System.Windows.Automation.Provider.IInvokeProvider"
 			]);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers($asm02.System.Windows.Automation.Peers.HyperlinkAutomationPeer.prototype, 
+			"_ctor"
+		);
 	});
 JSIL.QueueInitializer(function () {
 		JSIL.SealTypes($asm02, "System.Windows", 

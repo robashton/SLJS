@@ -1,9 +1,7 @@
 ﻿initializeApplication = function () {
-    $('.coded').show();
-
-    $('.coded').each(function () {
-        var item = $(this);
-        setupElementAsControl(item);
+    var file = sljsconfig.entryPoint;
+    $.getJSON(file, function (data) {
+        var obj = JSON.parse(data);
     });
 };
 
@@ -23,21 +21,7 @@ setupElementAsControl = function (item) {
 
 $(document).ready(function () {
     $('.code').hide();
-    LazyLoad.js([
-        "JSIL.Core.js",
-        "JSIL.Bootstrap.js",
-        "mscorlib, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.js",
-        "System, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.js",
-        "System.Core, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.js",
-        "System.Net, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.js",
-        "System.Runtime.Serialization, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.js",
-        "System.ServiceModel.Web, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.js",
-        "System.Windows, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.js",
-        "System.Windows.Browser, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.js",
-        "System.Xml, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.js",
-        "TestAppOne, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null.js",
-        "Patches.js"
-        ],
+    LazyLoad.js(sljsconfig.files,
         function () {
             initializeApplication();
         });

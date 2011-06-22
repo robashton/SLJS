@@ -11,7 +11,7 @@ namespace SL2JS
 
         public JsonWriter(string jsonFilepath)
         {
-            this.stream = new FileStream(jsonFilepath,  FileMode.OpenOrCreate, FileAccess.Write);
+            this.stream = new FileStream(jsonFilepath,  FileMode.Create, FileAccess.Write);
             this.writer = new StreamWriter(stream);
         }
 

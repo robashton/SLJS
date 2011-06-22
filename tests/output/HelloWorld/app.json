@@ -1,16 +1,12 @@
 {
+	'$ElementType': 'Application',
+	'xmlns': 'http://schemas.microsoft.com/winfx/2006/xaml/presentation',
+	'x': 'http://schemas.microsoft.com/winfx/2006/xaml',
+	'Class': 'HelloWorld.App',
 	'$Elements': [ 
 		{
-			'$ElementType': 'Application',
-			'xmlns': 'http://schemas.microsoft.com/winfx/2006/xaml/presentation',
-			'x': 'http://schemas.microsoft.com/winfx/2006/xaml',
-			'Class': 'HelloWorld.App',
+			'$ElementType': 'Application.Resources',
 			'$Elements': [ 
-				{
-					'$ElementType': 'Application.Resources',
-					'$Elements': [ 
-					],
-				},
 			],
 		},
 	],

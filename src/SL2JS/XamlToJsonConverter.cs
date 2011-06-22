@@ -27,14 +27,11 @@ namespace SL2JS
 
         private void ParseDocument(JsonWriter writer)
         {
-            writer.StartBlock();
             ParseContent(writer);
-            writer.EndBlock(true);
         }
 
         private void ParseContent(JsonWriter writer)
         {
-            writer.StartArray("$Elements");
             Next();
             switch (current.NodeType)
             {
@@ -47,7 +44,6 @@ namespace SL2JS
                     Console.WriteLine(current.NodeType);
                     break;
             }
-            writer.EndArray();
         }
 
         private void ParseElement(JsonWriter writer)
@@ -88,12 +84,13 @@ namespace SL2JS
         private void ParseElementChildren(JsonWriter writer)
         {
             if (current.IsEmptyElement) return;
-
+            writer.StartArray("$Elements");
             Descend();
             Next();
             ParseContent(writer);
             Ascend();
             Next();
+            writer.EndArray();
         }
 
         private void Ascend()

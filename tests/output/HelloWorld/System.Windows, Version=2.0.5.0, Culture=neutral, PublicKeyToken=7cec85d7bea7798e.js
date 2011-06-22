@@ -34716,31 +34716,6 @@ $asm02.System.Windows.Data.WeakErrorsChangedListener.prototype._weakErrorsChange
 $asm02.System.Windows.Data.WeakErrorsChangedListener.prototype._notifyDataErrorInfo = null;
 $asm02.System.Windows.Data.WeakErrorsChangedListener.prototype._notifyChild = false;
 
-System.Windows.Application.prototype._ctor$0 = function () {
-	this._ctor$1(166);
-};
-System.Windows.Application.prototype._ctor$1 = function (nativeTypeIndex) {
-	System.Object.prototype._ctor.call(this);
-	System.Windows.Application._current = this;
-	var intPtr = System.IntPtr.Zero;
-	intPtr = $asm02.MS.Internal.XcpImports.CreateObjectByTypeIndex(nativeTypeIndex);
-	JSIL.IgnoredMember("m_nativePtr", this) = JSIL.IgnoredMember(".ctor()");
-	JSIL.IgnoredMember("set_NativeObject(value)", intPtr);
-	$asm02.MS.Internal.ManagedPeerTable.Add$0(intPtr, this);
-	this._coreTypeEventHelper = new $asm02.MS.Internal.CoreTypeEventHelper();
-	var type = (JSIL.GetType(this));
-	var isCustomType = 0;
-	if (!$asm02.MS.Internal.TypeProxy.IsCoreType(type)) {
-		isCustomType = 1;
-	}
-	$asm02.MS.Internal.XcpImports.NotifyHasManagedPeer$0(intPtr, 11, isCustomType);
-	this._hasElevatedPermissions = $asm02.MS.Internal.XcpImports.Application_GetHasElevatedPermissions();
-	var arg_6E_0 = System.Windows.Deployment.Current;
-	this.add_Starting(JSIL.Delegate.New("System.Windows.StartupEventHandler", this, System.Windows.Application.prototype.Application_Starting));
-	this.add_Started(JSIL.Delegate.New("System.EventHandler", this, System.Windows.Application.prototype.Application_Started));
-	this.add_Exiting(JSIL.Delegate.New("System.EventHandler", this, System.Windows.Application.prototype.Application_Exiting));
-	this.add_Exited(JSIL.Delegate.New("System.EventHandler", this, System.Windows.Application.prototype.Application_Exited));
-};
 System.Windows.Application.prototype.IManagedPeer_BeginShutdown = function () {
 	System.GC.SuppressFinalize(JSIL.IgnoredMember("m_nativePtr", this));
 	$asm02.MS.Internal.XcpImports.DisconnectManagedPeer(this);
@@ -35228,10 +35203,6 @@ System.Windows.Application.prototype.AddEventListener = function (property, hand
 System.Windows.Application.prototype.RemoveEventListener = function (property, handler) {
 	this._coreTypeEventHelper.RemoveEventListener(this, property, handler);
 };
-JSIL.OverloadedMethod(System.Windows.Application.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]]
-	]);
 JSIL.OverloadedMethod(System.Windows.Application, "GetResourceStream", [
 		["GetResourceStream$0", [System.Windows.Resources.StreamResourceInfo, System.Uri]], 
 		["GetResourceStream$1", [System.Uri]]
@@ -73261,6 +73232,11 @@ JSIL.QueueInitializer(function () {
 		System.Windows.Application.prototype.__StructFields__ = [
 			["_allowNavigation", System.Nullable$b1.Of(System.Boolean)]
 		];
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Application.prototype, 
+			"_ctor"
+		);
 	});
 JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces($asm02.MS.Internal.JoltHelperEx, [

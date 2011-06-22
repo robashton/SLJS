@@ -52,6 +52,7 @@
     <Compile Include="MessageBox.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnsafeNativeTypes.cs" />
+    <Compile Include="Uri.cs" />
     <Compile Include="UserControl.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

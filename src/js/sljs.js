@@ -1,28 +1,53 @@
-﻿initializeApplication = function () {
-    var file = sljsconfig.entryPoint;
-    $.getJSON(file, function (data) {
-        var obj = JSON.parse(data);
-    });
-};
+﻿sljs = {
 
-setupElementAsControl = function (item) {
-    if (item.data('code')) return; // Already set up
+    application: null,
+    initializeApplication: function () {
+        var typename = sljsconfig.entryPoint;
+        var factoryFunc = new Function("return new " + typename + "()");
+        sljs.application = factoryFunc();
+        sljs.application.InitializeComponent();
+    },
 
-    var codeClass = item.attr("code");
-    var code = eval('JSIL.New( ' + codeClass + ', "_ctor");');
+    getObject: function (path, callback) {
+        $.ajax({
+            url: path,
+            dataType: 'json',
+            success: function (data) {
+                callback(data);
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                sljs.processErr(textStatus, errorThrown);
+            }
+        });
+    },
 
-    // Set up the relationships
-    code.element = item;
-    item.data('code', code);
+    loadComponentFromJson: function (component, resource) {
+        var resource = resource.toString();
+        var hackyStringIndex = resource.indexOf('component/');
 
-    // And initialize self if necessary
-    if (code.InitializeComponent) { code.InitializeComponent(); }
+        var resourceNameAsXaml = resource.substr(hackyStringIndex + 'component/'.length);
+        var resourceNameAsJson = resourceNameAsXaml.replace('xaml', 'json');
+
+        sljs.getObject(resourceNameAsJson, function (data) {
+            sljs.mapPropertiesIntoObject(component, data);           
+        });
+    },
+
+    mapPropertiesIntoObject: function (component, data) {
+
+        // This is where dependency properties and shizzle come in
+        component.$data = data;
+    },
+
+    processErr: function (text, error) {
+        alert(text + ':' + error);
+    }
 };
 
 $(document).ready(function () {
     $('.code').hide();
     LazyLoad.js(sljsconfig.files,
         function () {
-            initializeApplication();
+            sljs.initializeApplication();
         });
 });

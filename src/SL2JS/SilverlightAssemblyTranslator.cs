@@ -19,7 +19,7 @@ namespace SL2JS
         public string GetEntrypointNameFromAssembly(string filename)
         {
             var assembly = AssemblyDefinition.ReadAssembly(filename, GetReaderParameters(false));
-            return "app.json";
+            return "HelloWorld.App";
         }
     }
 }

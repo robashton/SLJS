@@ -12278,7 +12278,6 @@ System.Uri.InternalEscapeString = function (rawString) {
 	}
 	return JSIL.New(System.String, "_ctor$0", [array, 0, length.value]);
 };
-System.Uri.ParseScheme = JSIL.UntranslatableFunction("System.UriExceptionHelper/ParsingError System.Uri::ParseScheme(System.String,System.Uri/Flags&,System.UriParser&)");
 System.Uri.prototype.ParseMinimal = function () {
 	var parsingError = this.PrivateParseMinimal();
 	if (!JSIL.Cast(parsingError, System.Boolean)) {
@@ -13253,7 +13252,7 @@ System.Uri.prototype.CreateThis = function (uri, dontEscape, uriKind) {
 	if (dontEscape) {
 		this.m_Flags = (this.m_Flags | System.Uri.Flags.UserEscaped);
 	}
-	var err = System.Uri.ParseScheme(this.m_String, /* ref */ new JSIL.MemberReference(this, "m_Flags"), /* ref */ new JSIL.MemberReference(this, "m_Syntax"));
+	var err = (false);
 	this.m_iriParsing = false;
 	this.InitializeUri(err, uriKind, /* ref */ uriFormatException);
 	if (uriFormatException.value !== null) {
@@ -13515,14 +13514,13 @@ System.Uri.CreateHelper = function (uriString, dontEscape, uriKind, /* ref */ e)
 	if (!((uriKind >= System.UriKind.RelativeOrAbsolute) && (uriKind <= System.UriKind.Relative))) {
 		throw JSIL.New(System.ArgumentException, "_ctor$1", [$asm05.System.SR.GetString$0("net_uri_InvalidUriKind", [uriKind])]);
 	}
-	var uriParser = new JSIL.Variable(null);
-	var flags = new JSIL.Variable(System.Uri.Flags.Zero);
-	var parsingError = System.Uri.ParseScheme(uriString, /* ref */ flags, /* ref */ uriParser);
+	var flags = System.Uri.Flags.Zero;
+	var parsingError = (false);
 	if (dontEscape) {
-		flags.value = (flags.value | System.Uri.Flags.UserEscaped);
+		flags = (flags | System.Uri.Flags.UserEscaped);
 	}
 	if (!JSIL.Cast(parsingError, System.Boolean)) {
-		var uri = JSIL.New(System.Uri, "_ctor$4", [flags.value, uriParser.value, uriString]);
+		var uri = JSIL.New(System.Uri, "_ctor$4", [flags, null, uriString]);
 		try {
 			uri.InitializeUri(parsingError, uriKind, /* ref */ e);
 			if (e.value === null) {
@@ -13541,7 +13539,7 @@ System.Uri.CreateHelper = function (uriString, dontEscape, uriKind, /* ref */ e)
 		return result;
 	}
 	if (!((uriKind === System.UriKind.Absolute) || (parsingError > System.UriExceptionHelper.ParsingError.LastRelativeUriOkErrIndex))) {
-		return JSIL.New(System.Uri, "_ctor$4", [(flags.value & System.Uri.Flags.UserEscaped), null, uriString]);
+		return JSIL.New(System.Uri, "_ctor$4", [(flags & System.Uri.Flags.UserEscaped), null, uriString]);
 	}
 	return null;
 };

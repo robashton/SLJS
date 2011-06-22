@@ -3,11 +3,15 @@ using System.IO;
 
 namespace SL2JS
 {
+    /// <summary>
+    /// HAhaaaaha, good luck debugging this future-self, replace it with someone elses yeah?
+    /// </summary>
     public class JsonWriter : IDisposable
     {
         private readonly FileStream stream;
         private readonly StreamWriter writer;
         private string indent = "";
+        private bool first = true;
 
         public JsonWriter(string jsonFilepath)
         {
@@ -19,29 +23,43 @@ namespace SL2JS
         {
             WriteLine("{{");
             IncreaseIndent();
+            first = true;
         }
 
-        public void EndBlock(bool finish = false)
+        public void EndBlock()
         {
             DecreaseIndent();
-            WriteLine("}},");
+            WriteLine("}}");
         }
 
         public void WriteProperty(string name, string value)
         {
-            WriteLine("'{0}': '{1}',", name, value);
+            WriteCommaIfNecessary();
+            WriteLine("\"{0}\": \"{1}\"", name, value);
+        }
+
+        private void WriteCommaIfNecessary()
+        {
+            if (first)
+            {
+                first = false;
+                return;
+            }
+            first = false;
+            writer.Write(",");
         }
 
         public void StartArray(string name)
         {
-            WriteLine("'{0}': [ ", name);
+            WriteCommaIfNecessary();
+            WriteLine("\"{0}\": [ ", name);
             IncreaseIndent();
         }
         
         public void EndArray()
         {
             DecreaseIndent();
-            WriteLine("],");
+            WriteLine("]");
         }
 
         public void Dispose()
@@ -61,6 +79,7 @@ namespace SL2JS
         private void DecreaseIndent()
         {
             indent = indent.Substring(0, indent.Length - 1);
+            first = false;
         }
 
 
@@ -71,7 +90,8 @@ namespace SL2JS
         
         private void WriteLine(string s, params object[] args)
         {
-            writer.WriteLine(indent + s, args);
+            writer.WriteLine();
+            writer.Write(indent + s, args);
         }
 
         ~JsonWriter()

@@ -7,13 +7,6 @@ JSIL.MakeClass("System.Object", "HelloWorld.App/$l$gc__DisplayClass2", false);
 
 JSIL.MakeClass("System.Windows.Controls.UserControl", "HelloWorld.MainPage", true);
 
-HelloWorld.App.prototype._ctor = function () {
-	System.Windows.Application.prototype._ctor$0.call(this);
-	System.Windows.Application.prototype.add_Startup.call(this, JSIL.Delegate.New("System.Windows.StartupEventHandler", this, HelloWorld.App.prototype.Application_Startup));
-	System.Windows.Application.prototype.add_Exit.call(this, JSIL.Delegate.New("System.EventHandler", this, HelloWorld.App.prototype.Application_Exit));
-	System.Windows.Application.prototype.add_UnhandledException.call(this, JSIL.Delegate.New("System.EventHandler`1[System.Windows.ApplicationUnhandledExceptionEventArgs]", this, HelloWorld.App.prototype.Application_UnhandledException));
-	this.InitializeComponent();
-};
 HelloWorld.App.prototype.Application_Startup = function (sender, e) {
 	System.Windows.Application.prototype.set_RootVisual.call(this, new HelloWorld.MainPage());
 };
@@ -41,7 +34,7 @@ HelloWorld.App.prototype.ReportErrorToDOM = function (e) {
 HelloWorld.App.prototype.InitializeComponent = function () {
 	if (!this._contentLoaded) {
 		this._contentLoaded = true;
-		console.log('Initializing Component');
+		sljs.loadComponentFromJson(this, JSIL.New(System.Uri, "_ctor$1", ["/HelloWorld;component/App.xaml", System.UriKind.Relative]));;
 	}
 };
 HelloWorld.App.prototype._contentLoaded = false;
@@ -58,7 +51,7 @@ HelloWorld.MainPage.prototype.button1_Click = function (sender, e) {
 HelloWorld.MainPage.prototype.InitializeComponent = function () {
 	if (!this._contentLoaded) {
 		this._contentLoaded = true;
-		console.log('Initializing Component');
+		sljs.loadComponentFromJson(this, JSIL.New(System.Uri, "_ctor$1", ["/HelloWorld;component/MainPage.xaml", System.UriKind.Relative]));;
 		this.LayoutRoot = JSIL.Cast(this.findElement("LayoutRoot"), System.Windows.Controls.Grid);
 		this.button1 = JSIL.Cast(this.findElement("button1"), System.Windows.Controls.Button);
 	}
@@ -67,6 +60,11 @@ HelloWorld.MainPage.prototype.LayoutRoot = null;
 HelloWorld.MainPage.prototype.button1 = null;
 HelloWorld.MainPage.prototype._contentLoaded = false;
 
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(HelloWorld.App.prototype, 
+			"_ctor"
+		);
+	});
 JSIL.QueueInitializer(function () {
 		JSIL.ExternalMembers(HelloWorld.MainPage.prototype, 
 			"_ctor"

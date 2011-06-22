@@ -17,15 +17,14 @@ namespace SL2JS
 
         public void StartBlock()
         {
-            WriteLine("{");
+            WriteLine("{{");
             IncreaseIndent();
         }
 
-
         public void EndBlock(bool finish = false)
         {
-            WriteLine("},");
             DecreaseIndent();
+            WriteLine("}},");
         }
 
         public void WriteProperty(string name, string value)
@@ -35,11 +34,13 @@ namespace SL2JS
 
         public void StartArray(string name)
         {
-            WriteLine("{0}: [ ", name);
+            WriteLine("'{0}': [ ", name);
+            IncreaseIndent();
         }
         
         public void EndArray()
         {
+            DecreaseIndent();
             WriteLine("],");
         }
 
@@ -59,7 +60,7 @@ namespace SL2JS
         
         private void DecreaseIndent()
         {
-            indent = indent.Substring(indent.Length - 1);
+            indent = indent.Substring(0, indent.Length - 1);
         }
 
 

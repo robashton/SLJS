@@ -16,8 +16,8 @@ namespace SLJS.Compiler
         {
             var assemblyTranslator = new SilverlightAssemblyTranslator();
             HookTranslatorEvents(assemblyTranslator);
+          
 
-            var filenames = new HashSet<string>(arguments);
             var configuration = new SilverlightApplicationTranslatorConfiguration();
             configuration.ParseArguments(arguments);
 

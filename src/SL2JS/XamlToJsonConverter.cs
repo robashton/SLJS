@@ -8,7 +8,8 @@ namespace SL2JS
     {
         private readonly XmlReader input;
         private XmlReader current;
-        private Stack<XmlReader> readers = new Stack<XmlReader>();
+        private readonly Stack<XmlReader> readers = new Stack<XmlReader>();
+        private bool ended = false;
 
         public XamlToJsonConverter(XmlReader input)
         {
@@ -39,6 +40,8 @@ namespace SL2JS
             {
                 case XmlNodeType.Element:
                     ParseElement(writer);
+                    break;
+                case XmlNodeType.EndElement:
                     break;
                 default:
                     Console.WriteLine(current.NodeType);
@@ -86,12 +89,24 @@ namespace SL2JS
         {
             if (current.IsEmptyElement) return;
 
+            Descend();
+            Next();
+            ParseContent(writer);
+            Ascend();
+            Next();
+        }
+
+        private void Ascend()
+        {
+            current.Close();
+            current = readers.Pop();
+        }
+
+        private void Descend()
+        {
             var child = current.ReadSubtree();
             readers.Push(current);
             current = child;
-            Next();
-            ParseContent(writer);
-            current = readers.Pop();
         }
 
         private void Next()
@@ -104,11 +119,14 @@ namespace SL2JS
                         continue;
                     case XmlNodeType.Element:
                         return;
+                    case XmlNodeType.EndElement:
+                        return;
                     case XmlNodeType.None:
                         continue;
                 }
             }
-            throw new InvalidOperationException("Unexpected end of xml found");
+            if (ended) throw new InvalidOperationException("Unexpected end of XML found");
+            ended = true;
         }
     }
 }

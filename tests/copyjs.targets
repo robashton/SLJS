@@ -7,6 +7,6 @@
   </ItemGroup>
     
   <Target Name="CopyJs">
-    <Copy SourceFiles="@(Js)" DestinationFolder="Output"></Copy>
+    <Copy SourceFiles="@(Js)" DestinationFolder="$(OutDir)"></Copy>
   </Target>
 </Project>

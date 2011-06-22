@@ -1,5 +1,8 @@
 using System;
 using System.IO;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
 using JSIL;
 using Mono.Cecil;
 using SL2JS.Proxies;
@@ -21,12 +24,26 @@ namespace SL2JS
         {
             ProcessAssembly(translator);
             ProcessResources();
-            GenerateContainer();
+            GenerateContainer(translator);
         }
 
-        private void GenerateContainer()
+        private void GenerateContainer(SilverlightAssemblyTranslator translator)
         {
-            throw new NotImplementedException();
+            var container = File.ReadAllText("container.html");
+
+            var applicationEntrypoint = translator.GetEntrypointNameFromAssembly(configuration.Filename);
+            var dependencies = translator.GetJavascriptFilenames()
+                .Select(x => string.Format("'{0}'", x))
+                .ToArray();
+           
+            var configurationDirectiveBuilder = new StringBuilder();
+            configurationDirectiveBuilder.AppendLine("sljsconfig = {");
+            configurationDirectiveBuilder.AppendFormat("entryPoint: '{0}',", applicationEntrypoint).AppendLine();
+            configurationDirectiveBuilder.AppendFormat("files: [{0}]", string.Join("\r\n,", dependencies)).AppendLine();
+            configurationDirectiveBuilder.AppendLine("};");
+
+            container = container.Replace("{configuration}", configurationDirectiveBuilder.ToString());
+            File.WriteAllText(Path.Combine(configuration.OutputDirectory, "index.html"), container);
         }
 
         private void ProcessResources()

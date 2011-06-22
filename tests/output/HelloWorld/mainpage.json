@@ -1,0 +1,35 @@
+{
+	'$Elements': [ 
+		{
+			'$ElementType': 'UserControl',
+			'Class': 'HelloWorld.MainPage',
+			'xmlns': 'http://schemas.microsoft.com/winfx/2006/xaml/presentation',
+			'x': 'http://schemas.microsoft.com/winfx/2006/xaml',
+			'd': 'http://schemas.microsoft.com/expression/blend/2008',
+			'mc': 'http://schemas.openxmlformats.org/markup-compatibility/2006',
+			'Ignorable': 'd',
+			'DesignHeight': '300',
+			'DesignWidth': '400',
+			'$Elements': [ 
+				{
+					'$ElementType': 'Grid',
+					'Name': 'LayoutRoot',
+					'Background': 'White',
+					'$Elements': [ 
+						{
+							'$ElementType': 'Button',
+							'Content': 'Click Me',
+							'Height': '214',
+							'HorizontalAlignment': 'Left',
+							'Margin': '51,42,0,0',
+							'Name': 'button1',
+							'VerticalAlignment': 'Top',
+							'Width': '287',
+							'Click': 'button1_Click',
+						},
+					],
+				},
+			],
+		},
+	],
+},

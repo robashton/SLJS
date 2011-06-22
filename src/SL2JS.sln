@@ -8,6 +8,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SL2JS", "SL2JS\SL2JS.csproj", "{B37E0D26-B34F-4AC1-8C7D-09B190DB01FE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{FA964E47-5C55-4243-A9F3-EF80F19D0C8A}"
+	ProjectSection(SolutionItems) = preProject
+		js\jquery-1.6.1.js = js\jquery-1.6.1.js
+		js\jquery.tmpl.js = js\jquery.tmpl.js
+		js\lazyload.js = js\lazyload.js
+		js\patches.js = js\patches.js
+		js\sljs.js = js\sljs.js
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

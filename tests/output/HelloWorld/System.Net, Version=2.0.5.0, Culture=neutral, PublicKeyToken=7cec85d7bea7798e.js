@@ -5266,9 +5266,6 @@ $asm06.System.Net.Sockets.UnsafeSocketPolicyNativeMethods.prototype._ctor = func
 	System.Object.prototype._ctor.call(this);
 };
 
-$asm06.System.Net.Sockets.SafeFreeSocketPolicy.prototype._ctor = function () {
-	Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid.prototype._ctor$0.call(this, true);
-};
 $asm06.System.Net.Sockets.SafeFreeSocketPolicy.ParseSocketPolicy = function (policyBuffer) {
 	var result = new JSIL.Variable(null);
 	$asm06.System.Net.Sockets.UnsafeSocketPolicyNativeMethods.ParseSocketPolicy(policyBuffer, policyBuffer.length, /* ref */ result);
@@ -8651,7 +8648,7 @@ System.Net.Sockets.Socket.prototype.UnsetAsyncEventSelect = function () {
 	var errorCode = new JSIL.Variable(System.Net.Sockets.SocketError.Success);
 	var socketError = System.Net.Sockets.SocketError.NotSocket;
 	try {
-		socketError = $asm06.System.Net.UnsafeNclNativeMethods.OSSOCK.WSAEventSelect(this.m_Handle, JSIL.New(Microsoft.Win32.SafeHandles.SafeWaitHandle, "_ctor$1", [System.IntPtr.Zero, false]), $asm06.System.Net.Sockets.AsyncEventBits.FdNone, /* ref */ errorCode);
+		socketError = $asm06.System.Net.UnsafeNclNativeMethods.OSSOCK.WSAEventSelect(this.m_Handle, new Microsoft.Win32.SafeHandles.SafeWaitHandle(System.IntPtr.Zero, false), $asm06.System.Net.Sockets.AsyncEventBits.FdNone, /* ref */ errorCode);
 	} catch ($exception) {
 		var exception = $exception;
 		if ($asm06.System.Net.NclUtilities.IsFatal(exception)) {
@@ -9497,9 +9494,6 @@ $asm06.System.Net.GroupSourceRequest._cctor = function () {
 	$asm06.System.Net.GroupSourceRequest.Size = System.Runtime.InteropServices.Marshal.SizeOf$1($asm06.System.Net.GroupSourceRequest);
 };
 
-$asm06.System.Net.SafeFreeAddrInfo.prototype._ctor = function () {
-	Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid.prototype._ctor$0.call(this, true);
-};
 $asm06.System.Net.SafeFreeAddrInfo.GetAddrInfo = function (nodename, servicename, /* ref */ hints, /* ref */ outAddrInfo, /* ref */ lastError) {
 	return $asm06.System.Net.UnsafeNclNativeMethods.SafeNetHandlesXPOrLater.getaddrinfo(
 		nodename, 
@@ -9514,9 +9508,6 @@ $asm06.System.Net.SafeFreeAddrInfo.prototype.ReleaseHandle = function () {
 	return true;
 };
 
-$asm06.System.Net.SafeCloseSocket.prototype._ctor = function () {
-	Microsoft.Win32.SafeHandles.SafeHandleMinusOneIsInvalid.prototype._ctor$0.call(this, true);
-};
 $asm06.System.Net.SafeCloseSocket.prototype.get_IsInvalid = function () {
 	return (System.Runtime.InteropServices.SafeHandle.prototype.get_IsClosed.call(this) || Microsoft.Win32.SafeHandles.SafeHandleMinusOneIsInvalid.prototype.get_IsInvalid.call(this));
 };
@@ -9587,9 +9578,6 @@ JSIL.MakeProperty($asm06.System.Net.SafeCloseSocket.prototype, "IsInvalid",
 $asm06.System.Net.SafeCloseSocket.prototype.m_InnerSocket = null;
 $asm06.System.Net.SafeCloseSocket.prototype.m_Released = null;
 
-$asm06.System.Net.SafeCloseSocket.InnerSafeCloseSocket.prototype._ctor = function () {
-	Microsoft.Win32.SafeHandles.SafeHandleMinusOneIsInvalid.prototype._ctor$0.call(this, true);
-};
 $asm06.System.Net.SafeCloseSocket.InnerSafeCloseSocket.prototype.get_IsInvalid = function () {
 	return (System.Runtime.InteropServices.SafeHandle.prototype.get_IsClosed.call(this) || Microsoft.Win32.SafeHandles.SafeHandleMinusOneIsInvalid.prototype.get_IsInvalid.call(this));
 };
@@ -10831,10 +10819,10 @@ $asm06.System.Net.Sockets.NCLPALDelegates.get_ResetEventDelegate = function () {
 	return $asm06.System.Net.Sockets.NCLPALDelegates.resetEventDelegate;
 };
 $asm06.System.Net.Sockets.NCLPALDelegates.SetEventImpl = function (handle) {
-	return Microsoft.Win32.Win32Native.SetEvent(JSIL.New(Microsoft.Win32.SafeHandles.SafeWaitHandle, "_ctor$1", [handle, false]));
+	return Microsoft.Win32.Win32Native.SetEvent(new Microsoft.Win32.SafeHandles.SafeWaitHandle(handle, false));
 };
 $asm06.System.Net.Sockets.NCLPALDelegates.ResetEventImpl = function (handle) {
-	return Microsoft.Win32.Win32Native.ResetEvent(JSIL.New(Microsoft.Win32.SafeHandles.SafeWaitHandle, "_ctor$1", [handle, false]));
+	return Microsoft.Win32.Win32Native.ResetEvent(new Microsoft.Win32.SafeHandles.SafeWaitHandle(handle, false));
 };
 JSIL.MakeProperty($asm06.System.Net.Sockets.NCLPALDelegates, "SetEventDelegate", 
 	$asm06.System.Net.Sockets.NCLPALDelegates.get_SetEventDelegate, null);
@@ -14255,6 +14243,11 @@ JSIL.QueueInitializer(function () {
 		);
 	});
 JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers($asm06.System.Net.Sockets.SafeFreeSocketPolicy.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
 		JSIL.ExternalMembers($asm06.System.Net.Sockets.UnsafeRegKeyServicesNativeMethods, 
 			"GetAllowUdpMulticastClients"
 		);
@@ -14321,6 +14314,21 @@ JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Net.Sockets.Socket, [
 				"System.IDisposable"
 			]);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers($asm06.System.Net.SafeFreeAddrInfo.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers($asm06.System.Net.SafeCloseSocket.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers($asm06.System.Net.SafeCloseSocket.InnerSafeCloseSocket.prototype, 
+			"_ctor"
+		);
 	});
 JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Net.Sockets.SocketAsyncEventArgs, [

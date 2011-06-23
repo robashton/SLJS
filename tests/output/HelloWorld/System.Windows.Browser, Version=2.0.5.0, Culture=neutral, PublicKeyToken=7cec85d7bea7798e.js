@@ -4876,7 +4876,7 @@ $asm04.System.Windows.Hosting.ManagedHost.VerifyScriptableEnabled = function () 
 $asm04.System.Windows.Hosting.ManagedRuntimeHost.prototype.get_ScriptableEnabled = function () {
 	var flag = new JSIL.Variable(false);
 	this.IsCrossDomainSource(/* ref */ flag);
-	return (!flag.value || (System.Windows.Deployment.Current.ExternalCallersFromCrossDomain !== System.Windows.CrossDomainAccess.NoAccess));
+	return (!flag.value || ({}.ExternalCallersFromCrossDomain !== System.Windows.CrossDomainAccess.NoAccess));
 };
 $asm04.System.Windows.Hosting.ManagedRuntimeHost.prototype._ctor = function (runtimeHostHandle) {
 	System.Object.prototype._ctor.call(this);

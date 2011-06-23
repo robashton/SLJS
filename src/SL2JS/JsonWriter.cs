@@ -34,8 +34,14 @@ namespace SL2JS
 
         public void WriteProperty(string name, string value)
         {
+            WriteRawProperty(name, string.Format("\"{0}\"", value));
+        }
+
+
+        public void WriteRawProperty(string name, string value)
+        {
             WriteCommaIfNecessary();
-            WriteLine("\"{0}\": \"{1}\"", name, value);
+            WriteLine("\"{0}\": {1}", name, value);
         }
 
         private void WriteCommaIfNecessary()

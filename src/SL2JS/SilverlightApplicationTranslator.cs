@@ -15,6 +15,10 @@ namespace SL2JS
         private readonly SilverlightApplicationTranslatorConfiguration configuration;
         private readonly ResourceFileTranslator resourceFileTranslator;
 
+        // Seems assemblies are load order dependent
+        // This should be fixed in JSIL I think, that's the whole "deferred dependency thing"
+        // For now therefore I'll shove all the JS in these cos I want to get on with things
+
         private static readonly string[] BootstrapJs = new[]
                                                           {
                                                               "jquery-1.6.1.js",
@@ -27,9 +31,18 @@ namespace SL2JS
                                                               "JSIL.Core.js",
                                                               "JSIL.Bootstrap.js",
                                                               "jquery.tmpl.js",
-                                                              "knockout.js"
+                                                              "knockout.js",
+                                                              "mscorlib, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.js",
+                                                              "System, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.js",
+                                                              "System.Core, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.js",
+                                                              "System.Net, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.js",
+                                                              "System.Runtime.Serialization, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.js",
+                                                              "System.ServiceModel.Web, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.js",
+                                                              "System.Windows, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.js",
+                                                              "System.Windows.Browser, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.js",
+                                                              "System.Xml, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.js"
                                                           };
-        private static readonly string[] PatchJs = new[]
+        private static readonly string[] PatchJs = new[] 
                                                           {
                                                               "patches.js"
                                                           };
@@ -97,10 +110,27 @@ namespace SL2JS
         {
             var resourceFolderName = Path.GetFileNameWithoutExtension(configuration.Filename);
             var resourceFolder = Path.Combine(configuration.OutputDirectory, resourceFolderName);
-
+            
             foreach (var file in Directory.GetFiles(resourceFolder, "*.resources"))
             {
-                resourceFileTranslator.Translate(file, configuration.OutputDirectory);
+                resourceFileTranslator.Translate(file, resourceFolder);
+            }
+
+            ClumpJsonFromDirectoryIntoFile(resourceFolder);
+        }
+
+        private void ClumpJsonFromDirectoryIntoFile(string sourceDirectoryPath)
+        {
+            var clumpedFilepath = Path.Combine(configuration.OutputDirectory, "xaml.json");
+            using (var clumpedWriter = new JsonWriter(clumpedFilepath))
+            {
+                clumpedWriter.StartBlock();
+                foreach (var jsonFile in Directory.GetFiles(sourceDirectoryPath, "*.json"))
+                {
+                    var propertyName = Path.GetFileName(jsonFile);
+                    clumpedWriter.WriteRawProperty(propertyName, File.ReadAllText(jsonFile));
+                }
+                clumpedWriter.EndBlock();
             }
         }
 

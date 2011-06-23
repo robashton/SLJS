@@ -5,19 +5,18 @@ using JSIL.Proxy;
 namespace SL2JS.Proxies
 {
     [JSProxy("System.Windows.Application")]
-    public class Application
+    public abstract class Application
     {
-        [JSRuntimeDispatch]
-        [JSExternal]
-        public Application(params AnyType[] values)
-        {
-            
-        }
-
         [JSReplacement("sljs.loadComponentFromJson($component, $resourceLocator);")]
         public static void LoadComponent(object component, Uri resourceLocator)
         {
             
         }
-    }
+
+        [JSExternal]
+        public abstract AnyType Application_Started(params AnyType[] values);
+
+        [JSExternal]
+        public abstract AnyType Application_Starting(params AnyType[] values);
+    } 
 }

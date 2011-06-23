@@ -3913,9 +3913,6 @@ $asm08.Microsoft.Win32.SystemExtras.RegistryTimeZoneInformation.prototype.Standa
 $asm08.Microsoft.Win32.SystemExtras.RegistryTimeZoneInformation.prototype.DaylightBias = 0;
 
 
-$asm08.Microsoft.Win32.SafeLibraryHandle.prototype._ctor = function () {
-	Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid.prototype._ctor$0.call(this, true);
-};
 $asm08.Microsoft.Win32.SafeLibraryHandle.prototype.ReleaseHandle = function () {
 	return $asm08.Microsoft.Win32.UnsafeNativeMethods.FreeLibrary(this.handle);
 };
@@ -40978,6 +40975,11 @@ JSIL.QueueInitializer(function () {
 JSIL.QueueInitializer(function () {
 		JSIL.ExternalMembers($asm08.Microsoft.Win32.UnsafeNativeMethods, 
 			"GetFileMUIPath", "LoadString", "LoadLibraryEx", "FreeLibrary"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers($asm08.Microsoft.Win32.SafeLibraryHandle.prototype, 
+			"_ctor"
 		);
 	});
 JSIL.QueueInitializer(function () {

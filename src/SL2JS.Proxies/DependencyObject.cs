@@ -9,13 +9,6 @@ namespace SL2JS.Proxies
     {
         [JSRuntimeDispatch]
         [JSExternal]
-        public DependencyObject(params AnyType[] values)
-        {
-            throw new NotImplementedException();
-        }
-
-        [JSRuntimeDispatch]
-        [JSExternal]
         public abstract void SetValue(params AnyType[] values);
 
         [JSRuntimeDispatch]

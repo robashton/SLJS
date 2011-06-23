@@ -7,6 +7,13 @@ JSIL.MakeClass("System.Object", "HelloWorld.App/$l$gc__DisplayClass2", false);
 
 JSIL.MakeClass("System.Windows.Controls.UserControl", "HelloWorld.MainPage", true);
 
+HelloWorld.App.prototype._ctor = function () {
+	System.Windows.Application.prototype._ctor$0.call(this);
+	System.Windows.Application.prototype.add_Startup.call(this, JSIL.Delegate.New("System.Windows.StartupEventHandler", this, HelloWorld.App.prototype.Application_Startup));
+	System.Windows.Application.prototype.add_Exit.call(this, JSIL.Delegate.New("System.EventHandler", this, HelloWorld.App.prototype.Application_Exit));
+	System.Windows.Application.prototype.add_UnhandledException.call(this, JSIL.Delegate.New("System.EventHandler`1[System.Windows.ApplicationUnhandledExceptionEventArgs]", this, HelloWorld.App.prototype.Application_UnhandledException));
+	this.InitializeComponent();
+};
 HelloWorld.App.prototype.Application_Startup = function (sender, e) {
 	System.Windows.Application.prototype.set_RootVisual.call(this, new HelloWorld.MainPage());
 };
@@ -18,7 +25,7 @@ HelloWorld.App.prototype.Application_UnhandledException = function (sender, e) {
 	$l$gc__DisplayClass.$this = this;
 	if (!System.Diagnostics.Debugger.IsAttached) {
 		$l$gc__DisplayClass.e.Handled = true;
-		System.Windows.Deployment.Current.Dispatcher.BeginInvoke$0(function () {
+		({}.Dispatcher).BeginInvoke$0(function () {
 				$l$gc__DisplayClass.$this.ReportErrorToDOM($l$gc__DisplayClass.e);
 			});
 	}
@@ -45,6 +52,10 @@ $asm01.HelloWorld.App.$l$gc__DisplayClass2.prototype._ctor = function () {
 $asm01.HelloWorld.App.$l$gc__DisplayClass2.prototype.$this = null;
 $asm01.HelloWorld.App.$l$gc__DisplayClass2.prototype.e = null;
 
+HelloWorld.MainPage.prototype._ctor = function () {
+	System.Windows.Controls.UserControl.prototype._ctor$0.call(this);
+	this.InitializeComponent();
+};
 HelloWorld.MainPage.prototype.button1_Click = function (sender, e) {
 	System.Windows.MessageBox.Show("Hello world");
 };
@@ -60,13 +71,3 @@ HelloWorld.MainPage.prototype.LayoutRoot = null;
 HelloWorld.MainPage.prototype.button1 = null;
 HelloWorld.MainPage.prototype._contentLoaded = false;
 
-JSIL.QueueInitializer(function () {
-		JSIL.ExternalMembers(HelloWorld.App.prototype, 
-			"_ctor"
-		);
-	});
-JSIL.QueueInitializer(function () {
-		JSIL.ExternalMembers(HelloWorld.MainPage.prototype, 
-			"_ctor"
-		);
-	});

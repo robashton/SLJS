@@ -8194,7 +8194,7 @@ System.Windows.DependencyObject.prototype.SetObjectValueToCore = function (dp, v
 			throw JSIL.New(System.ArgumentException, "_ctor$1", [stringBuilder.toString()]);
 		}
 	}
-	$asm02.MS.Internal.XcpImports.SetValue$14(this, dp, obj);
+	$asm02.MS.Internal.XcpImports.SetValue(this, dp, obj);
 };
 System.Windows.DependencyObject.prototype.ArePropertyValuesEqual = function (dp, value1, value2) {
 	if (!(!dp._propertyType.IsValueType && (dp._propertyType !== System.String))) {
@@ -8233,9 +8233,6 @@ System.Windows.DependencyObject.prototype.CheckCanSetCustomDPValue = function (p
 	if (!((property === null) || !property.IsReadOnly())) {
 		throw JSIL.New(System.InvalidOperationException, "_ctor$1", [System.String.Format(System.Globalization.CultureInfo.InvariantCulture, $asm02.System.Windows.Resx.GetString$2("DP_ReadOnly"), [JSIL.GetType(this).FullName, property.Name])]);
 	}
-};
-System.Windows.DependencyObject.prototype.GetValue = function (dp) {
-	return this.GetValueInternal(dp);
 };
 System.Windows.DependencyObject.prototype.GetValueInternal = function (dp) {
 	if (dp === null) {
@@ -8460,9 +8457,6 @@ System.Windows.DependencyObject.prototype.OnInheritanceContextChanged = function
 			enumerator.IDisposable_Dispose();
 		}
 	}
-};
-System.Windows.DependencyObject.prototype.RemoveEventListener = function (property, handler) {
-	this._coreTypeEventHelper.RemoveEventListener(this, property, handler);
 };
 System.Windows.DependencyObject.prototype.IManagedPeer_BeginShutdown = function () {
 	System.GC.SuppressFinalize(this.NativeObjectSafeHandle);
@@ -10495,7 +10489,7 @@ System.Windows.RoutedEventArgs.prototype.get_OriginalSource = function () {
 System.Windows.RoutedEventArgs.prototype.set_OriginalSource = function (value) {
 	this.CheckPtr();
 	if (!((value !== null) && (JSIL.TryCast(value, System.Windows.DependencyObject) === null))) {
-		$asm02.MS.Internal.XcpImports.SetValue$14(this, System.Windows.RoutedEventArgs.SourceProperty, value);
+		$asm02.MS.Internal.XcpImports.SetValue(this, System.Windows.RoutedEventArgs.SourceProperty, value);
 		return;
 	}
 	throw JSIL.New(System.ArgumentException, "_ctor$0", []);
@@ -10524,7 +10518,7 @@ System.Windows.DragEventArgs.prototype.get_Handled = function () {
 };
 System.Windows.DragEventArgs.prototype.set_Handled = function (value) {
 	this.CheckPtr();
-	$asm02.MS.Internal.XcpImports.SetValue$11(this, System.Windows.DragEventArgs.HandledProperty, value);
+	$asm02.MS.Internal.XcpImports.SetValue(this, System.Windows.DragEventArgs.HandledProperty, value);
 };
 System.Windows.DragEventArgs.prototype.get_FilePaths = function () {
 	this.CheckPtr();
@@ -10532,7 +10526,7 @@ System.Windows.DragEventArgs.prototype.get_FilePaths = function () {
 };
 System.Windows.DragEventArgs.prototype.set_FilePaths = function (value) {
 	this.CheckPtr();
-	$asm02.MS.Internal.XcpImports.SetValue$0(this, System.Windows.DragEventArgs.FilePathsProperty, value);
+	$asm02.MS.Internal.XcpImports.SetValue(this, System.Windows.DragEventArgs.FilePathsProperty, value);
 };
 System.Windows.DragEventArgs.prototype.get_AllowDataAccess = function () {
 	this.CheckPtr();
@@ -10540,7 +10534,7 @@ System.Windows.DragEventArgs.prototype.get_AllowDataAccess = function () {
 };
 System.Windows.DragEventArgs.prototype.set_AllowDataAccess = function (value) {
 	this.CheckPtr();
-	$asm02.MS.Internal.XcpImports.SetValue$11(this, System.Windows.DragEventArgs.AllowDataAccessProperty, value);
+	$asm02.MS.Internal.XcpImports.SetValue(this, System.Windows.DragEventArgs.AllowDataAccessProperty, value);
 };
 System.Windows.DragEventArgs.prototype.GetPosition = function (relativeTo) {
 	this.CheckPtr();
@@ -11288,7 +11282,7 @@ System.Windows.VisualStateChangedEventArgs.prototype.get_OldState = function () 
 };
 System.Windows.VisualStateChangedEventArgs.prototype.set_OldState = function (value) {
 	this.CheckPtr();
-	$asm02.MS.Internal.XcpImports.SetValue$13(this, System.Windows.VisualStateChangedEventArgs.OldStateProperty, value);
+	$asm02.MS.Internal.XcpImports.SetValue(this, System.Windows.VisualStateChangedEventArgs.OldStateProperty, value);
 };
 System.Windows.VisualStateChangedEventArgs.prototype.get_NewState = function () {
 	this.CheckPtr();
@@ -11296,7 +11290,7 @@ System.Windows.VisualStateChangedEventArgs.prototype.get_NewState = function () 
 };
 System.Windows.VisualStateChangedEventArgs.prototype.set_NewState = function (value) {
 	this.CheckPtr();
-	$asm02.MS.Internal.XcpImports.SetValue$13(this, System.Windows.VisualStateChangedEventArgs.NewStateProperty, value);
+	$asm02.MS.Internal.XcpImports.SetValue(this, System.Windows.VisualStateChangedEventArgs.NewStateProperty, value);
 };
 System.Windows.VisualStateChangedEventArgs.prototype.get_Control = function () {
 	this.CheckPtr();
@@ -11304,7 +11298,7 @@ System.Windows.VisualStateChangedEventArgs.prototype.get_Control = function () {
 };
 System.Windows.VisualStateChangedEventArgs.prototype.set_Control = function (value) {
 	this.CheckPtr();
-	$asm02.MS.Internal.XcpImports.SetValue$13(this, System.Windows.VisualStateChangedEventArgs.ControlProperty, value);
+	$asm02.MS.Internal.XcpImports.SetValue(this, System.Windows.VisualStateChangedEventArgs.ControlProperty, value);
 };
 System.Windows.VisualStateChangedEventArgs.prototype._ctor$1 = function (oldState, newState, control) {
 	System.EventArgs.prototype._ctor.call(this);
@@ -11442,7 +11436,7 @@ System.Windows.NotificationWindow.prototype.get_Content = function () {
 	return JSIL.TryCast($asm02.MS.Internal.XcpImports.GetValue(this, System.Windows.NotificationWindow.ContentProperty), System.Windows.FrameworkElement);
 };
 System.Windows.NotificationWindow.prototype.set_Content = function (value) {
-	$asm02.MS.Internal.XcpImports.SetValue$13(this, System.Windows.NotificationWindow.ContentProperty, value);
+	$asm02.MS.Internal.XcpImports.SetValue(this, System.Windows.NotificationWindow.ContentProperty, value);
 };
 System.Windows.NotificationWindow.prototype.get_Width = function () {
 	return JSIL.Cast($asm02.MS.Internal.XcpImports.GetValue(this, System.Windows.NotificationWindow.WidthProperty), System.Double);
@@ -11454,7 +11448,7 @@ System.Windows.NotificationWindow.prototype.set_Width = function (value) {
 	if (!((value >= 0) && (value <= 400))) {
 		throw JSIL.New(System.ArgumentOutOfRangeException, "_ctor$1", [$asm02.System.Windows.Resx.GetString$0("NotificationWindow_ValueOutOfRange", [0, 400])]);
 	}
-	$asm02.MS.Internal.XcpImports.SetValue$10(this, System.Windows.NotificationWindow.WidthProperty, value);
+	$asm02.MS.Internal.XcpImports.SetValue(this, System.Windows.NotificationWindow.WidthProperty, value);
 };
 System.Windows.NotificationWindow.prototype.get_Height = function () {
 	return JSIL.Cast($asm02.MS.Internal.XcpImports.GetValue(this, System.Windows.NotificationWindow.HeightProperty), System.Double);
@@ -11466,7 +11460,7 @@ System.Windows.NotificationWindow.prototype.set_Height = function (value) {
 	if (!((value >= 0) && (value <= 100))) {
 		throw JSIL.New(System.ArgumentOutOfRangeException, "_ctor$1", [$asm02.System.Windows.Resx.GetString$0("NotificationWindow_ValueOutOfRange", [0, 100])]);
 	}
-	$asm02.MS.Internal.XcpImports.SetValue$10(this, System.Windows.NotificationWindow.HeightProperty, value);
+	$asm02.MS.Internal.XcpImports.SetValue(this, System.Windows.NotificationWindow.HeightProperty, value);
 };
 System.Windows.NotificationWindow.prototype.get_Visibility = function () {
 	if (System.Windows.NotificationWindow.m_activeNotificationWindow !== this) {
@@ -11568,7 +11562,7 @@ System.Windows.Window.prototype.set_Height = function (value) {
 	this.CheckRunningOutOfBrowser();
 	this.ValidateHeight(value);
 	$asm02.MS.Internal.XcpImports.CheckThread();
-	$asm02.MS.Internal.XcpImports.SetValue$10(this, System.Windows.Window.HeightProperty, value);
+	$asm02.MS.Internal.XcpImports.SetValue(this, System.Windows.Window.HeightProperty, value);
 };
 System.Windows.Window.prototype.get_Width = function () {
 	this.CheckRunningOutOfBrowser();
@@ -11580,7 +11574,7 @@ System.Windows.Window.prototype.set_Width = function (value) {
 	this.CheckRunningOutOfBrowser();
 	this.ValidateWidth(value);
 	$asm02.MS.Internal.XcpImports.CheckThread();
-	$asm02.MS.Internal.XcpImports.SetValue$10(this, System.Windows.Window.WidthProperty, value);
+	$asm02.MS.Internal.XcpImports.SetValue(this, System.Windows.Window.WidthProperty, value);
 };
 System.Windows.Window.prototype.get_Left = function () {
 	this.CheckRunningOutOfBrowser();
@@ -11590,7 +11584,7 @@ System.Windows.Window.prototype.get_Left = function () {
 System.Windows.Window.prototype.set_Left = function (value) {
 	this.CheckRunningOutOfBrowser();
 	$asm02.MS.Internal.XcpImports.CheckThread();
-	$asm02.MS.Internal.XcpImports.SetValue$10(this, System.Windows.Window.LeftProperty, value);
+	$asm02.MS.Internal.XcpImports.SetValue(this, System.Windows.Window.LeftProperty, value);
 };
 System.Windows.Window.prototype.get_Top = function () {
 	this.CheckRunningOutOfBrowser();
@@ -11600,7 +11594,7 @@ System.Windows.Window.prototype.get_Top = function () {
 System.Windows.Window.prototype.set_Top = function (value) {
 	this.CheckRunningOutOfBrowser();
 	$asm02.MS.Internal.XcpImports.CheckThread();
-	$asm02.MS.Internal.XcpImports.SetValue$10(this, System.Windows.Window.TopProperty, value);
+	$asm02.MS.Internal.XcpImports.SetValue(this, System.Windows.Window.TopProperty, value);
 };
 System.Windows.Window.prototype.get_TopMost = function () {
 	this.CheckRunningOutOfBrowser();
@@ -11611,7 +11605,7 @@ System.Windows.Window.prototype.set_TopMost = function (value) {
 	this.CheckForPermissions();
 	this.CheckRunningOutOfBrowser();
 	$asm02.MS.Internal.XcpImports.CheckThread();
-	$asm02.MS.Internal.XcpImports.SetValue$11(this, System.Windows.Window.TopMostProperty, value);
+	$asm02.MS.Internal.XcpImports.SetValue(this, System.Windows.Window.TopMostProperty, value);
 };
 System.Windows.Window.prototype.get_IsActive = function () {
 	this.CheckRunningOutOfBrowser();
@@ -13367,7 +13361,7 @@ System.Windows.Media.TimelineMarkerRoutedEventArgs.prototype.get_Marker = functi
 };
 System.Windows.Media.TimelineMarkerRoutedEventArgs.prototype.set_Marker = function (value) {
 	this.CheckPtr();
-	$asm02.MS.Internal.XcpImports.SetValue$13(this, System.Windows.Media.TimelineMarkerRoutedEventArgs.MarkerProperty, value);
+	$asm02.MS.Internal.XcpImports.SetValue(this, System.Windows.Media.TimelineMarkerRoutedEventArgs.MarkerProperty, value);
 };
 JSIL.MakeProperty(System.Windows.Media.TimelineMarkerRoutedEventArgs.prototype, "Marker", 
 	System.Windows.Media.TimelineMarkerRoutedEventArgs.prototype.get_Marker, System.Windows.Media.TimelineMarkerRoutedEventArgs.prototype.set_Marker);
@@ -15184,7 +15178,7 @@ System.Windows.Input.MouseButtonEventArgs.prototype.get_Handled = function () {
 };
 System.Windows.Input.MouseButtonEventArgs.prototype.set_Handled = function (value) {
 	this.CheckPtr();
-	$asm02.MS.Internal.XcpImports.SetValue$11(this, System.Windows.Input.MouseButtonEventArgs.HandledProperty, value);
+	$asm02.MS.Internal.XcpImports.SetValue(this, System.Windows.Input.MouseButtonEventArgs.HandledProperty, value);
 };
 JSIL.MakeProperty(System.Windows.Input.MouseButtonEventArgs.prototype, "Handled", 
 	System.Windows.Input.MouseButtonEventArgs.prototype.get_Handled, System.Windows.Input.MouseButtonEventArgs.prototype.set_Handled);
@@ -15211,7 +15205,7 @@ System.Windows.Input.MouseWheelEventArgs.prototype.get_Handled = function () {
 };
 System.Windows.Input.MouseWheelEventArgs.prototype.set_Handled = function (value) {
 	this.CheckPtr();
-	$asm02.MS.Internal.XcpImports.SetValue$11(this, System.Windows.Input.MouseWheelEventArgs.HandledProperty, value);
+	$asm02.MS.Internal.XcpImports.SetValue(this, System.Windows.Input.MouseWheelEventArgs.HandledProperty, value);
 };
 JSIL.MakeProperty(System.Windows.Input.MouseWheelEventArgs.prototype, "Delta", 
 	System.Windows.Input.MouseWheelEventArgs.prototype.get_Delta, null);
@@ -15284,7 +15278,7 @@ System.Windows.Input.KeyEventArgs.prototype.get_Handled = function () {
 };
 System.Windows.Input.KeyEventArgs.prototype.set_Handled = function (value) {
 	this.CheckPtr();
-	$asm02.MS.Internal.XcpImports.SetValue$11(this, System.Windows.Input.KeyEventArgs.HandledProperty, value);
+	$asm02.MS.Internal.XcpImports.SetValue(this, System.Windows.Input.KeyEventArgs.HandledProperty, value);
 };
 System.Windows.Input.KeyEventArgs.prototype.get_Key = function () {
 	this.CheckPtr();
@@ -15323,7 +15317,7 @@ System.Windows.Input.TextCompositionEventArgs.prototype.get_Handled = function (
 };
 System.Windows.Input.TextCompositionEventArgs.prototype.set_Handled = function (value) {
 	this.CheckPtr();
-	$asm02.MS.Internal.XcpImports.SetValue$11(this, System.Windows.Input.TextCompositionEventArgs.HandledProperty, value);
+	$asm02.MS.Internal.XcpImports.SetValue(this, System.Windows.Input.TextCompositionEventArgs.HandledProperty, value);
 };
 System.Windows.Input.TextCompositionEventArgs.prototype.get_TextComposition = function () {
 	this.CheckPtr();
@@ -22446,7 +22440,7 @@ System.Windows.Printing.PrintPageEventArgs.prototype.get_PageVisual = function (
 };
 System.Windows.Printing.PrintPageEventArgs.prototype.set_PageVisual = function (value) {
 	this.CheckPtr();
-	$asm02.MS.Internal.XcpImports.SetValue$13(this, System.Windows.Printing.PrintPageEventArgs.PageVisualProperty, value);
+	$asm02.MS.Internal.XcpImports.SetValue(this, System.Windows.Printing.PrintPageEventArgs.PageVisualProperty, value);
 };
 System.Windows.Printing.PrintPageEventArgs.prototype.get_HasMorePages = function () {
 	this.CheckPtr();
@@ -22454,7 +22448,7 @@ System.Windows.Printing.PrintPageEventArgs.prototype.get_HasMorePages = function
 };
 System.Windows.Printing.PrintPageEventArgs.prototype.set_HasMorePages = function (value) {
 	this.CheckPtr();
-	$asm02.MS.Internal.XcpImports.SetValue$11(this, System.Windows.Printing.PrintPageEventArgs.HasMorePagesProperty, value);
+	$asm02.MS.Internal.XcpImports.SetValue(this, System.Windows.Printing.PrintPageEventArgs.HasMorePagesProperty, value);
 };
 System.Windows.Printing.PrintPageEventArgs.prototype.get_PrintableArea = function () {
 	this.CheckPtr();
@@ -22539,7 +22533,7 @@ System.Windows.Printing.EndPrintEventArgs.prototype.get_ErrorCode = function () 
 };
 System.Windows.Printing.EndPrintEventArgs.prototype.set_ErrorCode = function (value) {
 	this.CheckPtr();
-	$asm02.MS.Internal.XcpImports.SetValue$9(this, System.Windows.Printing.EndPrintEventArgs.ErrorCodeProperty, value);
+	$asm02.MS.Internal.XcpImports.SetValue(this, System.Windows.Printing.EndPrintEventArgs.ErrorCodeProperty, value);
 };
 System.Windows.Printing.EndPrintEventArgs.prototype.get_Error = function () {
 	return this._error;
@@ -22630,7 +22624,7 @@ System.Windows.Navigation.NavigationEventArgs.prototype.get_Uri = function () {
 };
 System.Windows.Navigation.NavigationEventArgs.prototype.set_Uri = function (value) {
 	this.CheckPtr();
-	$asm02.MS.Internal.XcpImports.SetValue$14(this, System.Windows.Navigation.NavigationEventArgs.UriProperty, value);
+	$asm02.MS.Internal.XcpImports.SetValue(this, System.Windows.Navigation.NavigationEventArgs.UriProperty, value);
 };
 JSIL.OverloadedMethod(System.Windows.Navigation.NavigationEventArgs.prototype, "_ctor", [
 		["_ctor$0", [System.Object, System.Uri, System.Windows.Navigation.NavigationMode, System.Boolean]], 
@@ -36101,7 +36095,7 @@ System.Windows.Application.prototype.get_Resources = function () {
 	return JSIL.Cast($asm02.MS.Internal.XcpImports.GetValue(this, System.Windows.Application.ResourcesProperty), System.Windows.ResourceDictionary);
 };
 System.Windows.Application.prototype.set_Resources = function (value) {
-	$asm02.MS.Internal.XcpImports.SetValue$13(this, System.Windows.Application.ResourcesProperty, value);
+	$asm02.MS.Internal.XcpImports.SetValue(this, System.Windows.Application.ResourcesProperty, value);
 };
 System.Windows.Application.prototype.set_RootVisual = function (value) {
 	$asm02.MS.Internal.XcpImports.CheckThread();
@@ -37610,7 +37604,7 @@ System.Windows.Threading.DispatcherTimer.prototype.set_Interval = function (valu
 	if (value.Seconds < 0) {
 		throw JSIL.New(System.ArgumentOutOfRangeException, "_ctor$0", []);
 	}
-	$asm02.MS.Internal.XcpImports.SetValue$0(this, System.Windows.Threading.DispatcherTimer.IntervalProperty, value.toString());
+	$asm02.MS.Internal.XcpImports.SetValue(this, System.Windows.Threading.DispatcherTimer.IntervalProperty, value.toString());
 };
 System.Windows.Threading.DispatcherTimer.prototype.get_IsEnabled = function () {
 	return this._isEnabled;
@@ -38289,14 +38283,6 @@ $asm02.MS.Internal.XcpImports.CreateObjectByTypeIndexWithDO = function (typeInde
 	$asm02.MS.Internal.XcpImports.CheckHResult($asm02.MS.Internal.XcpImports.CreateObjectByTypeIndexWithDONative($asm02.MS.Internal.JoltHelper.Context, typeIndex, pDO, /* ref */ zero));
 	return zero.value;
 };
-$asm02.MS.Internal.XcpImports.GetValue = function (managedPeer, property) {
-	var outDOType = new JSIL.Variable(0);
-	$asm02.MS.Internal.XcpImports.CheckThread();
-	var cValue = new JSIL.Variable(new $asm02.MS.Internal.CValue());
-	$asm02.MS.Internal.XcpImports.CheckHResult($asm02.MS.Internal.XcpImports.GetValueNative(managedPeer.IManagedPeerBase_NativeObject, property.m_nKnownId, /* ref */ cValue, /* ref */ outDOType));
-	System.GC.KeepAlive(managedPeer);
-	return $asm02.MS.Internal.XcpImports.ConvertCValueForManaged(property, /* ref */ cValue, outDOType.value, managedPeer);
-};
 $asm02.MS.Internal.XcpImports.GetManagedPropertyValueFromStyle = function (useBuiltInStyle, obj, property, /* ref */ value) {
 	$asm02.MS.Internal.XcpImports.CheckThread();
 	var cValue = new JSIL.Variable(new $asm02.MS.Internal.CValue());
@@ -38532,218 +38518,8 @@ $asm02.MS.Internal.XcpImports.ConvertCValueForManagedWithType$2 = function (prop
 		return System.Windows.Markup.XmlLanguage.GetLanguage(JSIL.Cast(obj, System.String));
 	}
 };
-$asm02.MS.Internal.XcpImports.SetValue$0 = JSIL.UntranslatableFunction("System.Void MS.Internal.XcpImports::SetValue(MS.Internal.IManagedPeerBase,System.Windows.DependencyProperty,System.String)");
-$asm02.MS.Internal.XcpImports.SetValue$1 = JSIL.UntranslatableFunction("System.Void MS.Internal.XcpImports::SetValue(MS.Internal.IManagedPeerBase,System.Windows.DependencyProperty,System.Windows.Media.Matrix)");
-$asm02.MS.Internal.XcpImports.SetValue$2 = JSIL.UntranslatableFunction("System.Void MS.Internal.XcpImports::SetValue(MS.Internal.IManagedPeerBase,System.Windows.DependencyProperty,System.Windows.Media.Media3D.Matrix3D)");
-$asm02.MS.Internal.XcpImports.SetValue$3 = JSIL.UntranslatableFunction("System.Void MS.Internal.XcpImports::SetValue(MS.Internal.IManagedPeerBase,System.Windows.DependencyProperty,System.Windows.Point)");
-$asm02.MS.Internal.XcpImports.SetValue$4 = JSIL.UntranslatableFunction("System.Void MS.Internal.XcpImports::SetValue(MS.Internal.IManagedPeerBase,System.Windows.DependencyProperty,System.Windows.Rect)");
-$asm02.MS.Internal.XcpImports.SetValue$5 = JSIL.UntranslatableFunction("System.Void MS.Internal.XcpImports::SetValue(MS.Internal.IManagedPeerBase,System.Windows.DependencyProperty,System.Windows.Size)");
-$asm02.MS.Internal.XcpImports.SetValue$6 = JSIL.UntranslatableFunction("System.Void MS.Internal.XcpImports::SetValue(MS.Internal.IManagedPeerBase,System.Windows.DependencyProperty,System.Windows.GridLength)");
-$asm02.MS.Internal.XcpImports.SetValue$7 = function (obj, property, language) {
-	var ietfLanguageTag = language.IetfLanguageTag;
-	$asm02.MS.Internal.XcpImports.SetValue$0(obj, property, ietfLanguageTag);
-};
-$asm02.MS.Internal.XcpImports.SetValue$8 = function (obj, property, c) {
-	$asm02.MS.Internal.XcpImports.CheckThread();
-	var cValue = new JSIL.Variable(new $asm02.MS.Internal.CValue());
-	var nValue = c.ToUInt32();
-	cValue.value.Type = MS.Internal.VType.valueColor;
-	cValue.value.m_nValue = nValue;
-	$asm02.MS.Internal.XcpImports.CheckHResult($asm02.MS.Internal.XcpImports.SetValueNative(obj.IManagedPeerBase_NativeObject, property.m_nKnownId, /* ref */ cValue));
-	System.GC.KeepAlive(obj);
-};
-$asm02.MS.Internal.XcpImports.SetValue$9 = function (obj, property, i) {
-	$asm02.MS.Internal.XcpImports.CheckThread();
-	var cValue = new JSIL.Variable(new $asm02.MS.Internal.CValue());
-	cValue.value.Type = MS.Internal.VType.valueSigned;
-	cValue.value.m_iValue = i;
-	$asm02.MS.Internal.XcpImports.CheckHResult($asm02.MS.Internal.XcpImports.SetValueNative(obj.IManagedPeerBase_NativeObject, property.m_nKnownId, /* ref */ cValue));
-	System.GC.KeepAlive(obj);
-};
-$asm02.MS.Internal.XcpImports.SetValue$10 = function (obj, property, d) {
-	$asm02.MS.Internal.XcpImports.CheckThread();
-	var cValue = new JSIL.Variable(new $asm02.MS.Internal.CValue());
-	cValue.value.Type = MS.Internal.VType.valueFloat;
-	cValue.value.m_eValue = d;
-	$asm02.MS.Internal.XcpImports.CheckHResult($asm02.MS.Internal.XcpImports.SetValueNative(obj.IManagedPeerBase_NativeObject, property.m_nKnownId, /* ref */ cValue));
-	System.GC.KeepAlive(obj);
-};
 $asm02.MS.Internal.XcpImports.SetValueWithDoublePrecision$0 = JSIL.UntranslatableFunction("System.Void MS.Internal.XcpImports::SetValueWithDoublePrecision(MS.Internal.IManagedPeerBase,System.Windows.DependencyProperty,System.Double)");
 $asm02.MS.Internal.XcpImports.SetValueWithDoublePrecision$1 = JSIL.UntranslatableFunction("System.Void MS.Internal.XcpImports::SetValueWithDoublePrecision(MS.Internal.IManagedPeerBase,System.Windows.DependencyProperty,System.Windows.Point)");
-$asm02.MS.Internal.XcpImports.SetValue$11 = function (obj, property, b) {
-	$asm02.MS.Internal.XcpImports.CheckThread();
-	var cValue = new JSIL.Variable(new $asm02.MS.Internal.CValue());
-	cValue.value.SetValue(b);
-	$asm02.MS.Internal.XcpImports.CheckHResult($asm02.MS.Internal.XcpImports.SetValueNative(obj.IManagedPeerBase_NativeObject, property.m_nKnownId, /* ref */ cValue));
-	System.GC.KeepAlive(obj);
-};
-$asm02.MS.Internal.XcpImports.SetValue$12 = function (obj, property, e) {
-	$asm02.MS.Internal.XcpImports.CheckThread();
-	var cValue = new JSIL.Variable(new $asm02.MS.Internal.CValue());
-	cValue.value.SetValue(e);
-	$asm02.MS.Internal.XcpImports.CheckHResult($asm02.MS.Internal.XcpImports.SetValueNative(obj.IManagedPeerBase_NativeObject, property.m_nKnownId, /* ref */ cValue));
-	System.GC.KeepAlive(obj);
-};
-$asm02.MS.Internal.XcpImports.SetValue$13 = function (obj, property, doh) {
-	$asm02.MS.Internal.XcpImports.CheckThread();
-	var cValue = new JSIL.Variable(new $asm02.MS.Internal.CValue());
-	if (doh === null) {
-		cValue.value.Type = MS.Internal.VType.valueNull;
-	} else {
-		cValue.value.Type = MS.Internal.VType.valueObject;
-		cValue.value.m_pdoValue = doh.NativeObject.ToInt32();
-	}
-	$asm02.MS.Internal.XcpImports.CheckHResult($asm02.MS.Internal.XcpImports.SetValueNative(obj.IManagedPeerBase_NativeObject, property.m_nKnownId, /* ref */ cValue));
-	System.GC.KeepAlive(doh);
-	System.GC.KeepAlive(obj);
-};
-$asm02.MS.Internal.XcpImports.SetValue$14 = function (doh, property, obj) {
-	$asm02.MS.Internal.XcpImports.CheckThread();
-	var cValue = new JSIL.Variable(new $asm02.MS.Internal.CValue());
-	if (obj === null) {
-		if (!((property !== System.Windows.Controls.TextBlock.TextDecorationsProperty) && 
-				(property !== System.Windows.Documents.Inline.TextDecorationsProperty) && (property !== System.Windows.Documents.Hyperlink.MouseOverTextDecorationsProperty))) {
-			$asm02.MS.Internal.XcpImports.SetValue$9(doh, property, 0);
-			return;
-		}
-		if (property === System.Windows.FrameworkElement.CursorProperty) {
-			$asm02.MS.Internal.XcpImports.SetValue$12(doh, property, System.Windows.Input.CursorType.Default);
-			return;
-		}
-		cValue.value.Type = MS.Internal.VType.valueNull;
-		cValue.value.m_pvValue = 0;
-		$asm02.MS.Internal.XcpImports.CheckHResult($asm02.MS.Internal.XcpImports.SetValueNative(doh.IManagedPeerBase_NativeObject, property.m_nKnownId, /* ref */ cValue));
-		System.GC.KeepAlive(doh);
-		return;
-	} else {
-		var dependencyObject = JSIL.TryCast(obj, System.Windows.DependencyObject);
-		if (dependencyObject !== null) {
-			$asm02.MS.Internal.XcpImports.SetValue$13(doh, property, dependencyObject);
-			return;
-		}
-		var array = JSIL.TryCast(obj, System.Array);
-		if (array !== null) {
-			var stringBuilder = JSIL.New(System.Text.StringBuilder, "_ctor$0", []);
-		__loop0__: 
-			for (var i = 0; i < array.length; ++i) {
-				stringBuilder.Append$2(array.GetValue(i).toString());
-				if (i !== (array.length - 1)) {
-					stringBuilder.Append$2(",");
-				}
-			}
-			var s = stringBuilder.toString();
-			$asm02.MS.Internal.XcpImports.SetValue$0(doh, property, s);
-			return;
-		}
-		if (JSIL.TryCast(obj, System.Double) !== 0) {
-			$asm02.MS.Internal.XcpImports.SetValue$10(doh, property, JSIL.Cast(obj, System.Double));
-			return;
-		}
-		if (JSIL.TryCast(obj, System.Int32) !== 0) {
-			$asm02.MS.Internal.XcpImports.SetValue$9(doh, property, JSIL.Cast(obj, System.Int32));
-			return;
-		}
-		if (JSIL.TryCast(obj, System.Boolean)) {
-			$asm02.MS.Internal.XcpImports.SetValue$11(doh, property, JSIL.Cast(obj, System.Boolean));
-			return;
-		}
-		if (JSIL.TryCast(obj, System.String) !== null) {
-			$asm02.MS.Internal.XcpImports.SetValue$0(doh, property, JSIL.Cast(obj, System.String));
-			return;
-		}
-		if (JSIL.TryCast(obj, System.Windows.Point) !== new System.Windows.Point()) {
-			$asm02.MS.Internal.XcpImports.SetValue$3(doh, property, JSIL.Cast(obj, System.Windows.Point).MemberwiseClone());
-			return;
-		}
-		if (!((JSIL.TryCast(obj, System.Enum) === null) || property.IsAnyTypeProperty)) {
-			$asm02.MS.Internal.XcpImports.SetValue$12(doh, property, JSIL.Cast(obj, System.Enum));
-			return;
-		}
-		if (JSIL.TryCast(obj, System.Windows.GridLength) !== new System.Windows.GridLength()) {
-			$asm02.MS.Internal.XcpImports.SetValue$6(doh, property, JSIL.Cast(obj, System.Windows.GridLength).MemberwiseClone());
-			return;
-		}
-		if (JSIL.TryCast(obj, System.Windows.Markup.XmlLanguage) !== null) {
-			$asm02.MS.Internal.XcpImports.SetValue$7(doh, property, JSIL.Cast(obj, System.Windows.Markup.XmlLanguage));
-			return;
-		}
-		if (JSIL.TryCast(obj, System.Windows.Rect) !== new System.Windows.Rect()) {
-			$asm02.MS.Internal.XcpImports.SetValue$4(doh, property, JSIL.Cast(obj, System.Windows.Rect).MemberwiseClone());
-			return;
-		}
-		if (JSIL.TryCast(obj, System.Windows.Size) !== new System.Windows.Size()) {
-			$asm02.MS.Internal.XcpImports.SetValue$5(doh, property, JSIL.Cast(obj, System.Windows.Size).MemberwiseClone());
-			return;
-		}
-		if (JSIL.TryCast(obj, System.Windows.Media.Color) !== new System.Windows.Media.Color()) {
-			$asm02.MS.Internal.XcpImports.SetValue$8(doh, property, JSIL.Cast(obj, System.Windows.Media.Color).MemberwiseClone());
-			return;
-		}
-		if (JSIL.TryCast(obj, System.Windows.Media.Matrix) !== new System.Windows.Media.Matrix()) {
-			$asm02.MS.Internal.XcpImports.SetValue$1(doh, property, JSIL.Cast(obj, System.Windows.Media.Matrix).MemberwiseClone());
-			return;
-		}
-		if (JSIL.TryCast(obj, System.Windows.Media.Media3D.Matrix3D) !== new System.Windows.Media.Media3D.Matrix3D()) {
-			$asm02.MS.Internal.XcpImports.SetValue$2(doh, property, JSIL.Cast(obj, System.Windows.Media.Media3D.Matrix3D).MemberwiseClone());
-			return;
-		}
-		if (!((JSIL.TryCast(obj, System.Windows.Media.FontFamily) === null) || property.IsAnyTypeProperty)) {
-			var fontFamily = JSIL.Cast(obj, System.Windows.Media.FontFamily);
-			$asm02.MS.Internal.XcpImports.SetValue$0(doh, property, fontFamily.Source);
-			return;
-		}
-		if (!((JSIL.TryCast(obj, System.Windows.FontStretch) === new System.Windows.FontStretch()) || property.IsAnyTypeProperty)) {
-			$asm02.MS.Internal.XcpImports.SetValue$12(doh, property, JSIL.Cast(obj, System.Windows.FontStretch).Stretch);
-			return;
-		}
-		if (!((JSIL.TryCast(obj, System.Windows.FontStyle) === new System.Windows.FontStyle()) || property.IsAnyTypeProperty)) {
-			$asm02.MS.Internal.XcpImports.SetValue$12(doh, property, JSIL.Cast(obj, System.Windows.FontStyle).Style);
-			return;
-		}
-		if (!((JSIL.TryCast(obj, System.Windows.FontWeight) === new System.Windows.FontWeight()) || property.IsAnyTypeProperty)) {
-			$asm02.MS.Internal.XcpImports.SetValue$12(doh, property, JSIL.Cast(obj, System.Windows.FontWeight).Weight);
-			return;
-		}
-		if (!((JSIL.TryCast(obj, System.Windows.TextDecorationCollection) === null) || property.IsAnyTypeProperty)) {
-			var textDecorationCollection = JSIL.TryCast(obj, System.Windows.TextDecorationCollection);
-			$asm02.MS.Internal.XcpImports.SetValue$12(doh, property, textDecorationCollection.Decoration.Location);
-			return;
-		}
-		if (!((JSIL.TryCast(obj, System.Uri) === null) || property.IsAnyTypeProperty)) {
-			var uri = JSIL.Cast(obj, System.Uri);
-			$asm02.MS.Internal.XcpImports.SetValue$0(doh, property, uri.OriginalString);
-			return;
-		}
-		if (!((JSIL.TryCast(obj, System.Windows.PropertyPath) === null) || property.IsAnyTypeProperty)) {
-			var propertyPath = JSIL.Cast(obj, System.Windows.PropertyPath);
-			$asm02.MS.Internal.XcpImports.SetValue$0(doh, property, propertyPath.Path);
-			return;
-		}
-		if (!(((JSIL.TryCast(obj, System.Windows.Media.Animation.KeyTime) === new System.Windows.Media.Animation.KeyTime()) && 
-					(JSIL.TryCast(obj, System.Windows.Duration) === new System.Windows.Duration()) && 
-					(JSIL.TryCast(obj, System.TimeSpan) === new System.TimeSpan()) && 
-					(JSIL.TryCast(obj, System.Windows.Media.Animation.RepeatBehavior) === new System.Windows.Media.Animation.RepeatBehavior()) && 
-					(JSIL.TryCast(obj, System.Windows.Thickness) === new System.Windows.Thickness()) && 
-					(JSIL.TryCast(obj, System.Windows.CornerRadius) === new System.Windows.CornerRadius()) && 
-					(JSIL.TryCast(obj, System.Char) === 0)) || property.IsAnyTypeProperty)) {
-			$asm02.MS.Internal.XcpImports.SetValue$0(doh, property, obj.toString());
-			return;
-		}
-		if (!((JSIL.TryCast(obj, System.Windows.Input.Cursor) === null) || property.IsAnyTypeProperty)) {
-			var cursor = JSIL.TryCast(obj, System.Windows.Input.Cursor);
-			$asm02.MS.Internal.XcpImports.SetValue$12(doh, property, cursor.CursorType);
-			return;
-		}
-		if (property === $asm02.MS.Internal.ManagedObjectReference.NativeValueProperty) {
-			$asm02.MS.Internal.XcpImports.SetValue$13(doh, property, null);
-			return;
-		}
-		var managedObjectReference = JSIL.New($asm02.MS.Internal.ManagedObjectReference, "_ctor$1", [obj]);
-		managedObjectReference.PegManagedPeerNoRef();
-		$asm02.MS.Internal.XcpImports.SetValue$13(doh, property, managedObjectReference);
-		return;
-	}
-};
 $asm02.MS.Internal.XcpImports.ClearValue = function (doh, property) {
 	$asm02.MS.Internal.XcpImports.CheckThread();
 	$asm02.MS.Internal.XcpImports.CheckHResult($asm02.MS.Internal.XcpImports.ClearValueNative(doh.IManagedPeerBase_NativeObject, property.m_nKnownId));
@@ -41677,23 +41453,6 @@ JSIL.OverloadedMethod($asm02.MS.Internal.XcpImports, "ConvertCValueForManagedWit
 		["ConvertCValueForManagedWithType$0", [System.Type, JSIL.Reference.Of($asm02.MS.Internal.CValue), System.Int32, $asm02.MS.Internal.IManagedPeerBase]], 
 		["ConvertCValueForManagedWithType$1", [System.Type, JSIL.Reference.Of($asm02.MS.Internal.CValue), System.Int32, System.Boolean, $asm02.MS.Internal.IManagedPeerBase]], 
 		["ConvertCValueForManagedWithType$2", [System.Type, JSIL.Reference.Of($asm02.MS.Internal.CValue), System.Int32, System.Boolean, System.Boolean, $asm02.MS.Internal.IManagedPeerBase]]
-	]);
-JSIL.OverloadedMethod($asm02.MS.Internal.XcpImports, "SetValue", [
-		["SetValue$0", [$asm02.MS.Internal.IManagedPeerBase, System.Windows.DependencyProperty, System.String]], 
-		["SetValue$1", [$asm02.MS.Internal.IManagedPeerBase, System.Windows.DependencyProperty, System.Windows.Media.Matrix]], 
-		["SetValue$2", [$asm02.MS.Internal.IManagedPeerBase, System.Windows.DependencyProperty, System.Windows.Media.Media3D.Matrix3D]], 
-		["SetValue$3", [$asm02.MS.Internal.IManagedPeerBase, System.Windows.DependencyProperty, System.Windows.Point]], 
-		["SetValue$4", [$asm02.MS.Internal.IManagedPeerBase, System.Windows.DependencyProperty, System.Windows.Rect]], 
-		["SetValue$5", [$asm02.MS.Internal.IManagedPeerBase, System.Windows.DependencyProperty, System.Windows.Size]], 
-		["SetValue$6", [$asm02.MS.Internal.IManagedPeerBase, System.Windows.DependencyProperty, System.Windows.GridLength]], 
-		["SetValue$7", [$asm02.MS.Internal.IManagedPeerBase, System.Windows.DependencyProperty, System.Windows.Markup.XmlLanguage]], 
-		["SetValue$8", [$asm02.MS.Internal.IManagedPeerBase, System.Windows.DependencyProperty, System.Windows.Media.Color]], 
-		["SetValue$9", [$asm02.MS.Internal.IManagedPeerBase, System.Windows.DependencyProperty, System.Int32]], 
-		["SetValue$10", [$asm02.MS.Internal.IManagedPeerBase, System.Windows.DependencyProperty, System.Double]], 
-		["SetValue$11", [$asm02.MS.Internal.IManagedPeerBase, System.Windows.DependencyProperty, System.Boolean]], 
-		["SetValue$12", [$asm02.MS.Internal.IManagedPeerBase, System.Windows.DependencyProperty, System.Enum]], 
-		["SetValue$13", [$asm02.MS.Internal.IManagedPeerBase, System.Windows.DependencyProperty, System.Windows.DependencyObject]], 
-		["SetValue$14", [$asm02.MS.Internal.IManagedPeerBase, System.Windows.DependencyProperty, System.Object]]
 	]);
 JSIL.OverloadedMethod($asm02.MS.Internal.XcpImports, "SetValueWithDoublePrecision", [
 		["SetValueWithDoublePrecision$0", [$asm02.MS.Internal.IManagedPeerBase, System.Windows.DependencyProperty, System.Double]], 
@@ -64625,7 +64384,7 @@ System.Windows.Ink.Stroke.prototype.HitTest = function (stylusPointCollection) {
 	return $asm02.MS.Internal.XcpImports.Stroke_HitTest(this, stylusPointCollection);
 };
 System.Windows.Ink.Stroke.prototype.SetPointCollection = function (pointCollection) {
-	$asm02.MS.Internal.XcpImports.SetValue$13(this, System.Windows.Ink.Stroke.StylusPointsProperty, pointCollection);
+	$asm02.MS.Internal.XcpImports.SetValue(this, System.Windows.Ink.Stroke.StylusPointsProperty, pointCollection);
 };
 JSIL.OverloadedMethod(System.Windows.Ink.Stroke.prototype, "_ctor", [
 		["_ctor$0", []], 
@@ -73447,7 +73206,7 @@ JSIL.QueueInitializer(function () {
 	});
 JSIL.QueueInitializer(function () {
 		JSIL.ExternalMembers(System.Windows.DependencyObject.prototype, 
-			"SetValue", "AddEventListener"
+			"SetValue", "GetValue", "AddEventListener", "RemoveEventListener"
 		);
 	});
 JSIL.QueueInitializer(function () {
@@ -73758,7 +73517,7 @@ JSIL.QueueInitializer(function () {
 	});
 JSIL.QueueInitializer(function () {
 		JSIL.ExternalMembers($asm02.MS.Internal.XcpImports, 
-			"FindNameNative", "GetVisualRootNative", "Application_GetWindowNative", "Application_SetVisualRootNative", "CreateObjectByTypeIndexNative", "CreateObjectByTypeIndexWithDONative", "GetValueNative", "GetManagedPropertyValueFromStyleNative", "SL3GetManagedPropertyValueFromStyleNative", "FontFamily_GetFamilyNameNative", "SetValueNative", "ClearValueNative", "ReadLocalValueNative", "IsPropertyDefaultNative", "GetAnimationBaseValueNative", "GetMentorNative", "SetParentForInheritanceContextOnlyNative", "GetDownloaderBytesNative", "GetRequestStreamNative", "Application_GetResourceStreamNative", "Deployment_SetCurrentApplicationNative", "Application_GetResourceFromApplicationNative", "ReleaseInternalMemoryNative", "ReleaseInternalStreamNative", "ReadInternalMemoryNative", "ReadInternalStreamNative", "GetStreamPositionNative", "SeekInternalStreamNative", "MeasureOverrideNative", "ArrangeOverrideNative", "UIElement_BringIntoViewNative", "MeasureNative", "ArrangeNative", "GetDesiredSizeNative", "MethodExNative", "AddEventListenerNative", "RemoveEventListenerNative", "ConvertStringToTypedCValueNative", "GetAnimationTargetHandlesNative", "NotifyHasManagedPeerNative", "SetParticipatesInManagedTreeDefaultNative", "DisconnectManagedPeerNative", "GetErrorDetailsNative", "GetNativeTypeIndexNative", "AddRefNativeObjectNative", "ReleaseMNative", "FinalizerReleaseMNative", "CleanupNativePeersNative", "SetFrameworkCallbacksNative", "TraceXcpEventNative", "TraceXcpEventVerboseNative", "GetXcpTraceStateNative", "RenderTargetBitmapCreateNative", "RenderTargetBitmapRenderNative", "RenderTargetBitmapDestroyNative", "WantsEventNative", "WantsEventStaticNative", "DependencyObject_EnterNative", "DependencyObject_LeaveNative", "DependencyObject_ShouldCreatePeerWithStrongRefNative", "DependencyObject_ControlsManagedPeerLifetimeNative", "DependencyObject_SetIsManagedPeerPeggedNoRef", "CreateFromXamlNative", "Host_IsVersionSupportedNative", "Host_GetIsWindowlessNative", "Host_GetEnableHTMLAccessNative", "Host_GetEnableFrameRateCounterNative", "Host_SetEnableFrameRateCounterNative", "Host_GetEnableCacheVisualizationNative", "Host_SetEnableCacheVisualizationNative", "Host_GetEnableRedrawRegionsNative", "Host_SetEnableRedrawRegionsNative", "Host_GetMaxFrameRateNative", "Host_SetMaxFrameRateNative", "Host_GetActualWidthNative", "Host_GetActualHeightNative", "Host_GetIsFullScreenNative", "Host_SetIsFullScreenNative", "Host_GetIsLoadedNative", "Host_GetBackgroundNative", "Host_GetSourceNative", "Host_GetFinalSourceNative", "Host_GetEnableGPUAccelerationNative", "Host_GetAutoZoomNative", "Host_SetAutoZoomNative", "Host_GetZoomFactorNative", "Host_AddedManagedZoomedListenerNative", "Host_RemovedManagedZoomedListenerNative", "Host_GetFileSystemAccessAllowedNative", "Host_GetNetworkingUnrestrictedNative", "Input_GetKeyboardModifiersNative", "SystemSetting_GetIsHighContrastEnabledNative", "SystemSetting_GetSystemColorNative", "Xml_ValidateXmlLanguageNative", "Application_GetCurrentNative", "PostGCCollectMessageNative", "Application_GetInitParamsNative", "Host_GetIsMouseInNotificationWindowNative", "Host_GetNavigationStateNative", "Host_HasNavigationStateChangedNative", "Host_SetNavigationStateNative", "Application_LoadComponentNative", "Application_GetAllowNavigationNative", "FocusManager_GetFocusedElementNative", "FocusManager_SetFocusedElementNative", "LayoutInformation_GetLayoutExceptionElementNative", "LayoutInformation_SetLayoutExceptionElementNative", "UIElement_HitTestPointNative", "UIElement_HitTestRectNative", "UIElement_DeleteListNative", "GetOpenPopupsNative", "InternalTransform_TransformNative", "InternalTransform_TransformBoundsNative", "InternalTransform_Inverse$0", "Transform_TransformNative", "Transform_TransformBoundsNative", "Transform_Inverse$0", "Storyboard_SeekAlignedToLastTickNative", "Storyboard_SetTargetNative", "Storyboard_SetTargetDependencyPropertyNative", "Storyboard_SkipToFillNative", "Timeline_GetCurrentTimeNative", "Timeline_GetClockStateNative", "VideoBrush_SetMediaElementSourceNative", "VideoBrush_SetCaptureGraphSourceNative", "BitmapSource_SetSourceNative", "CreateNativeInteropWrapperNative", "SetManagedCallbackCountNative", "SetManagedCallbackFunctionNative", "GetClassFullNameNative", "GetClassFullNameByIndexNative", "GetCoreDependencyPropertyNameAndTypeByIndexNative", "DispatcherTimer_StartNative", "DispatcherTimer_StopNative", "CreateNativeErrorObjectNative", "ResourceDictionary_AddNative", "ResourceDictionary_CountNative", "ResourceDictionary_ClearNative", "ResourceDictionary_RemoveNative", "ResourceDictionary_GetItemNative", "ResourceDictionary_GetKeyNative", "SaveFileDialog_GetLocalizedInitialFileName", "SaveFileDialog_GetIEProtectedModeTempFileNameNative", "FrameworkElement_OnApplyTemplateNative", "Control_RaiseNative", "MediaElement_SetMediaStreamSourceNative", "MediaStreamSource_SetMediaOpenStreamCountNative", "MediaStreamSource_OnOpenMediaCompletedNative", "MediaStreamSource_SetMediaOpenAttributeNative", "MediaStreamSource_SetMediaOpenStreamDescriptionNative", "MediaStreamSource_OnSeekCompletedNative", "MediaStreamSource_OnGetSampleCompletedNative", "MediaStreamSource_OnGetSampleProgressNative", "MediaStreamSource_OnGetDiagonosticCompletedNative", "MediaStreamSource_OnSwitchMediaStreamCompletedNative", "MediaStreamSource_OnMediaStreamErrorNative", "Deployment_GetCurrentNative", "AllocateNativeBufferNative", "TextBoxView_SetScrollOffsetNative", "TextBoxView_EnableInternalScrollingNative", "OnCreateAutomationPeerNative", "SetAutomationPeerParentNative", "GetAutomationPeerValueNative", "AutomationListenerExistsNative", "AutomationRaiseAutomationEventNative", "GetVisualRelativeNative", "Hyperlink_FindHostFrameworkElementNative", "RichTextBox_GetDocumentEdgeNative", "TextElement_GetEdgeNative", "TextPointer_GetLogicalDirectionNative", "TextPointer_GetCharacterRectNative", "TextPointer_CompareToNative", "TextPointer_GetOffsetNative", "TextPointer_GetNormalizedPositionNative", "TextPointer_GetParentNative", "TextPointer_IsAtInsertionPositionNative", "TextPointer_GetNextInsertionPositionNative", "TextPointer_GetPositionAtOffsetNative", "TextPointer_GetNextWordBoundaryPositionNative", "TextPointer_GetRichTextBox$0", "TextRange_GetTextNative", "RichTextBox_GetTextPositionFromPointNative", "UIATextRange_GetEnclosingElementNative", "UIATextRange_GetChildrenNative", "UIATextRange_DeleteChildrenArrayNative", "UIATextRange_GetBoundingRectanglesNative", "UIATextRange_DeleteBoundingRectanglesArrayNative", "StylusPointCollection_AddItemNative", "StylusPointCollection_GetItemNative", "StylusPointCollection_InsertItemNative", "StylusPointCollection_IndexOfItemNative", "StylusPointCollection_RemoveItemNative", "AutomationRaiseAutomationPropertyChangedNative", "CallAutomationPeerMethodNative", "Collection_AddNative", "Collection_GetItemNative", "Collection_RemoveNative", "Collection_RemoveAtNative", "Collection_InsertNative", "Collection_ClearNative", "Collection_IndexOfNative", "SetContentIsNotLogicalNative", "SetContentIsTemplateBoundManagedNative", "MediaElement_AcquireLicenseComplete$0", "MediaElement_RequestLogNative", "MessageBox_ShowCoreNative", "NavigateToSafeURINative", "GetPropertyNameNative", "GetDefaultValueNative", "WebRequest_GetSizeNative", "WebRequest_GetTotalSizeNative", "WebRequest_GetShouldEnableMemoryAsIPALStreamNative", "WebRequest_SetHeadersNative", "WebRequest_GetResponseHeadersNative", "WebRequest_EndUploadDataNative", "WebRequest_AddUploadDataChunkNative", "Application_InstallNative", "Application_VerifyAuthenticodeSignatureNative", "Application_CheckAndDownloadUpdateNative", "Application_GetAppIDForURINative", "Host_GetFullScreenOptionsNative", "Host_SetFullScreenOptionsNative", "Application_GetHasElevatedPermissionsNative", "Application_SetHasElevatedPermissionsNative", "GetIsNativeHostedNative", "LocalMessageSenderCreateNative", "LocalMessageReceiverCreateNative", "LocalMessageSendNative", "LocalMessageReceiveNative", "LocalMessageStopReceiveNative", "ClearCustomTypeFactoryCacheNative", "RefreshXamlSchemaContextNative", "GetTemplatedParentNative", "GoToStateNative", "GoToStateInternalNative", "GetCurrentStateNative", "SuppressIsEnabledNative", "ResolveXamlPrefixNative", "GetPropertyUsingCurrentOWContextNative", "GetNativePropertyInfoNative", "XamlSchemaContext_ResolvePropertyNameNative", "XamlSchemaContext_AddAssemblyNative", "XamlSchemaContext_AddAssemblyXmlnsDefinitionNative", "GetInheritanceParentNative", "GetIsActiveNative", "GetAppVersionNative", "EasingFunction_EaseInCoreNative", "Analytics_Start$0", "Analytics_Stop$0", "Analytics_GetAverageProcessLoad$0", "Analytics_GetAverageProcessorLoad$0", "Analytics_GetGpuInformationNative", "ShaderEffect_SetConstantNative", "WriteableBitmap_CopyPixelsNative", "WriteableBitmap_CreateNative", "WriteableBitmap_CreateFromSourceNative", "WriteableBitmap_CreateFromUIElementNative", "WriteableBitmap_CalculateSizeNative", "WriteableBitmap_InvalidateNative", "WriteableBitmap_RenderNative", "GetResourceStringNative", "DesignerProperties_SetIsInDesignModeNative", "LayoutManager_ClearErrorOccurredDuringLayoutNative", "LayoutManager_DidErrorOccurDuringLayoutNative", "PrintDocument_ProcessPrintRequestNative", "PrintDocument_LaunchPrintDialogNative", "PrintDocument_ResetNative", "RichTextBoxView_SetScrollOffsetNative", "RichTextSelection_SetPropertyValueNative", "RichTextSelection_GetPropertyValueNative", "RichTextSelection_SetTextNative", "RichTextSelection_GetTextNative", "RichTextSelection_InsertNative", "RichTextSelection_SelectNative", "RichTextSelection_GetEdgeNative", "Text_GetBaselineOffsetNative", "Window_ActivateNative", "Window_CloseNative", "Window_DragMoveNative", "Window_DragResizeNative", "Window_MinimizeNative", "Window_MaximizeNative", "Window_RestoreNative", "CaptureGraph_StartNative", "CaptureGraph_StopNative", "CaptureGraph_GetStateNative", "CaptureGraph_GetHasDeviceAccessNative", "CaptureGraph_RequestDeviceAccessNative", "CaptureGraph_GetAvailableVideoCaptureDevicesNative", "CaptureGraph_GetAvailableAudioCaptureDevicesNative", "VideoSink_SetSourceNative", "VideoSink_GetSourceNative", "AudioSink_SetSourceNative", "AudioSink_GetSourceNative", "VideoCaptureDevice_SetDesiredFormatNative$0", "VideoCaptureDevice_SetDesiredFormatNative$1", "VideoCaptureDevice_GetDesiredFormatNative", "VideoCaptureDevice_HasDesiredFormatNative", "VideoCaptureDevice_GetSupportedFormatCountNative", "VideoCaptureDevice_GetSupportedFormatsNative", "AudioCaptureDevice_SetDesiredFormatNative$0", "AudioCaptureDevice_SetDesiredFormatNative$1", "AudioCaptureDevice_GetDesiredFormatNative", "AudioCaptureDevice_HasDesiredFormatNative", "AudioCaptureDevice_GetSupportedFormatCountNative", "AudioCaptureDevice_GetSupportedFormatsNative", "WebBrowser_NavigateNative", "WebBrowser_NavigateToStringNative", "WebBrowser_SaveToStringNative", "WebBrowserBrush_RedrawNative", "WebBrowserBrush_SetSourceNative", "WebBrowser_InvokeScriptNative", "DrmLicense_GetExpirationDate_Native", "DrmLicense_GetKeyId_Native", "DrmLicense_GetUplinkKeyId_Native", "DrmLicense_IsUsable_Native", "DrmLicenseEnumerator_CreateNativePeerByKID_Native", "DrmLicenseEnumerator_CreateNativePeerByStream_Native", "DrmLicenseEnumerator_MoveNext_Native", "DrmLicenseEnumerator_Reset_Native", "DrmLicenseEnumerator_GetCurrent_Native", "DrmReleaseLicenseWrapper_Native", "DrmLicenseAcquirer_CreateNativePeer_Entry", "DrmLicenseAcquirer_GenerateChallengeByHeaderComponentsAsync_Native", "DrmLicenseAcquirer_GenerateChallengeByHeaderBytesAsync_Native", "DrmLicenseAcquirer_GenerateChallengeByHeaderAsync_Native", "DrmLicenseAcquirer_AcquireAsync_Native", "DrmLicenseAcquirer_SetLicenseResponse_Native", "DrmLicenseAcquirer_Abort_Entry", "DrmLicenseAcquirer_DomainJoinComplete_Entry", "DrmDomainAcquirer_CreateNativePeer_Native", "DrmDomainAcquirer_DomainOpGenerateChallengeAsync_Native", "DrmDomainAcquirer_DomainOpAsync_Native", "DrmDomainAcquirer_DomainOpSetResponse_Native", "DrmDomainAcquirer_DomainOpAsyncCancel_Native", "DrmException_GetErrorDataFromHResult_Native", "IsUserInitiatedAction_Native", "Clipboard_AccessAllowedNative", "Clipboard_ContainsTextNative", "Clipboard_GetTextNative", "Clipboard_SetTextNative", "NotificationWindow_ShowNative", "NotificationWindow_CloseNative", "GetConnectorInfoNative", "GetClientInfoNative", "ControlHost_GetDefaultThemeResourceDictionaryNative", "Font_GetSystemGlyphTypefacesNative", "InputManager_GetLastMousePositionNative", "PathGeometry_ToStringNative", "InlineCollection_IsInTextBlockNative", "InlineCollection_IsInHyperlinkNative"
+			"FindNameNative", "GetVisualRootNative", "Application_GetWindowNative", "Application_SetVisualRootNative", "CreateObjectByTypeIndexNative", "CreateObjectByTypeIndexWithDONative", "GetValue", "GetValueNative", "GetManagedPropertyValueFromStyleNative", "SL3GetManagedPropertyValueFromStyleNative", "FontFamily_GetFamilyNameNative", "SetValue", "SetValueNative", "ClearValueNative", "ReadLocalValueNative", "IsPropertyDefaultNative", "GetAnimationBaseValueNative", "GetMentorNative", "SetParentForInheritanceContextOnlyNative", "GetDownloaderBytesNative", "GetRequestStreamNative", "Application_GetResourceStreamNative", "Deployment_SetCurrentApplicationNative", "Application_GetResourceFromApplicationNative", "ReleaseInternalMemoryNative", "ReleaseInternalStreamNative", "ReadInternalMemoryNative", "ReadInternalStreamNative", "GetStreamPositionNative", "SeekInternalStreamNative", "MeasureOverrideNative", "ArrangeOverrideNative", "UIElement_BringIntoViewNative", "MeasureNative", "ArrangeNative", "GetDesiredSizeNative", "MethodExNative", "AddEventListenerNative", "RemoveEventListenerNative", "ConvertStringToTypedCValueNative", "GetAnimationTargetHandlesNative", "NotifyHasManagedPeerNative", "SetParticipatesInManagedTreeDefaultNative", "DisconnectManagedPeerNative", "GetErrorDetailsNative", "GetNativeTypeIndexNative", "AddRefNativeObjectNative", "ReleaseMNative", "FinalizerReleaseMNative", "CleanupNativePeersNative", "SetFrameworkCallbacksNative", "TraceXcpEventNative", "TraceXcpEventVerboseNative", "GetXcpTraceStateNative", "RenderTargetBitmapCreateNative", "RenderTargetBitmapRenderNative", "RenderTargetBitmapDestroyNative", "WantsEventNative", "WantsEventStaticNative", "DependencyObject_EnterNative", "DependencyObject_LeaveNative", "DependencyObject_ShouldCreatePeerWithStrongRefNative", "DependencyObject_ControlsManagedPeerLifetimeNative", "DependencyObject_SetIsManagedPeerPeggedNoRef", "CreateFromXamlNative", "Host_IsVersionSupportedNative", "Host_GetIsWindowlessNative", "Host_GetEnableHTMLAccessNative", "Host_GetEnableFrameRateCounterNative", "Host_SetEnableFrameRateCounterNative", "Host_GetEnableCacheVisualizationNative", "Host_SetEnableCacheVisualizationNative", "Host_GetEnableRedrawRegionsNative", "Host_SetEnableRedrawRegionsNative", "Host_GetMaxFrameRateNative", "Host_SetMaxFrameRateNative", "Host_GetActualWidthNative", "Host_GetActualHeightNative", "Host_GetIsFullScreenNative", "Host_SetIsFullScreenNative", "Host_GetIsLoadedNative", "Host_GetBackgroundNative", "Host_GetSourceNative", "Host_GetFinalSourceNative", "Host_GetEnableGPUAccelerationNative", "Host_GetAutoZoomNative", "Host_SetAutoZoomNative", "Host_GetZoomFactorNative", "Host_AddedManagedZoomedListenerNative", "Host_RemovedManagedZoomedListenerNative", "Host_GetFileSystemAccessAllowedNative", "Host_GetNetworkingUnrestrictedNative", "Input_GetKeyboardModifiersNative", "SystemSetting_GetIsHighContrastEnabledNative", "SystemSetting_GetSystemColorNative", "Xml_ValidateXmlLanguageNative", "Application_GetCurrentNative", "PostGCCollectMessageNative", "Application_GetInitParamsNative", "Host_GetIsMouseInNotificationWindowNative", "Host_GetNavigationStateNative", "Host_HasNavigationStateChangedNative", "Host_SetNavigationStateNative", "Application_LoadComponentNative", "Application_GetAllowNavigationNative", "FocusManager_GetFocusedElementNative", "FocusManager_SetFocusedElementNative", "LayoutInformation_GetLayoutExceptionElementNative", "LayoutInformation_SetLayoutExceptionElementNative", "UIElement_HitTestPointNative", "UIElement_HitTestRectNative", "UIElement_DeleteListNative", "GetOpenPopupsNative", "InternalTransform_TransformNative", "InternalTransform_TransformBoundsNative", "InternalTransform_Inverse$0", "Transform_TransformNative", "Transform_TransformBoundsNative", "Transform_Inverse$0", "Storyboard_SeekAlignedToLastTickNative", "Storyboard_SetTargetNative", "Storyboard_SetTargetDependencyPropertyNative", "Storyboard_SkipToFillNative", "Timeline_GetCurrentTimeNative", "Timeline_GetClockStateNative", "VideoBrush_SetMediaElementSourceNative", "VideoBrush_SetCaptureGraphSourceNative", "BitmapSource_SetSourceNative", "CreateNativeInteropWrapperNative", "SetManagedCallbackCountNative", "SetManagedCallbackFunctionNative", "GetClassFullNameNative", "GetClassFullNameByIndexNative", "GetCoreDependencyPropertyNameAndTypeByIndexNative", "DispatcherTimer_StartNative", "DispatcherTimer_StopNative", "CreateNativeErrorObjectNative", "ResourceDictionary_AddNative", "ResourceDictionary_CountNative", "ResourceDictionary_ClearNative", "ResourceDictionary_RemoveNative", "ResourceDictionary_GetItemNative", "ResourceDictionary_GetKeyNative", "SaveFileDialog_GetLocalizedInitialFileName", "SaveFileDialog_GetIEProtectedModeTempFileNameNative", "FrameworkElement_OnApplyTemplateNative", "Control_RaiseNative", "MediaElement_SetMediaStreamSourceNative", "MediaStreamSource_SetMediaOpenStreamCountNative", "MediaStreamSource_OnOpenMediaCompletedNative", "MediaStreamSource_SetMediaOpenAttributeNative", "MediaStreamSource_SetMediaOpenStreamDescriptionNative", "MediaStreamSource_OnSeekCompletedNative", "MediaStreamSource_OnGetSampleCompletedNative", "MediaStreamSource_OnGetSampleProgressNative", "MediaStreamSource_OnGetDiagonosticCompletedNative", "MediaStreamSource_OnSwitchMediaStreamCompletedNative", "MediaStreamSource_OnMediaStreamErrorNative", "Deployment_GetCurrentNative", "AllocateNativeBufferNative", "TextBoxView_SetScrollOffsetNative", "TextBoxView_EnableInternalScrollingNative", "OnCreateAutomationPeerNative", "SetAutomationPeerParentNative", "GetAutomationPeerValueNative", "AutomationListenerExistsNative", "AutomationRaiseAutomationEventNative", "GetVisualRelativeNative", "Hyperlink_FindHostFrameworkElementNative", "RichTextBox_GetDocumentEdgeNative", "TextElement_GetEdgeNative", "TextPointer_GetLogicalDirectionNative", "TextPointer_GetCharacterRectNative", "TextPointer_CompareToNative", "TextPointer_GetOffsetNative", "TextPointer_GetNormalizedPositionNative", "TextPointer_GetParentNative", "TextPointer_IsAtInsertionPositionNative", "TextPointer_GetNextInsertionPositionNative", "TextPointer_GetPositionAtOffsetNative", "TextPointer_GetNextWordBoundaryPositionNative", "TextPointer_GetRichTextBox$0", "TextRange_GetTextNative", "RichTextBox_GetTextPositionFromPointNative", "UIATextRange_GetEnclosingElementNative", "UIATextRange_GetChildrenNative", "UIATextRange_DeleteChildrenArrayNative", "UIATextRange_GetBoundingRectanglesNative", "UIATextRange_DeleteBoundingRectanglesArrayNative", "StylusPointCollection_AddItemNative", "StylusPointCollection_GetItemNative", "StylusPointCollection_InsertItemNative", "StylusPointCollection_IndexOfItemNative", "StylusPointCollection_RemoveItemNative", "AutomationRaiseAutomationPropertyChangedNative", "CallAutomationPeerMethodNative", "Collection_AddNative", "Collection_GetItemNative", "Collection_RemoveNative", "Collection_RemoveAtNative", "Collection_InsertNative", "Collection_ClearNative", "Collection_IndexOfNative", "SetContentIsNotLogicalNative", "SetContentIsTemplateBoundManagedNative", "MediaElement_AcquireLicenseComplete$0", "MediaElement_RequestLogNative", "MessageBox_ShowCoreNative", "NavigateToSafeURINative", "GetPropertyNameNative", "GetDefaultValueNative", "WebRequest_GetSizeNative", "WebRequest_GetTotalSizeNative", "WebRequest_GetShouldEnableMemoryAsIPALStreamNative", "WebRequest_SetHeadersNative", "WebRequest_GetResponseHeadersNative", "WebRequest_EndUploadDataNative", "WebRequest_AddUploadDataChunkNative", "Application_InstallNative", "Application_VerifyAuthenticodeSignatureNative", "Application_CheckAndDownloadUpdateNative", "Application_GetAppIDForURINative", "Host_GetFullScreenOptionsNative", "Host_SetFullScreenOptionsNative", "Application_GetHasElevatedPermissionsNative", "Application_SetHasElevatedPermissionsNative", "GetIsNativeHostedNative", "LocalMessageSenderCreateNative", "LocalMessageReceiverCreateNative", "LocalMessageSendNative", "LocalMessageReceiveNative", "LocalMessageStopReceiveNative", "ClearCustomTypeFactoryCacheNative", "RefreshXamlSchemaContextNative", "GetTemplatedParentNative", "GoToStateNative", "GoToStateInternalNative", "GetCurrentStateNative", "SuppressIsEnabledNative", "ResolveXamlPrefixNative", "GetPropertyUsingCurrentOWContextNative", "GetNativePropertyInfoNative", "XamlSchemaContext_ResolvePropertyNameNative", "XamlSchemaContext_AddAssemblyNative", "XamlSchemaContext_AddAssemblyXmlnsDefinitionNative", "GetInheritanceParentNative", "GetIsActiveNative", "GetAppVersionNative", "EasingFunction_EaseInCoreNative", "Analytics_Start$0", "Analytics_Stop$0", "Analytics_GetAverageProcessLoad$0", "Analytics_GetAverageProcessorLoad$0", "Analytics_GetGpuInformationNative", "ShaderEffect_SetConstantNative", "WriteableBitmap_CopyPixelsNative", "WriteableBitmap_CreateNative", "WriteableBitmap_CreateFromSourceNative", "WriteableBitmap_CreateFromUIElementNative", "WriteableBitmap_CalculateSizeNative", "WriteableBitmap_InvalidateNative", "WriteableBitmap_RenderNative", "GetResourceStringNative", "DesignerProperties_SetIsInDesignModeNative", "LayoutManager_ClearErrorOccurredDuringLayoutNative", "LayoutManager_DidErrorOccurDuringLayoutNative", "PrintDocument_ProcessPrintRequestNative", "PrintDocument_LaunchPrintDialogNative", "PrintDocument_ResetNative", "RichTextBoxView_SetScrollOffsetNative", "RichTextSelection_SetPropertyValueNative", "RichTextSelection_GetPropertyValueNative", "RichTextSelection_SetTextNative", "RichTextSelection_GetTextNative", "RichTextSelection_InsertNative", "RichTextSelection_SelectNative", "RichTextSelection_GetEdgeNative", "Text_GetBaselineOffsetNative", "Window_ActivateNative", "Window_CloseNative", "Window_DragMoveNative", "Window_DragResizeNative", "Window_MinimizeNative", "Window_MaximizeNative", "Window_RestoreNative", "CaptureGraph_StartNative", "CaptureGraph_StopNative", "CaptureGraph_GetStateNative", "CaptureGraph_GetHasDeviceAccessNative", "CaptureGraph_RequestDeviceAccessNative", "CaptureGraph_GetAvailableVideoCaptureDevicesNative", "CaptureGraph_GetAvailableAudioCaptureDevicesNative", "VideoSink_SetSourceNative", "VideoSink_GetSourceNative", "AudioSink_SetSourceNative", "AudioSink_GetSourceNative", "VideoCaptureDevice_SetDesiredFormatNative$0", "VideoCaptureDevice_SetDesiredFormatNative$1", "VideoCaptureDevice_GetDesiredFormatNative", "VideoCaptureDevice_HasDesiredFormatNative", "VideoCaptureDevice_GetSupportedFormatCountNative", "VideoCaptureDevice_GetSupportedFormatsNative", "AudioCaptureDevice_SetDesiredFormatNative$0", "AudioCaptureDevice_SetDesiredFormatNative$1", "AudioCaptureDevice_GetDesiredFormatNative", "AudioCaptureDevice_HasDesiredFormatNative", "AudioCaptureDevice_GetSupportedFormatCountNative", "AudioCaptureDevice_GetSupportedFormatsNative", "WebBrowser_NavigateNative", "WebBrowser_NavigateToStringNative", "WebBrowser_SaveToStringNative", "WebBrowserBrush_RedrawNative", "WebBrowserBrush_SetSourceNative", "WebBrowser_InvokeScriptNative", "DrmLicense_GetExpirationDate_Native", "DrmLicense_GetKeyId_Native", "DrmLicense_GetUplinkKeyId_Native", "DrmLicense_IsUsable_Native", "DrmLicenseEnumerator_CreateNativePeerByKID_Native", "DrmLicenseEnumerator_CreateNativePeerByStream_Native", "DrmLicenseEnumerator_MoveNext_Native", "DrmLicenseEnumerator_Reset_Native", "DrmLicenseEnumerator_GetCurrent_Native", "DrmReleaseLicenseWrapper_Native", "DrmLicenseAcquirer_CreateNativePeer_Entry", "DrmLicenseAcquirer_GenerateChallengeByHeaderComponentsAsync_Native", "DrmLicenseAcquirer_GenerateChallengeByHeaderBytesAsync_Native", "DrmLicenseAcquirer_GenerateChallengeByHeaderAsync_Native", "DrmLicenseAcquirer_AcquireAsync_Native", "DrmLicenseAcquirer_SetLicenseResponse_Native", "DrmLicenseAcquirer_Abort_Entry", "DrmLicenseAcquirer_DomainJoinComplete_Entry", "DrmDomainAcquirer_CreateNativePeer_Native", "DrmDomainAcquirer_DomainOpGenerateChallengeAsync_Native", "DrmDomainAcquirer_DomainOpAsync_Native", "DrmDomainAcquirer_DomainOpSetResponse_Native", "DrmDomainAcquirer_DomainOpAsyncCancel_Native", "DrmException_GetErrorDataFromHResult_Native", "IsUserInitiatedAction_Native", "Clipboard_AccessAllowedNative", "Clipboard_ContainsTextNative", "Clipboard_GetTextNative", "Clipboard_SetTextNative", "NotificationWindow_ShowNative", "NotificationWindow_CloseNative", "GetConnectorInfoNative", "GetClientInfoNative", "ControlHost_GetDefaultThemeResourceDictionaryNative", "Font_GetSystemGlyphTypefacesNative", "InputManager_GetLastMousePositionNative", "PathGeometry_ToStringNative", "InlineCollection_IsInTextBlockNative", "InlineCollection_IsInHyperlinkNative"
 		);
 	});
 JSIL.QueueInitializer(function () {

@@ -91,12 +91,42 @@
     },
 
     addChildrenToTarget: function (component, target, elements) {
+        var childrenProperty = sljs.findPropertyInTarget(target, "Children");
+        var contentProperty = sljs.findPropertyInTarget(target, "Content");
+        var children = null;
+        if (childrenProperty) {
+            children = new System.Windows.Controls.UIElementCollection();
+            target.SetValue(childrenProperty, children);
+        }
+
         for (var i = 0; i < elements.length; i++) {
             var element = elements[i];
             var child = sljs.createChild(component, element);
             if (child == null) { continue; }
-            target.AddChild(child);
+
+            sljs.mapPropertiesIntoTarget(component, child, element);
+            if (childrenProperty) {
+                children.Add(child);
+            }
+            else if (contentProperty) {
+                target.SetValue(contentProperty, child);
+            }
+            else {
+                console.log("Unable to find somewhere to place my control");
+            }
         }
+    },
+
+
+    findPropertyInTarget: function (target, name) {
+        return sljs.findPropertyInType(target.GetType(), name);
+    },
+
+    findPropertyInType: function (type, name) {
+        if (!type) return null;
+        var property = type[name + "Property"];
+        if (property) return property;
+        return sljs.findPropertyInType(type.prototype.__BaseType__, name);
     },
 
     createChild: function (component, data) {
@@ -109,7 +139,6 @@
         } catch (ex) {
             console.log("Failed to create instance of: " + controlType);
         }
-        sljs.mapPropertiesIntoTarget(component, control, data);
         return control;
     },
 

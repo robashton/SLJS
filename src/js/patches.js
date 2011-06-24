@@ -71,16 +71,56 @@ System.Windows.DependencyObject.prototype._ctor$2 = function (nativeTypeIndex, c
     }
 };
 
-System.Windows.DependencyObject.prototype.SetValue = function () { } // Either re-implement or get the original working
-System.Windows.DependencyObject.prototype.AddEventListener = function () { } // Same here, obviously
+// Let's face it, this entire bit of infrastructure will need re-implementing fully from scratch
+// written in native javascript, so let's just hack through for now
+var XcpImports = $asm02.MS.Internal.XcpImports;
+XcpImports.GlobalProperties = [];
 
-
-Dictionary = function () { };
-Dictionary.prototype.set_Item = function (key, value) {
-this[key] = value;
+XcpImports.GetValue = function (obj, property) {
+    if (!XcpImports.GlobalProperties[obj]) XcpImports.GlobalProperties[obj] = {};
+    return XcpImports.GlobalProperties[obj][property.m_nKnownId];
 };
-Dictionary.prototype.get_Item = function (key) {
-return this[key];
-};
-System.Windows.DependencyProperty._registeredCoreProperties = new Dictionary();
 
+XcpImports.SetValue = function (obj, property, value) {
+    if (!XcpImports.GlobalProperties[obj]) XcpImports.GlobalProperties[obj] = {};
+    XcpImports.GlobalProperties[obj][property.m_nKnownId] = value;
+};
+
+System.Windows.DependencyObject.prototype.SetValue = function (property, value) {
+    if (!property) {
+        console.log("Unset property on type: " + this.GetType());
+        return;
+    }
+    XcpImports.SetValue(this, property, value);
+}
+System.Windows.DependencyObject.prototype.GetValue = function (property) {
+    if (!property) {
+        console.log("Unset property on type: " + this.GetType());
+        return null;
+    }
+    return XcpImports.GetValue(this, property);
+}
+ 
+System.Windows.DependencyObject.prototype.AddEventListener = function () { }
+System.Windows.DependencyObject.prototype.RemoveEventListener = function () { } 
+
+DependencyPropertyDictionary = function () { };
+DependencyPropertyDictionary.prototype.set_Item = function (key, value) {
+    this[key] = value;
+};
+DependencyPropertyDictionary.prototype.get_Item = function (key) {
+    return this[key];
+};
+
+System.Windows.DependencyProperty._registeredCoreProperties = new DependencyPropertyDictionary();
+
+/// This is because all the dependency properties are initialized in the static constructors
+JSIL.SealTypes(
+  $asm02, "System.Windows.Controls",
+  "Panel", "Grid", "UserControl", "Button", "Control", "FrameworkElement", "UIElement", "ContentControl");
+JSIL.SealTypes(
+  $asm02, "System.Windows.Controls.Primitives",
+  "ButtonBase");
+JSIL.SealTypes(
+  $asm02, "System.Windows.Input",
+  "KeyboardNavigation");

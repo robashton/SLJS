@@ -10,6 +10,21 @@ namespace SL2JS.Proxies
     [JSProxy("MS.Internal.XcpImports")]
     public class XcpImports
     {
+        [JSRuntimeDispatch]
+        [JSExternal]
+        public static AnyType SetValue(params AnyType[] values)
+        {
+            throw new NotImplementedException();
+        }
+
+        [JSRuntimeDispatch]
+        [JSExternal]
+        public static AnyType GetValue(params AnyType[] values)
+        {
+            throw new NotImplementedException();
+        }
+
+
         [JSReplacement("0")]
         public static AnyType CreateObjectByTypeIndex(params AnyType[] values)
         {

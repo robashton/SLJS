@@ -13,6 +13,18 @@ namespace SL2JS.Proxies
 
         [JSRuntimeDispatch]
         [JSExternal]
+        public abstract AnyType GetValue(params AnyType[] values);
+
+        [JSRuntimeDispatch]
+        [JSExternal]
         public abstract void AddEventListener(params AnyType[] values);
+
+        [JSRuntimeDispatch]
+        [JSExternal]
+        public abstract void RemoveEventListener(params AnyType[] values);
+        
+        [JSRuntimeDispatch]
+        [JSExternal]
+        public abstract AnyType FindProperty(params AnyType[] values);
     }
 }

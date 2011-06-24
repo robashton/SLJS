@@ -7964,40 +7964,6 @@ System.Windows.DependencyObject.prototype.get_ManagedReferenceStore = function (
 	}
 	return dictionary;
 };
-System.Windows.DependencyObject.prototype._ctor$0 = function () {
-	this._ctor$1(1);
-};
-System.Windows.DependencyObject.prototype._ctor$1 = function (nativeTypeIndex) {
-	this._ctor$2(nativeTypeIndex, System.IntPtr.Zero);
-};
-System.Windows.DependencyObject.prototype._ctor$2 = function (nativeTypeIndex, constructDO) {
-	System.Object.prototype._ctor.call(this);
-	$asm02.MS.Internal.XcpImports.CheckThread();
-	this.m_nativePtr = new $asm02.MS.Internal.NativeObjectSafeHandle();
-	var intPtr = System.IntPtr.Zero;
-	if (System.IntPtr.op_Inequality(System.Windows.DependencyObject.StaticNativePointer, System.IntPtr.Zero)) {
-		intPtr = System.Windows.DependencyObject.StaticNativePointer;
-		System.Windows.DependencyObject.StaticNativePointer = System.IntPtr.Zero;
-		$asm02.MS.Internal.XcpImports.AddRefNativeObject$1(intPtr);
-	} else if (System.IntPtr.op_Inequality(constructDO, System.IntPtr.Zero)) {
-		intPtr = $asm02.MS.Internal.XcpImports.CreateObjectByTypeIndexWithDO(nativeTypeIndex, constructDO);
-	} else {
-		intPtr = (0);
-	}
-	var flag = false;
-	if ($asm02.MS.Internal.XcpImports.DependencyObject_ShouldCreatePeerWithStrongRefNative(intPtr)) {
-		flag = true;
-	}
-	this.m_nativePtr.NativeObject = intPtr;
-	;
-	this._coreTypeEventHelper = new $asm02.MS.Internal.CoreTypeEventHelper();
-	var type = (JSIL.GetType(this));
-	var isCustomType = 0;
-	if (!$asm02.MS.Internal.TypeProxy.IsCoreType(type)) {
-		isCustomType = 1;
-	}
-	;
-};
 System.Windows.DependencyObject.prototype.CheckAccess = function () {
 	return this.Dispatcher.CheckAccess();
 };
@@ -8721,11 +8687,6 @@ System.Windows.DependencyObject.RemovePeerReferenceToItem = function (nativeOwne
 	}
 	return 0;
 };
-JSIL.OverloadedMethod(System.Windows.DependencyObject.prototype, "_ctor", [
-		["_ctor$0", []], 
-		["_ctor$1", [System.UInt32]], 
-		["_ctor$2", [System.UInt32, System.IntPtr]]
-	]);
 JSIL.OverloadedMethod(System.Windows.DependencyObject.prototype, "SetValueInternal", [
 		["SetValueInternal$0", [System.Windows.DependencyProperty, System.Object]], 
 		["SetValueInternal$1", [System.Windows.DependencyProperty, System.Object, System.Boolean]]
@@ -8764,11 +8725,11 @@ System.Windows.DependencyObject._cctor = function () {
 };
 
 $asm02.System.Windows.DependencyObject.ManagedReferencesToken.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$0.call(this);
+	System.Windows.DependencyObject.prototype._ctor.call(this);
 };
 
 System.Windows.UIElement.prototype._ctor = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
+	System.Windows.DependencyObject.prototype._ctor.call(this, nKnownTypeIndex);
 };
 System.Windows.UIElement.prototype.add_MouseMove = function (value) {
 	System.Windows.DependencyObject.prototype.AddEventListener.call(this, System.Windows.DependencyProperty.RegisterCoreProperty(23010, null), value);
@@ -9762,7 +9723,7 @@ System.Windows.FrameworkElement.prototype.FindNameInPage = function (name, calle
 	var obj = null;
 	var frameworkElement = this;
 __loop0__: 
-	for (obj = (this.findElement(name)); (obj === null) && frameworkElement; ) {
+	for (obj = frameworkElement.FindName(name); (obj === null) && frameworkElement; ) {
 		var frameworkElement2 = JSIL.TryCast(frameworkElement.TemplatedParent, System.Windows.FrameworkElement);
 		if (frameworkElement2 === null) {
 			var frameworkElement3 = JSIL.TryCast($asm02.MS.Internal.XcpImports.GetInheritanceParent(frameworkElement), System.Windows.FrameworkElement);
@@ -9776,7 +9737,7 @@ __loop0__:
 			frameworkElement = frameworkElement2;
 		}
 		if (frameworkElement !== null) {
-			obj = (this.findElement(name));
+			obj = frameworkElement.FindName(name);
 		}
 	}
 	return obj;
@@ -9922,7 +9883,7 @@ System.Windows.FrameworkElement._cctor = function () {
 	System.Windows.FrameworkElement.FlowDirectionProperty = System.Windows.DependencyProperty.RegisterCoreProperty(13134, System.Windows.FlowDirection);
 	System.Windows.FrameworkElement.NameProperty = System.Windows.DependencyProperty.RegisterCoreProperty(17000, System.String);
 	System.Windows.FrameworkElement.TagProperty = System.Windows.DependencyProperty.RegisterCoreProperty(13113, System.Object);
-	System.Windows.FrameworkElement.TagInternalProperty = System.Windows.DependencyProperty.Register$1(
+	System.Windows.FrameworkElement.TagInternalProperty = System.Windows.DependencyProperty.Register(
 		false, 
 		"TagInternal", 
 		System.Object, 
@@ -9932,7 +9893,7 @@ System.Windows.FrameworkElement._cctor = function () {
 	);
 	System.Windows.FrameworkElement.LoadedEvent = new System.Windows.RoutedEvent("FrameworkElement.Loaded");
 	System.Windows.FrameworkElement.CursorProperty = System.Windows.DependencyProperty.RegisterCoreProperty(13111, System.Windows.Input.Cursor);
-	System.Windows.FrameworkElement.InstanceDelegateStoreProperty = System.Windows.DependencyProperty.Register$0("InstanceDelegateStore", System.Collections.Generic.List$b1.Of(System.Windows.FrameworkElement.WeakRefSTRUCT), System.Windows.FrameworkElement, null);
+	System.Windows.FrameworkElement.InstanceDelegateStoreProperty = System.Windows.DependencyProperty.Register("InstanceDelegateStore", System.Collections.Generic.List$b1.Of(System.Windows.FrameworkElement.WeakRefSTRUCT), System.Windows.FrameworkElement, null);
 	System.Windows.FrameworkElement.DataContextProperty = System.Windows.DependencyProperty.RegisterCoreProperty(13130, System.Object);
 	System.Windows.FrameworkElement._staticDelegateList = null;
 };
@@ -9947,7 +9908,7 @@ System.Windows.PresentationFrameworkCollection$b1.prototype._ctor$0 = function (
 	this._ctor$1(2);
 };
 System.Windows.PresentationFrameworkCollection$b1.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
+	System.Windows.DependencyObject.prototype._ctor.call(this, nKnownTypeIndex);
 	this._version = 0;
 };
 System.Windows.PresentationFrameworkCollection$b1.prototype.AddImpl = function (value) {
@@ -9958,15 +9919,6 @@ System.Windows.PresentationFrameworkCollection$b1.prototype.AddImpl = function (
 	var result = $asm02.MS.Internal.XcpImports.Collection_Add$b1(this.T)(this, value);
 	this.NotifyCountChanged();
 	return result;
-};
-System.Windows.PresentationFrameworkCollection$b1.prototype.AddDependencyObject = function (value) {
-	if (value !== null) {
-		++this._version;
-		$asm02.MS.Internal.XcpImports.Collection_AddDependencyObject$b1(this.T)(this, value);
-		this.NotifyCountChanged();
-		return;
-	}
-	throw JSIL.New(System.ArgumentNullException, "_ctor$0", []);
 };
 System.Windows.PresentationFrameworkCollection$b1.prototype.AddPoint = function (p) {
 	++this._version;
@@ -9999,9 +9951,6 @@ System.Windows.PresentationFrameworkCollection$b1.prototype.IList_Contains = fun
 };
 System.Windows.PresentationFrameworkCollection$b1.prototype.ContainsImpl = function (value) {
 	return (this.IndexOfImpl(value) !== -1);
-};
-System.Windows.PresentationFrameworkCollection$b1.prototype.ContainsDependencyObject = function (value) {
-	return (this.IndexOfDependencyObject(value) !== -1);
 };
 System.Windows.PresentationFrameworkCollection$b1.prototype.ContainsDouble = function (value) {
 	return (this.IndexOfDouble(value) !== -1);
@@ -10098,16 +10047,6 @@ System.Windows.PresentationFrameworkCollection$b1.prototype.Remove = function (v
 };
 System.Windows.PresentationFrameworkCollection$b1.prototype.IList_Remove = function (value) {
 	this.RemoveImpl(value);
-};
-System.Windows.PresentationFrameworkCollection$b1.prototype.RemoveDependencyObject = function (value) {
-	if (value !== null) {
-		++this._version;
-		if ($asm02.MS.Internal.XcpImports.Collection_RemoveDependencyObject$b1(this.T)(this, value)) {
-			this.NotifyCountChanged();
-			return true;
-		}
-	}
-	return false;
 };
 System.Windows.PresentationFrameworkCollection$b1.prototype.RemoveDouble = function (value) {
 	++this._version;
@@ -10397,10 +10336,10 @@ System.Windows.TriggerCollection.prototype.SetItemImplSkipMethodPack = function 
 };
 
 System.Windows.TriggerBase.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 270);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 270);
 };
 System.Windows.TriggerBase.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
+	System.Windows.DependencyObject.prototype._ctor.call(this, nKnownTypeIndex);
 };
 JSIL.OverloadedMethod(System.Windows.TriggerBase.prototype, "_ctor", [
 		["_ctor$0", []], 
@@ -10456,10 +10395,10 @@ System.Windows.TriggerActionCollection.prototype.SetItemImplSkipMethodPack = fun
 };
 
 System.Windows.TriggerAction.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 271);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 271);
 };
 System.Windows.TriggerAction.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
+	System.Windows.DependencyObject.prototype._ctor.call(this, nKnownTypeIndex);
 };
 JSIL.OverloadedMethod(System.Windows.TriggerAction.prototype, "_ctor", [
 		["_ctor$0", []], 
@@ -10611,7 +10550,7 @@ System.Windows.MediaFailedRoutedEventArgs._cctor = function () {
 };
 
 System.Windows.AssemblyPart.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 162);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 162);
 };
 System.Windows.AssemblyPart.prototype.get_Source = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.AssemblyPart.SourceProperty), System.String);
@@ -10696,10 +10635,10 @@ JSIL.MakeProperty(System.Windows.StartupEventArgs.prototype, "InitParams",
 System.Windows.StartupEventArgs.prototype.m_objectPtr = null;
 
 System.Windows.FrameworkTemplate.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 187);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 187);
 };
 System.Windows.FrameworkTemplate.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
+	System.Windows.DependencyObject.prototype._ctor.call(this, nKnownTypeIndex);
 };
 System.Windows.FrameworkTemplate.prototype.get_Template = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.FrameworkTemplate.TemplateProperty), $asm02.MS.Internal.TemplateContent);
@@ -10761,7 +10700,7 @@ System.Windows.SizeChangedEventArgs._cctor = function () {
 };
 
 System.Windows.Style.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 225);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 225);
 };
 System.Windows.Style.prototype.get_IsSealed = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Style.IsSealedProperty), System.Boolean);
@@ -10816,7 +10755,7 @@ System.Windows.Style._cctor = function () {
 };
 
 System.Windows.SetterBase.prototype._ctor = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
+	System.Windows.DependencyObject.prototype._ctor.call(this, nKnownTypeIndex);
 };
 System.Windows.SetterBase.prototype.get_IsSealed = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.SetterBase.IsSealedProperty), System.Boolean);
@@ -10909,7 +10848,7 @@ System.Windows.SetterBaseCollection._cctor = function () {
 };
 
 System.Windows.VisualState.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 258);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 258);
 };
 System.Windows.VisualState.prototype.get_Storyboard = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.VisualState.StoryboardProperty), System.Windows.Media.Animation.Storyboard);
@@ -10940,7 +10879,7 @@ System.Windows.VisualState._cctor = function () {
 };
 
 System.Windows.OutOfBrowserSettings.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 316);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 316);
 };
 System.Windows.OutOfBrowserSettings.prototype.get_ShortName = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.OutOfBrowserSettings.ShortNameProperty), System.String);
@@ -11020,7 +10959,7 @@ System.Windows.IconCollection.prototype.SetItemImplSkipMethodPack = function (in
 };
 
 System.Windows.Icon.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 318);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 318);
 };
 System.Windows.Icon.prototype.get_Size = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Icon.SizeProperty), System.Windows.Size);
@@ -11040,7 +10979,7 @@ System.Windows.Icon._cctor = function () {
 };
 
 System.Windows.WindowSettings.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 321);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 321);
 };
 System.Windows.WindowSettings.prototype.get_Height = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.WindowSettings.HeightProperty), System.Double);
@@ -11095,7 +11034,7 @@ System.Windows.WindowSettings._cctor = function () {
 };
 
 System.Windows.SecuritySettings.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 351);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 351);
 };
 System.Windows.SecuritySettings.prototype.get_ElevatedPermissions = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.SecuritySettings.ElevatedPermissionsProperty), System.Windows.ElevatedPermissions);
@@ -11108,7 +11047,7 @@ System.Windows.SecuritySettings._cctor = function () {
 };
 
 System.Windows.VisualStateGroup.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 322);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 322);
 };
 System.Windows.VisualStateGroup.prototype.get_Name = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.FrameworkElement.NameProperty), System.String);
@@ -11198,10 +11137,10 @@ System.Windows.VisualStateGroup._cctor = function () {
 };
 
 System.Windows.VisualTransition.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 323);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 323);
 };
 System.Windows.VisualTransition.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
+	System.Windows.DependencyObject.prototype._ctor.call(this, nKnownTypeIndex);
 };
 System.Windows.VisualTransition.prototype.get_GeneratedDuration = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.VisualTransition.GeneratedDurationProperty), System.Windows.Duration);
@@ -11384,7 +11323,7 @@ System.Windows.CheckAndDownloadUpdateCompletedEventArgs._cctor = function () {
 };
 
 System.Windows.NotificationWindow.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 378);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 378);
 };
 System.Windows.NotificationWindow.prototype.Show = function (durationInMilliseconds) {
 	if (!((durationInMilliseconds >= 0) && (durationInMilliseconds <= 30000))) {
@@ -11521,7 +11460,7 @@ System.Windows.NotificationWindow._cctor = function () {
 };
 
 System.Windows.Window.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 353);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 353);
 };
 System.Windows.Window.prototype.Activate = function () {
 	if (System.Windows.Application.Current.IsRunningOutOfBrowser) {
@@ -11786,10 +11725,10 @@ System.Windows.Window._cctor = function () {
 };
 
 System.Windows.VisualStateManager.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 385);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 385);
 };
 System.Windows.VisualStateManager.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
+	System.Windows.DependencyObject.prototype._ctor.call(this, nKnownTypeIndex);
 };
 System.Windows.VisualStateManager.GoToState = function (control, stateName, useTransitions) {
 	var flag = new JSIL.Variable(false), group = new JSIL.Variable(null), visualState = new JSIL.Variable(null), group2 = new JSIL.Variable(null), state = new JSIL.Variable(null);
@@ -11997,7 +11936,7 @@ System.Windows.Ink.StrokeCollection.prototype.HitTest = function (stylusPointCol
 };
 
 System.Windows.Ink.DrawingAttributes.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 141);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 141);
 };
 System.Windows.Ink.DrawingAttributes.prototype.get_Color = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Ink.DrawingAttributes.ColorProperty), System.Windows.Media.Color);
@@ -12093,10 +12032,10 @@ System.Windows.Media.PointCollection.prototype.SetItemImplSkipMethodPack = funct
 };
 
 System.Windows.Media.GeneralTransform.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 176);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 176);
 };
 System.Windows.Media.GeneralTransform.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
+	System.Windows.DependencyObject.prototype._ctor.call(this, nKnownTypeIndex);
 };
 System.Windows.Media.GeneralTransform.prototype.Transform = function (point) {
 	var result = new JSIL.Variable(new System.Windows.Point());
@@ -12148,14 +12087,14 @@ JSIL.MakeProperty(System.Windows.Media.Transform.prototype, "Inverse",
 	System.Windows.Media.Transform.prototype.get_Inverse, null);
 
 System.Windows.Media.PathSegment.prototype._ctor = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
+	System.Windows.DependencyObject.prototype._ctor.call(this, nKnownTypeIndex);
 };
 
 System.Windows.Media.Brush.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 33);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 33);
 };
 System.Windows.Media.Brush.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
+	System.Windows.DependencyObject.prototype._ctor.call(this, nKnownTypeIndex);
 };
 System.Windows.Media.Brush.prototype.get_Opacity = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Brush.OpacityProperty), System.Double);
@@ -12238,7 +12177,7 @@ System.Windows.Media.TileBrush._cctor = function () {
 };
 
 System.Windows.Media.Geometry.prototype._ctor = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
+	System.Windows.DependencyObject.prototype._ctor.call(this, nKnownTypeIndex);
 };
 System.Windows.Media.Geometry.prototype.get_Transform = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Geometry.TransformProperty), System.Windows.Media.Transform);
@@ -12271,7 +12210,7 @@ System.Windows.Media.Geometry._cctor = function () {
 };
 
 System.Windows.Media.ImageSource.prototype._ctor = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
+	System.Windows.DependencyObject.prototype._ctor.call(this, nKnownTypeIndex);
 };
 
 System.Windows.Media.RotateTransform.prototype._ctor = function () {
@@ -12796,7 +12735,7 @@ System.Windows.Media.PathSegmentCollection.prototype.SetItemImplSkipMethodPack =
 };
 
 System.Windows.Media.PathFigure.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 29);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 29);
 };
 System.Windows.Media.PathFigure.prototype.get_Segments = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.PathFigure.SegmentsProperty), System.Windows.Media.PathSegmentCollection);
@@ -13072,7 +13011,7 @@ System.Windows.Media.SolidColorBrush._cctor = function () {
 };
 
 System.Windows.Media.GradientStop.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 35);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 35);
 };
 System.Windows.Media.GradientStop.prototype.get_Color = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.GradientStop.ColorProperty), System.Windows.Media.Color);
@@ -13371,7 +13310,7 @@ System.Windows.Media.TimelineMarkerRoutedEventArgs._cctor = function () {
 };
 
 System.Windows.Media.TimelineMarker.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 147);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 147);
 };
 System.Windows.Media.TimelineMarker.prototype.get_Time = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.TimelineMarker.TimeProperty), System.TimeSpan);
@@ -13489,10 +13428,10 @@ System.Windows.Media.RenderingEventArgs._cctor = function () {
 };
 
 System.Windows.Media.Projection.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 303);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 303);
 };
 System.Windows.Media.Projection.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
+	System.Windows.DependencyObject.prototype._ctor.call(this, nKnownTypeIndex);
 };
 JSIL.OverloadedMethod(System.Windows.Media.Projection.prototype, "_ctor", [
 		["_ctor$0", []], 
@@ -13649,10 +13588,10 @@ System.Windows.Media.Matrix3DProjection._cctor = function () {
 };
 
 System.Windows.Media.CacheMode.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 273);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 273);
 };
 System.Windows.Media.CacheMode.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
+	System.Windows.DependencyObject.prototype._ctor.call(this, nKnownTypeIndex);
 };
 JSIL.OverloadedMethod(System.Windows.Media.CacheMode.prototype, "_ctor", [
 		["_ctor$0", []], 
@@ -13726,10 +13665,10 @@ System.Windows.Media.AudioCaptureDeviceCollection.prototype.SetItemImplSkipMetho
 };
 
 System.Windows.Media.CaptureDevice.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 358);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 358);
 };
 System.Windows.Media.CaptureDevice.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
+	System.Windows.DependencyObject.prototype._ctor.call(this, nKnownTypeIndex);
 };
 System.Windows.Media.CaptureDevice.prototype.get_FriendlyName = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.CaptureDevice.FriendlyNameProperty), System.String);
@@ -13829,7 +13768,7 @@ System.Windows.Media.CaptureSource.prototype.get_State = function () {
 };
 System.Windows.Media.CaptureSource.prototype._ctor = function () {
 	this.m_CaptureLock = new System.Object();
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 361);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 361);
 	this.VideoCaptureDevice = System.Windows.Media.CaptureDeviceConfiguration.GetDefaultVideoCaptureDevice();
 	this.AudioCaptureDevice = System.Windows.Media.CaptureDeviceConfiguration.GetDefaultAudioCaptureDevice();
 };
@@ -13897,10 +13836,10 @@ System.Windows.Media.CaptureSource._cctor = function () {
 };
 
 System.Windows.Media.Animation.Timeline.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 47);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 47);
 };
 System.Windows.Media.Animation.Timeline.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
+	System.Windows.DependencyObject.prototype._ctor.call(this, nKnownTypeIndex);
 };
 System.Windows.Media.Animation.Timeline.prototype.get_AutoReverse = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Animation.Timeline.AutoReverseProperty), System.Boolean);
@@ -14069,10 +14008,10 @@ System.Windows.Media.Animation.Timeline._cctor = function () {
 };
 
 System.Windows.Media.Animation.EasingFunctionBase.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 284);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 284);
 };
 System.Windows.Media.Animation.EasingFunctionBase.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
+	System.Windows.DependencyObject.prototype._ctor.call(this, nKnownTypeIndex);
 };
 System.Windows.Media.Animation.EasingFunctionBase.prototype.get_EasingMode = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Animation.EasingFunctionBase.EasingModeProperty), System.Windows.Media.Animation.EasingMode);
@@ -14629,7 +14568,7 @@ System.Windows.Media.Animation.PointAnimation._cctor = function () {
 };
 
 System.Windows.Media.Animation.KeySpline.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 70);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 70);
 };
 System.Windows.Media.Animation.KeySpline.prototype.get_ControlPoint1 = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Animation.KeySpline.ControlPoint1Property), System.Windows.Point);
@@ -14768,10 +14707,10 @@ System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames._cctor = function (
 };
 
 System.Windows.Media.Animation.DoubleKeyFrame.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 73);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 73);
 };
 System.Windows.Media.Animation.DoubleKeyFrame.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
+	System.Windows.DependencyObject.prototype._ctor.call(this, nKnownTypeIndex);
 };
 System.Windows.Media.Animation.DoubleKeyFrame.prototype.get_Value = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Animation.DoubleKeyFrame.ValueProperty), System.Double);
@@ -14857,10 +14796,10 @@ System.Windows.Media.Animation.ColorAnimationUsingKeyFrames._cctor = function ()
 };
 
 System.Windows.Media.Animation.ColorKeyFrame.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 78);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 78);
 };
 System.Windows.Media.Animation.ColorKeyFrame.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
+	System.Windows.DependencyObject.prototype._ctor.call(this, nKnownTypeIndex);
 };
 System.Windows.Media.Animation.ColorKeyFrame.prototype.get_Value = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Animation.ColorKeyFrame.ValueProperty), System.Windows.Media.Color);
@@ -14946,10 +14885,10 @@ System.Windows.Media.Animation.PointAnimationUsingKeyFrames._cctor = function ()
 };
 
 System.Windows.Media.Animation.PointKeyFrame.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 83);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 83);
 };
 System.Windows.Media.Animation.PointKeyFrame.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
+	System.Windows.DependencyObject.prototype._ctor.call(this, nKnownTypeIndex);
 };
 System.Windows.Media.Animation.PointKeyFrame.prototype.get_Value = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Animation.PointKeyFrame.ValueProperty), System.Windows.Point);
@@ -15035,10 +14974,10 @@ System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames._cctor = function (
 };
 
 System.Windows.Media.Animation.ObjectKeyFrame.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 221);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 221);
 };
 System.Windows.Media.Animation.ObjectKeyFrame.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
+	System.Windows.DependencyObject.prototype._ctor.call(this, nKnownTypeIndex);
 };
 System.Windows.Media.Animation.ObjectKeyFrame.prototype.get_KeyTime = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Animation.ObjectKeyFrame.KeyTimeProperty), System.Windows.Media.Animation.KeyTime);
@@ -15368,7 +15307,7 @@ System.Windows.Input.TouchPointCollection.prototype.SetItemImplSkipMethodPack = 
 };
 
 System.Windows.Input.TouchDevice.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 332);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 332);
 };
 System.Windows.Input.TouchDevice.prototype.get_Id = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Input.TouchDevice.IdProperty), System.Int32);
@@ -15388,7 +15327,7 @@ System.Windows.Input.TouchDevice._cctor = function () {
 };
 
 System.Windows.Input.TouchPoint.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 333);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 333);
 };
 System.Windows.Input.TouchPoint.prototype.get_TouchDevice = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Input.TouchPoint.TouchDeviceProperty), System.Windows.Input.TouchDevice);
@@ -15706,10 +15645,10 @@ System.Windows.Shapes.Rectangle._cctor = function () {
 };
 
 System.Windows.Documents.TextElement.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 341);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 341);
 };
 System.Windows.Documents.TextElement.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
+	System.Windows.DependencyObject.prototype._ctor.call(this, nKnownTypeIndex);
 };
 System.Windows.Documents.TextElement.prototype.get_FontSize = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Documents.TextElement.FontSizeProperty), System.Double);
@@ -15951,20 +15890,6 @@ System.Windows.Documents.InlineCollection.prototype.InsertDependencyObject = fun
 		}
 	}
 };
-System.Windows.Documents.InlineCollection.prototype.AddDependencyObject = function (value) {
-	try {
-		System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Documents.Inline).prototype.AddDependencyObject.call(this, value);
-	} catch ($exception) {
-		if (JSIL.CheckType($exception, System.ArgumentException)) {
-			if (value !== null) {
-				this.TryThrowWithHostSpecificMessage(value);
-			}
-			throw $exception;
-		} else {
-			throw $exception;
-		}
-	}
-};
 System.Windows.Documents.InlineCollection.prototype.AddImpl = function (value) {
 	try {
 		var result = System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Documents.Inline).prototype.AddImpl.call(this, value);
@@ -16035,12 +15960,6 @@ System.Windows.Documents.BlockCollection.prototype.InsertDependencyObject = func
 		this.ThrowSectionIsNotAllowedException(value);
 	}
 	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Documents.Block).prototype.InsertDependencyObject.call(this, index, value);
-};
-System.Windows.Documents.BlockCollection.prototype.AddDependencyObject = function (value) {
-	if (!((value === null) || !JSIL.GetType(value).IsAssignableFrom(System.Windows.Documents.Section))) {
-		this.ThrowSectionIsNotAllowedException(value);
-	}
-	System.Windows.PresentationFrameworkCollection$b1.Of(System.Windows.Documents.Block).prototype.AddDependencyObject.call(this, value);
 };
 System.Windows.Documents.BlockCollection.prototype.AddImpl = function (value) {
 	if (!((value === null) || !JSIL.GetType(value).IsAssignableFrom(System.Windows.Documents.Section))) {
@@ -16370,8 +16289,8 @@ System.Windows.Documents.Hyperlink._cctor = function () {
 	System.Windows.Documents.Hyperlink.NavigateUriProperty = System.Windows.DependencyProperty.RegisterCoreProperty(14211, System.Uri);
 	System.Windows.Documents.Hyperlink.MouseOverForegroundProperty = System.Windows.DependencyProperty.RegisterCoreProperty(14212, System.Windows.Media.Brush);
 	System.Windows.Documents.Hyperlink.MouseOverTextDecorationsProperty = System.Windows.DependencyProperty.RegisterCoreProperty(14213, System.Windows.TextDecorationCollection);
-	System.Windows.Documents.Hyperlink.CommandProperty = System.Windows.DependencyProperty.Register$0("Command", System.Windows.Input.ICommand, System.Windows.Documents.Hyperlink, null);
-	System.Windows.Documents.Hyperlink.CommandParameterProperty = System.Windows.DependencyProperty.Register$0("CommandParameter", System.Object, System.Windows.Documents.Hyperlink, null);
+	System.Windows.Documents.Hyperlink.CommandProperty = System.Windows.DependencyProperty.Register("Command", System.Windows.Input.ICommand, System.Windows.Documents.Hyperlink, null);
+	System.Windows.Documents.Hyperlink.CommandParameterProperty = System.Windows.DependencyProperty.Register("CommandParameter", System.Object, System.Windows.Documents.Hyperlink, null);
 };
 
 System.Windows.Documents.LineBreak.prototype._ctor = function () {
@@ -17049,7 +16968,7 @@ System.Windows.Controls.MediaElement.prototype.MediaSourceReportOpenMediaComplet
 };
 System.Windows.Controls.MediaElement.prototype.MediaSourceReportSeekCompleted = function (timeSeekedTo) {
 	this.CheckMediaStreamSource();
-	if ($asm02.MS.Internal.XcpImports.DependencyObject_IsPointerValid(this)) {
+	if ((true) !== null) {
 		$asm02.MS.Internal.XcpImports.MediaStreamSource_OnSeekCompleted(this, timeSeekedTo);
 	}
 };
@@ -17077,7 +16996,7 @@ System.Windows.Controls.MediaElement.prototype.MediaSourceReportGetSampleComplet
 			}
 		}
 	}
-	if (!(!$asm02.MS.Internal.XcpImports.DependencyObject_IsPointerValid(this) || ((streamWrapper !== null) && 
+	if (!(((true) === null) || ((streamWrapper !== null) && 
 				!streamWrapper.IsNativePointerValid()))) {
 		$asm02.MS.Internal.XcpImports.MediaStreamSource_OnGetSampleCompleted(
 			this, 
@@ -17096,19 +17015,19 @@ System.Windows.Controls.MediaElement.prototype.MediaSourceReportGetSampleComplet
 };
 System.Windows.Controls.MediaElement.prototype.MediaSourceReportGetSampleProgress = function (bufferingProgress) {
 	this.CheckMediaStreamSource();
-	if ($asm02.MS.Internal.XcpImports.DependencyObject_IsPointerValid(this)) {
+	if ((true) !== null) {
 		$asm02.MS.Internal.XcpImports.MediaStreamSource_OnGetSampleProgress(this, bufferingProgress);
 	}
 };
 System.Windows.Controls.MediaElement.prototype.MediaSourceReportGetDiagnosticCompleted = function (diagnosticKind, diagnosticValue) {
 	this.CheckMediaStreamSource();
-	if ($asm02.MS.Internal.XcpImports.DependencyObject_IsPointerValid(this)) {
+	if ((true) !== null) {
 		$asm02.MS.Internal.XcpImports.MediaStreamSource_OnGetDiagonosticCompleted(this, diagnosticKind, diagnosticValue);
 	}
 };
 System.Windows.Controls.MediaElement.prototype.MediaSourceReportSwitchMediaStreamCompleted = function (mediaStreamDescription) {
 	this.CheckMediaStreamSource();
-	if ($asm02.MS.Internal.XcpImports.DependencyObject_IsPointerValid(this)) {
+	if ((true) !== null) {
 		$asm02.MS.Internal.XcpImports.MediaStreamSource_OnSwitchMediaStreamCompleted(this, this.GetStreamIndexFromDescription(mediaStreamDescription));
 	}
 };
@@ -17118,7 +17037,7 @@ System.Windows.Controls.MediaElement.prototype.MediaSourceErrorOccurred = functi
 		this._previousMediaStreamSource = null;
 		return;
 	}
-	if ($asm02.MS.Internal.XcpImports.DependencyObject_IsPointerValid(this)) {
+	if ((true) !== null) {
 		$asm02.MS.Internal.XcpImports.MediaStreamSource_OnMediaStreamError(this, errorMessage);
 	}
 };
@@ -17181,7 +17100,7 @@ System.Windows.Controls.MediaElement.prototype.EnsureLicenseAcquirer = function 
 	}
 };
 System.Windows.Controls.MediaElement.prototype.AcquireLicenseComplete = function (sender, e) {
-	if ($asm02.MS.Internal.XcpImports.DependencyObject_IsPointerValid(this)) {
+	if ((true) !== null) {
 		$asm02.MS.Internal.XcpImports.MediaElement_AcquireLicenseComplete$1(this, e.Enumerator, e.HrResult);
 	}
 };
@@ -17622,7 +17541,7 @@ System.Windows.Controls.MultiScaleImage._cctor = function () {
 };
 
 System.Windows.Controls.MultiScaleSubImage.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 227);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 227);
 };
 System.Windows.Controls.MultiScaleSubImage.prototype.get_ViewportOrigin = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Controls.MultiScaleSubImage.ViewportOriginProperty), System.Windows.Point);
@@ -18830,10 +18749,10 @@ System.Windows.Controls.TextBox._cctor = function () {
 	System.Windows.Controls.TextBox.TextAlignmentProperty = System.Windows.DependencyProperty.RegisterCoreProperty(19409, System.Windows.TextAlignment);
 	System.Windows.Controls.TextBox.TextWrappingProperty = System.Windows.DependencyProperty.RegisterCoreProperty(19401, System.Windows.TextWrapping);
 	System.Windows.Controls.TextBox.CaretBrushProperty = System.Windows.DependencyProperty.RegisterCoreProperty(19411, System.Windows.Media.Brush);
-	System.Windows.Controls.TextBox.InputScopeProperty = System.Windows.DependencyProperty.Register$0("InputScope", System.Windows.Input.InputScope, System.Windows.Controls.TextBox, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [function (o, a) {
+	System.Windows.Controls.TextBox.InputScopeProperty = System.Windows.DependencyProperty.Register("InputScope", System.Windows.Input.InputScope, System.Windows.Controls.TextBox, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [function (o, a) {
 				$asm02.MS.Internal.StubHelper.ThrowIfNotInDesignMode();
 			}]));
-	System.Windows.Controls.TextBox.WatermarkProperty = System.Windows.DependencyProperty.Register$0("Watermark", System.Object, System.Windows.Controls.TextBox, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [function (o, a) {
+	System.Windows.Controls.TextBox.WatermarkProperty = System.Windows.DependencyProperty.Register("Watermark", System.Object, System.Windows.Controls.TextBox, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [function (o, a) {
 				$asm02.MS.Internal.StubHelper.ThrowIfNotInDesignMode();
 			}]));
 };
@@ -19501,7 +19420,7 @@ System.Windows.Controls.PasswordBox._cctor = function () {
 };
 
 System.Windows.Controls.RowDefinition.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 180);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 180);
 };
 System.Windows.Controls.RowDefinition.prototype.get_Height = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Controls.RowDefinition.HeightProperty), System.Windows.GridLength);
@@ -19544,7 +19463,7 @@ System.Windows.Controls.RowDefinition._cctor = function () {
 };
 
 System.Windows.Controls.ColumnDefinition.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 181);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 181);
 };
 System.Windows.Controls.ColumnDefinition.prototype.get_Width = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Controls.ColumnDefinition.WidthProperty), System.Windows.GridLength);
@@ -20195,7 +20114,7 @@ System.Windows.Controls.ItemsControl._cctor = function () {
 	System.Windows.Controls.ItemsControl.ItemsPanelProperty = System.Windows.DependencyProperty.RegisterCoreProperty(19435, System.Windows.Controls.ItemsPanelTemplate);
 	System.Windows.Controls.ItemsControl.DisplayMemberPathProperty = System.Windows.DependencyProperty.RegisterCoreProperty(19433, System.String);
 	System.Windows.Controls.ItemsControl.IsItemsHostInvalidProperty = System.Windows.DependencyProperty.RegisterCoreProperty(19436, System.Boolean);
-	System.Windows.Controls.ItemsControl.ItemsSourceProperty = System.Windows.DependencyProperty.Register$0("ItemsSource", System.Collections.IEnumerable, System.Windows.Controls.ItemsControl, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.ItemsControl.ItemsSourceChanged)]));
+	System.Windows.Controls.ItemsControl.ItemsSourceProperty = System.Windows.DependencyProperty.Register("ItemsSource", System.Collections.IEnumerable, System.Windows.Controls.ItemsControl, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.ItemsControl.ItemsSourceChanged)]));
 	System.Windows.Controls.ItemsControl.ItemsHostProperty = System.Windows.DependencyProperty.RegisterCoreProperty(19434, System.Windows.Controls.Panel);
 	System.Windows.Controls.ItemsControl.ItemOfGeneratedContainerProperty = System.Windows.DependencyProperty.RegisterAttached("ItemOfGeneratedContainer", $asm02.System.Windows.Controls.ItemsControl.AccessibilityItem, System.Windows.Controls.ItemsControl, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [null]));
 };
@@ -20609,7 +20528,7 @@ JSIL.MakeProperty($asm02.MS.Internal.InternalTransform.prototype, "Inverse",
 	$asm02.MS.Internal.InternalTransform.prototype.get_Inverse, null);
 
 $asm02.MS.Internal.TextPointerWrapper.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 407);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 407);
 };
 
 $asm02.MS.Internal.ErrorEventArgs.prototype._ctor = function () {
@@ -20633,7 +20552,7 @@ JSIL.MakeProperty($asm02.MS.Internal.ErrorEventArgs.prototype, "IManagedPeerBase
 $asm02.MS.Internal.ErrorEventArgs.prototype.m_objectPtr = null;
 
 $asm02.MS.Internal.Downloader.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 131);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 131);
 };
 $asm02.MS.Internal.Downloader.prototype.add_DownloadProgressChanged = function (value) {
 	System.Windows.DependencyObject.prototype.AddEventListener.call(this, System.Windows.DependencyProperty.RegisterCoreProperty(23300, null), value);
@@ -20742,7 +20661,7 @@ $asm02.MS.Internal.Downloader._cctor = function () {
 };
 
 $asm02.MS.Internal.StylusInfo.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 140);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 140);
 };
 $asm02.MS.Internal.StylusInfo.prototype.get_DeviceType = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, $asm02.MS.Internal.StylusInfo.DeviceTypeProperty), System.Windows.Input.TabletDeviceType);
@@ -20793,7 +20712,7 @@ $asm02.MS.Internal.MultiScaleSubImageCollection.prototype.SetItemImplSkipMethodP
 };
 
 $asm02.MS.Internal.MediaAttribute.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 152);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 152);
 };
 $asm02.MS.Internal.MediaAttribute.prototype.get_Value = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, $asm02.MS.Internal.MediaAttribute.ValueProperty), System.String);
@@ -20987,7 +20906,7 @@ $asm02.MS.Internal.DisplayMemberTemplate._cctor = function () {
 };
 
 $asm02.MS.Internal.TypeProxy.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 211);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 211);
 };
 $asm02.MS.Internal.TypeProxy.prototype.get_ManagedTypeId = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, $asm02.MS.Internal.TypeProxy.ManagedTypeIdProperty), System.Int32);
@@ -21276,7 +21195,7 @@ $asm02.MS.Internal.TypeProxy.$l$gc__DisplayClass30.prototype.$locals2e = null;
 $asm02.MS.Internal.TypeProxy.$l$gc__DisplayClass30.prototype.ctor = null;
 
 $asm02.MS.Internal.ManagedObjectReference.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 216);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 216);
 };
 $asm02.MS.Internal.ManagedObjectReference.prototype.get_IsMarkupExtension = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, $asm02.MS.Internal.ManagedObjectReference.IsMarkupExtensionProperty), System.Boolean);
@@ -21323,7 +21242,7 @@ $asm02.MS.Internal.ManagedObjectReference._cctor = function () {
 };
 
 $asm02.MS.Internal.DependencyPropertyProxy.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 229);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 229);
 };
 $asm02.MS.Internal.DependencyPropertyProxy.prototype.get_ManagedPropertyId = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, $asm02.MS.Internal.DependencyPropertyProxy.ManagedPropertyIdProperty), System.Int32);
@@ -21388,7 +21307,7 @@ $asm02.MS.Internal.DependencyPropertyProxy._cctor = function () {
 };
 
 $asm02.MS.Internal.GlyphTypeface.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 275);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 275);
 };
 $asm02.MS.Internal.GlyphTypeface.prototype.get_FontUri = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, $asm02.MS.Internal.GlyphTypeface.FontUriProperty), System.String);
@@ -21540,7 +21459,7 @@ $asm02.MS.Internal.VisualStateCollection.prototype.SetItemImplSkipMethodPack = f
 };
 
 $asm02.MS.Internal.TemplateContent.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 381);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 381);
 };
 
 System.Windows.Media.Imaging.BitmapSource.prototype._ctor$0 = function () {
@@ -21805,7 +21724,7 @@ System.Windows.Controls.Primitives.Popup._cctor = function () {
 };
 
 System.Windows.Media.Effects.PixelShader.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 305);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 305);
 };
 System.Windows.Media.Effects.PixelShader.prototype.get_UriSource = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Media.Effects.PixelShader.UriSourceProperty), System.Uri);
@@ -21821,10 +21740,10 @@ System.Windows.Media.Effects.PixelShader._cctor = function () {
 };
 
 System.Windows.Media.Effects.Effect.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 307);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 307);
 };
 System.Windows.Media.Effects.Effect.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
+	System.Windows.DependencyObject.prototype._ctor.call(this, nKnownTypeIndex);
 };
 System.Windows.Media.Effects.Effect.prototype.get_EffectMapping = function () {
 	return new System.Windows.Media.MatrixTransform();
@@ -22158,7 +22077,7 @@ System.Windows.Media.Effects.ShaderEffect.RegisterPixelShaderSamplerProperty$0 =
 	return System.Windows.Media.Effects.ShaderEffect.RegisterPixelShaderSamplerProperty$1(dpName, ownerType, samplerRegisterIndex, System.Windows.Media.Effects.SamplingMode.Auto);
 };
 System.Windows.Media.Effects.ShaderEffect.RegisterPixelShaderSamplerProperty$1 = function (dpName, ownerType, samplerRegisterIndex, samplingMode) {
-	return System.Windows.DependencyProperty.Register$0(dpName, System.Windows.Media.Brush, ownerType, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [System.Windows.Media.Effects.ShaderEffect.PixelShaderSamplerCallback$1(samplerRegisterIndex, samplingMode)]));
+	return System.Windows.DependencyProperty.Register(dpName, System.Windows.Media.Brush, ownerType, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [System.Windows.Media.Effects.ShaderEffect.PixelShaderSamplerCallback$1(samplerRegisterIndex, samplingMode)]));
 };
 JSIL.OverloadedMethod(System.Windows.Media.Effects.ShaderEffect.prototype, "_ctor", [
 		["_ctor$0", []], 
@@ -22347,10 +22266,10 @@ System.Windows.Media.Effects.DropShadowEffect._cctor = function () {
 };
 
 System.Windows.Printing.PrintDocument.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 365);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 365);
 };
 System.Windows.Printing.PrintDocument.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
+	System.Windows.DependencyObject.prototype._ctor.call(this, nKnownTypeIndex);
 };
 System.Windows.Printing.PrintDocument.prototype.get_PrintedPageCount = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.Printing.PrintDocument.PrintedPageCountProperty), System.Int32);
@@ -28499,10 +28418,10 @@ $asm02.MS.Internal.InternalUtils.AreValuesEqual = function (o1, o2) {
 };
 
 $asm02.MS.Internal.InternalWebRequest.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 197);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 197);
 };
 $asm02.MS.Internal.InternalWebRequest.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
+	System.Windows.DependencyObject.prototype._ctor.call(this, nKnownTypeIndex);
 };
 $asm02.MS.Internal.InternalWebRequest.prototype.add_DownloadProgressChanged = function (value) {
 	System.Windows.DependencyObject.prototype.AddEventListener.call(this, System.Windows.DependencyProperty.RegisterCoreProperty(24600, null), value);
@@ -36097,14 +36016,6 @@ System.Windows.Application.prototype.get_Resources = function () {
 System.Windows.Application.prototype.set_Resources = function (value) {
 	$asm02.MS.Internal.XcpImports.SetValue(this, System.Windows.Application.ResourcesProperty, value);
 };
-System.Windows.Application.prototype.set_RootVisual = function (value) {
-	$asm02.MS.Internal.XcpImports.CheckThread();
-	if (!((value !== null) && $asm02.MS.Internal.XcpImports.DependencyObject_IsPointerValid(value))) {
-		throw JSIL.New(System.InvalidOperationException, "_ctor$1", [$asm02.System.Windows.Resx.GetString$2("Application_InvalidRootVisual")]);
-	}
-	$asm02.MS.Internal.XcpImports.Application_SetVisualRoot(value);
-	this._rootVisual = value;
-};
 System.Windows.Application.prototype.get_RootVisual = function () {
 	return JSIL.TryCast($asm02.MS.Internal.XcpImports.Application_GetVisualRoot(), System.Windows.UIElement);
 };
@@ -37013,7 +36924,7 @@ System.Windows.Controls.UserControl.prototype.set_Content = function (value) {
 };
 System.Windows.Controls.UserControl.prototype.FindNameInPage = function (name, calledFromUserControl) {
 	if (calledFromUserControl) {
-		return this.findElement(name);
+		return System.Windows.FrameworkElement.prototype.FindName.call(this, name);
 	}
 	var frameworkElement = JSIL.TryCast($asm02.MS.Internal.XcpImports.GetInheritanceParent(this), System.Windows.FrameworkElement);
 	if (frameworkElement === null) {
@@ -37054,45 +36965,21 @@ JSIL.MakeProperty(System.Windows.TemplatePartAttribute.prototype, "Type",
 System.Windows.TemplatePartAttribute.prototype._name = null;
 System.Windows.TemplatePartAttribute.prototype._type = null;
 
-System.Windows.DependencyProperty.prototype._ctor = function (propertyType) {
-	System.Object.prototype._ctor.call(this);
-	this._propertyType = propertyType;
-};
 System.Windows.DependencyProperty.prototype.get_Name = function () {
 	throw JSIL.New(System.NotImplementedException, "_ctor$0", []);
 };
-System.Windows.DependencyProperty.Register$0 = function (name, propertyType, ownerType, typeMetadata) {
-	return System.Windows.DependencyProperty.Register$1(
-		false, 
-		name, 
-		propertyType, 
-		ownerType, 
-		typeMetadata, 
-		false
-	);
-};
 System.Windows.DependencyProperty.RegisterReadOnly = function (name, propertyType, ownerType, typeMetadata) {
-	return System.Windows.DependencyProperty.Register$1(
+	return System.Windows.DependencyProperty.Register(
 		false, 
 		name, 
 		propertyType, 
 		ownerType, 
 		typeMetadata, 
 		true
-	);
-};
-System.Windows.DependencyProperty.RegisterAttached = function (name, propertyType, ownerType, defaultMetadata) {
-	return System.Windows.DependencyProperty.Register$1(
-		true, 
-		name, 
-		propertyType, 
-		ownerType, 
-		defaultMetadata, 
-		false
 	);
 };
 System.Windows.DependencyProperty.RegisterAttachedReadOnly = function (name, propertyType, ownerType, defaultMetadata) {
-	return System.Windows.DependencyProperty.Register$1(
+	return System.Windows.DependencyProperty.Register(
 		true, 
 		name, 
 		propertyType, 
@@ -37100,44 +36987,6 @@ System.Windows.DependencyProperty.RegisterAttachedReadOnly = function (name, pro
 		defaultMetadata, 
 		true
 	);
-};
-System.Windows.DependencyProperty.Register$1 = function (fIsAttachedDP, name, propertyType, ownerType, propertyMetadata, readOnly) {
-	if (name === null) {
-		throw JSIL.New(System.ArgumentNullException, "_ctor$1", ["name"]);
-	}
-	if (name == System.String.Empty) {
-		throw JSIL.New(System.ArgumentException, "_ctor$1", [$asm02.System.Windows.Resx.GetString$2("DP_NameCannotBeEmpty")]);
-	}
-	if (propertyType === null) {
-		throw JSIL.New(System.ArgumentNullException, "_ctor$1", ["propertyType"]);
-	}
-	if (ownerType === null) {
-		throw JSIL.New(System.ArgumentNullException, "_ctor$1", ["ownerType"]);
-	}
-	if (fIsAttachedDP) {
-		var customDependencyProperty = new $asm02.System.Windows.CustomAttachedDependencyProperty(propertyType);
-	} else {
-		customDependencyProperty = new $asm02.System.Windows.CustomDependencyProperty(propertyType);
-	}
-	customDependencyProperty._name = name;
-	customDependencyProperty._ownerType = ownerType;
-	customDependencyProperty._readOnly = readOnly;
-	if (propertyMetadata !== null) {
-		customDependencyProperty._propertyChangedCallback = propertyMetadata.PropertyChangedCallback;
-	}
-	if (!((propertyMetadata === null) || (propertyMetadata.DefaultValue === System.Windows.DependencyProperty.UnsetValue))) {
-		if (!customDependencyProperty.IsValidType(propertyMetadata.DefaultValue)) {
-			throw JSIL.New(System.ArgumentException, "_ctor$1", [$asm02.System.Windows.Resx.GetString$2("DP_DefaultValueTypeDoesNotMatchPropertyType")]);
-		}
-		customDependencyProperty._defaultValue = propertyMetadata.DefaultValue;
-	} else if (propertyType.IsValueType) {
-		customDependencyProperty._defaultValue = System.Activator.CreateInstance$3(propertyType);
-	}
-	System.Windows.DependencyProperty.RememberRegisteredProperty(name, ownerType, customDependencyProperty);
-	return customDependencyProperty;
-};
-System.Windows.DependencyProperty.prototype.GetMetadata = function (forType) {
-	return this.GetMetadataCore(forType);
 };
 System.Windows.DependencyProperty.prototype.GetMetadataCore = function (forType) {
 	throw JSIL.New(System.NotImplementedException, "_ctor$0", []);
@@ -37198,12 +37047,6 @@ __step0__:
 };
 System.Windows.DependencyProperty.QueryRegisteredProperty$1 = function (nCustomPropertyID) {
 	return System.Windows.DependencyProperty._customProperties.get_Item(nCustomPropertyID);
-};
-System.Windows.DependencyProperty.RegisterCoreProperty = function (id, propertyType) {
-	var coreDependencyProperty = new $asm02.System.Windows.CoreDependencyProperty(propertyType);
-	coreDependencyProperty.m_nKnownId = id;
-	System.Windows.DependencyProperty._registeredCoreProperties.set_Item(id, coreDependencyProperty);
-	return coreDependencyProperty;
 };
 System.Windows.DependencyProperty.RememberRegisteredCoreProperty = function (dp) {
 	System.Windows.DependencyProperty._registeredCoreProperties.set_Item(dp.m_nKnownId, dp);
@@ -37328,10 +37171,6 @@ System.Windows.DependencyProperty.prototype.IsValidType = function (value) {
 	}
 	return true;
 };
-JSIL.OverloadedMethod(System.Windows.DependencyProperty, "Register", [
-		["Register$0", [System.String, System.Type, System.Type, System.Windows.PropertyMetadata]], 
-		["Register$1", [System.Boolean, System.String, System.Type, System.Type, System.Windows.PropertyMetadata, System.Boolean]]
-	]);
 JSIL.OverloadedMethod(System.Windows.DependencyProperty, "QueryRegisteredProperty", [
 		["QueryRegisteredProperty$0", [System.String, System.Type]], 
 		["QueryRegisteredProperty$1", [System.UInt32]]
@@ -37366,9 +37205,6 @@ System.Windows.DependencyProperty._cctor = function () {
 	System.Windows.DependencyProperty.KnownNamespaces = JSIL.Array.New(System.String, ["System.Windows", "System.Windows.Controls", "System.Windows.Controls.Primitives", "System.Windows.Data", "System.Windows.Documents", "System.Windows.Ink", "System.Windows.Input", "System.Windows.Media", "System.Windows.Media.Animation", "System.Windows.Media.Imaging", "System.Windows.Shapes"]);
 };
 
-$asm02.System.Windows.CoreDependencyProperty.prototype._ctor = function (propertyType) {
-	System.Windows.DependencyProperty.prototype._ctor.call(this, propertyType);
-};
 $asm02.System.Windows.CoreDependencyProperty.prototype.get_IsCoreProperty = function () {
 	return true;
 };
@@ -37395,13 +37231,6 @@ $asm02.System.Windows.CoreDependencyProperty.prototype.GetMetadataCore = functio
 	}
 	return this.GetMetadata(coreTypeId);
 };
-$asm02.System.Windows.CoreDependencyProperty.prototype.GetMetadata = function (propertyOwnerTypeId) {
-	var obj = this.GetDefaultValue$1(propertyOwnerTypeId);
-	if (obj === null) {
-		obj = System.Windows.DependencyProperty.UnsetValue;
-	}
-	return JSIL.New(System.Windows.PropertyMetadata, "_ctor$1", [obj]);
-};
 $asm02.System.Windows.CoreDependencyProperty.prototype.GetDefaultValue$0 = function (propertyOwner) {
 	return $asm02.MS.Internal.XcpImports.DependencyProperty_GetDefaultValue(this, propertyOwner, 0);
 };
@@ -37419,11 +37248,6 @@ JSIL.MakeProperty($asm02.System.Windows.CoreDependencyProperty.prototype, "Name"
 JSIL.MakeProperty($asm02.System.Windows.CoreDependencyProperty.prototype, "IsAnyTypeProperty", 
 	$asm02.System.Windows.CoreDependencyProperty.prototype.get_IsAnyTypeProperty, null);
 
-$asm02.System.Windows.CustomDependencyProperty.prototype._ctor = function (propertyType) {
-	System.Windows.DependencyProperty.prototype._ctor.call(this, propertyType);
-	this._getterMethodInfo = null;
-	this._setterMethodInfo = null;
-};
 $asm02.System.Windows.CustomDependencyProperty.prototype.get_GetterMethodInfo = function () {
 	if (this._getterMethodInfo === null) {
 		this._getterMethodInfo = this._ownerType.GetMethod$4(("Get" + this._name), (System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static));
@@ -37475,9 +37299,6 @@ $asm02.System.Windows.CustomDependencyProperty.prototype._getterMethodInfo = nul
 $asm02.System.Windows.CustomDependencyProperty.prototype._setterMethodInfo = null;
 $asm02.System.Windows.CustomDependencyProperty.prototype._defaultPropertyMetadata = null;
 
-$asm02.System.Windows.CustomAttachedDependencyProperty.prototype._ctor = function (propertyType) {
-	$asm02.System.Windows.CustomDependencyProperty.prototype._ctor.call(this, propertyType);
-};
 $asm02.System.Windows.CustomAttachedDependencyProperty.prototype.get_IsCustomAttachedProperty = function () {
 	return true;
 };
@@ -37504,7 +37325,7 @@ System.Windows.Deployment.RegisterAssembly = function (assembly) {
 	$asm02.MS.Internal.JoltHelper.RegisterAssembly(assembly, true);
 };
 System.Windows.Deployment.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 161);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 161);
 	if (System.Windows.Deployment._current !== null) {
 		throw JSIL.New(System.InvalidOperationException, "_ctor$1", [$asm02.System.Windows.Resx.GetString$2("Deployment_UseCurrentToAccessDeployment")]);
 	}
@@ -40560,9 +40381,6 @@ $asm02.MS.Internal.XcpImports.SystemSetting_GetSystemColor = function (colorInde
 	$asm02.MS.Internal.XcpImports.CheckHResult($asm02.MS.Internal.XcpImports.SystemSetting_GetSystemColorNative(colorIndex, /* ref */ result));
 	return result.value;
 };
-$asm02.MS.Internal.XcpImports.DependencyObject_IsPointerValid = function (obj) {
-	return ((obj.NativeObjectSafeHandle !== null) && !obj.NativeObjectSafeHandle.IsInvalid);
-};
 $asm02.MS.Internal.XcpImports.GetIsNativeHosted = function () {
 	var num = new JSIL.Variable(0);
 	$asm02.MS.Internal.XcpImports.CheckThread();
@@ -42529,7 +42347,7 @@ System.Windows.Input.InputScopeNameConverter.prototype._ctor = function () {
 
 System.Windows.Input.InputScope.prototype._ctor = function () {
 	this._scopeNames = new (System.Collections.Generic.List$b1.Of(System.Windows.Input.InputScopeName)) ();
-	System.Windows.DependencyObject.prototype._ctor$0.call(this);
+	System.Windows.DependencyObject.prototype._ctor.call(this);
 	$asm02.MS.Internal.StubHelper.ThrowIfNotInDesignMode();
 };
 System.Windows.Input.InputScope.prototype.get_Names = function () {
@@ -42540,11 +42358,11 @@ JSIL.MakeProperty(System.Windows.Input.InputScope.prototype, "Names",
 System.Windows.Input.InputScope.prototype._scopeNames = null;
 
 System.Windows.Input.InputScopeName.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$0.call(this);
+	System.Windows.DependencyObject.prototype._ctor.call(this);
 	$asm02.MS.Internal.StubHelper.ThrowIfNotInDesignMode();
 };
 System.Windows.Input.InputScopeName.prototype._ctor$1 = function (nameValue) {
-	System.Windows.DependencyObject.prototype._ctor$0.call(this);
+	System.Windows.DependencyObject.prototype._ctor.call(this);
 	$asm02.MS.Internal.StubHelper.ThrowIfNotInDesignMode();
 	this.NameValue = nameValue;
 };
@@ -42725,7 +42543,7 @@ System.Windows.Input.ManipulationCompletedEventArgs.prototype.TotalManipulation$
 System.Windows.Input.ManipulationCompletedEventArgs.prototype.FinalVelocities$value = null;
 
 System.Windows.Input.ManipulationDelta.prototype._ctor = function (translation, scale) {
-	System.Windows.DependencyObject.prototype._ctor$0.call(this);
+	System.Windows.DependencyObject.prototype._ctor.call(this);
 	$asm02.MS.Internal.StubHelper.ThrowIfNotInDesignMode();
 	(this.Translation = translation);
 	(this.Scale = scale);
@@ -42751,16 +42569,16 @@ System.Windows.Input.ManipulationDelta.TranslationProperty = null;
 System.Windows.Input.ManipulationDelta.$CachedAnonymousMethodDelegate2 = null;
 System.Windows.Input.ManipulationDelta.$CachedAnonymousMethodDelegate3 = null;
 System.Windows.Input.ManipulationDelta._cctor = function () {
-	System.Windows.Input.ManipulationDelta.ScaleProperty = System.Windows.DependencyProperty.Register$0("Scale", System.Windows.Point, System.Windows.Input.ManipulationDelta, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [function (o, a) {
+	System.Windows.Input.ManipulationDelta.ScaleProperty = System.Windows.DependencyProperty.Register("Scale", System.Windows.Point, System.Windows.Input.ManipulationDelta, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [function (o, a) {
 				MS.Internal.StubHelper.ThrowIfNotInDesignMode();
 			}]));
-	System.Windows.Input.ManipulationDelta.TranslationProperty = System.Windows.DependencyProperty.Register$0("Translation", System.Windows.Point, System.Windows.Input.ManipulationDelta, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [function (o, a) {
+	System.Windows.Input.ManipulationDelta.TranslationProperty = System.Windows.DependencyProperty.Register("Translation", System.Windows.Point, System.Windows.Input.ManipulationDelta, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [function (o, a) {
 				MS.Internal.StubHelper.ThrowIfNotInDesignMode();
 			}]));
 };
 
 System.Windows.Input.ManipulationVelocities.prototype._ctor = function (linear, expansion) {
-	System.Windows.DependencyObject.prototype._ctor$0.call(this);
+	System.Windows.DependencyObject.prototype._ctor.call(this);
 	$asm02.MS.Internal.StubHelper.ThrowIfNotInDesignMode();
 	(this.LinearVelocity = linear);
 	(this.ExpansionVelocity = expansion);
@@ -42786,10 +42604,10 @@ System.Windows.Input.ManipulationVelocities.LinearVelocityProperty = null;
 System.Windows.Input.ManipulationVelocities.$CachedAnonymousMethodDelegate2 = null;
 System.Windows.Input.ManipulationVelocities.$CachedAnonymousMethodDelegate3 = null;
 System.Windows.Input.ManipulationVelocities._cctor = function () {
-	System.Windows.Input.ManipulationVelocities.ExpansionVelocityProperty = System.Windows.DependencyProperty.Register$0("ExpansionVelocity", System.Windows.Point, System.Windows.Input.ManipulationVelocities, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [function (o, a) {
+	System.Windows.Input.ManipulationVelocities.ExpansionVelocityProperty = System.Windows.DependencyProperty.Register("ExpansionVelocity", System.Windows.Point, System.Windows.Input.ManipulationVelocities, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [function (o, a) {
 				MS.Internal.StubHelper.ThrowIfNotInDesignMode();
 			}]));
-	System.Windows.Input.ManipulationVelocities.LinearVelocityProperty = System.Windows.DependencyProperty.Register$0("LinearVelocity", System.Windows.Point, System.Windows.Input.ManipulationVelocities, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [function (o, a) {
+	System.Windows.Input.ManipulationVelocities.LinearVelocityProperty = System.Windows.DependencyProperty.Register("LinearVelocity", System.Windows.Point, System.Windows.Input.ManipulationVelocities, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [function (o, a) {
 				MS.Internal.StubHelper.ThrowIfNotInDesignMode();
 			}]));
 };
@@ -42814,7 +42632,7 @@ JSIL.MakeProperty(System.Windows.Input.GestureEventArgs.prototype, "Handled",
 System.Windows.Input.GestureEventArgs.HandledProperty = null;
 System.Windows.Input.GestureEventArgs.$CachedAnonymousMethodDelegate1 = null;
 System.Windows.Input.GestureEventArgs._cctor = function () {
-	System.Windows.Input.GestureEventArgs.HandledProperty = System.Windows.DependencyProperty.Register$0("Handled", System.Boolean, System.Windows.Input.GestureEventArgs, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [function (o, a) {
+	System.Windows.Input.GestureEventArgs.HandledProperty = System.Windows.DependencyProperty.Register("Handled", System.Boolean, System.Windows.Input.GestureEventArgs, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [function (o, a) {
 				MS.Internal.StubHelper.ThrowIfNotInDesignMode();
 			}]));
 };
@@ -50426,12 +50244,12 @@ System.Windows.Controls.Primitives.ButtonBase.prototype._suspendStateChanges = f
 System.Windows.Controls.Primitives.ButtonBase.prototype._isSuspendingIsEnabled = false;
 System.Windows.Controls.Primitives.ButtonBase.prototype.Click = null;
 System.Windows.Controls.Primitives.ButtonBase._cctor = function () {
-	System.Windows.Controls.Primitives.ButtonBase.ClickModeProperty = System.Windows.DependencyProperty.Register$0("ClickMode", System.Windows.Controls.ClickMode, System.Windows.Controls.Primitives.ButtonBase, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.ButtonBase.OnClickModePropertyChanged)]));
+	System.Windows.Controls.Primitives.ButtonBase.ClickModeProperty = System.Windows.DependencyProperty.Register("ClickMode", System.Windows.Controls.ClickMode, System.Windows.Controls.Primitives.ButtonBase, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.ButtonBase.OnClickModePropertyChanged)]));
 	System.Windows.Controls.Primitives.ButtonBase.IsFocusedProperty = System.Windows.DependencyProperty.RegisterReadOnly("IsFocused", System.Boolean, System.Windows.Controls.Primitives.ButtonBase, null);
 	System.Windows.Controls.Primitives.ButtonBase.IsMouseOverProperty = System.Windows.DependencyProperty.RegisterReadOnly("IsMouseOver", System.Boolean, System.Windows.Controls.Primitives.ButtonBase, null);
 	System.Windows.Controls.Primitives.ButtonBase.IsPressedProperty = System.Windows.DependencyProperty.RegisterReadOnly("IsPressed", System.Boolean, System.Windows.Controls.Primitives.ButtonBase, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.ButtonBase.OnIsPressedPropertyChanged)]));
-	System.Windows.Controls.Primitives.ButtonBase.CommandProperty = System.Windows.DependencyProperty.Register$0("Command", System.Windows.Input.ICommand, System.Windows.Controls.Primitives.ButtonBase, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [null, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.ButtonBase.OnCommandPropertyChanged)]));
-	System.Windows.Controls.Primitives.ButtonBase.CommandParameterProperty = System.Windows.DependencyProperty.Register$0("CommandParameter", System.Object, System.Windows.Controls.Primitives.ButtonBase, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [null, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.ButtonBase.OnCommandParameterPropertyChanged)]));
+	System.Windows.Controls.Primitives.ButtonBase.CommandProperty = System.Windows.DependencyProperty.Register("Command", System.Windows.Input.ICommand, System.Windows.Controls.Primitives.ButtonBase, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [null, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.ButtonBase.OnCommandPropertyChanged)]));
+	System.Windows.Controls.Primitives.ButtonBase.CommandParameterProperty = System.Windows.DependencyProperty.Register("CommandParameter", System.Object, System.Windows.Controls.Primitives.ButtonBase, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [null, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.ButtonBase.OnCommandParameterPropertyChanged)]));
 };
 
 System.Windows.Controls.Button.prototype._ctor = function () {
@@ -50635,8 +50453,8 @@ System.Windows.Controls.Primitives.ToggleButton.prototype.Indeterminate = null;
 System.Windows.Controls.Primitives.ToggleButton.prototype.Unchecked = null;
 System.Windows.Controls.Primitives.ToggleButton.prototype._skipCreateAutomationPeer = false;
 System.Windows.Controls.Primitives.ToggleButton._cctor = function () {
-	System.Windows.Controls.Primitives.ToggleButton.IsCheckedProperty = System.Windows.DependencyProperty.Register$0("IsChecked", System.Nullable$b1.Of(System.Boolean), System.Windows.Controls.Primitives.ToggleButton, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [false, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.ToggleButton.OnIsCheckedPropertyChanged)]));
-	System.Windows.Controls.Primitives.ToggleButton.IsThreeStateProperty = System.Windows.DependencyProperty.Register$0("IsThreeState", System.Boolean, System.Windows.Controls.Primitives.ToggleButton, null);
+	System.Windows.Controls.Primitives.ToggleButton.IsCheckedProperty = System.Windows.DependencyProperty.Register("IsChecked", System.Nullable$b1.Of(System.Boolean), System.Windows.Controls.Primitives.ToggleButton, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [false, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.ToggleButton.OnIsCheckedPropertyChanged)]));
+	System.Windows.Controls.Primitives.ToggleButton.IsThreeStateProperty = System.Windows.DependencyProperty.Register("IsThreeState", System.Boolean, System.Windows.Controls.Primitives.ToggleButton, null);
 };
 
 System.Windows.Controls.CheckBox.prototype._ctor = function () {
@@ -51766,11 +51584,11 @@ System.Windows.Controls.Primitives.Selector.prototype._updatingCurrentItemInColl
 System.Windows.Controls.Primitives.Selector._cctor = function () {
 	System.Windows.Controls.Primitives.Selector.IsSelectedProperty = System.Windows.DependencyProperty.RegisterAttached("IsSelected", System.Boolean, System.Windows.Controls.Primitives.Selector, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.Selector.OnIsSelectedChanged)]));
 	System.Windows.Controls.Primitives.Selector.IsSelectionActiveProperty = System.Windows.DependencyProperty.RegisterAttachedReadOnly("IsSelectionActive", System.Boolean, System.Windows.Controls.Primitives.Selector, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.Selector.OnIsSelectionActiveChanged)]));
-	System.Windows.Controls.Primitives.Selector.SelectedIndexProperty = System.Windows.DependencyProperty.Register$0("SelectedIndex", System.Int32, System.Windows.Controls.Primitives.Selector, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [-1, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.Selector.OnSelectedIndexChanged)]));
-	System.Windows.Controls.Primitives.Selector.SelectedValueProperty = System.Windows.DependencyProperty.Register$0("SelectedValue", System.Object, System.Windows.Controls.Primitives.Selector, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [null, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.Selector.OnSelectedValuePropertyChanged)]));
-	System.Windows.Controls.Primitives.Selector.SelectedValuePathProperty = System.Windows.DependencyProperty.Register$0("SelectedValuePath", System.String, System.Windows.Controls.Primitives.Selector, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [System.String.Empty, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.Selector.OnSelectedValuePathPropertyChanged)]));
-	System.Windows.Controls.Primitives.Selector.SelectedItemProperty = System.Windows.DependencyProperty.Register$0("SelectedItem", System.Object, System.Windows.Controls.Primitives.Selector, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.Selector.OnSelectedItemChanged)]));
-	System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItemProperty = System.Windows.DependencyProperty.Register$0("IsSynchronizedWithCurrentItem", System.Nullable$b1.Of(System.Boolean), System.Windows.Controls.Primitives.Selector, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.Selector.OnIsSynchronizedWithCurrentItemChanged)]));
+	System.Windows.Controls.Primitives.Selector.SelectedIndexProperty = System.Windows.DependencyProperty.Register("SelectedIndex", System.Int32, System.Windows.Controls.Primitives.Selector, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [-1, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.Selector.OnSelectedIndexChanged)]));
+	System.Windows.Controls.Primitives.Selector.SelectedValueProperty = System.Windows.DependencyProperty.Register("SelectedValue", System.Object, System.Windows.Controls.Primitives.Selector, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [null, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.Selector.OnSelectedValuePropertyChanged)]));
+	System.Windows.Controls.Primitives.Selector.SelectedValuePathProperty = System.Windows.DependencyProperty.Register("SelectedValuePath", System.String, System.Windows.Controls.Primitives.Selector, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [System.String.Empty, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.Selector.OnSelectedValuePathPropertyChanged)]));
+	System.Windows.Controls.Primitives.Selector.SelectedItemProperty = System.Windows.DependencyProperty.Register("SelectedItem", System.Object, System.Windows.Controls.Primitives.Selector, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.Selector.OnSelectedItemChanged)]));
+	System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItemProperty = System.Windows.DependencyProperty.Register("IsSynchronizedWithCurrentItem", System.Nullable$b1.Of(System.Boolean), System.Windows.Controls.Primitives.Selector, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.Selector.OnIsSynchronizedWithCurrentItemChanged)]));
 };
 
 $asm02.System.Windows.Controls.Primitives.Selector.InitializingData.prototype._ctor = function () {
@@ -52793,11 +52611,11 @@ System.Windows.Controls.ComboBox.prototype.ElementPopupChild = null;
 System.Windows.Controls.ComboBox.prototype.ElementContentPresenterBorder = null;
 System.Windows.Controls.ComboBox.prototype.ElementContentPresenter = null;
 System.Windows.Controls.ComboBox._cctor = function () {
-	System.Windows.Controls.ComboBox.IsDropDownOpenProperty = System.Windows.DependencyProperty.Register$0("IsDropDownOpen", System.Boolean, System.Windows.Controls.ComboBox, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.ComboBox.OnIsDropDownOpenChanged)]));
+	System.Windows.Controls.ComboBox.IsDropDownOpenProperty = System.Windows.DependencyProperty.Register("IsDropDownOpen", System.Boolean, System.Windows.Controls.ComboBox, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.ComboBox.OnIsDropDownOpenChanged)]));
 	System.Windows.Controls.ComboBox.IsSelectionActiveProperty = System.Windows.Controls.Primitives.Selector.IsSelectionActiveProperty.AddOwner(System.Windows.Controls.ComboBox);
 	System.Windows.Controls.ComboBox.IsSelectionBoxHighlightedProperty = System.Windows.DependencyProperty.RegisterReadOnly("IsSelectionBoxHighlighted", System.Boolean, System.Windows.Controls.ComboBox, null);
-	System.Windows.Controls.ComboBox.ItemContainerStyleProperty = System.Windows.DependencyProperty.Register$0("ItemContainerStyle", System.Windows.Style, System.Windows.Controls.ComboBox, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.ItemsControl.OnItemContainerStyleChanged)]));
-	System.Windows.Controls.ComboBox.MaxDropDownHeightProperty = System.Windows.DependencyProperty.Register$0("MaxDropDownHeight", System.Double, System.Windows.Controls.ComboBox, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [Infinity, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.ComboBox.OnMaxDropDownHeightChanged)]));
+	System.Windows.Controls.ComboBox.ItemContainerStyleProperty = System.Windows.DependencyProperty.Register("ItemContainerStyle", System.Windows.Style, System.Windows.Controls.ComboBox, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.ItemsControl.OnItemContainerStyleChanged)]));
+	System.Windows.Controls.ComboBox.MaxDropDownHeightProperty = System.Windows.DependencyProperty.Register("MaxDropDownHeight", System.Double, System.Windows.Controls.ComboBox, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [Infinity, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.ComboBox.OnMaxDropDownHeightChanged)]));
 	System.Windows.Controls.ComboBox.SelectionBoxItemProperty = System.Windows.DependencyProperty.RegisterReadOnly("SelectionBoxItem", System.Object, System.Windows.Controls.ComboBox, null);
 	System.Windows.Controls.ComboBox.SelectionBoxItemTemplateProperty = System.Windows.DependencyProperty.RegisterReadOnly("SelectionBoxItemTemplate", System.Windows.DataTemplate, System.Windows.Controls.ComboBox, null);
 };
@@ -53054,8 +52872,8 @@ JSIL.MakeProperty(System.Windows.Controls.HyperlinkButton.prototype, "TargetName
 System.Windows.Controls.HyperlinkButton.NavigateUriProperty = null;
 System.Windows.Controls.HyperlinkButton.TargetNameProperty = null;
 System.Windows.Controls.HyperlinkButton._cctor = function () {
-	System.Windows.Controls.HyperlinkButton.NavigateUriProperty = System.Windows.DependencyProperty.Register$0("NavigateUri", System.Uri, System.Windows.Controls.HyperlinkButton, null);
-	System.Windows.Controls.HyperlinkButton.TargetNameProperty = System.Windows.DependencyProperty.Register$0("TargetName", System.String, System.Windows.Controls.HyperlinkButton, null);
+	System.Windows.Controls.HyperlinkButton.NavigateUriProperty = System.Windows.DependencyProperty.Register("NavigateUri", System.Uri, System.Windows.Controls.HyperlinkButton, null);
+	System.Windows.Controls.HyperlinkButton.TargetNameProperty = System.Windows.DependencyProperty.Register("TargetName", System.String, System.Windows.Controls.HyperlinkButton, null);
 };
 
 System.Windows.Controls.ItemContainerGenerator.prototype._ctor = function (host) {
@@ -55152,8 +54970,8 @@ System.Windows.Controls.ListBox.ItemContainerStyleProperty = null;
 System.Windows.Controls.ListBox.SelectionModeProperty = null;
 System.Windows.Controls.ListBox._cctor = function () {
 	System.Windows.Controls.ListBox.IsSelectionActiveProperty = System.Windows.Controls.Primitives.Selector.IsSelectionActiveProperty.AddOwner(System.Windows.Controls.ListBox);
-	System.Windows.Controls.ListBox.ItemContainerStyleProperty = System.Windows.DependencyProperty.Register$0("ItemContainerStyle", System.Windows.Style, System.Windows.Controls.ListBox, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.ItemsControl.OnItemContainerStyleChanged)]));
-	System.Windows.Controls.ListBox.SelectionModeProperty = System.Windows.DependencyProperty.Register$0("SelectionMode", System.Windows.Controls.SelectionMode, System.Windows.Controls.ListBox, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [System.Windows.Controls.SelectionMode.Single, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.ListBox.OnSelectionModeChanged)]));
+	System.Windows.Controls.ListBox.ItemContainerStyleProperty = System.Windows.DependencyProperty.Register("ItemContainerStyle", System.Windows.Style, System.Windows.Controls.ListBox, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.ItemsControl.OnItemContainerStyleChanged)]));
+	System.Windows.Controls.ListBox.SelectionModeProperty = System.Windows.DependencyProperty.Register("SelectionMode", System.Windows.Controls.SelectionMode, System.Windows.Controls.ListBox, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [System.Windows.Controls.SelectionMode.Single, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.ListBox.OnSelectionModeChanged)]));
 };
 
 System.Windows.Controls.OpenFileDialog.prototype.get_Filter = function () {
@@ -55934,11 +55752,11 @@ System.Windows.Controls.Primitives.RangeBase.SmallChangeProperty = null;
 System.Windows.Controls.Primitives.RangeBase.ValueProperty = null;
 System.Windows.Controls.Primitives.RangeBase.prototype.ValueChanged = null;
 System.Windows.Controls.Primitives.RangeBase._cctor = function () {
-	System.Windows.Controls.Primitives.RangeBase.MinimumProperty = System.Windows.DependencyProperty.Register$0("Minimum", System.Double, System.Windows.Controls.Primitives.RangeBase, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [0, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.RangeBase.OnMinimumPropertyChanged)]));
-	System.Windows.Controls.Primitives.RangeBase.MaximumProperty = System.Windows.DependencyProperty.Register$0("Maximum", System.Double, System.Windows.Controls.Primitives.RangeBase, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [1, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.RangeBase.OnMaximumPropertyChanged)]));
-	System.Windows.Controls.Primitives.RangeBase.LargeChangeProperty = System.Windows.DependencyProperty.Register$0("LargeChange", System.Double, System.Windows.Controls.Primitives.RangeBase, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [1, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.RangeBase.OnLargeChangePropertyChanged)]));
-	System.Windows.Controls.Primitives.RangeBase.SmallChangeProperty = System.Windows.DependencyProperty.Register$0("SmallChange", System.Double, System.Windows.Controls.Primitives.RangeBase, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [0.1, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.RangeBase.OnSmallChangePropertyChanged)]));
-	System.Windows.Controls.Primitives.RangeBase.ValueProperty = System.Windows.DependencyProperty.Register$0("Value", System.Double, System.Windows.Controls.Primitives.RangeBase, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [0, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.RangeBase.OnValuePropertyChanged)]));
+	System.Windows.Controls.Primitives.RangeBase.MinimumProperty = System.Windows.DependencyProperty.Register("Minimum", System.Double, System.Windows.Controls.Primitives.RangeBase, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [0, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.RangeBase.OnMinimumPropertyChanged)]));
+	System.Windows.Controls.Primitives.RangeBase.MaximumProperty = System.Windows.DependencyProperty.Register("Maximum", System.Double, System.Windows.Controls.Primitives.RangeBase, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [1, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.RangeBase.OnMaximumPropertyChanged)]));
+	System.Windows.Controls.Primitives.RangeBase.LargeChangeProperty = System.Windows.DependencyProperty.Register("LargeChange", System.Double, System.Windows.Controls.Primitives.RangeBase, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [1, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.RangeBase.OnLargeChangePropertyChanged)]));
+	System.Windows.Controls.Primitives.RangeBase.SmallChangeProperty = System.Windows.DependencyProperty.Register("SmallChange", System.Double, System.Windows.Controls.Primitives.RangeBase, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [0.1, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.RangeBase.OnSmallChangePropertyChanged)]));
+	System.Windows.Controls.Primitives.RangeBase.ValueProperty = System.Windows.DependencyProperty.Register("Value", System.Double, System.Windows.Controls.Primitives.RangeBase, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [0, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.RangeBase.OnValuePropertyChanged)]));
 };
 
 System.Windows.Controls.Primitives.RepeatButton.prototype.get_Delay = function () {
@@ -56156,8 +55974,8 @@ System.Windows.Controls.Primitives.RepeatButton.prototype._timer = null;
 System.Windows.Controls.Primitives.RepeatButton.prototype._keyboardCausingRepeat = false;
 System.Windows.Controls.Primitives.RepeatButton.prototype._mouseCausingRepeat = false;
 System.Windows.Controls.Primitives.RepeatButton._cctor = function () {
-	System.Windows.Controls.Primitives.RepeatButton.DelayProperty = System.Windows.DependencyProperty.Register$0("Delay", System.Int32, System.Windows.Controls.Primitives.RepeatButton, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [500, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.RepeatButton.OnDelayPropertyChanged)]));
-	System.Windows.Controls.Primitives.RepeatButton.IntervalProperty = System.Windows.DependencyProperty.Register$0("Interval", System.Int32, System.Windows.Controls.Primitives.RepeatButton, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [33, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.RepeatButton.OnIntervalPropertyChanged)]));
+	System.Windows.Controls.Primitives.RepeatButton.DelayProperty = System.Windows.DependencyProperty.Register("Delay", System.Int32, System.Windows.Controls.Primitives.RepeatButton, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [500, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.RepeatButton.OnDelayPropertyChanged)]));
+	System.Windows.Controls.Primitives.RepeatButton.IntervalProperty = System.Windows.DependencyProperty.Register("Interval", System.Int32, System.Windows.Controls.Primitives.RepeatButton, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [33, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.RepeatButton.OnIntervalPropertyChanged)]));
 };
 
 System.Windows.Controls.Primitives.ScrollBar.prototype._ctor = function () {
@@ -56696,8 +56514,8 @@ System.Windows.Controls.Primitives.ScrollBar.prototype.ElementVerticalSmallDecre
 System.Windows.Controls.Primitives.ScrollBar.prototype.ElementVerticalThumb$value = null;
 System.Windows.Controls.Primitives.ScrollBar.prototype.IsMouseOver$value = false;
 System.Windows.Controls.Primitives.ScrollBar._cctor = function () {
-	System.Windows.Controls.Primitives.ScrollBar.OrientationProperty = System.Windows.DependencyProperty.Register$0("Orientation", System.Windows.Controls.Orientation, System.Windows.Controls.Primitives.ScrollBar, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [System.Windows.Controls.Orientation.Vertical, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.ScrollBar.OnOrientationPropertyChanged)]));
-	System.Windows.Controls.Primitives.ScrollBar.ViewportSizeProperty = System.Windows.DependencyProperty.Register$0("ViewportSize", System.Double, System.Windows.Controls.Primitives.ScrollBar, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [0, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.ScrollBar.OnViewportSizeChanged)]));
+	System.Windows.Controls.Primitives.ScrollBar.OrientationProperty = System.Windows.DependencyProperty.Register("Orientation", System.Windows.Controls.Orientation, System.Windows.Controls.Primitives.ScrollBar, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [System.Windows.Controls.Orientation.Vertical, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.ScrollBar.OnOrientationPropertyChanged)]));
+	System.Windows.Controls.Primitives.ScrollBar.ViewportSizeProperty = System.Windows.DependencyProperty.Register("ViewportSize", System.Double, System.Windows.Controls.Primitives.ScrollBar, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [0, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Primitives.ScrollBar.OnViewportSizeChanged)]));
 };
 
 System.Windows.Controls.Primitives.ScrollEventArgs.prototype.get_NewValue = function () {
@@ -57056,7 +56874,7 @@ JSIL.MakeProperty(System.Windows.Controls.RadioButton.prototype, "GroupName",
 System.Windows.Controls.RadioButton._groupNameToElements = null;
 System.Windows.Controls.RadioButton.GroupNameProperty = null;
 System.Windows.Controls.RadioButton._cctor = function () {
-	System.Windows.Controls.RadioButton.GroupNameProperty = System.Windows.DependencyProperty.Register$0("GroupName", System.String, System.Windows.Controls.RadioButton, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.RadioButton.OnGroupNamePropertyChanged)]));
+	System.Windows.Controls.RadioButton.GroupNameProperty = System.Windows.DependencyProperty.Register("GroupName", System.String, System.Windows.Controls.RadioButton, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.RadioButton.OnGroupNamePropertyChanged)]));
 };
 
 System.Windows.Controls.ScrollContentPresenter.prototype._ctor = function () {
@@ -57894,9 +57712,9 @@ System.Windows.Controls.Slider.prototype.ElementVerticalLargeDecrease$value = nu
 System.Windows.Controls.Slider.prototype.ElementVerticalThumb$value = null;
 System.Windows.Controls.Slider.prototype.IsMouseOver$value = false;
 System.Windows.Controls.Slider._cctor = function () {
-	System.Windows.Controls.Slider.OrientationProperty = System.Windows.DependencyProperty.Register$0("Orientation", System.Windows.Controls.Orientation, System.Windows.Controls.Slider, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [System.Windows.Controls.Orientation.Horizontal, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Slider.OnOrientationPropertyChanged)]));
+	System.Windows.Controls.Slider.OrientationProperty = System.Windows.DependencyProperty.Register("Orientation", System.Windows.Controls.Orientation, System.Windows.Controls.Slider, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [System.Windows.Controls.Orientation.Horizontal, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Slider.OnOrientationPropertyChanged)]));
 	System.Windows.Controls.Slider.IsFocusedProperty = System.Windows.DependencyProperty.RegisterReadOnly("IsFocused", System.Boolean, System.Windows.Controls.Slider, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Slider.OnIsFocusedPropertyChanged)]));
-	System.Windows.Controls.Slider.IsDirectionReversedProperty = System.Windows.DependencyProperty.Register$0("IsDirectionReversed", System.Boolean, System.Windows.Controls.Slider, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Slider.OnIsDirectionReversedChanged)]));
+	System.Windows.Controls.Slider.IsDirectionReversedProperty = System.Windows.DependencyProperty.Register("IsDirectionReversed", System.Boolean, System.Windows.Controls.Slider, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.Slider.OnIsDirectionReversedChanged)]));
 };
 
 System.Windows.Controls.ToolTip.prototype.get_HorizontalOffset = function () {
@@ -58559,11 +58377,11 @@ System.Windows.Controls.ToolTip.prototype._owner = null;
 System.Windows.Controls.ToolTip.prototype._toolTipServiceTargetOverride = null;
 System.Windows.Controls.ToolTip.prototype._eventsHookedUp = false;
 System.Windows.Controls.ToolTip._cctor = function () {
-	System.Windows.Controls.ToolTip.HorizontalOffsetProperty = System.Windows.DependencyProperty.Register$0("HorizontalOffset", System.Double, System.Windows.Controls.ToolTip, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.ToolTip.OnHorizontalOffsetPropertyChanged)]));
-	System.Windows.Controls.ToolTip.IsOpenProperty = System.Windows.DependencyProperty.Register$0("IsOpen", System.Boolean, System.Windows.Controls.ToolTip, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.ToolTip.OnIsOpenPropertyChanged)]));
-	System.Windows.Controls.ToolTip.VerticalOffsetProperty = System.Windows.DependencyProperty.Register$0("VerticalOffset", System.Double, System.Windows.Controls.ToolTip, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.ToolTip.OnVerticalOffsetPropertyChanged)]));
-	System.Windows.Controls.ToolTip.PlacementProperty = System.Windows.DependencyProperty.Register$0("Placement", System.Windows.Controls.Primitives.PlacementMode, System.Windows.Controls.ToolTip, JSIL.New(System.Windows.PropertyMetadata, "_ctor$1", [System.Windows.Controls.Primitives.PlacementMode.Mouse]));
-	System.Windows.Controls.ToolTip.PlacementTargetProperty = System.Windows.DependencyProperty.Register$0("PlacementTarget", System.Windows.UIElement, System.Windows.Controls.ToolTip, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [null]));
+	System.Windows.Controls.ToolTip.HorizontalOffsetProperty = System.Windows.DependencyProperty.Register("HorizontalOffset", System.Double, System.Windows.Controls.ToolTip, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.ToolTip.OnHorizontalOffsetPropertyChanged)]));
+	System.Windows.Controls.ToolTip.IsOpenProperty = System.Windows.DependencyProperty.Register("IsOpen", System.Boolean, System.Windows.Controls.ToolTip, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.ToolTip.OnIsOpenPropertyChanged)]));
+	System.Windows.Controls.ToolTip.VerticalOffsetProperty = System.Windows.DependencyProperty.Register("VerticalOffset", System.Double, System.Windows.Controls.ToolTip, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.ToolTip.OnVerticalOffsetPropertyChanged)]));
+	System.Windows.Controls.ToolTip.PlacementProperty = System.Windows.DependencyProperty.Register("Placement", System.Windows.Controls.Primitives.PlacementMode, System.Windows.Controls.ToolTip, JSIL.New(System.Windows.PropertyMetadata, "_ctor$1", [System.Windows.Controls.Primitives.PlacementMode.Mouse]));
+	System.Windows.Controls.ToolTip.PlacementTargetProperty = System.Windows.DependencyProperty.Register("PlacementTarget", System.Windows.UIElement, System.Windows.Controls.ToolTip, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [null]));
 };
 
 System.Windows.Controls.ToolTipService.GetToolTip = function (element) {
@@ -60187,7 +60005,7 @@ System.Windows.Controls.VirtualizingStackPanel.prototype._realizedChildren = nul
 System.Windows.Controls.VirtualizingStackPanel.prototype._beforeTrail = 0;
 System.Windows.Controls.VirtualizingStackPanel.prototype._afterTrail = 0;
 System.Windows.Controls.VirtualizingStackPanel._cctor = function () {
-	System.Windows.Controls.VirtualizingStackPanel.OrientationProperty = System.Windows.DependencyProperty.Register$0("Orientation", System.Windows.Controls.Orientation, System.Windows.Controls.VirtualizingStackPanel, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [System.Windows.Controls.Orientation.Vertical, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.VirtualizingStackPanel.OnOrientationChanged)]));
+	System.Windows.Controls.VirtualizingStackPanel.OrientationProperty = System.Windows.DependencyProperty.Register("Orientation", System.Windows.Controls.Orientation, System.Windows.Controls.VirtualizingStackPanel, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [System.Windows.Controls.Orientation.Vertical, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.VirtualizingStackPanel.OnOrientationChanged)]));
 	System.Windows.Controls.VirtualizingStackPanel.IsVirtualizingProperty = System.Windows.DependencyProperty.RegisterAttachedReadOnly("IsVirtualizing", System.Boolean, System.Windows.Controls.VirtualizingStackPanel, JSIL.New(System.Windows.PropertyMetadata, "_ctor$1", [false]));
 	System.Windows.Controls.VirtualizingStackPanel.VirtualizationModeProperty = System.Windows.DependencyProperty.RegisterAttached("VirtualizationMode", System.Windows.Controls.VirtualizationMode, System.Windows.Controls.VirtualizingStackPanel, JSIL.New(System.Windows.PropertyMetadata, "_ctor$1", [System.Windows.Controls.VirtualizationMode.Recycling]));
 };
@@ -60307,7 +60125,7 @@ System.Windows.Controls.ProgressBar.IsIndeterminateProperty = null;
 System.Windows.Controls.ProgressBar.prototype.ElementTrack$value = null;
 System.Windows.Controls.ProgressBar.prototype.ElementIndicator$value = null;
 System.Windows.Controls.ProgressBar._cctor = function () {
-	System.Windows.Controls.ProgressBar.IsIndeterminateProperty = System.Windows.DependencyProperty.Register$0("IsIndeterminate", System.Boolean, System.Windows.Controls.ProgressBar, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.ProgressBar.OnIsIndeterminateChanged)]));
+	System.Windows.Controls.ProgressBar.IsIndeterminateProperty = System.Windows.DependencyProperty.Register("IsIndeterminate", System.Boolean, System.Windows.Controls.ProgressBar, JSIL.New(System.Windows.PropertyMetadata, "_ctor$0", [JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Controls.ProgressBar.OnIsIndeterminateChanged)]));
 };
 
 $asm02.MS.Internal.Data.DefaultValueConverter.prototype._ctor = function (typeConverter, sourceType, targetType, shouldConvertFrom, shouldConvertTo) {
@@ -60715,7 +60533,7 @@ $asm02.MS.Internal.Data.TargetDefaultValueConverter.prototype.ConvertBack = func
 };
 
 System.Windows.Data.CollectionViewSource.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 322);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 322);
 	this._sort = new System.ComponentModel.SortDescriptionCollection();
 	this._sort.INotifyCollectionChanged_add_CollectionChanged(JSIL.Delegate.New("System.Collections.Specialized.NotifyCollectionChangedEventHandler", this, System.Windows.Data.CollectionViewSource.prototype.OnForwardedCollectionChanged));
 	this._groupBy = JSIL.New(System.Collections.ObjectModel.ObservableCollection$b1.Of(System.ComponentModel.GroupDescription), "_ctor$0", []);
@@ -60942,7 +60760,7 @@ System.Windows.Data.CollectionViewSource.prototype._filterStub = null;
 System.Windows.Data.CollectionViewSource.prototype._culture = null;
 System.Windows.Data.CollectionViewSource._cctor = function () {
 	System.Windows.Data.CollectionViewSource.ViewProperty = System.Windows.DependencyProperty.RegisterReadOnly("View", System.ComponentModel.ICollectionView, System.Windows.Data.CollectionViewSource, JSIL.New(System.Windows.PropertyMetadata, "_ctor$1", [null]));
-	System.Windows.Data.CollectionViewSource.SourceProperty = System.Windows.DependencyProperty.Register$0("Source", System.Object, System.Windows.Data.CollectionViewSource, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [null, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Data.CollectionViewSource.OnSourceChanged)]));
+	System.Windows.Data.CollectionViewSource.SourceProperty = System.Windows.DependencyProperty.Register("Source", System.Object, System.Windows.Data.CollectionViewSource, JSIL.New(System.Windows.PropertyMetadata, "_ctor$2", [null, JSIL.Delegate.New("System.Windows.PropertyChangedCallback", null, System.Windows.Data.CollectionViewSource.OnSourceChanged)]));
 };
 
 $asm02.System.Windows.Data.CollectionViewSource.DeferHelper.prototype._ctor = function (target) {
@@ -62218,7 +62036,7 @@ System.Windows.DependencyObjectCollection$b1.prototype.INativeCollectionWrapper_
 	return this._collection;
 };
 System.Windows.DependencyObjectCollection$b1.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 409);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 409);
 	this._collection = new $asm02.System.Windows.DOCollection();
 	System.Windows.DependencyObject.prototype.SetValue.call(this, System.Windows.DependencyObjectCollection$b1.Of(this.T).CollectionProperty, this._collection);
 };
@@ -62504,7 +62322,7 @@ System.Windows.DependencyObjectCollection$b1.prototype._collection = null;
 System.Windows.DependencyObjectCollection$b1.prototype._busy = false;
 System.Windows.DependencyObjectCollection$b1.prototype.CollectionChanged = null;
 System.Windows.DependencyObjectCollection$b1._cctor = function () {
-	System.Windows.DependencyObjectCollection$b1.Of(this.T).CollectionProperty = System.Windows.DependencyProperty.Register$0("DOCollection", $asm02.System.Windows.DOCollection, System.Windows.DependencyObject, null);
+	System.Windows.DependencyObjectCollection$b1.Of(this.T).CollectionProperty = System.Windows.DependencyProperty.Register("DOCollection", $asm02.System.Windows.DOCollection, System.Windows.DependencyObject, null);
 };
 
 $asm02.System.Windows.DependencyObjectCollection$b1.$lGetEnumerator$gd__0.prototype.IEnumerator_MoveNext = function () {
@@ -63861,10 +63679,10 @@ System.Windows.MessageBox.Win32ToMessageBoxResult = function (win32Result) {
 };
 
 System.Windows.ExternalPart.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 280);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 280);
 };
 System.Windows.ExternalPart.prototype._ctor$1 = function (nKnownTypeIndex) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
+	System.Windows.DependencyObject.prototype._ctor.call(this, nKnownTypeIndex);
 };
 System.Windows.ExternalPart.prototype.get_Source = function () {
 	return null;
@@ -64353,10 +64171,10 @@ $asm02.System.Windows.Hosting.NativeMethods.DOMEventInfo.prototype.pszEventType 
 $asm02.System.Windows.Hosting.NativeMethods.DOMEventInfo.prototype.pEventObject = 0;
 
 System.Windows.Ink.Stroke.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 136);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 136);
 };
 System.Windows.Ink.Stroke.prototype._ctor$1 = function (stylusPoints) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 136);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 136);
 	if (stylusPoints === null) {
 		throw JSIL.New(System.ArgumentNullException, "_ctor$1", ["stylusPoints"]);
 	}
@@ -64533,7 +64351,7 @@ System.Windows.Input.FocusManager.GetFocusedElement = function () {
 };
 
 System.Windows.Input.InputMethod.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$0.call(this);
+	System.Windows.DependencyObject.prototype._ctor.call(this);
 };
 System.Windows.Input.InputMethod.GetIsInputMethodEnabled = function (target) {
 	if (target === null) {
@@ -69039,7 +68857,7 @@ System.Windows.Media.MultiScaleTileSource.prototype._ctor$0 = function (nKnownTy
 	this._lastTilePositionY = -1;
 	this._lastTileImageUris = new (System.Collections.Generic.List$b1.Of(System.Object)) ();
 	this._maxTileBlendTimeMilliseconds = 500;
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, nKnownTypeIndex);
+	System.Windows.DependencyObject.prototype._ctor.call(this, nKnownTypeIndex);
 };
 System.Windows.Media.MultiScaleTileSource.prototype.get_TileBlendTime = function () {
 	return System.TimeSpan.FromMilliseconds(this._maxTileBlendTimeMilliseconds);
@@ -69060,7 +68878,7 @@ System.Windows.Media.MultiScaleTileSource.prototype._ctor$1 = function (imageWid
 	this._lastTilePositionY = -1;
 	this._lastTileImageUris = new (System.Collections.Generic.List$b1.Of(System.Object)) ();
 	this._maxTileBlendTimeMilliseconds = 500;
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 256);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 256);
 	if (!((imageWidth >= 0) && 
 			(imageHeight >= 0) && 
 			(tileWidth >= 0) && 
@@ -69081,7 +68899,7 @@ System.Windows.Media.MultiScaleTileSource.prototype._ctor$2 = function (imageWid
 	this._lastTilePositionY = -1;
 	this._lastTileImageUris = new (System.Collections.Generic.List$b1.Of(System.Object)) ();
 	this._maxTileBlendTimeMilliseconds = 500;
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 256);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 256);
 	if (!((imageWidth >= 0) && 
 			(imageHeight >= 0) && 
 			(imageWidth <= System.Windows.Media.MultiScaleTileSource.MaxImageDimension) && 
@@ -69202,7 +69020,7 @@ System.Windows.PropertyMetadata.prototype._propertyChangedCallback = null;
 System.Windows.PropertyMetadata.prototype._defaultValue = null;
 
 System.Windows.ResourceDictionary.prototype._ctor = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 151);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 151);
 };
 System.Windows.ResourceDictionary.prototype.get_Source = function () {
 	return JSIL.Cast(System.Windows.DependencyObject.prototype.GetValue.call(this, System.Windows.ResourceDictionary.SourceProperty), System.Uri);
@@ -70282,10 +70100,10 @@ JSIL.OverloadedMethod(System.Windows.Media.VisualTreeHelper, "FindElementsInHost
 	]);
 
 System.Windows.Automation.Peers.AutomationPeer.prototype._ctor$0 = function () {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 231);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 231);
 };
 System.Windows.Automation.Peers.AutomationPeer.prototype._ctor$1 = function (index, nativeDO) {
-	System.Windows.DependencyObject.prototype._ctor$2.call(this, index, nativeDO);
+	System.Windows.DependencyObject.prototype._ctor.call(this, index, nativeDO);
 };
 System.Windows.Automation.Peers.AutomationPeer.prototype.GetAcceleratorKey = function () {
 	return this.GetAcceleratorKeyCore();
@@ -71300,7 +71118,7 @@ System.Windows.Automation.AutomationTextAttribute.prototype._ctor = function (th
 System.Windows.Automation.AutomationTextAttribute.prototype.m_enum = 0;
 
 $asm02.MS.Internal.Automation.TextProvider.prototype._ctor = function (textPeer) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 404);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 404);
 	this._textPeer = textPeer;
 	this._richTextBox = JSIL.Cast(this._textPeer.Owner, System.Windows.Controls.RichTextBox);
 	this._richTextBox.add_ContentChanged(JSIL.Delegate.New("System.Windows.Controls.ContentChangedEventHandler", this, $asm02.MS.Internal.Automation.TextProvider.prototype.OnTextContentChanged));
@@ -71400,7 +71218,7 @@ $asm02.MS.Internal.Automation.TextProvider.prototype._textPeer = null;
 $asm02.MS.Internal.Automation.TextProvider.prototype._richTextBox = null;
 
 $asm02.MS.Internal.Automation.TextRangeProvider.prototype._ctor = function (textProvider, textRange, textPeer) {
-	System.Windows.DependencyObject.prototype._ctor$1.call(this, 405);
+	System.Windows.DependencyObject.prototype._ctor.call(this, 405);
 	this._textProvider = textProvider;
 	this._textRange = textRange;
 	this._textPeer = textPeer;
@@ -73206,7 +73024,7 @@ JSIL.QueueInitializer(function () {
 	});
 JSIL.QueueInitializer(function () {
 		JSIL.ExternalMembers(System.Windows.DependencyObject.prototype, 
-			"SetValue", "GetValue", "AddEventListener", "RemoveEventListener"
+			"_ctor", "SetValue", "GetValue", "AddEventListener", "RemoveEventListener"
 		);
 	});
 JSIL.QueueInitializer(function () {
@@ -73215,9 +73033,19 @@ JSIL.QueueInitializer(function () {
 			]);
 	});
 JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.FrameworkElement.prototype, 
+			"FindName"
+		);
+	});
+JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Windows.PresentationFrameworkCollection$b1, [
 				"System.Collections.Generic.IList$b1", "System.Collections.Generic.ICollection$b1", "System.Collections.Generic.IEnumerable$b1", "System.Collections.IList", "System.Collections.ICollection", "System.Collections.IEnumerable"
 			]);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.PresentationFrameworkCollection$b1.prototype, 
+			"AddDependencyObject", "ContainsDependencyObject", "RemoveDependencyObject"
+		);
 	});
 JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces($asm02.System.Windows.PresentationFrameworkCollection$b1.CollectionEnum$b1, [
@@ -73263,6 +73091,16 @@ JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Windows.Documents.TextElement, [
 				"System.Windows.Automation.IAutomationElement"
 			]);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Documents.InlineCollection.prototype, 
+			"AddDependencyObject"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.Documents.BlockCollection.prototype, 
+			"AddDependencyObject"
+		);
 	});
 JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Windows.Controls.NotifyEventArgs, [
@@ -73492,7 +73330,7 @@ JSIL.QueueInitializer(function () {
 	});
 JSIL.QueueInitializer(function () {
 		JSIL.ExternalMembers(System.Windows.Application.prototype, 
-			"Application_Starting", "Application_Started"
+			"Application_Starting", "Application_Started", "set_RootVisual"
 		);
 	});
 JSIL.QueueInitializer(function () {
@@ -73506,9 +73344,32 @@ JSIL.QueueInitializer(function () {
 			]);
 	});
 JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers(System.Windows.DependencyProperty.prototype, 
+			"_ctor", "GetMetadata"
+		);
+		JSIL.ExternalMembers(System.Windows.DependencyProperty, 
+			"Register", "RegisterAttached", "RegisterCoreProperty"
+		);
+	});
+JSIL.QueueInitializer(function () {
 		$asm02.System.Windows.CoreDependencyProperty.prototype.__StructFields__ = [
 			["_isAnyTypeProperty", System.Nullable$b1.Of(System.Boolean)]
 		];
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers($asm02.System.Windows.CoreDependencyProperty.prototype, 
+			"_ctor", "GetMetadata"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers($asm02.System.Windows.CustomDependencyProperty.prototype, 
+			"_ctor"
+		);
+	});
+JSIL.QueueInitializer(function () {
+		JSIL.ExternalMembers($asm02.System.Windows.CustomAttachedDependencyProperty.prototype, 
+			"_ctor"
+		);
 	});
 JSIL.QueueInitializer(function () {
 		JSIL.ImplementInterfaces(System.Windows.Threading.DispatcherTimer, [

@@ -4,9 +4,17 @@ using JSIL.Proxy;
 
 namespace SL2JS.Proxies
 {
-    [JSProxy("System.Windows.DependencyObject")]
-    public abstract class DependencyObject
+    [JSProxy("System.Windows.DependencyObject",
+        inheritable: false)]
+        public abstract class DependencyObject
     {
+        [JSRuntimeDispatch]
+        [JSExternal]
+        public DependencyObject(params AnyType[] values)
+        {
+            
+        }
+
         [JSRuntimeDispatch]
         [JSExternal]
         public abstract void SetValue(params AnyType[] values);
@@ -23,8 +31,5 @@ namespace SL2JS.Proxies
         [JSExternal]
         public abstract void RemoveEventListener(params AnyType[] values);
         
-        [JSRuntimeDispatch]
-        [JSExternal]
-        public abstract AnyType FindProperty(params AnyType[] values);
     }
 }

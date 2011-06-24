@@ -63,8 +63,8 @@ HelloWorld.MainPage.prototype.InitializeComponent = function () {
 	if (!this._contentLoaded) {
 		this._contentLoaded = true;
 		sljs.loadComponentFromJson(this, JSIL.New(System.Uri, "_ctor$1", ["/HelloWorld;component/MainPage.xaml", System.UriKind.Relative]));;
-		this.LayoutRoot = JSIL.Cast(this.findElement("LayoutRoot"), System.Windows.Controls.Grid);
-		this.button1 = JSIL.Cast(this.findElement("button1"), System.Windows.Controls.Button);
+		this.LayoutRoot = JSIL.Cast(System.Windows.FrameworkElement.prototype.FindName.call(this, "LayoutRoot"), System.Windows.Controls.Grid);
+		this.button1 = JSIL.Cast(System.Windows.FrameworkElement.prototype.FindName.call(this, "button1"), System.Windows.Controls.Button);
 	}
 };
 HelloWorld.MainPage.prototype.LayoutRoot = null;

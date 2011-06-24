@@ -83,9 +83,17 @@
             else {
 
                 // Find the appropriate property and set it
-
                 // Note: It may be an "attached" dependency property
                 // But cross that bridge when we come to it
+                // No idea how that works
+                var property = sljs.findPropertyInTarget(target, key);
+                if (!property) {
+                    console.log("Unable to find destination property: " + key + " on " + target);
+                }
+                else {
+                    target.SetValue(property, data[key]); // TODO: Casting
+                    console.log("Set property: " + key + " on " + target + " to " + data[key]);
+                }
             }
         }
     },
@@ -103,6 +111,7 @@
             var element = elements[i];
             var child = sljs.createChild(component, element);
             if (child == null) { continue; }
+            child.Name = "Noname";
 
             sljs.mapPropertiesIntoTarget(component, child, element);
             if (childrenProperty) {
@@ -116,7 +125,6 @@
             }
         }
     },
-
 
     findPropertyInTarget: function (target, name) {
         return sljs.findPropertyInType(target.GetType(), name);
@@ -147,14 +155,6 @@
     }
 };
 
-$(document).ready(function () {
-    $('.code').hide();
-    LazyLoad.js(sljsconfig.files,
-        function () {
-            sljs.initializeApplication();
-        });
-    });
-
 sljs.ManagedEvent = function(peer, property)
 {
     this.peer = peer;
@@ -174,3 +174,10 @@ sljs.ManagedEvent.prototype.raise = function (sender, ev) {
         this.handlers[i]();
     }
 };
+
+$(document).ready(function () {
+    LazyLoad.js(sljsconfig.files,
+        function () {
+            sljs.initializeApplication();
+        });
+});

@@ -18,5 +18,8 @@ namespace SL2JS.Proxies
 
         [JSExternal]
         public abstract AnyType Application_Starting(params AnyType[] values);
+
+        [JSExternal]
+        public abstract AnyType set_RootVisual(params AnyType[] values);
     } 
 }

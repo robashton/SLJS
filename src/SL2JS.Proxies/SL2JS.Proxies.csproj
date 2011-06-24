@@ -48,6 +48,7 @@
     <Compile Include="Deployment.cs" />
     <Compile Include="ManagedPeerTable.cs" />
     <Compile Include="NativeObjectSafeHandle.cs" />
+    <Compile Include="PresentationFrameworkCollection.cs" />
     <Compile Include="SafeHandle.cs" />
     <Compile Include="Application.cs" />
     <Compile Include="XcpImports.cs" />

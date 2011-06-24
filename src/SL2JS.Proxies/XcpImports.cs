@@ -43,5 +43,10 @@ namespace SL2JS.Proxies
             throw new NotImplementedException();
         }
 
+        [JSReplacement("true")]
+        public static AnyType DependencyObject_IsPointerValid(params AnyType[] values)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

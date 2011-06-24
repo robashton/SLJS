@@ -7,7 +7,7 @@ namespace SL2JS.Proxies
     [JSProxy("System.Windows.FrameworkElement")]
     public class FrameworkElement
     {
-        [JSReplacement("this.findElement($name)")]
+        [JSExternal]
         public Object FindName(string name)
         {
             throw new NotImplementedException();

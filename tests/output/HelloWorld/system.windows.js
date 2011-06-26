@@ -176,7 +176,7 @@ Class.setup(System.Windows.DependencyProperty, {
         this.metadata = metadata;
         this.isAttached = isAttached;
         this.isReadonly = isReadonly;
-        console.log("Property created");
+        console.info("Property created with name: " + name);
     }
 });
 
@@ -208,23 +208,33 @@ System.Windows.DependencyProperty.RegisterImpl = function (name, propertyType, o
     return property;
 }
 
-JSIL.MakeClass(System.Windows.DependencyObject, "System.Windows.FrameworkElement", true);
+JSIL.MakeClass(System.Windows.DependencyObject, "System.Windows.UIElement", true);
+Class.setup(System.Windows.UIElement, {
+    _ctor: function () {
+
+    }
+});
+
+JSIL.MakeClass(System.Windows.UIElement, "System.Windows.FrameworkElement", true);
 Class.setup(System.Windows.FrameworkElement, {
     _ctor: function () {
 
     },
     FindName: function (name) {
 
-    }
+    },
+    $NameProperty: System.String
 });
+
 
 JSIL.MakeClass(System.Windows.FrameworkElement, "System.Windows.Controls.Control", true);
 Class.setup(System.Windows.Controls.Control, {
     _ctor: function () {
 
-    }
+    },
 });
-System.Windows.Controls.Control.NameProperty = System.Windows.DependencyProperty.Register("Name", System.String, System.Windows.Controls.Control);
+
+
 
 JSIL.MakeClass(System.Windows.Controls.Control, "System.Windows.Controls.ContentControl", true);
 Class.setup(System.Windows.Controls.ContentControl, {
@@ -237,7 +247,8 @@ JSIL.MakeClass(System.Windows.Controls.Control, "System.Windows.Controls.UserCon
 Class.setup(System.Windows.Controls.UserControl, {
     _ctor: function () {
 
-    }
+    },
+    $ContentProperty: System.Windows.Controls.UIElement
 });
 
 JSIL.MakeClass(System.Windows.Controls.Control, "System.Windows.Controls.Grid", true);

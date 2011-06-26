@@ -81,7 +81,6 @@ System.Windows.Application.addChildrenToTarget = function (component, target, el
         var element = elements[i];
         var child = System.Windows.Application.createChild(component, element);
         if (child == null) { continue; }
-        child.Name = "Noname";
 
         System.Windows.Application.mapPropertiesIntoTarget(component, child, element);
         if (childrenProperty) {
@@ -91,7 +90,7 @@ System.Windows.Application.addChildrenToTarget = function (component, target, el
             target.SetValue(contentProperty, child);
         }
         else {
-            console.warning("Unable to find somewhere to place the control: " + child.Name + " " + child.GetType());
+            console.warn("Unable to find somewhere to place the control: " + child.Name + " " + child.GetType());
         }
     }
 };
@@ -119,19 +118,6 @@ System.Windows.Application.findPropertyInType = function (type, name) {
     return this.findPropertyInType(type.prototype.__BaseType__, name);
 };
 
-GlobalTable = {};
-GlobalTable.GlobalProperties = [];
-
-GlobalTable.GetValue = function (obj, property) {
-    if (!GlobalTable.GlobalProperties[obj]) GlobalTable.GlobalProperties[obj] = {};
-    return GlobalTable.GlobalProperties[obj][property.typeIndex];
-};
-
-GlobalTable.SetValue = function (obj, property, value) {
-    if (!GlobalTable.GlobalProperties[obj]) GlobalTable.GlobalProperties[obj] = {};
-    GlobalTable.GlobalProperties[obj][property.typeIndex] = value;
-};
-
 JSIL.MakeClass(Object, "System.Windows.DependencyObject", true);
 Class.setup(System.Windows.DependencyObject, {
  SetValue: function(property, value) {
@@ -139,14 +125,14 @@ Class.setup(System.Windows.DependencyObject, {
          console.log("Attempt to set missing dependency property on type: " + this.GetType());
          return;
      }
-     GlobalTable.SetValue(this, property, value);
+     this["$$$" + property.name] = value;
  },
  GetValue: function(property) {
       if (!property) {
          console.log("Attempt to read missing dependency property on type: " + this.GetType());
          return null;
      }
-     return GlobalTable.GetValue(this, property);
+     return this["$$$" + property.name];
  },
  AddEventListener: function () {
      console.log("AddEventListener not implemented");
@@ -208,6 +194,25 @@ System.Windows.DependencyProperty.RegisterImpl = function (name, propertyType, o
     return property;
 }
 
+JSIL.MakeClass(System.Windows.DependencyObject, "System.Windows.Controls.UIElementCollection", true); // This is going to be complex eventually
+Class.setup(System.Windows.Controls.UIElementCollection, {
+    _ctor: function () {
+        this.items = [];
+    },
+    Add: function(item) {
+        this.items.push(item);
+        this.NotifyCountChanged();
+    },
+    NotifyCountChanged: function() {
+        // No idea how to raise events just yet, so
+        this.Count = this.items.length;
+    },
+    ElementAt: function(index) {
+        return this.items[index];
+    },
+    $CountProperty: System.Int32
+});
+
 JSIL.MakeClass(System.Windows.DependencyObject, "System.Windows.UIElement", true);
 Class.setup(System.Windows.UIElement, {
     _ctor: function () {
@@ -221,7 +226,34 @@ Class.setup(System.Windows.FrameworkElement, {
 
     },
     FindName: function (name) {
+         if (this.Name == name) return this;
+         var needle = null;
 
+         // Find the content property on this level of framework element
+         var childrenProperty = System.Windows.Application.findPropertyInTarget(this, "Children");
+         var contentProperty = System.Windows.Application.findPropertyInTarget(this, "Content");
+
+         if (childrenProperty != null) {
+             var childrenElement = this.GetValue(childrenProperty);
+             for (var i = 0; i < childrenElement.Count; i++) {
+                 var haystack = childrenElement.ElementAt(i);
+                 needle = haystack.FindName(name);
+                 if (needle) break;
+             }
+         }
+         else if (contentProperty != null) {
+             var haystack = this.GetValue(contentProperty);
+             needle = haystack.FindName(name);
+         }
+         else console.warn("FindName couldn't find a property to use");
+
+         if (needle) {
+             console.info("Found element " + name);
+         }
+         else {
+             console.warn("Couldn't find element: " + name);
+         }
+         return needle;
     },
     $NameProperty: System.String
 });
@@ -255,7 +287,8 @@ JSIL.MakeClass(System.Windows.Controls.Control, "System.Windows.Controls.Grid", 
 Class.setup(System.Windows.Controls.Grid, {
     _ctor: function () {
 
-    }
+    },
+    $ChildrenProperty: System.Windows.Controls.UIElementCollection
 });
 
 

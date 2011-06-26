@@ -17,9 +17,9 @@ Class.setupDependencyProperty = function (destination, rawName, information) {
     var propertyFieldName = rawName.substr(startIndex);
     destination[propertyFieldName] = System.Windows.DependencyProperty.Register(actualPropertyName, information, destination);
 
-    Object.defineProperty(destination, actualPropertyName, {
+    Object.defineProperty(destination.prototype, actualPropertyName, {
         get: function () {
-            this.GetValue(destination[propertyFieldName]);
+            return this.GetValue(destination[propertyFieldName]);
         },
         set: function (value) {
             this.SetValue(destination[propertyFieldName], value);

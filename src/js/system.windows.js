@@ -91,7 +91,7 @@ System.Windows.Application.addChildrenToTarget = function (component, target, el
             target.SetValue(contentProperty, child);
         }
         else {
-            console.log("Unable to find somewhere to place my control");
+            console.warning("Unable to find somewhere to place the control: " + child.Name + " " + child.GetType());
         }
     }
 };

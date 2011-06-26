@@ -9,13 +9,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SL2JS", "SL2JS\SL2JS.csproj
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{FA964E47-5C55-4243-A9F3-EF80F19D0C8A}"
 	ProjectSection(SolutionItems) = preProject
+		js\controls.js = js\controls.js
+		js\core.js = js\core.js
+		js\executor.js = js\executor.js
 		js\jquery-1.6.1.js = js\jquery-1.6.1.js
 		js\jquery.tmpl.js = js\jquery.tmpl.js
 		js\jsonselect.js = js\jsonselect.js
 		js\knockout.js = js\knockout.js
 		js\lazyload.js = js\lazyload.js
 		js\patches.js = js\patches.js
-		js\sljs.js = js\sljs.js
+		js\support.js = js\support.js
 	EndProjectSection
 EndProject
 Global

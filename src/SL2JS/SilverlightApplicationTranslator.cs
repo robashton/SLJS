@@ -23,29 +23,21 @@ namespace SL2JS
                                                           {
                                                               "jquery-1.6.1.js",
                                                               "lazyload.js",
-                                                              "sljs.js"
+                                                              "support.js",
+                                                              "executor.js",
                                                           };
 
         private static readonly string[] CoreJs = new[]
                                                           {
                                                               "JSIL.Core.js",
                                                               "JSIL.Bootstrap.js",
+                                                              "core.js",
+                                                              "system.js",
+                                                              "system.windows.js",
                                                               "jquery.tmpl.js",
                                                               "knockout.js",
-                                                              "mscorlib, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.js",
-                                                              "System, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.js",
-                                                              "System.Core, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.js",
-                                                              "System.Net, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.js",
-                                                              "System.Runtime.Serialization, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.js",
-                                                              "System.ServiceModel.Web, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.js",
-                                                              "System.Windows, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.js",
-                                                              "System.Windows.Browser, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.js",
-                                                              "System.Xml, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.js"
                                                           };
-        private static readonly string[] PatchJs = new[] 
-                                                          {
-                                                              "patches.js"
-                                                          };
+        private static readonly string[] PatchJs = new string[] {};
 
         public SilverlightApplicationTranslator(SilverlightApplicationTranslatorConfiguration configuration, ResourceFileTranslator resourceFileTranslator)
         {
@@ -110,7 +102,9 @@ namespace SL2JS
         {
             var resourceFolderName = Path.GetFileNameWithoutExtension(configuration.Filename);
             var resourceFolder = Path.Combine(configuration.OutputDirectory, resourceFolderName);
-            
+
+            if (!Directory.Exists(resourceFolder)) return;
+
             foreach (var file in Directory.GetFiles(resourceFolder, "*.resources"))
             {
                 resourceFileTranslator.Translate(file, resourceFolder);
@@ -138,8 +132,11 @@ namespace SL2JS
         {
             translator.OutputDirectory = configuration.OutputDirectory;
             translator.IncludeDependencies = configuration.IncludeDependencies;
-            translator.AddProxyAssembly(typeof (Application).Assembly, false);
+            translator.AddProxyAssembly(typeof (MessageBox).Assembly, false);
             translator.Translate(configuration.Filename);
+            translator.EliminateTemporaries = false;
+            translator.SimplifyLoops = false;
+            translator.SimplifyOperators = false;
         }
     }
 }

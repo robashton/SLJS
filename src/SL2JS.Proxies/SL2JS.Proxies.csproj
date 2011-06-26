@@ -43,23 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationLifetimeObjects.cs" />
-    <Compile Include="CoreTypeEventHelper.cs" />
-    <Compile Include="Deployment.cs" />
-    <Compile Include="ManagedPeerTable.cs" />
-    <Compile Include="NativeObjectSafeHandle.cs" />
-    <Compile Include="PresentationFrameworkCollection.cs" />
-    <Compile Include="SafeHandle.cs" />
-    <Compile Include="Application.cs" />
-    <Compile Include="XcpImports.cs" />
-    <Compile Include="Control.cs" />
-    <Compile Include="DependencyObject.cs" />
-    <Compile Include="DependencyProperty.cs" />
-    <Compile Include="FrameworkElement.cs" />
     <Compile Include="MessageBox.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Uri.cs" />
-    <Compile Include="UserControl.cs" />
+    <Compile Include="Ctors.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

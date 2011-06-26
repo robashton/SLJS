@@ -547,6 +547,13 @@ JSIL.TypeObjectPrototype.Of = function () {
     };
   };
 
+   // Obviously this is not correct
+   var makeIndirectSetter = function (key) {
+    return function (value) {
+      self[key] = value;
+    };
+  };
+
   var ignoredNames = [
     "__Self__", "prototype", "Of"
   ];
@@ -559,7 +566,8 @@ JSIL.TypeObjectPrototype.Of = function () {
       result, k, {
         configurable: false,
         enumerable: true,
-        get: makeIndirectGetter(k)
+        get: makeIndirectGetter(k),
+        set: makeIndirectSetter(k)
       }
     );
   }
@@ -582,7 +590,10 @@ JSIL.TypeObjectPrototype.Of = function () {
 
   JSIL.InstantiateGenericProperties(result);
 
+  result.__IsClosed__ = true;
   ofCache[cacheKey] = result;
+  
+  JSIL.InitializeType(result);
   return result;
 };
 
@@ -666,7 +677,11 @@ JSIL.InitializeType = function (type) {
 
   if (type.__TypeInitialized__ || false)
     return;
-
+    /*
+    // Don't initialize open generics
+   if(type.__GenericArguments__.length > 0 && !type.__IsClosed__) 
+      return; 
+      */
   // Not entirely correct, but prevents recursive type initialization
   type.__TypeInitialized__ = true;
 
@@ -691,10 +706,11 @@ JSIL.InitializeType = function (type) {
   }
 
   if (typeof (type._cctor) !== "undefined") {
-    try {
+   try {
       type._cctor();
     } catch (e) {
-      JSIL.Host.error(e, "Unhandled exception in static constructor for type " + JSIL.GetTypeName(type));
+           JSIL.Host.logWriteLine( "Unhandled exception in static constructor for type " + JSIL.GetTypeName(type));
+    //  JSIL.Host.error(e,);
     }
   }
 };
@@ -1295,7 +1311,7 @@ JSIL.TryCast = function (value, expectedType) {
 };
 
 JSIL.Cast = function (value, expectedType) {
-  if(!value) return null;
+    if(!value) return null;
   if (expectedType.IsEnum) {
     var result = JSIL.MakeEnumValue(expectedType, value, null);
   } else if (JSIL.CheckType(value, expectedType)) {

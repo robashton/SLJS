@@ -2,6 +2,7 @@
 using System.IO;
 using System.Reflection;
 using JSIL;
+using SL2JS.Proxies;
 
 namespace SL2JS
 {
@@ -13,4 +14,5 @@ namespace SL2JS
             this.AddSearchDirectory(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
         }
     }
+
 }

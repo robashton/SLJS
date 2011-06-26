@@ -8,7 +8,7 @@ JSIL.MakeClass("System.Object", "HelloWorld.App/$l$gc__DisplayClass2", false);
 JSIL.MakeClass("System.Windows.Controls.UserControl", "HelloWorld.MainPage", true);
 
 HelloWorld.App.prototype._ctor = function () {
-	System.Windows.Application.prototype._ctor$0.call(this);
+	System.Windows.Application.prototype._ctor.call(this);
 	System.Windows.Application.prototype.add_Startup.call(this, JSIL.Delegate.New("System.Windows.StartupEventHandler", this, HelloWorld.App.prototype.Application_Startup));
 	System.Windows.Application.prototype.add_Exit.call(this, JSIL.Delegate.New("System.EventHandler", this, HelloWorld.App.prototype.Application_Exit));
 	System.Windows.Application.prototype.add_UnhandledException.call(this, JSIL.Delegate.New("System.EventHandler`1[System.Windows.ApplicationUnhandledExceptionEventArgs]", this, HelloWorld.App.prototype.Application_UnhandledException));
@@ -25,7 +25,7 @@ HelloWorld.App.prototype.Application_UnhandledException = function (sender, e) {
 	$l$gc__DisplayClass.$this = this;
 	if (!System.Diagnostics.Debugger.IsAttached) {
 		$l$gc__DisplayClass.e.Handled = true;
-		({}.Dispatcher).BeginInvoke$0(function () {
+		System.Windows.Deployment.Current.Dispatcher.BeginInvoke$0(function () {
 				$l$gc__DisplayClass.$this.ReportErrorToDOM($l$gc__DisplayClass.e);
 			});
 	}
@@ -41,7 +41,7 @@ HelloWorld.App.prototype.ReportErrorToDOM = function (e) {
 HelloWorld.App.prototype.InitializeComponent = function () {
 	if (!this._contentLoaded) {
 		this._contentLoaded = true;
-		sljs.loadComponentFromJson(this, JSIL.New(System.Uri, "_ctor$1", ["/HelloWorld;component/App.xaml", System.UriKind.Relative]));;
+		System.Windows.Application.LoadComponent(this, new System.Uri("/HelloWorld;component/App.xaml", System.UriKind.Relative));
 	}
 };
 HelloWorld.App.prototype._contentLoaded = false;
@@ -53,7 +53,7 @@ $asm01.HelloWorld.App.$l$gc__DisplayClass2.prototype.$this = null;
 $asm01.HelloWorld.App.$l$gc__DisplayClass2.prototype.e = null;
 
 HelloWorld.MainPage.prototype._ctor = function () {
-	System.Windows.Controls.UserControl.prototype._ctor$0.call(this);
+	System.Windows.Controls.UserControl.prototype._ctor.call(this);
 	this.InitializeComponent();
 };
 HelloWorld.MainPage.prototype.button1_Click = function (sender, e) {
@@ -62,7 +62,7 @@ HelloWorld.MainPage.prototype.button1_Click = function (sender, e) {
 HelloWorld.MainPage.prototype.InitializeComponent = function () {
 	if (!this._contentLoaded) {
 		this._contentLoaded = true;
-		sljs.loadComponentFromJson(this, JSIL.New(System.Uri, "_ctor$1", ["/HelloWorld;component/MainPage.xaml", System.UriKind.Relative]));;
+		System.Windows.Application.LoadComponent(this, new System.Uri("/HelloWorld;component/MainPage.xaml", System.UriKind.Relative));
 		this.LayoutRoot = JSIL.Cast(System.Windows.FrameworkElement.prototype.FindName.call(this, "LayoutRoot"), System.Windows.Controls.Grid);
 		this.button1 = JSIL.Cast(System.Windows.FrameworkElement.prototype.FindName.call(this, "button1"), System.Windows.Controls.Button);
 	}

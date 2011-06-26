@@ -4,24 +4,19 @@
     <title>Default Silverlight -> Html Container</title>
     <script type="text/javascript" src="jquery-1.6.1.js"></script>
     <script type="text/javascript" src="lazyload.js"></script>
-    <script type="text/javascript" src="sljs.js"></script>
+    <script type="text/javascript" src="support.js"></script>
+    <script type="text/javascript" src="executor.js"></script>
     
     <script type="text/javascript">
         sljsconfig = {
 entryPoint: 'HelloWorld.App',
 files: ['JSIL.Core.js'
 ,'JSIL.Bootstrap.js'
+,'core.js'
+,'system.js'
+,'system.windows.js'
 ,'jquery.tmpl.js'
 ,'knockout.js'
-,'mscorlib, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.js'
-,'System, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.js'
-,'System.Core, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.js'
-,'System.Net, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.js'
-,'System.Runtime.Serialization, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.js'
-,'System.ServiceModel.Web, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.js'
-,'System.Windows, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.js'
-,'System.Windows.Browser, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.js'
-,'System.Xml, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.js'
 ,'HelloWorld, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null.js'
 ,'jsonselect.js'
 ,'patches.js']

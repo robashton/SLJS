@@ -18,7 +18,7 @@ GlobalEvents = {
 
 JSIL.MakeClass(Object, "System.Windows.Application", true);
 Class.setup(System.Windows.Application, {
-    _ctor: function () {},
+    _ctor: function () { },
     add_Startup: function (handler) {
         this.addEventHandler(this, GlobalEvents.OnStartup, handler);
     },
@@ -32,7 +32,7 @@ Class.setup(System.Windows.Application, {
         this.raiseEvent(this, GlobalEvents.OnStartup, {});
     },
     set_RootVisual: function (control) {
-        console.log("Setting root visual");
+        $(sljs.Renderer.render(control)).appendTo('#container');
     },
     $Events: [
         GlobalEvents.OnStartup,
@@ -218,31 +218,28 @@ Class.setup(System.Windows.DependencyProperty, {
 
 System.Windows.DependencyProperty._registeredCoreProperties = new DependencyPropertyDictionary();
 System.Windows.DependencyProperty._registeredProperties = new DependencyPropertyDictionary();
-System.Windows.DependencyProperty.RegisterCoreProperty = function (typeIndex, type) {
+System.Windows.DependencyProperty.RegisterCoreProperty = function(typeIndex, type) {
     var property = new System.Windows.DependencyProperty(typeIndex, "", type);
     System.Windows.DependencyProperty._registeredCoreProperties.set_Item(typeIndex, property);
     return property;
-}
-System.Windows.DependencyProperty.Register = function(name, propertyType, ownerType, metadata)
-{
+};
+System.Windows.DependencyProperty.Register = function(name, propertyType, ownerType, metadata) {
     return System.Windows.DependencyProperty.RegisterImpl(name, propertyType, ownerType, metadata, false, false);
-}
-System.Windows.DependencyProperty.RegisterReadonly = function (name, propertyType, ownerType, metadata)
-{
+};
+System.Windows.DependencyProperty.RegisterReadonly = function(name, propertyType, ownerType, metadata) {
     return System.Windows.DependencyProperty.RegisterImpl(name, propertyType, ownerType, metadata, false, true);
-}
-System.Windows.DependencyProperty.RegisterAttached = function (name, propertyType, ownerType, metadata)
-{
+};
+System.Windows.DependencyProperty.RegisterAttached = function(name, propertyType, ownerType, metadata) {
     return System.Windows.DependencyProperty.RegisterImpl(name, propertyType, ownerType, metadata, true, false);
-}
-System.Windows.DependencyProperty.RegisterAttachedReadonly = function (name, propertyType, ownerType, metadata) {
+};
+System.Windows.DependencyProperty.RegisterAttachedReadonly = function(name, propertyType, ownerType, metadata) {
     return System.Windows.DependencyProperty.RegisterImpl(name, propertyType, ownerType, metadata, true, true);
-}
-System.Windows.DependencyProperty.RegisterImpl = function (name, propertyType, ownerType, metadata, isAttached, isReadonly) {
+};
+System.Windows.DependencyProperty.RegisterImpl = function(name, propertyType, ownerType, metadata, isAttached, isReadonly) {
     var property = new System.Windows.DependencyProperty(null, name, propertyType, ownerType, metadata, isAttached, isReadonly);
     System.Windows.DependencyProperty._registeredProperties.set_Item(name + ownerType, property);
     return property;
-}
+};
 
 JSIL.MakeClass(System.Windows.DependencyObject, "System.Windows.Controls.UIElementCollection", true); // This is going to be complex eventually
 Class.setup(System.Windows.Controls.UIElementCollection, {
@@ -329,21 +326,24 @@ JSIL.MakeClass(System.Windows.Controls.Control, "System.Windows.Controls.Content
 Class.setup(System.Windows.Controls.ContentControl, {
     _ctor: function () {
 
-    }
+    },
+    $ContentProperty: System.Windows.Controls.UIElement
 });
 
-JSIL.MakeClass(System.Windows.Controls.Control, "System.Windows.Controls.UserControl", true);
+JSIL.MakeClass(System.Windows.Controls.ContentControl, "System.Windows.Controls.UserControl", true);
 Class.setup(System.Windows.Controls.UserControl, {
     _ctor: function () {
 
-    },
-    $ContentProperty: System.Windows.Controls.UIElement
+    }
 });
 
 JSIL.MakeClass(System.Windows.Controls.Control, "System.Windows.Controls.Grid", true);
 Class.setup(System.Windows.Controls.Grid, {
     _ctor: function () {
 
+    },
+    Items: function () {
+        return this.Children.items;
     },
     $ChildrenProperty: System.Windows.Controls.UIElementCollection
 });

@@ -1,7 +1,7 @@
-<div id="{Name}">
+<div id="{{Name}}">
     <ul>
-        {{each Children}}
-            <li>${$item.render(this)}</li>
-        {{/each}}
+        {{#Items}}
+            <li>{{#child}}self{{/child}}</li>
+        {{/Items}}            
     </ul>
 </div>

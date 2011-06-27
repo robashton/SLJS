@@ -43,7 +43,7 @@ sljs.processErr = function(text, error) {
 };
 
 sljs.loadJavascript = function(callback) {
-   LazyLoad.js(sljsconfig.code, callback());
+   LazyLoad.js(sljsconfig.code, callback);
 };
 sljs.loadTemplates = function (callback) {
     var templatesToLoad = sljsconfig.templates;
@@ -60,13 +60,23 @@ sljs.loadTemplate = function (template, callback) {
     $.ajax({
         url: template,
         success: function (data) {
-            sljs.templates[template] = data;
+            var templateName = sljs.sanitiseTemplateName(template);
+            
+            // We'll store it here for future reference
+            sljs.templates[templateName] = data;
+            
             callback();
         },
         error: function (jqXHR, textStatus, errorThrown) {
             sljs.processErr(textStatus, errorThrown);
         }
     });
+};
+
+sljs.sanitiseTemplateName = function (templateName) {
+    var extensionIndex = templateName.lastIndexOf('.');
+    var fileWithoutExtension = templateName.substr(0, extensionIndex);
+    return fileWithoutExtension.toLowerCase();
 };
 
 sljs.initialize = function() {

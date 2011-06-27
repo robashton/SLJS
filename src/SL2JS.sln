@@ -9,7 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SL2JS", "SL2JS\SL2JS.csproj
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{FA964E47-5C55-4243-A9F3-EF80F19D0C8A}"
 	ProjectSection(SolutionItems) = preProject
-		js\controls.html = js\controls.html
 		js\core.js = js\core.js
 		js\executor.js = js\executor.js
 		js\jquery-1.6.1.js = js\jquery-1.6.1.js
@@ -17,9 +16,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{FA964E47-5C55-
 		js\jsonselect.js = js\jsonselect.js
 		js\knockout.js = js\knockout.js
 		js\lazyload.js = js\lazyload.js
+		js\rendering.js = js\rendering.js
 		js\support.js = js\support.js
 		js\system.js = js\system.js
 		js\system.windows.js = js\system.windows.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "templates", "templates", "{796D66BB-F197-4D23-9CFB-B12403AF956C}"
+	ProjectSection(SolutionItems) = preProject
+		templates\System.Windows.Controls.Button.htm = templates\System.Windows.Controls.Button.htm
+		templates\System.Windows.Controls.Grid.htm = templates\System.Windows.Controls.Grid.htm
+		templates\System.Windows.Controls.UserControl.htm = templates\System.Windows.Controls.UserControl.htm
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "external", "external", "{E11FC79C-5ABB-4E80-9335-BD0EB5EDE54A}"
+	ProjectSection(SolutionItems) = preProject
+		_LIBS\JSIL\JSIL.Bootstrap.js = _LIBS\JSIL\JSIL.Bootstrap.js
+		_LIBS\JSIL\JSIL.Core.js = _LIBS\JSIL\JSIL.Core.js
 	EndProjectSection
 EndProject
 Global

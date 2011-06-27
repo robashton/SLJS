@@ -33,23 +33,24 @@ Class.setup(System.Windows.Application, {
     },
     set_RootVisual: function (control) {
         this.rootVisual = control;
+        this.allControls = [];
         $(sljs.Renderer.render(control)).appendTo('#container');
         this.notifyControlsOfTheDom();
         this.applyInlineStylesToControls();
     },
     notifyControlsOfTheDom: function () {
         var rootVisual = this.rootVisual;
+        var application = this;
         $('#container').find('[id]').each(function () {
             var element = $(this);
             var id = element.attr('id');
             if (!id || id === "") return;
             var control = rootVisual.FindName(id);
-            if (control.notifyOfDomElement) control.notifyOfDomElement(element);
+            if (control) {
+                if (control.notifyOfDomElement) control.notifyOfDomElement(element);
+                application.allControls.push(control);
+            }
         });
-    },
-    applyInlineStylesToControls: function() {
-        // Note: This will need to listen for changes too :-)
-        
     },
     $Events: [
         GlobalEvents.OnStartup,
@@ -268,7 +269,6 @@ Class.setup(System.Windows.Controls.UIElementCollection, {
         this.NotifyCountChanged();
     },
     NotifyCountChanged: function() {
-        // No idea how to raise events just yet, so
         this.Count = this.items.length;
     },
     ElementAt: function(index) {
@@ -281,6 +281,24 @@ JSIL.MakeClass(System.Windows.DependencyObject, "System.Windows.UIElement", true
 Class.setup(System.Windows.UIElement, {
     _ctor: function () {
 
+    },
+    notifyOfDomElement: function (element) {
+        this.$element = element;
+        this.hookDomEvents();
+        this.hookInlineStyling();
+    },
+    hookDomEvents: function () {
+
+    },
+    hookInlineStyling: function () {
+        this.wrapCss('width', "Width");
+        this.wrapCss('height', "Height");
+        this.wrapCss('margin', "Margin");
+        this.wrapCss('background-color', "Background"); // probably not
+    },
+    wrapCss: function (cssProperty, propertyName) {
+        // NOTE: Actually want to hook the property changed event here and re-apply CSS when it changes, should be easy right?
+        this.$element.css(cssProperty, this[propertyName]);
     },
     $WidthProperty: System.Int32,
     $HeightProperty: System.Int32,
@@ -297,41 +315,34 @@ Class.setup(System.Windows.FrameworkElement, {
 
     },
     FindName: function (name) {
-         if (this.Name == name) return this;
+        if (this.Name == name) return this;
         var needle = null;
         var haystack = null;
-         // Find the content property on this level of framework element
-         var childrenProperty = System.Windows.Application.findPropertyInTarget(this, "Children");
-         var contentProperty = System.Windows.Application.findPropertyInTarget(this, "Content");
-         
-         if (childrenProperty != null) {
-             var childrenElement = this.GetValue(childrenProperty);
-             for (var i = 0; i < childrenElement.Count; i++) {
-                 haystack = childrenElement.ElementAt(i);
-                 needle = haystack.FindName(name);
-                 if (needle) break;
-             }
-         }
-         else if (contentProperty != null) {
-             haystack = this.GetValue(contentProperty);
-             needle = haystack.FindName(name);
-         }
-         else console.warn("FindName couldn't find a property to use");
+        // Find the content property on this level of framework element
+        var childrenProperty = System.Windows.Application.findPropertyInTarget(this, "Children");
+        var contentProperty = System.Windows.Application.findPropertyInTarget(this, "Content");
 
-         if (needle) {
-             console.info("Found element " + name);
-         }
-         else {
-             console.warn("Couldn't find element: " + name);
-         }
-         return needle;
-     },
-     notifyOfDomElement: function (element) {
-         this.$element = element;
-         this.hookDomEvents();
-     },
-    hookDomEvents: function () {
-            
+        if (childrenProperty != null) {
+            var childrenElement = this.GetValue(childrenProperty);
+            for (var i = 0; i < childrenElement.Count; i++) {
+                haystack = childrenElement.ElementAt(i);
+                needle = haystack.FindName(name);
+                if (needle) break;
+            }
+        }
+        else if (contentProperty != null) {
+            haystack = this.GetValue(contentProperty);
+            needle = haystack.FindName(name);
+        }
+        else console.warn("FindName couldn't find a property to use");
+
+        if (needle) {
+            console.info("Found element " + name);
+        }
+        else {
+            console.warn("Couldn't find element: " + name);
+        }
+        return needle;
     },
     $NameProperty: System.String
 });

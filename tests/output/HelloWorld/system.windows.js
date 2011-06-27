@@ -18,24 +18,27 @@ GlobalEvents = {
 
 JSIL.MakeClass(Object, "System.Windows.Application", true);
 Class.setup(System.Windows.Application, {
-    _ctor: function () {
-        this.eventTable = new sljs.EventTable();
-    },
+    _ctor: function () {},
     add_Startup: function (handler) {
-        this.eventTable.addHandler(this, GlobalEvents.OnStartup, handler);
+        this.addEventHandler(this, GlobalEvents.OnStartup, handler);
     },
     add_Exit: function (handler) {
-        this.eventTable.addHandler(this, GlobalEvents.OnExit, handler);
+        this.addEventHandler(this, GlobalEvents.OnExit, handler);
     },
     add_UnhandledException: function (handler) {
-        this.eventTable.addHandler(this, GlobalEvents.OnUnhandledException, handler);
+        this.addEventHandler(this, GlobalEvents.OnUnhandledException, handler);
     },
     notifyStartup: function () {
-        this.eventTable.raise(this, GlobalEvents.OnStartup);
+        this.raiseEvent(this, GlobalEvents.OnStartup, {});
     },
     set_RootVisual: function (control) {
         console.log("Setting root visual");
-    }
+    },
+    $Events: [
+        GlobalEvents.OnStartup,
+        GlobalEvents.OnExit,
+        GlobalEvents.OnUnhandledException
+    ]
 });
 
 System.Windows.Application.LoadComponent = function (component, resource) {
@@ -57,17 +60,45 @@ System.Windows.Application.mapPropertiesIntoTarget = function (component, target
         }
         else if (key == "$ElementType") continue;
         else {
-            var property = System.Windows.Application.findPropertyInTarget(target, key);
-            if (!property) {
-                console.log("Unable to find destination property: " + key + " on " + target);
+            if(this.attemptToWireUpProperty(component, target, key, data[key]))  {
+                continue;
             }
-            else {
-                target.SetValue(property, data[key]);
-                console.log("Set property: " + key + " on " + target.GetType() + " to " + data[key]);
+            else if(this.attemptToWireUpEvent(component, target, key, data[key])) {
+                continue;
             }
+            else{ 
+                console.warn("Unable to find anything to do with " + key + " on " + target.GetType());
+            }            
         }
     }
 };
+
+System.Windows.Application.attemptToWireUpEvent = function (component, target, key, value) {
+    var event = System.Windows.Application.findEventInTarget(target, key);
+    if (!event) {
+        return false;
+    }
+    else {
+        event.addHandler(target, key, function(sender, args) {
+            component[value](sender, args);
+        });
+        console.log("Set event: " + key + " on " + target.GetType() + " to " + value);
+        return true;
+    }
+};
+
+System.Windows.Application.attemptToWireUpProperty = function (component, target, key, value) {
+    var property = System.Windows.Application.findPropertyInTarget(target, key);
+    if (!property) {
+        return false;
+    }
+    else {
+        target.SetValue(property, value);
+        console.log("Set property: " + key + " on " + target.GetType() + " to " + value);
+        return true;
+    }
+};
+
 System.Windows.Application.addChildrenToTarget = function (component, target, elements) {
     var childrenProperty = this.findPropertyInTarget(target, "Children");
     var contentProperty = this.findPropertyInTarget(target, "Content");
@@ -111,34 +142,53 @@ System.Windows.Application.createChild = function (component, data) {
 System.Windows.Application.findPropertyInTarget = function (target, name) {
     return System.Windows.Application.findPropertyInType(target.GetType(), name);
 };
+
 System.Windows.Application.findPropertyInType = function (type, name) {
+    var propertyName = name + "Property";
+    return this.findNameInType(type, propertyName);
+};
+
+System.Windows.Application.findEventInTarget = function (target, name) {
+    return System.Windows.Application.findEventInType(target.GetType(), name);
+};
+
+System.Windows.Application.findEventInType = function (type, name) {
+    if(!type) return null;
+    var eventTable = type["$eventTable"];
+    if(eventTable && eventTable.isKnownEvent(name)) {
+        return eventTable;
+    }
+    return this.findEventInType(type.prototype.__BaseType__, name);
+};
+
+System.Windows.Application.findNameInType = function (type, name) {
     if (!type) return null;
-    var property = type[name + "Property"];
+    var property = type[name];
     if (property) return property;
-    return this.findPropertyInType(type.prototype.__BaseType__, name);
+    return this.findNameInType(type.prototype.__BaseType__, name);
 };
 
 JSIL.MakeClass(Object, "System.Windows.DependencyObject", true);
 Class.setup(System.Windows.DependencyObject, {
  SetValue: function(property, value) {
       if (!property) {
-         console.log("Attempt to set missing dependency property on type: " + this.GetType());
+         console.warn("Attempt to set missing dependency property on type: " + this.GetType());
          return;
      }
      this["$$$" + property.name] = value;
  },
  GetValue: function(property) {
       if (!property) {
-         console.log("Attempt to read missing dependency property on type: " + this.GetType());
+         console.warn("Attempt to read missing dependency property on type: " + this.GetType());
          return null;
      }
      return this["$$$" + property.name];
  },
  AddEventListener: function () {
-     console.log("AddEventListener not implemented");
+     console.warn("AddEventListener not implemented");
  },
  RemoveEventListener: function () {
-     console.log("RemoveEventListener not implemented");
+     console.warn("RemoveEventListener not implemented");
  } 
 });
 
@@ -217,7 +267,15 @@ JSIL.MakeClass(System.Windows.DependencyObject, "System.Windows.UIElement", true
 Class.setup(System.Windows.UIElement, {
     _ctor: function () {
 
-    }
+    },
+    $WidthProperty: System.Int32,
+    $HeightProperty: System.Int32,
+    $VerticalAlignmentProperty: System.String,
+    $MarginProperty: System.String,
+    $BackgroundProperty: System.String,
+    $HorizontalAlignmentProperty: System.String,
+    $BackgroundProperty: System.String,
+    $ContentProperty: System.String
 });
 
 JSIL.MakeClass(System.Windows.UIElement, "System.Windows.FrameworkElement", true);
@@ -296,5 +354,8 @@ JSIL.MakeClass(System.Windows.Controls.Control, "System.Windows.Controls.Button"
 Class.setup(System.Windows.Controls.Button, {
     _ctor: function () {
 
-    }
+    },
+    $Events: [
+        "Click"
+    ]
 });

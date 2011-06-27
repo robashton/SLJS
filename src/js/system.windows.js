@@ -42,10 +42,10 @@ Class.setup(System.Windows.Application, {
 });
 
 System.Windows.Application.LoadComponent = function (component, resource) {
-    var resource = resource.toString();
-    var hackyStringIndex = resource.indexOf('component/');
+    var resourceName = resource.toString();
+    var hackyStringIndex = resourceName.indexOf('component/');
 
-    var resourceNameAsXaml = resource.substr(hackyStringIndex + 'component/'.length);
+    var resourceNameAsXaml = resourceName.substr(hackyStringIndex + 'component/'.length);
     var resourceNameAsJson = resourceNameAsXaml.replace('xaml', 'json');
 
     var data = sljs.getXaml(resourceNameAsJson);
@@ -272,7 +272,6 @@ Class.setup(System.Windows.UIElement, {
     $HeightProperty: System.Int32,
     $VerticalAlignmentProperty: System.String,
     $MarginProperty: System.String,
-    $BackgroundProperty: System.String,
     $HorizontalAlignmentProperty: System.String,
     $BackgroundProperty: System.String,
     $ContentProperty: System.String
@@ -285,22 +284,22 @@ Class.setup(System.Windows.FrameworkElement, {
     },
     FindName: function (name) {
          if (this.Name == name) return this;
-         var needle = null;
-
+        var needle = null;
+        var haystack = null;
          // Find the content property on this level of framework element
          var childrenProperty = System.Windows.Application.findPropertyInTarget(this, "Children");
          var contentProperty = System.Windows.Application.findPropertyInTarget(this, "Content");
-
+         
          if (childrenProperty != null) {
              var childrenElement = this.GetValue(childrenProperty);
              for (var i = 0; i < childrenElement.Count; i++) {
-                 var haystack = childrenElement.ElementAt(i);
+                 haystack = childrenElement.ElementAt(i);
                  needle = haystack.FindName(name);
                  if (needle) break;
              }
          }
          else if (contentProperty != null) {
-             var haystack = this.GetValue(contentProperty);
+             haystack = this.GetValue(contentProperty);
              needle = haystack.FindName(name);
          }
          else console.warn("FindName couldn't find a property to use");
@@ -321,7 +320,7 @@ JSIL.MakeClass(System.Windows.FrameworkElement, "System.Windows.Controls.Control
 Class.setup(System.Windows.Controls.Control, {
     _ctor: function () {
 
-    },
+    }
 });
 
 

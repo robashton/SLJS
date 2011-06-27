@@ -60,15 +60,27 @@ namespace SL2JS
             var dependencies = GetJavascriptFilenames()
                 .Select(x => string.Format("'{0}'", x))
                 .ToArray();
+            var templates = GetTemplateFilenames()
+                .Select(x => string.Format("'{0}'", x))
+                .ToArray();
            
             var configurationDirectiveBuilder = new StringBuilder();
             configurationDirectiveBuilder.AppendLine("sljsconfig = {");
             configurationDirectiveBuilder.AppendFormat("entryPoint: '{0}',", applicationEntrypoint).AppendLine();
-            configurationDirectiveBuilder.AppendFormat("files: [{0}]", string.Join("\r\n,", dependencies)).AppendLine();
+            configurationDirectiveBuilder.AppendFormat("code: [{0}]", string.Join("\r\n,", dependencies)).AppendLine(",");
+            configurationDirectiveBuilder.AppendFormat("templates: [{0}]", string.Join("\r\n,", templates)).AppendLine();
             configurationDirectiveBuilder.AppendLine("};");
 
             container = container.Replace("{configuration}", configurationDirectiveBuilder.ToString());
             File.WriteAllText(Path.Combine(configuration.OutputDirectory, "index.html"), container);
+        }
+
+        private IEnumerable<string> GetTemplateFilenames()
+        {
+            var filesInOutputDirectory = Directory.GetFiles(configuration.OutputDirectory, "*.htm")
+                .Where(x=> Path.GetExtension(x) == ".htm")
+                .Select(Path.GetFileName);
+            return filesInOutputDirectory.ToArray();
         }
 
         private IEnumerable<string> GetJavascriptFilenames()
@@ -85,7 +97,7 @@ namespace SL2JS
             foreach (var standardFile in CoreJs)
             {
                 yield return standardFile;
-            }
+                }
 
             foreach(var file in applicationFiles)
             {

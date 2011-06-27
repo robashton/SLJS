@@ -1,6 +1,7 @@
 ﻿var sljs = sljs || {};
+var sljsconfig = sljsconfig || {  };
 
-sljs.getXaml = function (path, callback) {
+sljs.getXaml = function (path) {
     var data = sljs.globalXaml[path.toLowerCase()];
     return data;
 };
@@ -28,22 +29,55 @@ Class.setup(sljs.Executor, {
                 callback();
             },
             error: function (jqXHR, textStatus, errorThrown) {
-                this.processErr(textStatus, errorThrown);
+                sljs.processErr(textStatus, errorThrown);
             }
         });
     },
     runApplication: function () {
         this.app.notifyStartup();
-    },
-    processErr: function (text, error) {
-        alert(text + ':' + error);
     }
 });
 
+sljs.processErr = function(text, error) {
+    alert(text + ':' + error);
+};
+
+sljs.loadJavascript = function(callback) {
+   LazyLoad.js(sljsconfig.code, callback());
+};
+sljs.loadTemplates = function (callback) {
+    var templatesToLoad = sljsconfig.templates;
+    sljs.templates = {  };
+    var numberLeft = templatesToLoad.length;
+    for (var x = 0; x < templatesToLoad.length; x++) {
+        sljs.loadTemplate(templatesToLoad[x], function () {
+            numberLeft--;
+            if (numberLeft == 0) callback();
+        });
+    }
+};
+sljs.loadTemplate = function (template, callback) {
+    $.ajax({
+        url: template,
+        success: function (data) {
+            sljs.templates[template] = data;
+            callback();
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            sljs.processErr(textStatus, errorThrown);
+        }
+    });
+};
+
+sljs.initialize = function() {
+    var application = new sljs.Executor();
+    application.startApplication();
+};
+
 $(document).ready(function () {
-    LazyLoad.js(sljsconfig.files,
-        function () {
-            var application = new sljs.Executor();
-            application.startApplication();
+    sljs.loadJavascript(function() {
+        sljs.loadTemplates(function() {
+            sljs.initialize();
+        });
     });
 });

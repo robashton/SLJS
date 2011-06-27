@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="CopyJs" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  
+  <ItemGroup>
+    <Template Include="..\src\templates\*.htm" />
+  </ItemGroup>
+    
+  <Target Name="CopyJs">
+    <Copy SourceFiles="@(Template)" DestinationFolder="$(OutDir)"></Copy>
+  </Target>
+</Project>

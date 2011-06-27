@@ -1,7 +1,5 @@
 var sljs = sljs || {};
 
-
-
 sljs.Renderer = {
     render: function (control) {
         var template = sljs.Renderer.findTemplateForControl(control);

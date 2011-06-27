@@ -32,7 +32,24 @@ Class.setup(System.Windows.Application, {
         this.raiseEvent(this, GlobalEvents.OnStartup, {});
     },
     set_RootVisual: function (control) {
+        this.rootVisual = control;
         $(sljs.Renderer.render(control)).appendTo('#container');
+        this.notifyControlsOfTheDom();
+        this.applyInlineStylesToControls();
+    },
+    notifyControlsOfTheDom: function () {
+        var rootVisual = this.rootVisual;
+        $('#container').find('[id]').each(function () {
+            var element = $(this);
+            var id = element.attr('id');
+            if (!id || id === "") return;
+            var control = rootVisual.FindName(id);
+            if (control.notifyOfDomElement) control.notifyOfDomElement(element);
+        });
+    },
+    applyInlineStylesToControls: function() {
+        // Note: This will need to listen for changes too :-)
+        
     },
     $Events: [
         GlobalEvents.OnStartup,
@@ -192,7 +209,7 @@ Class.setup(System.Windows.DependencyObject, {
  } 
 });
 
-DependencyPropertyDictionary = function () { }
+DependencyPropertyDictionary = function() { };
 Class.setup(DependencyPropertyDictionary, {
     set_Item: function(key, value) {
         this[key] = value;
@@ -308,6 +325,13 @@ Class.setup(System.Windows.FrameworkElement, {
              console.warn("Couldn't find element: " + name);
          }
          return needle;
+     },
+     notifyOfDomElement: function (element) {
+         this.$element = element;
+         this.hookDomEvents();
+     },
+    hookDomEvents: function () {
+            
     },
     $NameProperty: System.String
 });
@@ -356,5 +380,11 @@ Class.setup(System.Windows.Controls.Button, {
     },
     $Events: [
         "Click"
-    ]
+    ],
+    hookDomEvents: function () {
+        var control = this;
+        this.$element.click(function () {
+            control.raiseEvent(control, "Click", {  });
+        });
+    }
 });

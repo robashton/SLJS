@@ -1,5 +1,5 @@
 Class = {};
-Class.setup = function (destination, content) {
+Class.setup = function(destination, content) {
     for (var name in content) {
         if (name.indexOf("$") == 0) {
             Class.setupSpecialProperty(destination, name, content[name]);
@@ -8,7 +8,7 @@ Class.setup = function (destination, content) {
             destination.prototype[name] = content[name];
         }
     }
-}
+};
 
 Class.setupSpecialProperty = function (destination, rawName, information) {
     if (rawName == "$Events") {
@@ -28,15 +28,15 @@ Class.addEvents = function (destination, eventList) {
 Class.setupEventTable = function (destination) {
     var eventTable = new sljs.EventTable();
     destination["$eventTable"] = eventTable;
-    destination.prototype.raiseEvent = function (sender, eventId, args) {
+    destination.prototype.raiseEvent = function(sender, eventId, args) {
         eventTable.raise(sender, eventId, args);
     },
-    destination.prototype.addEventHandler = function (sender, eventId, handler) {
+    destination.prototype.addEventHandler = function(sender, eventId, handler) {
         eventTable.addHandler(sender, eventId, handler);
-    }
-}
+    };
+};
 
-Class.setupDependencyProperty = function (destination, rawName, information) {
+Class.setupDependencyProperty = function(destination, rawName, information) {
     var startIndex = 1;
     var endIndex = rawName.indexOf('Property');
     var actualPropertyName = rawName.substr(startIndex, endIndex - startIndex);
@@ -44,13 +44,13 @@ Class.setupDependencyProperty = function (destination, rawName, information) {
     destination[propertyFieldName] = System.Windows.DependencyProperty.Register(actualPropertyName, information, destination);
 
     Object.defineProperty(destination.prototype, actualPropertyName, {
-        get: function () {
-            return this.GetValue(destination[propertyFieldName]);
-        },
-        set: function (value) {
-            this.SetValue(destination[propertyFieldName], value);
-        },
-        configurable: true,
-        enumerable: true
-    });
-}
+            get: function() {
+                return this.GetValue(destination[propertyFieldName]);
+            },
+            set: function(value) {
+                this.SetValue(destination[propertyFieldName], value);
+            },
+            configurable: true,
+            enumerable: true
+        });
+};

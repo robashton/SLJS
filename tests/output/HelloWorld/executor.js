@@ -85,9 +85,11 @@ sljs.initialize = function() {
 };
 
 $(document).ready(function () {
-    sljs.loadJavascript(function() {
-        sljs.loadTemplates(function() {
+    sljs.loadJavascript(function () {
+        sljs.loadTemplates(function () {
+            $('#container').hide();
             sljs.initialize();
+            $('#container').show();
         });
     });
 });

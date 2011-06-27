@@ -292,7 +292,8 @@ Class.setup(System.Windows.UIElement, {
     hookInlineStyling: function () {
         this.wrapCss('width', "Width");
         this.wrapCss('height', "Height");
-        this.wrapCss('margin', "Margin", function (value) { return value.replace(/,/g, 'px '); });
+        // TODO: Bah, I'll have to re-arrange these it seems, it's all wrong atm!
+    //    this.wrapCss('margin', "Margin", function (value) { return value.replace(/,/g, 'px '); });
         this.wrapCss('background-color', "Background"); // probably not
     },
     wrapCss: function (cssProperty, propertyName, transform) {

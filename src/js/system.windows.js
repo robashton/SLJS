@@ -187,26 +187,34 @@ System.Windows.Application.findNameInType = function (type, name) {
 
 JSIL.MakeClass(Object, "System.Windows.DependencyObject", true);
 Class.setup(System.Windows.DependencyObject, {
- SetValue: function(property, value) {
-      if (!property) {
-         console.warn("Attempt to set missing dependency property on type: " + this.GetType());
-         return;
-     }
-     this["$$$" + property.name] = value;
- },
- GetValue: function(property) {
-      if (!property) {
-         console.warn("Attempt to read missing dependency property on type: " + this.GetType());
-         return null;
-     }
-     return this["$$$" + property.name];
- },
- AddEventListener: function () {
-     console.warn("AddEventListener not implemented");
- },
- RemoveEventListener: function () {
-     console.warn("RemoveEventListener not implemented");
- } 
+    SetValue: function (property, value) {
+        if (!property) {
+            console.warn("Attempt to set missing dependency property on type: " + this.GetType());
+            return;
+        }
+        this["$$$" + property.name] = value;
+        this.raisePropertyChanged(property);
+    },
+    GetValue: function (property) {
+        if (!property) {
+            console.warn("Attempt to read missing dependency property on type: " + this.GetType());
+            return null;
+        }
+        return this["$$$" + property.name];
+    },
+    AddEventListener: function (property, handler) {
+        console.warn("AddEventListener not implemented");
+    },
+    RemoveEventListener: function () {
+        console.warn("RemoveEventListener not implemented");
+    },
+    raisePropertyChanged: function (property) {
+         
+    },
+    addPropertyChangedHandler: function (name, callback) {
+        var property = System.Windows.Application.findPropertyInTarget(this, name);
+        this.AddEventListener(property, callback);
+    }
 });
 
 DependencyPropertyDictionary = function() { };
@@ -293,11 +301,17 @@ Class.setup(System.Windows.UIElement, {
         this.wrapCss('width', "Width");
         this.wrapCss('height', "Height");
         // TODO: Bah, I'll have to re-arrange these it seems, it's all wrong atm!
-    //    this.wrapCss('margin', "Margin", function (value) { return value.replace(/,/g, 'px '); });
+        //    this.wrapCss('margin', "Margin", function (value) { return value.replace(/,/g, 'px '); });
         this.wrapCss('background-color', "Background"); // probably not
     },
     wrapCss: function (cssProperty, propertyName, transform) {
-        // NOTE: Actually want to hook the property changed event here and re-apply CSS when it changes, should be easy right?
+        var control = this;
+        this.onPropertyChanged(propertyName, function () {
+            control.setCssValue(cssProperty, propertyName, transform);
+        });
+        control.setCssValue(cssProperty, propertyName, transform);
+    },
+    setCssValue: function (cssProperty, propertyName, transform) {
         var rawValue = this[propertyName];
         if (transform && rawValue) {
             rawValue = transform(rawValue);

@@ -21,6 +21,7 @@ namespace SL2JS
 
         public void StartBlock()
         {
+            WriteCommaIfNecessary();
             WriteLine("{{");
             IncreaseIndent();
             first = true;
@@ -51,7 +52,6 @@ namespace SL2JS
                 first = false;
                 return;
             }
-            first = false;
             writer.Write(",");
         }
 
@@ -60,12 +60,14 @@ namespace SL2JS
             WriteCommaIfNecessary();
             WriteLine("\"{0}\": [ ", name);
             IncreaseIndent();
+            first = true;
         }
         
         public void EndArray()
         {
             DecreaseIndent();
             WriteLine("]");
+            first = false;
         }
 
         public void Dispose()

@@ -4,9 +4,10 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    d:DesignHeight="300" d:DesignWidth="400">
+    d:DesignHeight="433" d:DesignWidth="778" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
 
-    <Grid x:Name="LayoutRoot" Background="White">
-        <Button Content="Click Me" Height="214" HorizontalAlignment="Left" Margin="51,42,0,0" Name="button1" VerticalAlignment="Top" Width="287" Click="button1_Click" />
+    <Grid x:Name="LayoutRoot" Background="White" Height="441" Width="754">
+        <Button Content="Click Me" Height="214" HorizontalAlignment="Left" Margin="12,12,0,0" Name="button1" VerticalAlignment="Top" Width="287" Click="button1_Click" />
+        <TextBlock Height="27" HorizontalAlignment="Left" Margin="305,12,0,0" Name="txtHelloWorld" Text="Hello world, yes aren't we clever?" VerticalAlignment="Top" Width="227" Visibility="Collapsed"  />
     </Grid>
 </UserControl>

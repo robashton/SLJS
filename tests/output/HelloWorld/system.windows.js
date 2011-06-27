@@ -1,6 +1,16 @@
+// So yes, doing it all in on giant file
+// It's faster for me, for the moment
+// I probably will rig something up to do something CommonJS stylee
+// And process as part of the build, but right now I like the fast feedback that edit
+// and F5 gives me and see no reason to change that
+
 JSIL.DeclareAssembly("System.Windows");
 JSIL.DeclareNamespace("System.Windows");
 JSIL.DeclareNamespace("System.Windows.Controls");
+
+//////////////////
+////// STUBS
+//////////////////
 
 System.Windows = System.Windows || {};
 System.Windows.Controls = System.Windows.Controls || {};
@@ -10,11 +20,20 @@ System.Windows.MessageBox.Show = function (msg) {
     alert(msg);
 };
 
+System.Windows.Visibility = {
+    Collapsed : "Collapsed",
+    Visible: "Visible"
+};
+
 GlobalEvents = {
     OnStartup: 0,
     OnExit: 1,
     OnUnhandledException: 2
 };
+
+/////////////////////////////////////
+////// System.Windows.Application////
+/////////////////////////////////////
 
 JSIL.MakeClass(Object, "System.Windows.Application", true);
 Class.setup(System.Windows.Application, {
@@ -185,30 +204,49 @@ System.Windows.Application.findNameInType = function (type, name) {
     return this.findNameInType(type.prototype.__BaseType__, name);
 };
 
+//////////////////////////////////////////
+////// System.Windows.DependencyObject////
+//////////////////////////////////////////
+
 JSIL.MakeClass(Object, "System.Windows.DependencyObject", true);
 Class.setup(System.Windows.DependencyObject, {
- SetValue: function(property, value) {
-      if (!property) {
-         console.warn("Attempt to set missing dependency property on type: " + this.GetType());
-         return;
-     }
-     this["$$$" + property.name] = value;
- },
- GetValue: function(property) {
-      if (!property) {
-         console.warn("Attempt to read missing dependency property on type: " + this.GetType());
-         return null;
-     }
-     return this["$$$" + property.name];
- },
- AddEventListener: function () {
-     console.warn("AddEventListener not implemented");
- },
- RemoveEventListener: function () {
-     console.warn("RemoveEventListener not implemented");
- } 
+    _ctor: function () {
+        
+    },
+    SetValue: function (property, value) {
+        if (!property) {
+            console.warn("Attempt to set missing dependency property on type: " + this.GetType());
+            return;
+        }
+        this["$$$" + property.name] = value;
+        this.raisePropertyChanged(property.name);
+    },
+    GetValue: function (property) {
+        if (!property) {
+            console.warn("Attempt to read missing dependency property on type: " + this.GetType());
+            return null;
+        }
+        return this["$$$" + property.name];
+    },
+    AddEventListener: function (propertyName, handler) {
+        System.Windows.DependencyObject._managedEvents.addHandler(this, this.getChangedEventNameFor(propertyName), handler);
+    },
+    RemoveEventListener: function (propertyName, handler) {
+        System.Windows.DependencyObject._managedEvents.removeHandler(this, this.getChangedEventNameFor(propertyName), handler);
+    },
+    getChangedEventNameFor: function (propertyName) {
+        return propertyName + "_Changed";
+    },
+    raisePropertyChanged: function (propertyName) {
+        System.Windows.DependencyObject._managedEvents.raise(this, this.getChangedEventNameFor(propertyName), {});
+    },
+    addPropertyChangedHandler: function (name, callback) {
+        var property = System.Windows.Application.findPropertyInTarget(this, name);
+        this.AddEventListener(property, callback);
+    }
 });
 
+System.Windows.DependencyObject._managedEvents = new sljs.EventTable();
 DependencyPropertyDictionary = function() { };
 Class.setup(DependencyPropertyDictionary, {
     set_Item: function(key, value) {
@@ -218,6 +256,10 @@ Class.setup(DependencyPropertyDictionary, {
         return this[key];
     }
 });
+
+//////////////////////////////////////////
+////// System.Windows.DependencyProperty//
+//////////////////////////////////////////
 
 JSIL.MakeClass(Object, "System.Windows.DependencyProperty", true);
 Class.setup(System.Windows.DependencyProperty, {
@@ -258,7 +300,11 @@ System.Windows.DependencyProperty.RegisterImpl = function(name, propertyType, ow
     return property;
 };
 
-JSIL.MakeClass(System.Windows.DependencyObject, "System.Windows.Controls.UIElementCollection", true); // This is going to be complex eventually
+//////////////////////////////////////////////////////////////
+////// System.Windows.Controls.UIElementCollection////////////
+//////////////////////////////////////////////////////////////
+
+JSIL.MakeClass(System.Windows.DependencyObject, "System.Windows.Controls.UIElementCollection", true);
 Class.setup(System.Windows.Controls.UIElementCollection, {
     _ctor: function () {
         this.items = [];
@@ -275,6 +321,10 @@ Class.setup(System.Windows.Controls.UIElementCollection, {
     },
     $CountProperty: System.Int32
 });
+
+//////////////////////////////////////////////////////////////
+////// System.Windows.UIElement///////////////////////////////
+//////////////////////////////////////////////////////////////
 
 JSIL.MakeClass(System.Windows.DependencyObject, "System.Windows.UIElement", true);
 Class.setup(System.Windows.UIElement, {
@@ -293,11 +343,18 @@ Class.setup(System.Windows.UIElement, {
         this.wrapCss('width', "Width");
         this.wrapCss('height', "Height");
         // TODO: Bah, I'll have to re-arrange these it seems, it's all wrong atm!
-    //    this.wrapCss('margin', "Margin", function (value) { return value.replace(/,/g, 'px '); });
-        this.wrapCss('background-color', "Background"); // probably not
+        //    this.wrapCss('margin', "Margin", function (value) { return value.replace(/,/g, 'px '); });
+        this.wrapCss('background-color', "Background");
+        this.wrapCss('display', "Visibility", function (input) { return input ? input == "Collapsed" ? "none" : "block" : "block"; });
     },
     wrapCss: function (cssProperty, propertyName, transform) {
-        // NOTE: Actually want to hook the property changed event here and re-apply CSS when it changes, should be easy right?
+        var control = this;
+        this.AddEventListener(propertyName, function () {
+            control.setCssValue(cssProperty, propertyName, transform);
+        });
+        control.setCssValue(cssProperty, propertyName, transform);
+    },
+    setCssValue: function (cssProperty, propertyName, transform) {
         var rawValue = this[propertyName];
         if (transform && rawValue) {
             rawValue = transform(rawValue);
@@ -310,8 +367,13 @@ Class.setup(System.Windows.UIElement, {
     $MarginProperty: System.String,
     $HorizontalAlignmentProperty: System.String,
     $BackgroundProperty: System.String,
-    $ContentProperty: System.String
+    $ContentProperty: System.String,
+    $VisibilityProperty: System.String
 });
+
+//////////////////////////////////////////////////////////////
+////// System.Windows.FrameworkElement////////////////////////
+//////////////////////////////////////////////////////////////
 
 JSIL.MakeClass(System.Windows.UIElement, "System.Windows.FrameworkElement", true);
 Class.setup(System.Windows.FrameworkElement, {
@@ -330,13 +392,15 @@ Class.setup(System.Windows.FrameworkElement, {
             var childrenElement = this.GetValue(childrenProperty);
             for (var i = 0; i < childrenElement.Count; i++) {
                 haystack = childrenElement.ElementAt(i);
-                needle = haystack.FindName(name);
+                if (haystack.FindName)
+                    needle = haystack.FindName(name);
                 if (needle) break;
             }
         }
         else if (contentProperty != null) {
             haystack = this.GetValue(contentProperty);
-            needle = haystack.FindName(name);
+            if (haystack.FindName)
+                needle = haystack.FindName(name);
         }
         else console.warn("FindName couldn't find a property to use");
 
@@ -352,6 +416,11 @@ Class.setup(System.Windows.FrameworkElement, {
 });
 
 
+//////////////////////////////////////////////////////////////
+////// System.Windows.Controls.Control////////////////////////
+//////////////////////////////////////////////////////////////
+
+
 JSIL.MakeClass(System.Windows.FrameworkElement, "System.Windows.Controls.Control", true);
 Class.setup(System.Windows.Controls.Control, {
     _ctor: function () {
@@ -359,7 +428,9 @@ Class.setup(System.Windows.Controls.Control, {
     }
 });
 
-
+//////////////////////////////////////////////////////////////
+////// System.Windows.Controls.ContentControl/////////////////
+//////////////////////////////////////////////////////////////
 
 JSIL.MakeClass(System.Windows.Controls.Control, "System.Windows.Controls.ContentControl", true);
 Class.setup(System.Windows.Controls.ContentControl, {
@@ -369,12 +440,20 @@ Class.setup(System.Windows.Controls.ContentControl, {
     $ContentProperty: System.Windows.Controls.UIElement
 });
 
+//////////////////////////////////////////////////////////////
+////// System.Windows.Controls.UserControl////////////////////
+//////////////////////////////////////////////////////////////
+
 JSIL.MakeClass(System.Windows.Controls.ContentControl, "System.Windows.Controls.UserControl", true);
 Class.setup(System.Windows.Controls.UserControl, {
     _ctor: function () {
 
     }
 });
+
+//////////////////////////////////////////////////////////////
+////// System.Windows.Controls.Grid///////////////////////////
+//////////////////////////////////////////////////////////////
 
 JSIL.MakeClass(System.Windows.Controls.Control, "System.Windows.Controls.Grid", true);
 Class.setup(System.Windows.Controls.Grid, {
@@ -387,6 +466,21 @@ Class.setup(System.Windows.Controls.Grid, {
     $ChildrenProperty: System.Windows.Controls.UIElementCollection
 });
 
+//////////////////////////////////////////////////////////////
+////// System.Windows.Controls.TextBlock//////////////////////
+//////////////////////////////////////////////////////////////
+
+JSIL.MakeClass(System.Windows.Controls.Control, "System.Windows.Controls.TextBlock", true);
+Class.setup(System.Windows.Controls.TextBlock, {
+    _ctor: function () {
+
+    },
+    $TextProperty: System.String
+});
+
+//////////////////////////////////////////////////////////////
+////// System.Windows.Controls.Button/////////////////////////
+//////////////////////////////////////////////////////////////
 
 JSIL.MakeClass(System.Windows.Controls.Control, "System.Windows.Controls.Button", true);
 Class.setup(System.Windows.Controls.Button, {

@@ -21,7 +21,7 @@ namespace HelloWorld
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Hello world");
+            txtHelloWorld.Visibility = Visibility.Visible;
         }
     }
 }

@@ -1,6 +1,5 @@
 Class = {};
 Class.setup = function (destination, content) {
-    Class.setupEventTable(destination);
     for (var name in content) {
         if (name.indexOf("$") == 0) {
             Class.setupSpecialProperty(destination, name, content[name]);
@@ -19,6 +18,7 @@ Class.setupSpecialProperty = function (destination, rawName, information) {
 };
 
 Class.addEvents = function (destination, eventList) {
+    if (!destination['$eventTable']) Class.setupEventTable(destination);
     var eventTable = destination["$eventTable"];
     for (var x = 0; x < eventList.length; x++) {
         eventTable.registerKnownEvent(eventList[x]);

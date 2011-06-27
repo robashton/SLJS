@@ -32,17 +32,19 @@ namespace SL2JS
 
         private void ParseContent(JsonWriter writer)
         {
-            Next();
-            switch (current.NodeType)
+            while (Next())
             {
-                case XmlNodeType.Element:
-                    ParseElement(writer);
-                    break;
-                case XmlNodeType.EndElement:
-                    break;
-                default:
-                    Console.WriteLine(current.NodeType);
-                    break;
+                switch (current.NodeType)
+                {
+                    case XmlNodeType.Element:
+                        ParseElement(writer);
+                        continue;
+                    case XmlNodeType.EndElement:
+                        continue;
+                    default:
+                        Console.WriteLine(current.NodeType);
+                        break;
+                }
             }
         }
 
@@ -106,7 +108,7 @@ namespace SL2JS
             current = child;
         }
 
-        private void Next()
+        private bool Next()
         {
             while (current.Read())
             {
@@ -115,15 +117,14 @@ namespace SL2JS
                     case XmlNodeType.Whitespace:
                         continue;
                     case XmlNodeType.Element:
-                        return;
+                        return true;
                     case XmlNodeType.EndElement:
-                        return;
+                        return true; 
                     case XmlNodeType.None:
                         continue;
                 }
             }
-            if (ended) throw new InvalidOperationException("Unexpected end of XML found");
-            ended = true;
+            return false;
         }
     }
 }

@@ -26,6 +26,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "templates", "templates", "{
 	ProjectSection(SolutionItems) = preProject
 		templates\System.Windows.Controls.Button.htm = templates\System.Windows.Controls.Button.htm
 		templates\System.Windows.Controls.Grid.htm = templates\System.Windows.Controls.Grid.htm
+		templates\System.Windows.Controls.TextBlock.htm = templates\System.Windows.Controls.TextBlock.htm
 		templates\System.Windows.Controls.UserControl.htm = templates\System.Windows.Controls.UserControl.htm
 	EndProjectSection
 EndProject

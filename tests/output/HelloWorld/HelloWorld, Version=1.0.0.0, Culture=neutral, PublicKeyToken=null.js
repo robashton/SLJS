@@ -7,6 +7,12 @@ JSIL.MakeClass("System.Object", "HelloWorld.App/$l$gc__DisplayClass2", false);
 
 JSIL.MakeClass("System.Windows.Controls.UserControl", "HelloWorld.MainPage", true);
 
+HelloWorld.App.prototype.InitializeComponent = function () {
+	if (!this._contentLoaded) {
+		this._contentLoaded = true;
+		System.Windows.Application.LoadComponent(this, new System.Uri("/HelloWorld;component/App.xaml", System.UriKind.Relative));
+	}
+};
 HelloWorld.App.prototype._ctor = function () {
 	System.Windows.Application.prototype._ctor.call(this);
 	System.Windows.Application.prototype.add_Startup.call(this, JSIL.Delegate.New("System.Windows.StartupEventHandler", this, HelloWorld.App.prototype.Application_Startup));
@@ -38,12 +44,6 @@ HelloWorld.App.prototype.ReportErrorToDOM = function (e) {
 	} catch ($exception) {
 	}
 };
-HelloWorld.App.prototype.InitializeComponent = function () {
-	if (!this._contentLoaded) {
-		this._contentLoaded = true;
-		System.Windows.Application.LoadComponent(this, new System.Uri("/HelloWorld;component/App.xaml", System.UriKind.Relative));
-	}
-};
 HelloWorld.App.prototype._contentLoaded = false;
 
 $asm01.HelloWorld.App.$l$gc__DisplayClass2.prototype._ctor = function () {
@@ -57,7 +57,7 @@ HelloWorld.MainPage.prototype._ctor = function () {
 	this.InitializeComponent();
 };
 HelloWorld.MainPage.prototype.button1_Click = function (sender, e) {
-	System.Windows.MessageBox.Show("Hello world");
+	this.txtHelloWorld.Visibility = System.Windows.Visibility.Visible;
 };
 HelloWorld.MainPage.prototype.InitializeComponent = function () {
 	if (!this._contentLoaded) {
@@ -65,9 +65,11 @@ HelloWorld.MainPage.prototype.InitializeComponent = function () {
 		System.Windows.Application.LoadComponent(this, new System.Uri("/HelloWorld;component/MainPage.xaml", System.UriKind.Relative));
 		this.LayoutRoot = JSIL.Cast(System.Windows.FrameworkElement.prototype.FindName.call(this, "LayoutRoot"), System.Windows.Controls.Grid);
 		this.button1 = JSIL.Cast(System.Windows.FrameworkElement.prototype.FindName.call(this, "button1"), System.Windows.Controls.Button);
+		this.txtHelloWorld = JSIL.Cast(System.Windows.FrameworkElement.prototype.FindName.call(this, "txtHelloWorld"), System.Windows.Controls.TextBlock);
 	}
 };
 HelloWorld.MainPage.prototype.LayoutRoot = null;
 HelloWorld.MainPage.prototype.button1 = null;
+HelloWorld.MainPage.prototype.txtHelloWorld = null;
 HelloWorld.MainPage.prototype._contentLoaded = false;
 

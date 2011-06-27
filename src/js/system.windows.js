@@ -36,7 +36,6 @@ Class.setup(System.Windows.Application, {
         this.allControls = [];
         $(sljs.Renderer.render(control)).appendTo('#container');
         this.notifyControlsOfTheDom();
-        this.applyInlineStylesToControls();
     },
     notifyControlsOfTheDom: function () {
         var rootVisual = this.rootVisual;
@@ -293,12 +292,17 @@ Class.setup(System.Windows.UIElement, {
     hookInlineStyling: function () {
         this.wrapCss('width', "Width");
         this.wrapCss('height', "Height");
-        this.wrapCss('margin', "Margin");
+        // TODO: Bah, I'll have to re-arrange these it seems, it's all wrong atm!
+    //    this.wrapCss('margin', "Margin", function (value) { return value.replace(/,/g, 'px '); });
         this.wrapCss('background-color', "Background"); // probably not
     },
-    wrapCss: function (cssProperty, propertyName) {
+    wrapCss: function (cssProperty, propertyName, transform) {
         // NOTE: Actually want to hook the property changed event here and re-apply CSS when it changes, should be easy right?
-        this.$element.css(cssProperty, this[propertyName]);
+        var rawValue = this[propertyName];
+        if (transform && rawValue) {
+            rawValue = transform(rawValue);
+        }
+        this.$element.css(cssProperty, rawValue);
     },
     $WidthProperty: System.Int32,
     $HeightProperty: System.Int32,

@@ -7,12 +7,6 @@ JSIL.MakeClass("System.Object", "HelloWorld.App/$l$gc__DisplayClass2", false);
 
 JSIL.MakeClass("System.Windows.Controls.UserControl", "HelloWorld.MainPage", true);
 
-HelloWorld.App.prototype.InitializeComponent = function () {
-	if (!this._contentLoaded) {
-		this._contentLoaded = true;
-		System.Windows.Application.LoadComponent(this, new System.Uri("/HelloWorld;component/App.xaml", System.UriKind.Relative));
-	}
-};
 HelloWorld.App.prototype._ctor = function () {
 	System.Windows.Application.prototype._ctor.call(this);
 	System.Windows.Application.prototype.add_Startup.call(this, JSIL.Delegate.New("System.Windows.StartupEventHandler", this, HelloWorld.App.prototype.Application_Startup));
@@ -42,6 +36,12 @@ HelloWorld.App.prototype.ReportErrorToDOM = function (e) {
 		errorMsg = (errorMsg.Replace$0('"', "'")).Replace$1("\r\n", "\\n");
 		System.Windows.Browser.HtmlPage.Window.Eval(('throw new Error("Unhandled Error in Silverlight Application ' + errorMsg + '");'));
 	} catch ($exception) {
+	}
+};
+HelloWorld.App.prototype.InitializeComponent = function () {
+	if (!this._contentLoaded) {
+		this._contentLoaded = true;
+		System.Windows.Application.LoadComponent(this, new System.Uri("/HelloWorld;component/App.xaml", System.UriKind.Relative));
 	}
 };
 HelloWorld.App.prototype._contentLoaded = false;

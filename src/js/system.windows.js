@@ -326,6 +326,23 @@ Class.setup(System.Windows.Controls.UIElementCollection, {
 ////// System.Windows.UIElement///////////////////////////////
 //////////////////////////////////////////////////////////////
 
+StyleConverters = {
+    Visibility: function (input) {
+        return input ? input == "Collapsed" ? "none" : "block" : "block";
+    },
+    Margin: function (input) {
+        var values = input.split(',');
+        var output = '';
+        for (var i = 1; i < 5; i++) {
+            var index = i == 4 ? 0 : i;
+            output += values[index] + 'px ';
+        }
+        return output.trim();
+
+        // return value.replace(/,/g, 'px ');
+    }
+};
+
 JSIL.MakeClass(System.Windows.DependencyObject, "System.Windows.UIElement", true);
 Class.setup(System.Windows.UIElement, {
     _ctor: function () {
@@ -342,10 +359,9 @@ Class.setup(System.Windows.UIElement, {
     hookInlineStyling: function () {
         this.wrapCss('width', "Width");
         this.wrapCss('height', "Height");
-        // TODO: Bah, I'll have to re-arrange these it seems, it's all wrong atm!
-        //    this.wrapCss('margin', "Margin", function (value) { return value.replace(/,/g, 'px '); });
+        this.wrapCss('margin', "Margin", StyleConverters.Margin);
         this.wrapCss('background-color', "Background");
-        this.wrapCss('display', "Visibility", function (input) { return input ? input == "Collapsed" ? "none" : "block" : "block"; });
+        this.wrapCss('display', "Visibility", StyleConverters.Visibility);
     },
     wrapCss: function (cssProperty, propertyName, transform) {
         var control = this;

@@ -25,7 +25,6 @@
 	"Ignorable": "d",
 	"DesignHeight": "433",
 	"DesignWidth": "778",
-	"sdk": "http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk",
 	"$Elements": [ 
 		{
 			"$ElementType": "Grid",

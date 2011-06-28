@@ -6,7 +6,9 @@ sljs.getXaml = function (path) {
     return data;
 };
 
-sljs.Executor = function () {
+sljs.Executor = function (rootPath, config) {
+    this.rootPath = rootPath ? rootPath + '/' : '';
+    this.config = config || sljsconfig;
     this.application = null;
 };
 
@@ -14,7 +16,7 @@ Class.setup(sljs.Executor, {
     startApplication: function () {
         var executor = this;
         this.loadXamlJson(function () {
-            var typename = sljsconfig.entryPoint;
+            var typename = executor.config.entryPoint;
             var factoryFunc = new Function("return new " + typename + "();");
             executor.app = factoryFunc();
             executor.runApplication();
@@ -22,7 +24,7 @@ Class.setup(sljs.Executor, {
     },
     loadXamlJson: function (callback) {
         $.ajax({
-            url: 'xaml.json',
+            url: this.rootPath  + 'xaml.json',
             dataType: 'json',
             success: function (data) {
                 sljs.globalXaml = data;

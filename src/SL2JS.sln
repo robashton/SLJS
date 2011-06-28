@@ -36,6 +36,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "external", "external", "{E1
 		_LIBS\JSIL\JSIL.Core.js = _LIBS\JSIL\JSIL.Core.js
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{6E78F4F3-A5E0-48E5-A2A4-4ADD7941554A}"
+	ProjectSection(SolutionItems) = preProject
+		..\tests\runner\qunit.css = ..\tests\runner\qunit.css
+		..\tests\runner\qunit.js = ..\tests\runner\qunit.js
+		..\tests\runner\tests.html = ..\tests\runner\tests.html
+		..\tests\runner\tests.js = ..\tests\runner\tests.js
+		..\tests\runner\testsupport.js = ..\tests\runner\testsupport.js
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

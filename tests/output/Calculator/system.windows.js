@@ -393,7 +393,6 @@ Class.setup(System.Windows.UIElement, {
     $MarginProperty: System.String,
     $HorizontalAlignmentProperty: System.String,
     $BackgroundProperty: System.String,
-    $ContentProperty: System.String,
     $VisibilityProperty: System.String
 });
 
@@ -505,6 +504,18 @@ Class.setup(System.Windows.Controls.TextBlock, {
 });
 
 //////////////////////////////////////////////////////////////
+////// System.Windows.Controls.TextBox//////////////////////
+//////////////////////////////////////////////////////////////
+
+JSIL.MakeClass(System.Windows.Controls.Control, "System.Windows.Controls.TextBox", true);
+Class.setup(System.Windows.Controls.TextBox, {
+    _ctor: function () {
+
+    },
+    $TextProperty: System.String
+});
+
+//////////////////////////////////////////////////////////////
 ////// System.Windows.Controls.Button/////////////////////////
 //////////////////////////////////////////////////////////////
 
@@ -521,5 +532,6 @@ Class.setup(System.Windows.Controls.Button, {
         this.$element.click(function () {
             control.raiseEvent(control, "Click", {  });
         });
-    }
+    },
+    $ContentProperty: System.String
 });

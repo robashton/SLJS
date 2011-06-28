@@ -7,12 +7,6 @@ JSIL.MakeClass("System.Object", "Calculator.App/$l$gc__DisplayClass2", false);
 
 JSIL.MakeClass("System.Windows.Controls.UserControl", "Calculator.MainPage", true);
 
-Calculator.App.prototype.InitializeComponent = function () {
-	if (!this._contentLoaded) {
-		this._contentLoaded = true;
-		System.Windows.Application.LoadComponent(this, new System.Uri("/Calculator;component/App.xaml", System.UriKind.Relative));
-	}
-};
 Calculator.App.prototype._ctor = function () {
 	System.Windows.Application.prototype._ctor.call(this);
 	System.Windows.Application.prototype.add_Startup.call(this, JSIL.Delegate.New("System.Windows.StartupEventHandler", this, Calculator.App.prototype.Application_Startup));
@@ -44,6 +38,12 @@ Calculator.App.prototype.ReportErrorToDOM = function (e) {
 	} catch ($exception) {
 	}
 };
+Calculator.App.prototype.InitializeComponent = function () {
+	if (!this._contentLoaded) {
+		this._contentLoaded = true;
+		System.Windows.Application.LoadComponent(this, new System.Uri("/Calculator;component/App.xaml", System.UriKind.Relative));
+	}
+};
 Calculator.App.prototype._contentLoaded = false;
 
 $asm01.Calculator.App.$l$gc__DisplayClass2.prototype._ctor = function () {
@@ -53,36 +53,70 @@ $asm01.Calculator.App.$l$gc__DisplayClass2.prototype.$this = null;
 $asm01.Calculator.App.$l$gc__DisplayClass2.prototype.e = null;
 
 Calculator.MainPage.prototype._ctor = function () {
+	this.pendingAction = null;
 	System.Windows.Controls.UserControl.prototype._ctor.call(this);
 	this.InitializeComponent();
 };
 Calculator.MainPage.prototype.btn1_Click = function (sender, e) {
+	this.Append(1);
 };
 Calculator.MainPage.prototype.btn2_Click = function (sender, e) {
+	this.Append(2);
 };
 Calculator.MainPage.prototype.btn3_Click = function (sender, e) {
-};
-Calculator.MainPage.prototype.btnPlus_Click = function (sender, e) {
+	this.Append(3);
 };
 Calculator.MainPage.prototype.btn4_Click = function (sender, e) {
+	this.Append(4);
 };
 Calculator.MainPage.prototype.btn5_Click = function (sender, e) {
+	this.Append(5);
 };
 Calculator.MainPage.prototype.btn6_Click = function (sender, e) {
+	this.Append(6);
 };
 Calculator.MainPage.prototype.btn7_Click = function (sender, e) {
+	this.Append(7);
 };
 Calculator.MainPage.prototype.btn8_Click = function (sender, e) {
+	this.Append(8);
 };
 Calculator.MainPage.prototype.btn9_Click = function (sender, e) {
+	this.Append(9);
 };
 Calculator.MainPage.prototype.btn0_Click = function (sender, e) {
+	this.Append(0);
+};
+Calculator.MainPage.prototype.btnPlus_Click = function (sender, e) {
+	this.Operate(function (x, y) {
+			return (x + y);
+		});
 };
 Calculator.MainPage.prototype.btnMinus_Click = function (sender, e) {
+	this.Operate(function (x, y) {
+			return (x - y);
+		});
 };
 Calculator.MainPage.prototype.btnEquals_Click = function (sender, e) {
+	this.Calculate();
 };
 Calculator.MainPage.prototype.btnDivide_Click = function (sender, e) {
+	this.Operate(function (x, y) {
+			return !Math.floor(x / y) ? 1E-09 : y;
+		});
+};
+Calculator.MainPage.prototype.Append = function (i) {
+	var expr_07 = this.txtScreen;
+	expr_07.Text = ((expr_07.Text + (i).toString()));
+};
+Calculator.MainPage.prototype.Operate = function (action) {
+	this.Calculate();
+	this.pendingAction = action;
+};
+Calculator.MainPage.prototype.Calculate = function () {
+	if (this.pendingAction === null) {
+		return;
+	}
 };
 Calculator.MainPage.prototype.InitializeComponent = function () {
 	if (!this._contentLoaded) {
@@ -107,6 +141,8 @@ Calculator.MainPage.prototype.InitializeComponent = function () {
 		this.btn0 = JSIL.Cast(System.Windows.FrameworkElement.prototype.FindName.call(this, "btn0"), System.Windows.Controls.Button);
 	}
 };
+Calculator.MainPage.prototype.pendingAction = null;
+Calculator.MainPage.prototype.leftHandSide = 0;
 Calculator.MainPage.prototype.LayoutRoot = null;
 Calculator.MainPage.prototype.txtScreen = null;
 Calculator.MainPage.prototype.btn1 = null;
@@ -125,4 +161,7 @@ Calculator.MainPage.prototype.btnDivide = null;
 Calculator.MainPage.prototype.btnEquals = null;
 Calculator.MainPage.prototype.btn0 = null;
 Calculator.MainPage.prototype._contentLoaded = false;
+Calculator.MainPage.$CachedAnonymousMethodDelegate1 = null;
+Calculator.MainPage.$CachedAnonymousMethodDelegate3 = null;
+Calculator.MainPage.$CachedAnonymousMethodDelegate5 = null;
 

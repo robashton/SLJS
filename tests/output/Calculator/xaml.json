@@ -200,9 +200,9 @@
 					"Content": "0",
 					"Height": "60",
 					"HorizontalAlignment": "Left",
-					"Margin": "19,0,0,19",
+					"Margin": "19,264,0,0",
 					"Name": "btn0",
-					"VerticalAlignment": "Bottom",
+					"VerticalAlignment": "Top",
 					"Width": "80",
 					"Click": "btn0_Click"
 				}

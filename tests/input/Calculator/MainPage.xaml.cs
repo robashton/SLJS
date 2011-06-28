@@ -14,6 +14,9 @@ namespace Calculator
 {
     public partial class MainPage : UserControl
     {
+        private Func<int, int, int> pendingAction = null;
+        private int leftHandSide;
+
         public MainPage()
         {
             InitializeComponent();
@@ -21,70 +24,87 @@ namespace Calculator
 
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
-
+            Append(1);
         }
 
         private void btn2_Click(object sender, RoutedEventArgs e)
         {
-
+            Append(2);
         }
 
         private void btn3_Click(object sender, RoutedEventArgs e)
         {
-
+            Append(3);
         }
 
-        private void btnPlus_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
+  
         private void btn4_Click(object sender, RoutedEventArgs e)
         {
-
+            Append(4);
         }
 
         private void btn5_Click(object sender, RoutedEventArgs e)
         {
-
+            Append(5);
         }
 
         private void btn6_Click(object sender, RoutedEventArgs e)
         {
-
+            Append(6);
         }
 
         private void btn7_Click(object sender, RoutedEventArgs e)
         {
-
+            Append(7);
         }
 
         private void btn8_Click(object sender, RoutedEventArgs e)
         {
-
+            Append(8);
         }
         private void btn9_Click(object sender, RoutedEventArgs e)
         {
-
+            Append(9);
         }
         private void btn0_Click(object sender, RoutedEventArgs e)
         {
+            Append(0);
+        }
 
+        private void btnPlus_Click(object sender, RoutedEventArgs e)
+        {
+            Operate((x, y) => x + y);
         }
 
         private void btnMinus_Click(object sender, RoutedEventArgs e)
         {
-
+            Operate((x, y) => x - y);
         }
 
         private void btnEquals_Click(object sender, RoutedEventArgs e)
         {
-
+            Calculate();
         }
 
         private void btnDivide_Click(object sender, RoutedEventArgs e)
         {
+            Operate((x, y) => (int) (x / y == 0 ? 0.000000001 : y));
+        }
 
+        private void Append(int i)
+        {
+            txtScreen.Text += i.ToString();
+        }
+
+        private void Operate(Func<int, int, int> action)
+        {
+            Calculate();
+            this.pendingAction = action;
+        }
+
+        private void Calculate()
+        {
+            if (this.pendingAction == null) return;
         }
     }
 }

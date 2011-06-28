@@ -1,25 +1,25 @@
 contextTest = function (context, testName, testMethod) {
-    $(document).ready(function () {
-        sljs.loadCoreDependencies(function () {
-            var contextData = sljs.contexts[context];
-            var qualifiedPaths = [];
-            for (var index = 0; index < contextData.code.length; index++) {
-                var path = contextData.code[index];
-                qualifiedPaths.push(contextData.location + '/' + path);
-            }
+    var contextData = sljs.contexts[context];
+    test(contextData.title + " : " + testName, function () {
+        stop();
+        $(document).ready(function() {
+            sljs.loadCoreDependencies(function() {
+                var qualifiedPaths = [];
+                for (var index = 0; index < contextData.code.length; index++) {
+                    var path = contextData.code[index];
+                    qualifiedPaths.push(contextData.location + '/' + path);
+                }
+                var executor = new sljs.Executor(contextData.location, contextData);
+                // Bootstrap the current context by loading in its code if necessary
+                LazyLoad.js(qualifiedPaths, function() {
 
-            var executor = new sljs.Executor(contextData.location, contextData);
-
-            // Bootstrap the current context by loading in its code if necessary
-            LazyLoad.js(qualifiedPaths, function () {
-
-                // Run the application
-                executor.startApplication(function () {
-
-                    var context = new sljs.TestContext(executor.app, $('#container'));
-
-                    // Execute the test method as a test
-                    test(testName, function () { testMethod(context); });
+                    // Run the application
+                    executor.startApplication(function() {
+                        // Execute the test method as a test
+                        var testContext = new sljs.TestContext(executor.app, $('#container'));
+                        testMethod(testContext);
+                        start();
+                    });
                 });
             });
         });
@@ -37,10 +37,13 @@ sljs.contexts = {
         code: [ 'HelloWorld, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null.js' ],
         templates: [],
         entryPoint: "HelloWorld.App",
+        title: "Hello World Button",
         location: '../Output/HelloWorld'
     }
 };
+var coreDependenciesLoaded = false;
 sljs.loadCoreDependencies = function (callback) {
+    if (coreDependenciesLoaded) { callback(); return; }
     LazyLoad.js([
             'JSIL.Core.js',
             'JSIL.Bootstrap.js',
@@ -55,14 +58,17 @@ sljs.loadCoreDependencies = function (callback) {
             'mustache.js',
             'patches.js',
             'rendering.js'
-        ], function() {
+        ], function () {
             sljsconfig = {
                 templates: ['System.Windows.Controls.Button.htm',
                     'System.Windows.Controls.Grid.htm',
                     'System.Windows.Controls.TextBlock.htm',
                     'System.Windows.Controls.UserControl.htm']
             };
-            sljs.loadTemplates(callback);
+            sljs.loadTemplates(function () {
+                coreDependenciesLoaded = true;
+                callback();
+            });
         });
 };
 

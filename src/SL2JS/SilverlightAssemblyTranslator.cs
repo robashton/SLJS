@@ -19,7 +19,9 @@ namespace SL2JS
         public string GetEntrypointNameFromAssembly(string filename)
         {
             var assembly = AssemblyDefinition.ReadAssembly(filename, GetReaderParameters(false));
-            return "HelloWorld.App";
+            return assembly.MainModule.Types
+                .Where(x => x.BaseType != null && x.BaseType.FullName == "System.Windows.Application")
+                .Select(x => x.FullName).FirstOrDefault();
         }
     }
 }

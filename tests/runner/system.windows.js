@@ -53,7 +53,8 @@ Class.setup(System.Windows.Application, {
     set_RootVisual: function (control) {
         this.rootVisual = control;
         this.allControls = [];
-        $(sljs.Renderer.render(control)).appendTo('#container');
+        var html = sljs.Renderer.render(control);
+        $('#container').html(html);
         this.notifyControlsOfTheDom();
     },
     notifyControlsOfTheDom: function () {
@@ -362,6 +363,15 @@ Class.setup(System.Windows.UIElement, {
         this.wrapCss('margin', "Margin", StyleConverters.Margin);
         this.wrapCss('background-color', "Background");
         this.wrapCss('display', "Visibility", StyleConverters.Visibility);
+
+        this.addClassTypes(this.GetType());
+    },
+    addClassTypes: function (type) {
+        if (!type.prototype.__BaseType__) return;
+        var typeName = type.toString();
+        typeName = typeName.replace(/\./g, '_');
+        this.$element.addClass(typeName);
+        this.addClassTypes(type.prototype.__BaseType__);
     },
     wrapCss: function (cssProperty, propertyName, transform) {
         var control = this;

@@ -1,0 +1,14 @@
+
+{
+	"$ElementType": "Application",
+	"xmlns": "http://schemas.microsoft.com/winfx/2006/xaml/presentation",
+	"x": "http://schemas.microsoft.com/winfx/2006/xaml",
+	"Class": "Calculator.App",
+	"$Elements": [ 
+		{
+			"$ElementType": "Application.Resources",
+			"$Elements": [ 
+			]
+		}
+	]
+}

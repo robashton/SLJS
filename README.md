@@ -19,5 +19,7 @@ So far we have a subset of the dependency property/object system implemented as 
 Note: Project schedule looks something like this:
 
 NDC2011: Start developing it
+
 End of July: Publicly put some demos up
+
 August: Hope people start helping

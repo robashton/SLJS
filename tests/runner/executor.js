@@ -13,18 +13,19 @@ sljs.Executor = function (rootPath, config) {
 };
 
 Class.setup(sljs.Executor, {
-    startApplication: function () {
+    startApplication: function (callback) {
         var executor = this;
         this.loadXamlJson(function () {
             var typename = executor.config.entryPoint;
             var factoryFunc = new Function("return new " + typename + "();");
             executor.app = factoryFunc();
             executor.runApplication();
+            if (callback) callback();
         });
     },
     loadXamlJson: function (callback) {
         $.ajax({
-            url: this.rootPath  + 'xaml.json',
+            url: this.rootPath + 'xaml.json',
             dataType: 'json',
             success: function (data) {
                 sljs.globalXaml = data;

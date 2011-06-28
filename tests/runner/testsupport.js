@@ -3,8 +3,9 @@ contextTest = function (context, testName, testMethod) {
         sljs.loadCoreDependencies(function () {
             var contextData = sljs.contexts[context];
             var qualifiedPaths = [];
-            for (var path in contextData.code) {
-                qualifiedPaths.push(sljs.location + '/' + path);
+            for (var index = 0; index < contextData.code.length; index++) {
+                var path = contextData.code[index];
+                qualifiedPaths.push(contextData.location + '/' + path);
             }
 
             var executor = new sljs.Executor(contextData.location, contextData);
@@ -13,10 +14,12 @@ contextTest = function (context, testName, testMethod) {
             LazyLoad.js(qualifiedPaths, function () {
 
                 // Run the application
-                executor.loadXamlJson(function () {
+                executor.startApplication(function () {
+
+                    var context = new sljs.TestContext(executor.app, $('#container'));
 
                     // Execute the test method as a test
-                    test(testName, testMethod);
+                    test(testName, function () { testMethod(context); });
                 });
             });
         });
@@ -34,14 +37,16 @@ sljs.contexts = {
         code: [ 'HelloWorld, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null.js' ],
         templates: [],
         entryPoint: "HelloWorld.App",
-        location: '../output/HelloWorld'
+        location: '../Output/HelloWorld'
     }
 };
 sljs.loadCoreDependencies = function (callback) {
     LazyLoad.js([
             'JSIL.Core.js',
             'JSIL.Bootstrap.js',
+            'support.js',
             'core.js',
+            'executor.js',
             'system.js',
             'system.windows.js',
             'jquery.tmpl.js',
@@ -60,3 +65,12 @@ sljs.loadCoreDependencies = function (callback) {
             sljs.loadTemplates(callback);
         });
 };
+
+sljs.TestContext = function (app, container) {
+    this.app = app;
+    this.container = container;
+};
+sljs.TestContext.prototype.findControlById = function(id) {
+    return this.app.rootVisual.FindName(id);
+};
+

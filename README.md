@@ -13,3 +13,11 @@ It has some disadvantages because it means writing a lot of code.
 C'est la vie, writing code is easy.
 
 For more information, hit me up on Twitter @robashton, you can probably help.
+
+So far we have a subset of the dependency property/object system implemented as well as some skeleton implementations of some controls with their events just to prove that end-to-end this whole thing actually works!
+
+Note: Project schedule looks something like this:
+
+NDC2011: Start developing it
+End of July: Publicly put some demos up
+August: Hope people start helping

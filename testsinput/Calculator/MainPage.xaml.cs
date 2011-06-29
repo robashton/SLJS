@@ -89,7 +89,7 @@ namespace Calculator
 
         private void btnDivide_Click(object sender, RoutedEventArgs e)
         {
-            Operate((x, y) => (int) (x / (y == 0 ? 0.000000001 : y)));
+            Operate((x, y) => (int) (x / (y == 0 ? 0.0001f : y)));
         }
 
 

@@ -7,12 +7,6 @@ JSIL.MakeClass("System.Object", "Calculator.App/$l$gc__DisplayClass2", false);
 
 JSIL.MakeClass("System.Windows.Controls.UserControl", "Calculator.MainPage", true);
 
-Calculator.App.prototype.InitializeComponent = function () {
-	if (!this._contentLoaded) {
-		this._contentLoaded = true;
-		System.Windows.Application.LoadComponent(this, new System.Uri("/Calculator;component/App.xaml", System.UriKind.Relative));
-	}
-};
 Calculator.App.prototype._ctor = function () {
 	System.Windows.Application.prototype._ctor.call(this);
 	System.Windows.Application.prototype.add_Startup.call(this, JSIL.Delegate.New("System.Windows.StartupEventHandler", this, Calculator.App.prototype.Application_Startup));
@@ -42,6 +36,12 @@ Calculator.App.prototype.ReportErrorToDOM = function (e) {
 		errorMsg = (errorMsg.Replace$0('"', "'")).Replace$1("\r\n", "\\n");
 		System.Windows.Browser.HtmlPage.Window.Eval(('throw new Error("Unhandled Error in Silverlight Application ' + errorMsg + '");'));
 	} catch ($exception) {
+	}
+};
+Calculator.App.prototype.InitializeComponent = function () {
+	if (!this._contentLoaded) {
+		this._contentLoaded = true;
+		System.Windows.Application.LoadComponent(this, new System.Uri("/Calculator;component/App.xaml", System.UriKind.Relative));
 	}
 };
 Calculator.App.prototype._contentLoaded = false;
@@ -104,7 +104,7 @@ Calculator.MainPage.prototype.btnEquals_Click = function (sender, e) {
 };
 Calculator.MainPage.prototype.btnDivide_Click = function (sender, e) {
 	this.Operate(function (x, y) {
-			return Math.floor(x / (y === 0) ? 1E-09 : y);
+			return Math.floor(x / (y === 0) ? 9.9999997473787516E-05 : y);
 		});
 };
 Calculator.MainPage.prototype.btnMultiply_Click = function (sender, e) {

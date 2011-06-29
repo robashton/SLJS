@@ -58,14 +58,14 @@ sljs.contexts = {
         templates: [],
         entryPoint: "HelloWorld.App",
         title: "Hello World Button",
-        location: '../Output/HelloWorld'
+        location: '../output/HelloWorld'
     },
     "Calculator": {
         code: ['Calculator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null.js'],
         templates: [],
         entryPoint: "Calculator.App",
         title: "Calculator Demo",
-        location: '../Output/Calculator'
+        location: '../output/Calculator'
     }
 };
 var coreDependenciesLoaded = false;

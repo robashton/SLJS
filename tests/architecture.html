@@ -1,0 +1,83 @@
+<html>
+	<head>
+        <title>SLJS - A Silverlight to JS/HTML Converter</title>
+        <link rel="stylesheet" href="site.css" type="text/css" />
+	</head>
+    <body>
+    <div id="container">
+        <div id="title">
+                        <h1>SLJS - A Silverlight to JS/HTML Converter</h1>
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="background.html">Background</a></li>
+                <li><a href="contribution.html">Contribution Guide</a></li>
+                <li><a href="architecture.html" class="current">Technical Description</a></li>
+            </ul>
+        </div>
+        <div id="content">
+            <h3>Technology</h3>
+            <p>SLJS is built on top of several key technologies:</p>
+            <ul class="bullets">
+                <li>JSIL - conversion of IL to JS
+                    <ul class="bullets">
+                        <li>Mono.Cecil - for reading the assemblies/IL</li>
+                        <li>ICSharpCode - for intepreting the IL before converting to JS</li>
+                    </ul>
+                </li>
+                <li>Mustache - for rendering the controls</li>
+                <li>jQuery - for gluing everything together</li>
+            </ul>
+            <p>All of this is open sourced under various licenses and this project is made a lot easier thanks to them.</p>
+            <h3>Concepts</h3>
+            <h5>Conversion</h5>
+                <p>The converter is the first step in getting a Silverlight application ready for running as JS/HTML. It takes an assembly containing the entry point to the application and 
+                converts it and its dependencies to Javascript.</p>
+                <p>Additionally it extracts the resources from those assemblies (such as XAML) and converts it into JSON for easy parsing by the JS version of the .NET framework.</p>
+                <p>Finally it sends the generated javascript, an templated HTML page containing some bootstrap code, and all the supporting files to a folder for opening up in a web browser.</p>
+            <h5>Bootstrapping</h5>
+                <p>The HTML page generated only contains references to jQuery and a lazy loading framework, and once the page is initialized, the loader sets to work downloading all the Javascript and resources/templates required to run a converted application.</p>
+                <p>The loader downloads the core SLJS framework, the HTML templates and finally the application itself, before executing the entry point to that application and letting everything execute as if it was running as a real Silverlight app.</p>
+                <p>This is important, as the application should be unaware that it is being run in a different environment to usual.</p>
+            <h5>The Framework</h5>
+                <p>The framework is a re-implementation of the framework that ships with Silverlight (System, System.Windows etc), the public interfaces are exactly the same but that is where the similarity ends.</p>
+                <p>All the implementation is and will carry on being done in a way that better fits how HTML works in the modern browser, there is a surprisingly small surface area exposed to the application itself from the original framework, and 
+                a lot of the code here can leverage what the browser/other frameworks give us.</p>             
+            <h5>The Renderer</h5>
+                <p>Once the root UI element has been set by the application, the control hierarchy is walked and a bridge-object is created for each control</p>
+                <p>This rendering object has all the properties from the original control, plus some additional methods for facilitating the rendering and binding process</p>
+                <p>The original implementation had the controls themselves performing this task, but this played havoc with both the templating frameworks and also made the code in the controls themselves bloated.</p>
+            <h5>Binding to HTML</h5>
+                <p>There are several concerns to be had when binding the SLJS controls to HTML</p>
+                <ul class="bullets">
+                    <li>The properties that indicate display styles need to be bound to CSS (EG: Width/Height/Margin) </li>
+                    <li>The properties that indicate content need to be bound to some logic (EG: Text in a TextBox)</li>
+                    <li>DOM events need to routed through the controls (EG: Button Click)</li>
+                </ul>
+                <p>After the templating has taken place and HTML has been generated, the bridge-object is given a reference to both the control and the root element that the control generated.</p>
+                <p>The bridge object uses the dependency object/property system to register interest in properties change events, and hooks DOM events for routing back to the control when appropriate.</p>
+                <p>In this manner, the code in the control itself is kept clean of implementation concerns, and the markup is kept clean from code concerns.</p>
+            <h5>Acceptance Testing</h5>
+                <p>For each test project there should be a suite of acceptance tests, which are easy to write as a mechanism has been put into place to allow tests to specify which test project they relate to, which will load the test project, execute the application and then call back into the test method with a context object for the querying of various objects within the application.</p>
+                <p>This takes the form of contextTest("ApplicationName", "Test name", function(context) { // test code }</p>
+                <p>It is expected that over time this will become more elaborate and the overhead of setting up new projects for this system will be decreased</p>
+        </div>
+        <div id="sidebar">
+        <div id="info">
+            <h5>Info</h5>
+            <p>SLJS can be found on Github at <a href="http://github.com/robashton/sljs/">/robashton/sljs</a></p>
+            <p>The Google Group can be found at <a href="#">/sljs</a></p> 
+        </div>   
+    
+        <div id="contributors">
+            <h5>Contributors</h5>
+            <ul>
+                <li>Lead: <a href="http://twitter.com/robashton">@robashton</a></li>
+            </ul>
+        </div>
+        </div>
+
+    </div>
+    </body>
+</html>

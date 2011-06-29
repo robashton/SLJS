@@ -1,0 +1,123 @@
+div, ul, li, h1, h2, h3, h4, h5, h6
+{
+    margin: 0;
+    padding: 0;       
+}
+
+body
+{
+    font-family: Verdana;
+    font-size: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+p
+{
+    margin-left: 3px;
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+
+li 
+{
+    list-style: none;   
+}
+
+ul.bullets > li
+{
+    list-style: circle;
+}
+
+
+#container
+{
+    width: 1024px;
+    float: left; 
+}
+
+#title
+{
+    width: 1024px;   
+}
+
+#title h1
+{
+   margin: 5px 0px 5px 5px;
+}
+
+#menu
+{
+    width: 1024px;   
+}
+
+#menu ul
+{
+    margin: 5px 0px 5px 5px;   
+}
+
+#menu li
+{
+    display: inline;
+    padding: 2px 5px 2px 5px;
+}
+
+#menu li a.current {
+    text-decoration: underline;
+}
+
+#content 
+{
+    margin: 5px 5px 5px 5px;
+    float: left;
+    width: 800px;
+}
+
+#content ul 
+{
+    margin-bottom: 5px;
+}
+
+#content li
+{
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 25px;
+}
+
+#content h3 {
+    text-align: center;
+    border-bottom: 1px dashed #000;
+    padding-bottom: 3px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+#content h3, h5
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+#sidebar
+{
+    float: left;
+    padding-left: 5px;
+    width: 200px;
+    border-left: 1px dashed #CCC;
+    
+}
+
+#info
+ {
+
+ 
+ }
+ 
+ #contributors
+ {
+  
+ }

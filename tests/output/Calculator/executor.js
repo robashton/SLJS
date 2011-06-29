@@ -89,6 +89,7 @@ sljs.initialize = function() {
 
 $(document).ready(function () {
     sljs.loadJavascript(function () {
+        JSIL.Initialize();
         sljs.loadTemplates(function () {
             $('#container').hide();
             sljs.initialize();

@@ -1,0 +1,61 @@
+<html>
+	<head>
+        <title>SLJS - A Silverlight to JS/HTML Converter</title>
+        <link rel="stylesheet" href="site.css" type="text/css" />
+	</head>
+    <body>
+    <div id="container">
+        <div id="title">
+                        <h1>SLJS - A Silverlight to JS/HTML Converter</h1>
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="background.html">Background</a></li>
+                <li><a href="contribution.html" class="current">Contribution Guide</a></li>
+                <li><a href="architecture.html">Technical Description</a></li>
+            </ul>
+        </div>
+        <div id="content">
+            <h3>Where do I begin?</h3>
+            <p>First off, don't go taking your Silverlight project which you've been working on for three years and expect it to work - 
+             SLJS doesn't even pretend to have enough of the framework implemented for that!</p>
+             <p>Instead, think of a small demo you'd like to add to this site that demonstrates a particular feature you want to get working.</p>
+            That could be a control from System.Windows.Controls, it could be a particular aspect of styling, an intricate part of the dependency property/object system or anything else.</p>
+            <p>Writing a Silverlight application that demonstrates that concept in the tests solution, letting the Google Group know that you're working on it, 
+            and then going to town on the code is the best thing you can do.</p>
+            <p>An acceptance testing mechanism has been implemented in the tests folder, and new features should have acceptance tests built around them - it is not necessary
+            to go writing unit tests for all your Javascript (although it is acknowledged that parts of the framework will warrant it), but it is important that the big things are captured
+            so future efforts don't go making breaking changes everywhere.</p>
+            <h3>Contribution Guidelines</h3>
+            <ul class="bullets">
+                <li>All features should have acceptance tests written against them</li>
+                <li>There is one JS file per .NET namespace and types are ordered alphabetically in them</li>
+                <li>Core .NET types/language issues belong to the JSIL project, although we can try to fix them ourselves and contribute back</li>
+                <li>Framework types/methods should all be PascalCase like in the .NET framework</li>
+                <li>Our JS types should be PascalCase and JS methods should be camelCase</li>
+                <li>In the case where we have .NET types with private methods, they should be camelCase so we know they're not Core Framework</li>
+            </ul>
+            <p>There isn't much else beyond that, as long as you don't go vomitting code everywhere then we can be fairly relaxed about contributions, better to have code submitted that's a bit different and adapted, 
+            than not submitted at all - feature tests will help us integrate it after all.</p>
+            <h3>After a feature is finished</h3>
+            <p>It will be pulled into the project by a core member, and if you have a good demo showing off the feature it will be added to this site.</p>
+        </div>
+        <div id="sidebar">
+        <div id="info">
+            <h5>Info</h5>
+            <p>SLJS can be found on Github at <a href="http://github.com/robashton/sljs/">/robashton/sljs</a></p>
+            <p>The Google Group can be found at <a href="#">/sljs</a></p> 
+        </div>       
+    
+        <div id="contributors">
+            <h5>Contributors</h5>
+            <ul>
+                <li>Lead: <a href="http://twitter.com/robashton">@robashton</a></li>
+            </ul>
+        </div>
+        </div>
+
+    </div>
+    </body>
+</html>

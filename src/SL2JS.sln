@@ -13,8 +13,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{FA964E47-5C55-
 		js\executor.js = js\executor.js
 		js\jquery-1.6.1.js = js\jquery-1.6.1.js
 		js\jquery.tmpl.js = js\jquery.tmpl.js
-		js\jsonselect.js = js\jsonselect.js
-		js\knockout.js = js\knockout.js
 		js\lazyload.js = js\lazyload.js
 		js\rendering.js = js\rendering.js
 		js\support.js = js\support.js
@@ -24,9 +22,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{FA964E47-5C55-
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "templates", "templates", "{796D66BB-F197-4D23-9CFB-B12403AF956C}"
 	ProjectSection(SolutionItems) = preProject
+		templates\default.css = templates\default.css
 		templates\System.Windows.Controls.Button.htm = templates\System.Windows.Controls.Button.htm
 		templates\System.Windows.Controls.Grid.htm = templates\System.Windows.Controls.Grid.htm
 		templates\System.Windows.Controls.TextBlock.htm = templates\System.Windows.Controls.TextBlock.htm
+		templates\System.Windows.Controls.TextBox.htm = templates\System.Windows.Controls.TextBox.htm
 		templates\System.Windows.Controls.UserControl.htm = templates\System.Windows.Controls.UserControl.htm
 	EndProjectSection
 EndProject
@@ -43,6 +43,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{6E78F4F3
 		..\tests\runner\tests.html = ..\tests\runner\tests.html
 		..\tests\runner\tests.js = ..\tests\runner\tests.js
 		..\tests\runner\testsupport.js = ..\tests\runner\testsupport.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "site", "site", "{A94E013E-CEDF-4528-A7A1-10108687157F}"
+	ProjectSection(SolutionItems) = preProject
+		..\tests\architecture.html = ..\tests\architecture.html
+		..\tests\background.html = ..\tests\background.html
+		..\tests\contribution.html = ..\tests\contribution.html
+		..\tests\index.html = ..\tests\index.html
+		..\tests\site.css = ..\tests\site.css
 	EndProjectSection
 EndProject
 Global

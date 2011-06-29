@@ -516,7 +516,7 @@ Class.setup(System.Windows.Controls.TextBlock, {
 JSIL.MakeClass(System.Windows.Controls.Control, "System.Windows.Controls.TextBox", true);
 Class.setup(System.Windows.Controls.TextBox, {
     _ctor: function () {
-
+        this.Text = '';
     },
     hookDomEvents: function () {
         var control = this;

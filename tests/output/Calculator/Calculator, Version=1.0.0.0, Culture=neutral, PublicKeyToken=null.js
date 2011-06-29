@@ -7,6 +7,12 @@ JSIL.MakeClass("System.Object", "Calculator.App/$l$gc__DisplayClass2", false);
 
 JSIL.MakeClass("System.Windows.Controls.UserControl", "Calculator.MainPage", true);
 
+Calculator.App.prototype.InitializeComponent = function () {
+	if (!this._contentLoaded) {
+		this._contentLoaded = true;
+		System.Windows.Application.LoadComponent(this, new System.Uri("/Calculator;component/App.xaml", System.UriKind.Relative));
+	}
+};
 Calculator.App.prototype._ctor = function () {
 	System.Windows.Application.prototype._ctor.call(this);
 	System.Windows.Application.prototype.add_Startup.call(this, JSIL.Delegate.New("System.Windows.StartupEventHandler", this, Calculator.App.prototype.Application_Startup));
@@ -38,12 +44,6 @@ Calculator.App.prototype.ReportErrorToDOM = function (e) {
 	} catch ($exception) {
 	}
 };
-Calculator.App.prototype.InitializeComponent = function () {
-	if (!this._contentLoaded) {
-		this._contentLoaded = true;
-		System.Windows.Application.LoadComponent(this, new System.Uri("/Calculator;component/App.xaml", System.UriKind.Relative));
-	}
-};
 Calculator.App.prototype._contentLoaded = false;
 
 $asm01.Calculator.App.$l$gc__DisplayClass2.prototype._ctor = function () {
@@ -54,6 +54,7 @@ $asm01.Calculator.App.$l$gc__DisplayClass2.prototype.e = null;
 
 Calculator.MainPage.prototype._ctor = function () {
 	this.pendingAction = null;
+	this.pendingValue = new (System.Nullable$b1.Of(System.Int32)) ();
 	System.Windows.Controls.UserControl.prototype._ctor.call(this);
 	this.InitializeComponent();
 };
@@ -100,23 +101,30 @@ Calculator.MainPage.prototype.btnMinus_Click = function (sender, e) {
 Calculator.MainPage.prototype.btnEquals_Click = function (sender, e) {
 	this.Calculate();
 };
+Calculator.MainPage.prototype.Calculate = function () {
+	if (this.pendingValue.HasValue && (this.pendingAction !== null)) {
+		var rightHandSide = System.Int32.Parse(this.txtScreen.Text);
+		var result = this.pendingAction(this.pendingValue.Value, rightHandSide);
+		this.txtScreen.Text = ((result).toString());
+		this.pendingValue = new (System.Nullable$b1.Of(System.Int32)) (result);
+	}
+};
 Calculator.MainPage.prototype.btnDivide_Click = function (sender, e) {
 	this.Operate(function (x, y) {
 			return !Math.floor(x / y) ? 1E-09 : y;
 		});
 };
 Calculator.MainPage.prototype.Append = function (i) {
-	var expr_07 = this.txtScreen;
-	expr_07.Text = ((expr_07.Text + (i).toString()));
+	if (this.pendingAction !== null) {
+		this.pendingValue = new (System.Nullable$b1.Of(System.Int32)) (System.Int32.Parse(this.txtScreen.Text));
+		this.txtScreen.Text = System.String.Empty;
+	}
+	var expr_42 = this.txtScreen;
+	expr_42.Text = ((expr_42.Text + (i).toString()));
 };
 Calculator.MainPage.prototype.Operate = function (action) {
 	this.Calculate();
 	this.pendingAction = action;
-};
-Calculator.MainPage.prototype.Calculate = function () {
-	if (this.pendingAction === null) {
-		return;
-	}
 };
 Calculator.MainPage.prototype.InitializeComponent = function () {
 	if (!this._contentLoaded) {
@@ -142,7 +150,6 @@ Calculator.MainPage.prototype.InitializeComponent = function () {
 	}
 };
 Calculator.MainPage.prototype.pendingAction = null;
-Calculator.MainPage.prototype.leftHandSide = 0;
 Calculator.MainPage.prototype.LayoutRoot = null;
 Calculator.MainPage.prototype.txtScreen = null;
 Calculator.MainPage.prototype.btn1 = null;
@@ -165,3 +172,8 @@ Calculator.MainPage.$CachedAnonymousMethodDelegate1 = null;
 Calculator.MainPage.$CachedAnonymousMethodDelegate3 = null;
 Calculator.MainPage.$CachedAnonymousMethodDelegate5 = null;
 
+JSIL.QueueInitializer(function () {
+		Calculator.MainPage.prototype.__StructFields__ = [
+			["pendingValue", System.Nullable$b1.Of(System.Int32)]
+		];
+	});

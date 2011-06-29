@@ -39,6 +39,13 @@ sljs.contexts = {
         entryPoint: "HelloWorld.App",
         title: "Hello World Button",
         location: '../Output/HelloWorld'
+    },
+    "Calculator": {
+        code: ['Calculator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null.js'],
+        templates: [],
+        entryPoint: "Calculator.App",
+        title: "Calculator Demo",
+        location: '../Output/Calculator'
     }
 };
 var coreDependenciesLoaded = false;
@@ -63,6 +70,7 @@ sljs.loadCoreDependencies = function (callback) {
                 templates: ['System.Windows.Controls.Button.htm',
                     'System.Windows.Controls.Grid.htm',
                     'System.Windows.Controls.TextBlock.htm',
+                    'System.Windows.Controls.TextBox.htm',
                     'System.Windows.Controls.UserControl.htm']
             };
             sljs.loadTemplates(function () {

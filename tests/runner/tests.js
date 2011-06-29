@@ -7,7 +7,6 @@ contextTest("HelloWorld", "A Button can be loaded onto the page", function (cont
     ok(mainButton, "I found a button");
 });
 
-
 contextTest("HelloWorld", "A TextBlock can be loaded onto the page", function (context) {
     var mainText = context.findControlById('txtHelloWorld');
     ok(mainText, "I found the text label");
@@ -41,4 +40,14 @@ contextTest("HelloWorld", "The margin property of a .NET control can be converte
     var actualHtmlMargin = element.css("margin-top") +element.css("margin-right") +  element.css("margin-bottom") + element.css("margin-left");
     
     equal(actualHtmlMargin, expectedHtmlMargin, "Hurrah, the doofus managed to write some code to play with the XAML margins");
+});
+
+contextTest("Calculator", "If I update the Text property of a TextBox, I expect to see the result in HTML", function (context) {
+    var button = context.findControlById('txtScreen');
+    var element = button.$element;
+
+    button.Text = 'Zomg';
+    var newValue = element.val();
+
+    equal(newValue, 'Zomg', "The change was made and the view was updated");
 });

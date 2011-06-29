@@ -15,7 +15,8 @@ namespace Calculator
     public partial class MainPage : UserControl
     {
         private Func<int, int, int> pendingAction = null;
-        private int leftHandSide;
+        private Func<int, int, int> potentialAction = null;
+        private int? pendingValue = null;
 
         public MainPage()
         {
@@ -88,23 +89,43 @@ namespace Calculator
 
         private void btnDivide_Click(object sender, RoutedEventArgs e)
         {
-            Operate((x, y) => (int) (x / y == 0 ? 0.000000001 : y));
+            Operate((x, y) => (int) (x / (y == 0 ? 0.000000001 : y)));
+        }
+
+
+        private void btnMultiply_Click(object sender, RoutedEventArgs e)
+        {
+            Operate((x, y) => x * y);
+        }
+
+
+        private void Calculate()
+        {
+            if (pendingValue == null || pendingAction == null) return;
+            var rightHandSide = int.Parse(txtScreen.Text);
+            var result = this.pendingAction.Invoke((int)pendingValue, rightHandSide);
+            txtScreen.Text = result.ToString();
+            this.pendingValue = null;
         }
 
         private void Append(int i)
         {
+            if (potentialAction != null)
+            {
+                pendingValue = int.Parse(txtScreen.Text);
+                txtScreen.Text = string.Empty;
+                this.pendingAction = potentialAction;
+                this.potentialAction = null;
+            }
             txtScreen.Text += i.ToString();
+
         }
 
         private void Operate(Func<int, int, int> action)
         {
             Calculate();
-            this.pendingAction = action;
+            this.potentialAction = action;
         }
 
-        private void Calculate()
-        {
-            if (this.pendingAction == null) return;
-        }
     }
 }

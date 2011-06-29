@@ -1,7 +1,6 @@
 sljs = sljs || {};
 
 sljs.EventTable = function () {
-    this.handlers = {};
     this.knownEvents = {};
 };
 
@@ -19,15 +18,15 @@ Class.setup(sljs.EventTable, {
         return this.knownEvents[eventId];
     },
     ensureEvent: function (obj, id) {
-        if (!this.handlers[obj]) this.handlers[obj] = {};
-        if (!this.handlers[obj][id]) this.handlers[obj][id] = [];
+        if (!obj.$eventTable) obj.$eventTable = {  };
+        if (!obj.$eventTable[id]) obj.$eventTable[id] = [];
     },
     findEvent: function (obj, id) {
         this.ensureEvent(obj, id);
-        return this.handlers[obj][id];
+        return obj.$eventTable[id];
     },
     addHandler: function (obj, id, handler) {
         this.ensureEvent(obj, id);
-        this.handlers[obj][id].push(handler);
+        obj.$eventTable[id].push(handler);
     }
 });

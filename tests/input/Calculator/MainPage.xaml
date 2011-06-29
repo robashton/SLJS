@@ -19,7 +19,7 @@
         <Button Content="9" Height="60" HorizontalAlignment="Left" Margin="189,199,0,0" Name="btn9" VerticalAlignment="Top" Width="80" Click="btn9_Click" />
         <Button Content="+" Height="59" HorizontalAlignment="Left" Margin="275,70,0,0" Name="btnPlus" VerticalAlignment="Top" Width="65" Click="btnPlus_Click" />
         <Button Content="-" Height="59" HorizontalAlignment="Left" Margin="275,135,0,0" Name="btnMinus" VerticalAlignment="Top" Width="65" Click="btnMinus_Click" />
-        <Button Content="*" Height="59" HorizontalAlignment="Left" Margin="275,200,0,0" Name="btnMultiply" VerticalAlignment="Top" Width="65" />
+        <Button Content="*" Height="59" HorizontalAlignment="Left" Margin="275,200,0,0" Name="btnMultiply" VerticalAlignment="Top" Width="65" Click="btnMultiply_Click" />
         <Button Content="/" Height="59" HorizontalAlignment="Left" Margin="275,265,0,0" Name="btnDivide" VerticalAlignment="Top" Width="65" Click="btnDivide_Click" />
         <Button Content="=" Height="60" HorizontalAlignment="Left" Margin="103,265,0,0" Name="btnEquals" VerticalAlignment="Top" Width="166" Click="btnEquals_Click" />
         <Button Content="0" Height="60" HorizontalAlignment="Left" Margin="19,264,0,0" Name="btn0" VerticalAlignment="Top" Width="80" Click="btn0_Click" />

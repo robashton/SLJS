@@ -17,8 +17,6 @@ contextTest = function (context, testName, testMethod) {
                 executor.startApplication(function() {
 
                     // Execute the test method as a test
-                    // NOTE: Async tests don't appear to do what we want to do, which is queue everything
-                    // Feel free to prove me wrong and fix this mess
                     test(contextData.title + " : " + testName, function() {
                         var testContext = new sljs.TestContext(executor.app, $('#container'));
                         testMethod(testContext);

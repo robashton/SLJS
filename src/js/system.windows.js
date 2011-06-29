@@ -500,6 +500,12 @@ Class.setup(System.Windows.Controls.TextBlock, {
     _ctor: function () {
 
     },
+    hookDomEvents: function () {
+        var control = this;
+        this.AddEventListener("Text", function () {
+            control.$element.val(control.Text);
+        });
+    },
     $TextProperty: System.String
 });
 
@@ -511,6 +517,12 @@ JSIL.MakeClass(System.Windows.Controls.Control, "System.Windows.Controls.TextBox
 Class.setup(System.Windows.Controls.TextBox, {
     _ctor: function () {
 
+    },
+    hookDomEvents: function () {
+        var control = this;
+        this.AddEventListener("Text", function () {
+            control.$element.val(control.Text);
+        });
     },
     $TextProperty: System.String
 });
@@ -532,6 +544,11 @@ Class.setup(System.Windows.Controls.Button, {
         this.$element.click(function () {
             control.raiseEvent(control, "Click", {  });
         });
+        
+       this.AddEventListener("Content", function () {
+           control.$element.val(this.Content);
+       }); 
     },
     $ContentProperty: System.String
+
 });

@@ -1,3 +1,4 @@
+
 contextTest("HelloWorld", "An application can be initialized", function (context) {
     ok(true, "If we made it this far without an exception, then it's all gravy");
 });

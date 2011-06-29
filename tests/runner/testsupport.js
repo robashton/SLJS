@@ -1,37 +1,59 @@
 contextTest = function (context, testName, testMethod) {
     var contextData = sljs.contexts[context];
-    test(contextData.title + " : " + testName, function () {
-        stop();
-        $(document).ready(function() {
-            sljs.loadCoreDependencies(function() {
-                var qualifiedPaths = [];
-                for (var index = 0; index < contextData.code.length; index++) {
-                    var path = contextData.code[index];
-                    qualifiedPaths.push(contextData.location + '/' + path);
-                }
-                var executor = new sljs.Executor(contextData.location, contextData);
-                // Bootstrap the current context by loading in its code if necessary
-                LazyLoad.js(qualifiedPaths, function() {
+    sljs.queueTest(function () {
 
-                    // Run the application
-                    executor.startApplication(function() {
-                        // Execute the test method as a test
+        sljs.loadCoreDependencies(function () {
+            var qualifiedPaths = [];
+            for (var index = 0; index < contextData.code.length; index++) {
+                var path = contextData.code[index];
+                qualifiedPaths.push(contextData.location + '/' + path);
+            }
+
+            var executor = new sljs.Executor(contextData.location, contextData);
+            // Bootstrap the current context by loading in its code if necessary
+            LazyLoad.js(qualifiedPaths, function() {
+
+                // Run the application
+                executor.startApplication(function() {
+
+                    // Execute the test method as a test
+                    // NOTE: Async tests don't appear to do what we want to do, which is queue everything
+                    // Feel free to prove me wrong and fix this mess
+                    test(contextData.title + " : " + testName, function() {
                         var testContext = new sljs.TestContext(executor.app, $('#container'));
                         testMethod(testContext);
-                        start();
                     });
+                    sljs.notifyTestEnded();
+
                 });
             });
         });
     });
 };
 
+var sljs = sljs || {};
+
+sljs.testIsRunning = false;
+sljs.queueTest = function (callback) {
+    $(document).ready(function () {
+        if (sljs.testIsRunning) {
+            setTimeout(function () { sljs.queueTest(callback); }, 20);
+        }
+        else {
+            sljs.testIsRunning = true;
+            callback();
+        }
+    });
+};
+
+sljs.notifyTestEnded = function() {
+    sljs.testIsRunning = false;
+};
+
 // Yes, I'm repeating myself a bit here for the tests, probably want a global
 // defines system somewhere, I'll ponder on it and sort it when it starts costing me to do
 // it this way, DRY is all very well and good in theory but let's face it
 // It's all bollocks really. I'll extract the commonality once I work out what exactly it is
-
-var sljs = sljs || {};
 sljs.contexts = {
     "HelloWorld": {
         code: [ 'HelloWorld, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null.js' ],

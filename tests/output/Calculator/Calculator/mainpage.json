@@ -155,7 +155,8 @@
 					"Margin": "275,200,0,0",
 					"Name": "btnMultiply",
 					"VerticalAlignment": "Top",
-					"Width": "65"
+					"Width": "65",
+					"Click": "btnMultiply_Click"
 				},
 				{
 					"$ElementType": "Button",

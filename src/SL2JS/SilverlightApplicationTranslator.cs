@@ -48,7 +48,7 @@ namespace SL2JS
         public void ProcessWith(SilverlightAssemblyTranslator translator)
         {
             ProcessAssembly(translator);
-            ProcessResources();
+            ProcessResources(translator);
             GenerateContainer(translator);
         }
         
@@ -110,10 +110,11 @@ namespace SL2JS
             }
         }
 
-        private void ProcessResources()
+        private void ProcessResources(SilverlightAssemblyTranslator translator)
         {
             var resourceFolderName = Path.GetFileNameWithoutExtension(configuration.Filename);
             var resourceFolder = Path.Combine(configuration.OutputDirectory, resourceFolderName);
+            translator.DumpResourcesFromAssemblyToDirectory(configuration.Filename, resourceFolder);
 
             if (!Directory.Exists(resourceFolder)) return;
 

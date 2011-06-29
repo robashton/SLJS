@@ -23,5 +23,21 @@ namespace SL2JS
                 .Where(x => x.BaseType != null && x.BaseType.FullName == "System.Windows.Application")
                 .Select(x => x.FullName).FirstOrDefault();
         }
+
+        public void DumpResourcesFromAssemblyToDirectory(string filename, string directory)
+        {
+            if (!Directory.Exists(directory))
+                Directory.CreateDirectory(directory);
+
+            var assembly = AssemblyDefinition.ReadAssembly(filename, GetReaderParameters(false));
+            if(!assembly.MainModule.HasResources) return;
+            foreach(var resource in assembly.MainModule.Resources)
+            {
+                if (resource.ResourceType != ResourceType.Embedded) continue;
+                var data = ((EmbeddedResource) resource).GetResourceData();
+                File.WriteAllBytes(Path.Combine(directory, resource.Name), data);
+
+            }
+        }
     }
 }

@@ -2,6 +2,7 @@
 using System.IO;
 using System.Reflection;
 using JSIL;
+using JSIL.Internal;
 using SL2JS.Proxies;
 
 namespace SL2JS

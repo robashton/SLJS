@@ -66,6 +66,13 @@ sljs.contexts = {
         entryPoint: "Calculator.App",
         title: "Calculator Demo",
         location: '../output/Calculator'
+    },
+    "Databinding": {
+        code: ['Databinding, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null.js'],
+        templates: [],
+        entryPoint: "Databinding.App",
+        title: "Databinding Demo",
+        location: '../output/Databinding'
     }
 };
 var coreDependenciesLoaded = false;
@@ -79,6 +86,7 @@ sljs.loadCoreDependencies = function (callback) {
             'executor.js',
             'system.js',
             'system.windows.js',
+            'system.windows.controls.js',
             'jquery.tmpl.js',
             'knockout.js',
             'jsonselect.js',

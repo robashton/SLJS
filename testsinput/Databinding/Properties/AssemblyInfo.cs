@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Mvvm")]
+[assembly: AssemblyTitle("Databinding")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("MCK")]
-[assembly: AssemblyProduct("Mvvm")]
+[assembly: AssemblyProduct("Databinding")]
 [assembly: AssemblyCopyright("Copyright © MCK 2011")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("998bb646-682d-4582-8ff5-c8998cfb21b4")]
+[assembly: Guid("64080439-d0b3-40ed-a0ce-c24ebc00892c")]
 
 // Version information for an assembly consists of the following four values:
 //

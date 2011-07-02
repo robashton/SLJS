@@ -1,0 +1,98 @@
+
+{
+	"app.json": 
+{
+	"$ElementType": "Application",
+	"xmlns": "http://schemas.microsoft.com/winfx/2006/xaml/presentation",
+	"x": "http://schemas.microsoft.com/winfx/2006/xaml",
+	"Class": "Databinding.App",
+	"$Elements": [ 
+		{
+			"$ElementType": "Application.Resources",
+			"$Elements": [ 
+			]
+		}
+	]
+},
+	"mainpage.json": 
+{
+	"$ElementType": "UserControl",
+	"Class": "Databinding.MainPage",
+	"xmlns": "http://schemas.microsoft.com/winfx/2006/xaml/presentation",
+	"x": "http://schemas.microsoft.com/winfx/2006/xaml",
+	"d": "http://schemas.microsoft.com/expression/blend/2008",
+	"mc": "http://schemas.openxmlformats.org/markup-compatibility/2006",
+	"Ignorable": "d",
+	"DesignHeight": "521",
+	"DesignWidth": "752",
+	"$Elements": [ 
+		{
+			"$ElementType": "Grid",
+			"Name": "LayoutRoot",
+			"Background": "White",
+			"$Elements": [ 
+				{
+					"$ElementType": "TextBox",
+					"Height": "23",
+					"HorizontalAlignment": "Left",
+					"Margin": "102,10,0,0",
+					"Name": "txtOneTime",
+					"Text": "{Binding Mode=OneTime, Path=StringProperty}",
+					"VerticalAlignment": "Top",
+					"Width": "319"
+				},
+				{
+					"$ElementType": "TextBlock",
+					"Height": "23",
+					"HorizontalAlignment": "Left",
+					"Margin": "10,10,0,0",
+					"Name": "lblOneTime",
+					"Text": "One time:",
+					"VerticalAlignment": "Top",
+					"Width": "134"
+				},
+				{
+					"$ElementType": "TextBox",
+					"Height": "23",
+					"HorizontalAlignment": "Left",
+					"Margin": "104,48,0,0",
+					"Name": "txtOneWay",
+					"Text": "{Binding Mode=OneWay, Path=StringProperty}",
+					"VerticalAlignment": "Top",
+					"Width": "319"
+				},
+				{
+					"$ElementType": "TextBlock",
+					"Height": "23",
+					"HorizontalAlignment": "Left",
+					"Margin": "12,48,0,0",
+					"Name": "lblOneWay",
+					"Text": "One way:",
+					"VerticalAlignment": "Top",
+					"Width": "134"
+				},
+				{
+					"$ElementType": "TextBox",
+					"Height": "23",
+					"HorizontalAlignment": "Left",
+					"Margin": "102,87,0,0",
+					"Name": "txtTwoWay",
+					"Text": "{Binding Mode=TwoWay, Path=StringProperty}",
+					"VerticalAlignment": "Top",
+					"Width": "319"
+				},
+				{
+					"$ElementType": "TextBlock",
+					"Height": "23",
+					"HorizontalAlignment": "Left",
+					"Margin": "10,87,0,0",
+					"Name": "lblTwoWay",
+					"Text": "Two way:",
+					"VerticalAlignment": "Top",
+					"Width": "134"
+				}
+			]
+		}
+	]
+}
+}

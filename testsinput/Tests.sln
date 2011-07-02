@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld", "HelloWorld\He
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Calculator.csproj", "{E369753F-A15A-4433-9B5B-48FBC0C7C337}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvvm", "Mvvm\Mvvm.csproj", "{A3FAAFA9-BB4A-4E6D-A606-6D4B7D74C561}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Databinding", "Databinding\Databinding.csproj", "{7A0C428E-03E2-4AEA-96A4-21F841D6BB45}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +21,10 @@ Global
 		{E369753F-A15A-4433-9B5B-48FBC0C7C337}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E369753F-A15A-4433-9B5B-48FBC0C7C337}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E369753F-A15A-4433-9B5B-48FBC0C7C337}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A3FAAFA9-BB4A-4E6D-A606-6D4B7D74C561}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A3FAAFA9-BB4A-4E6D-A606-6D4B7D74C561}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A3FAAFA9-BB4A-4E6D-A606-6D4B7D74C561}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A3FAAFA9-BB4A-4E6D-A606-6D4B7D74C561}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A0C428E-03E2-4AEA-96A4-21F841D6BB45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A0C428E-03E2-4AEA-96A4-21F841D6BB45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A0C428E-03E2-4AEA-96A4-21F841D6BB45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A0C428E-03E2-4AEA-96A4-21F841D6BB45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

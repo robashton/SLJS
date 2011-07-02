@@ -17,6 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{FA964E47-5C55-
 		js\rendering.js = js\rendering.js
 		js\support.js = js\support.js
 		js\system.js = js\system.js
+		js\system.windows.controls.js = js\system.windows.controls.js
 		js\system.windows.js = js\system.windows.js
 	EndProjectSection
 EndProject

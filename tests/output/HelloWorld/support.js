@@ -36,21 +36,27 @@ Class.setupEventTable = function (destination) {
     };
 };
 
-Class.setupDependencyProperty = function(destination, rawName, information) {
+Class.setupDependencyProperty = function (destination, rawName, information) {
     var startIndex = 1;
     var endIndex = rawName.indexOf('Property');
     var actualPropertyName = rawName.substr(startIndex, endIndex - startIndex);
     var propertyFieldName = rawName.substr(startIndex);
     destination[propertyFieldName] = System.Windows.DependencyProperty.Register(actualPropertyName, information, destination);
 
+    var getMethod = function () {
+        return this.GetValue(destination[propertyFieldName]);
+    };
+    var setMethod = function (value) {
+        this.SetValue(destination[propertyFieldName], value);
+    };
+
+    destination.prototype['get_' + actualPropertyName] = getMethod;
+    destination.prototype['set_' + actualPropertyName] = setMethod;
+    
     Object.defineProperty(destination.prototype, actualPropertyName, {
-            get: function() {
-                return this.GetValue(destination[propertyFieldName]);
-            },
-            set: function(value) {
-                this.SetValue(destination[propertyFieldName], value);
-            },
-            configurable: true,
-            enumerable: true
-        });
+        get: getMethod,
+        set: setMethod,
+        configurable: true,
+        enumerable: true
+    });
 };

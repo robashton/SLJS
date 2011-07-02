@@ -34,6 +34,7 @@ namespace SL2JS
                                                               "core.js",
                                                               "system.js",
                                                               "system.windows.js",
+                                                              "system.windows.controls.js",
                                                               "jquery.tmpl.js",
                                                               "knockout.js",
                                                           };

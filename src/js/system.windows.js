@@ -342,8 +342,6 @@ StyleConverters = {
             output += values[index] + 'px ';
         }
         return output.trim();
-
-        // return value.replace(/,/g, 'px ');
     }
 };
 
@@ -431,13 +429,6 @@ Class.setup(System.Windows.FrameworkElement, {
                 needle = haystack.FindName(name);
         }
         else console.warn("FindName couldn't find a property to use");
-
-        if (needle) {
-            console.info("Found element " + name);
-        }
-        else {
-            console.warn("Couldn't find element: " + name);
-        }
         return needle;
     },
         

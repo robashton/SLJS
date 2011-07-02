@@ -120,13 +120,23 @@ System.Windows.Application.attemptToWireUpEvent = function (component, target, k
 System.Windows.Application.attemptToWireUpProperty = function (component, target, key, value) {
     var property = System.Windows.Application.findPropertyInTarget(target, key);
     if (!property) {
+
         return false;
     }
     else {
-        target.SetValue(property, value);
-        console.log("Set property: " + key + " on " + target.GetType() + " to " + value);
+        if (value.indexOf('{') == 0) {
+            System.Windows.Application.wireUpDataboundProperty(component, target, key, value);
+        } else {
+            target.SetValue(property, value);
+            console.log("Set property: " + key + " on " + target.GetType() + " to " + value);
+        }
         return true;
     }
+};
+
+System.Windows.Application.wireUpDataboundProperty = function (component, target, key, value) {
+    console.log("Found a databound property");
+
 };
 
 System.Windows.Application.addChildrenToTarget = function (component, target, elements) {
